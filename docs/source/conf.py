@@ -27,6 +27,12 @@ extensions = [
     "sphinx.ext.coverage",
     "sphinx.ext.napoleon",
 ]
+
+
+autosummary_generate = True
+autosummary_imported_members = True
+
+
 pygments_style = "sphinx"
 templates_path = ["_templates"]
 exclude_patterns = []

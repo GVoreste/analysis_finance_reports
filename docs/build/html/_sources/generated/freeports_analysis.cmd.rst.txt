@@ -10,5 +10,12 @@
    
       cmd
       create_parser
+      main
       validate_args
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      PDF_Formats
    

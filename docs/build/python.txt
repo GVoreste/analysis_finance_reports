@@ -1,0 +1,38 @@
+Undocumented Python objects
+===========================
+
+Statistics
+----------
+
++-------------------------+----------+--------------+
+| Module                  | Coverage | Undocumented |
++=========================+==========+==============+
+| freeports_analysis      | 100.00%  | 0            |
++-------------------------+----------+--------------+
+| freeports_analysis.cmd  | 0.00%    | 3            |
++-------------------------+----------+--------------+
+| freeports_analysis.main | 0.00%    | 4            |
++-------------------------+----------+--------------+
+| TOTAL                   | 0.00%    | 7            |
++-------------------------+----------+--------------+
+
+freeports_analysis.cmd
+----------------------
+
+Functions:
+ * cmd
+ * create_parser
+ * validate_args
+
+freeports_analysis.main
+-----------------------
+
+Functions:
+ * get_functions
+ * main
+ * pipeline
+ * process_env_vars
+
+Classes:
+ * NoPDFormatDetected
+
