@@ -51,7 +51,7 @@ def select_outside(
 def _area_position_algorithm(
     areas, indexes, ruler_geometry, curr_idx, mode_flags, font_tol_ratio=0.5
 ):
-    return_columns, use_ruler_pos = mode_flags
+    return_columns, use_ruler_pos, area_intersection = mode_flags
     ruler_pos, ruler_bounds = ruler_geometry
 
     for i, area in enumerate(areas):
@@ -66,6 +66,15 @@ def _area_position_algorithm(
             test_pos = area.c[1]
             test_bounds = area.y_bounds
             tolerance = area.height * font_tol_ratio
+
+        if area_intersection:
+            min_bound_t, max_bound_t = test_bounds
+            min_bound_r, max_bound_r = ruler_bounds
+            if (min_bound_r - tolerance) <= max_bound_t <= (
+                max_bound_r + tolerance
+            ) or (min_bound_r - tolerance) <= min_bound_t <= (max_bound_r + tolerance):
+                indexes[i] = curr_idx
+                continue
 
         if use_ruler_pos:
             min_bound, max_bound = test_bounds
@@ -84,6 +93,7 @@ def get_table_positions(
     return_columns: bool = True,
     small_rule: bool = True,
     use_ruler_pos: bool = True,
+    area_intersection: bool = False,
 ) -> List[int]:
     """Compute either row or column indexes for areas in a tabular layout.
 
@@ -135,7 +145,7 @@ def get_table_positions(
             indexes,
             (ruler_pos, ruler_bounds),
             curr_idx,
-            (return_columns, use_ruler_pos),
+            (return_columns, use_ruler_pos, area_intersection),
         )
 
     # Sort rulers and create mapping
