@@ -58,19 +58,20 @@ def _area_position_algorithm(
         if indexes[i] is not None:
             continue
 
-        if use_ruler_pos:
-            if return_columns:
-                test_bounds = area.x_bounds
-                tolerance = area.width * font_tol_ratio
-            else:
-                test_bounds = area.y_bounds
-                tolerance = area.height * font_tol_ratio
+        if return_columns:
+            test_pos = area.c[0]
+            test_bounds = area.x_bounds
+            tolerance = area.width * font_tol_ratio
+        else:
+            test_pos = area.c[1]
+            test_bounds = area.y_bounds
+            tolerance = area.height * font_tol_ratio
 
+        if use_ruler_pos:
             min_bound, max_bound = test_bounds
             if (min_bound - tolerance) <= ruler_pos <= (max_bound + tolerance):
                 indexes[i] = curr_idx
         else:
-            test_pos = area.c[0] if return_columns else area.c[1]
             min_bound, max_bound = ruler_bounds
             if (min_bound - tolerance) <= test_pos <= (max_bound + tolerance):
                 indexes[i] = curr_idx
