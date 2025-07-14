@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 13:04+0200\n"
+"POT-Creation-Date: 2025-07-14 11:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -28,14 +28,14 @@ msgstr ""
 msgid "Developer documentation"
 msgstr ""
 
-#: ../../source/dev/index.rst:16
+#: ../../source/dev/index.rst:17
 msgid ""
 "The project consists in different repositories, specifically this section"
 " focus on the repository containing the source code and the "
 "documentation."
 msgstr ""
 
-#: ../../source/dev/index.rst:19
+#: ../../source/dev/index.rst:20
 msgid ""
 "This repository has two protected branches ``main`` and ``dev``, plus any"
 " other additional non protected branches. The logic is that ``dev`` "
@@ -47,38 +47,38 @@ msgid ""
 "repository). Specifically it:"
 msgstr ""
 
-#: ../../source/dev/index.rst:25
+#: ../../source/dev/index.rst:26
 msgid "Lint the code"
 msgstr ""
 
-#: ../../source/dev/index.rst:26
+#: ../../source/dev/index.rst:27
 msgid "Fail if a minimal linting vote is reached"
 msgstr ""
 
-#: ../../source/dev/index.rst:27
+#: ../../source/dev/index.rst:28
 msgid "Test the code and fail if some test is not passed"
 msgstr ""
 
-#: ../../source/dev/index.rst:28
+#: ../../source/dev/index.rst:29
 msgid "Fail if a minimal percentage of code is not tested"
 msgstr ""
 
-#: ../../source/dev/index.rst:29
+#: ../../source/dev/index.rst:30
 msgid "Build the documentation"
 msgstr ""
 
-#: ../../source/dev/index.rst:30
+#: ../../source/dev/index.rst:31
 msgid "Fail if a minimal percentage of the code is not documented"
 msgstr ""
 
-#: ../../source/dev/index.rst:31
+#: ../../source/dev/index.rst:32
 msgid ""
 "If the commit is tagged as `release version` (using `semantic versioning "
 "specification <https://semver.org/>`_) it publishes it to `PyPI "
 "<https://pypi.org/project/freeports-analysis/>`_"
 msgstr ""
 
-#: ../../source/dev/index.rst:33
+#: ../../source/dev/index.rst:34
 msgid ""
 "The difference between the two branches is that the state of the pipeline"
 " is only informative on the ``dev`` branch (it means that it only shows "
@@ -86,48 +86,57 @@ msgid ""
 "the PR on ``main`` branch to be approved and merged."
 msgstr ""
 
-#: ../../source/dev/index.rst:36
+#: ../../source/dev/index.rst:37
 msgid "In particular the development divide between:"
 msgstr ""
 
-#: ../../source/dev/index.rst:38
+#: ../../source/dev/index.rst:39
 msgid "development of tools for helping the contribution process"
 msgstr ""
 
-#: ../../source/dev/index.rst:39
+#: ../../source/dev/index.rst:40
 msgid ""
 "development of the code common for the different `pdf reports` (for "
 "example the source code related to the options and behaviour of the "
 "``freeports`` command)"
 msgstr ""
 
-#: ../../source/dev/index.rst:41
+#: ../../source/dev/index.rst:42
 msgid "development of the code for parsing the different `pdf report formats`"
 msgstr ""
 
-#: ../../source/dev/index.rst:42
+#: ../../source/dev/index.rst:43
 msgid "development of tests on the code"
 msgstr ""
 
-#: ../../source/dev/index.rst:43
+#: ../../source/dev/index.rst:44
 msgid "writing of the documentation"
 msgstr ""
 
-#: ../../source/dev/index.rst:44
+#: ../../source/dev/index.rst:45
 msgid ""
 "internationalization of the code (translation of messages in output of "
 "the command)"
 msgstr ""
 
-#: ../../source/dev/index.rst:45
+#: ../../source/dev/index.rst:46
 msgid ""
 "internationalization of the documentation (translation of the "
 "documentation)"
 msgstr ""
 
-#: ../../source/dev/index.rst:47
+#: ../../source/dev/index.rst:48
 msgid ""
 "you can consult the specific guide related to the type of contribution "
-"that you want to do."
+"that you want to do. When you feel comfortable with the concepts you can "
+"go forward with the workflow :doc:`examples provided <example>`; this "
+"page not only contains video expaining the possible contributions but "
+"also how to deploy them."
 msgstr ""
+
+#~ msgid ""
+#~ "you can consult the specific guide "
+#~ "related to the type of contribution "
+#~ "that you want to do."
+#~ msgstr ""
 

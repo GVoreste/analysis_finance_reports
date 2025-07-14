@@ -11,6 +11,7 @@ Developer documentation
    docs
    tests
    i18n
+   example
 
 
 The project consists in different repositories, specifically this section focus on the repository
@@ -45,3 +46,5 @@ In particular the development divide between:
 - internationalization of the documentation (translation of the documentation)
 
 you can consult the specific guide related to the type of contribution that you want to do.
+When you feel comfortable with the concepts you can go forward with the workflow :doc:`examples provided <example>`;
+this page not only contains video expaining the possible contributions but also how to deploy them.

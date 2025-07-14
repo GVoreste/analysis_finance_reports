@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 13:04+0200\n"
+"POT-Creation-Date: 2025-07-14 11:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,4 +18,8 @@ msgstr ""
 
 #: ../../source/dev/docs.rst:3
 msgid "Documentation development"
+msgstr ""
+
+#: ../../source/dev/docs.rst:5
+msgid "The documentation is"
 msgstr ""

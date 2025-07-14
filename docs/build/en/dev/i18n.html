@@ -19,7 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Tests" href="tests.html" /> 
+    <link rel="next" title="Example of a contribution" href="example.html" />
+    <link rel="prev" title="Creating tests" href="tests.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,12 +52,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="code.html">Code development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docs.html">Documentation development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.html">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Creating tests</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Interazionalization <em>(i18n)</em></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#translation-of-the-code">Translation of the code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#translation-of-the-documentation">Translation of the documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-translations">Building the translations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Example of a contribution</a></li>
 </ul>
 </li>
 </ul>
@@ -109,11 +112,33 @@ like for example <a class="reference external" href="https://poedit.net/">Poedit
 <section id="translation-of-the-documentation">
 <h2>Translation of the documentation<a class="headerlink" href="#translation-of-the-documentation" title="Link to this heading"></a></h2>
 <p>You can find a folder into <code class="docutils literal notranslate"><span class="pre">docs/source/locales</span></code> whit different language folders.
-The id is the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> code of the language.
+The id identifyng the lang is the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> code of the language.
 In the folder of the language that you want to translate there should be a directory called <code class="docutils literal notranslate"><span class="pre">LC_MESSAGES</span></code>
 and a some <code class="docutils literal notranslate"><span class="pre">.po</span></code> files. This files contain all the text strings present in the source code.
 You can translate the strings using a text editor or using a specific program to translate <code class="docutils literal notranslate"><span class="pre">.po</span></code> files
 like for example <a class="reference external" href="https://poedit.net/">Poedit</a>.</p>
+</section>
+<section id="building-the-translations">
+<h2>Building the translations<a class="headerlink" href="#building-the-translations" title="Link to this heading"></a></h2>
+<p>For updating the translations the deploy mechanism is similar in the case of source code and documentation and
+is caraterized by three steps:</p>
+<ul class="simple">
+<li><p>generate the <code class="docutils literal notranslate"><span class="pre">.pot</span></code> file(s) using the source code or the modified documentation</p></li>
+<li><p>updating the <code class="docutils literal notranslate"><span class="pre">.po</span></code> files using the new <code class="docutils literal notranslate"><span class="pre">.pot</span></code> file(s)</p></li>
+<li><p>compile <code class="docutils literal notranslate"><span class="pre">.po</span></code> files in <code class="docutils literal notranslate"><span class="pre">.mo</span></code> files</p></li>
+</ul>
+<p>In the case of the source code the command to launch are:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pybabel extract src/freeports_analysis/ -o freeports.pot</span>
+<span class="go">pybabel update -i freeports.pot -d src/freports_analysis/locales/</span>
+<span class="go">pybabel compile -d src/freports_analysis/locales/</span>
+</pre></div>
+</div>
+<p>In the case of the documentation are (from inside the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make gettext</span>
+<span class="go">sphinx-intl update</span>
+<span class="go">sphinx-intl build</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -121,7 +146,8 @@ like for example <a class="reference external" href="https://poedit.net/">Poedit
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="tests.html" class="btn btn-neutral float-left" title="Tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tests.html" class="btn btn-neutral float-left" title="Creating tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="example.html" class="btn btn-neutral float-right" title="Example of a contribution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -29,9 +29,36 @@ Translation of the documentation
 --------------------------------
 
 You can find a folder into ``docs/source/locales`` whit different language folders.
-The id is the `ISO 639 <https://en.wikipedia.org/wiki/ISO_639>`_ code of the language.
+The id identifyng the lang is the `ISO 639 <https://en.wikipedia.org/wiki/ISO_639>`_ code of the language.
 In the folder of the language that you want to translate there should be a directory called ``LC_MESSAGES``
 and a some ``.po`` files. This files contain all the text strings present in the source code.
 You can translate the strings using a text editor or using a specific program to translate ``.po`` files
 like for example `Poedit <https://poedit.net/>`_.
 
+
+-------------------------
+Building the translations
+-------------------------
+
+For updating the translations the deploy mechanism is similar in the case of source code and documentation and
+is caraterized by three steps:
+
+- generate the ``.pot`` file(s) using the source code or the modified documentation
+- updating the ``.po`` files using the new ``.pot`` file(s)
+- compile ``.po`` files in ``.mo`` files
+
+In the case of the source code the command to launch are:
+
+.. code-block:: console
+
+    pybabel extract src/freeports_analysis/ -o freeports.pot 
+    pybabel update -i freeports.pot -d src/freports_analysis/locales/
+    pybabel compile -d src/freports_analysis/locales/
+
+In the case of the documentation are (from inside the ``docs/`` directory):
+
+.. code-block:: console
+
+    make gettext
+    sphinx-intl update
+    sphinx-intl build

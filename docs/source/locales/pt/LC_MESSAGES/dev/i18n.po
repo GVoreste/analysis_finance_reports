@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 13:08+0200\n"
+"POT-Creation-Date: 2025-07-14 11:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -70,6 +70,40 @@ msgid ""
 "contain all the text strings present in the source code. You can "
 "translate the strings using a text editor or using a specific program to "
 "translate ``.po`` files like for example `Poedit <https://poedit.net/>`_."
+msgstr ""
+
+#: ../../source/dev/i18n.rst:41
+msgid "Building the translations"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:43
+msgid ""
+"For updating the translations the deploy mechanism is similar in the case"
+" of source code and documentation and is caraterized by three steps:"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:46
+msgid ""
+"generate the ``.pot`` file(s) using the source code or the modified "
+"documentation"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:47
+msgid "updating the ``.po`` files using the new ``.pot`` file(s)"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:48
+msgid "compile ``.po`` files in ``.mo`` files"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:50
+msgid "In the case of the source code the command to launch are:"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:58
+msgid ""
+"In the case of the documentation are (from inside the ``docs/`` "
+"directory):"
 msgstr ""
 
 #~ msgid ""
