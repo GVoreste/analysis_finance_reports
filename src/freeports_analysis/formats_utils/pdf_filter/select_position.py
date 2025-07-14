@@ -48,21 +48,31 @@ def select_outside(
     return [line for line in lines if line.c[coord] not in bounds]
 
 
-def _area_position_algorithm(areas, indexes, ruler_geometry, curr_idx, mode_flags):
+def _area_position_algorithm(
+    areas, indexes, ruler_geometry, curr_idx, mode_flags, font_tol_ratio=0.5
+):
     return_columns, use_ruler_pos = mode_flags
     ruler_pos, ruler_bounds = ruler_geometry
-    # Classify areas
+
     for i, area in enumerate(areas):
         if indexes[i] is not None:
             continue
 
         if use_ruler_pos:
-            test_bounds = area.x_bounds if return_columns else area.y_bounds
-            if ruler_pos in test_bounds:
+            if return_columns:
+                test_bounds = area.x_bounds
+                tolerance = area.width * font_tol_ratio
+            else:
+                test_bounds = area.y_bounds
+                tolerance = area.height * font_tol_ratio
+
+            min_bound, max_bound = test_bounds
+            if (min_bound - tolerance) <= ruler_pos <= (max_bound + tolerance):
                 indexes[i] = curr_idx
         else:
             test_pos = area.c[0] if return_columns else area.c[1]
-            if test_pos in ruler_bounds:
+            min_bound, max_bound = ruler_bounds
+            if (min_bound - tolerance) <= test_pos <= (max_bound + tolerance):
                 indexes[i] = curr_idx
 
     return indexes
