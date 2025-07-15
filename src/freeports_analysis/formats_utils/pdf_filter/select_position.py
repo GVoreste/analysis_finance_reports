@@ -157,7 +157,7 @@ def get_table_positions(
         # Classify areas
 
         ruler_geometry = (ruler_pos, ruler_bounds)
-        for i, table_pos in range(len(indexes)):
+        for i, table_pos in enumerate(indexes):
             if table_pos is not None:
                 continue
             test_bounds = areas[i].x_bounds if return_col else areas[i].y_bounds
