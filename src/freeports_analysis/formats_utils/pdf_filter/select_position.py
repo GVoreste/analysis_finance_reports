@@ -49,10 +49,17 @@ def select_outside(
 
 
 def _area_position_algorithm(
-    areas, indexes, ruler_geometry, curr_idx, mode_flags, font_tol_ratio=0.5
+    areas,
+    indexes,
+    ruler_geometry,
+    curr_idx,
+    mode_flags,
+    font_sizes,
+    font_tol_ratio=0.5,
 ):
-    return_columns, use_ruler_pos, area_intersection = mode_flags
+    return_columns, use_ruler_pos, use_font_sizes = mode_flags
     ruler_pos, ruler_bounds = ruler_geometry
+    font_tolerances = font_tol_ratio * font_sizes
 
     for i, area in enumerate(areas):
         if indexes[i] is not None:
@@ -61,31 +68,88 @@ def _area_position_algorithm(
         if return_columns:
             test_pos = area.c[0]
             test_bounds = area.x_bounds
-            tolerance = area.width * font_tol_ratio
+            default_tolerance = area.width * font_tol_ratio
         else:
             test_pos = area.c[1]
             test_bounds = area.y_bounds
-            tolerance = area.height * font_tol_ratio
+            default_tolerance = area.height * font_tol_ratio
 
-        if area_intersection:
-            min_bound_t, max_bound_t = test_bounds
-            min_bound_r, max_bound_r = ruler_bounds
-            if (min_bound_r - tolerance) <= max_bound_t <= (
-                max_bound_r + tolerance
-            ) or (min_bound_r - tolerance) <= min_bound_t <= (max_bound_r + tolerance):
-                indexes[i] = curr_idx
-                continue
+        tolerance = font_tolerances[i] if use_font_sizes else default_tolerance
 
         if use_ruler_pos:
+            match_pos = ruler_pos
             min_bound, max_bound = test_bounds
-            if (min_bound - tolerance) <= ruler_pos <= (max_bound + tolerance):
-                indexes[i] = curr_idx
         else:
+            match_pos = test_pos
             min_bound, max_bound = ruler_bounds
-            if (min_bound - tolerance) <= test_pos <= (max_bound + tolerance):
-                indexes[i] = curr_idx
+
+        if (min_bound - tolerance) <= match_pos <= (max_bound + tolerance):
+            indexes[i] = curr_idx
 
     return indexes
+
+
+def _area_intersection_algorithm(
+    areas, indexes, ruler_geometry, curr_idx, mode_flags, font_sizes, font_tol_ratio=0.5
+):
+    return_columns, _, use_font_sizes = mode_flags
+    _, ruler_bounds = ruler_geometry
+    font_tolerances = font_tol_ratio * font_sizes
+
+    for i, area in enumerate(areas):
+        if indexes[i] is not None:
+            continue
+
+        if return_columns:
+            test_bounds = area.x_bounds
+            default_tolerance = area.width * font_tol_ratio
+        else:
+            test_bounds = area.y_bounds
+            default_tolerance = area.height * font_tol_ratio
+
+        tolerance = font_tolerances[i] if use_font_sizes else default_tolerance
+
+        min_bound_t, max_bound_t = test_bounds
+        min_bound_r, max_bound_r = ruler_bounds
+
+        if (min_bound_r - tolerance) <= max_bound_t <= (max_bound_r + tolerance) or (
+            min_bound_r - tolerance
+        ) <= min_bound_t <= (max_bound_r + tolerance):
+            indexes[i] = curr_idx
+
+    return indexes
+
+
+def _algorithm(
+    areas,
+    indexes,
+    ruler_geometry,
+    curr_idx,
+    mode_flags,
+    logic,
+    font_sizes,
+    font_tol_ratio=0.5,
+):
+    if logic == 1:
+        return _area_intersection_algorithm(
+            areas,
+            indexes,
+            ruler_geometry,
+            curr_idx,
+            mode_flags,
+            font_sizes,
+            font_tol_ratio=0.5,
+        )
+    elif logic == 2:
+        return _area_position_algorithm(
+            areas,
+            indexes,
+            ruler_geometry,
+            curr_idx,
+            mode_flags,
+            font_sizes,
+            font_tol_ratio=0.5,
+        )
 
 
 def get_table_positions(
@@ -93,7 +157,8 @@ def get_table_positions(
     return_columns: bool = True,
     small_rule: bool = True,
     use_ruler_pos: bool = True,
-    area_intersection: bool = False,
+    use_font_sizes: bool = True,
+    logic: int = 1,
 ) -> List[int]:
     """Compute either row or column indexes for areas in a tabular layout.
 
@@ -116,6 +181,7 @@ def get_table_positions(
     # Initialize indexes
     indexes = [None for _ in lines]
     areas = [line.geometry for line in lines]
+    font_sizes = [line.text_size for line in lines]
     rulers = []
 
     # Choose min/max function based on small_rule
@@ -140,12 +206,19 @@ def get_table_positions(
         rulers.append((curr_idx, ruler_pos))
 
         # Classify areas
-        indexes = _area_position_algorithm(
+
+        modeflags = (return_columns, use_ruler_pos, use_font_sizes)
+        ruler_geometry = (ruler_pos, ruler_bounds)
+
+        indexes = _algorithm(
             areas,
             indexes,
-            (ruler_pos, ruler_bounds),
+            ruler_geometry,
             curr_idx,
-            (return_columns, use_ruler_pos, area_intersection),
+            modeflags,
+            logic,
+            font_sizes,
+            font_tol_ratio=0.5,
         )
 
     # Sort rulers and create mapping
