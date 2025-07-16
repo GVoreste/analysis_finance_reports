@@ -163,21 +163,21 @@ def get_table_positions(
             test_bounds = areas[i].x_bounds if return_col else areas[i].y_bounds
             test_pos = areas[i].c[0] if return_col else areas[i].c[1]
             test_geometry = (test_pos, test_bounds)
-            abs_tolerance = 0
+            effective_tolerance = 0
             if tolerance_mu == TablePosMeasureUnit.PT:
-                abs_tolerance = tolerance
+                effective_tolerance = tolerance
             elif tolerance_mu == TablePosMeasureUnit.PERC:
-                abs_tolerance = (
+                effective_tolerance = (
                     tolerance * areas[i].width if return_col else areas[i].height
                 )
             elif tolerance_mu == TablePosMeasureUnit.EM:
-                abs_tolerance = tolerance * font_sizes[i]
+                effective_tolerance = tolerance * font_sizes[i]
 
             if _algorithm_table_pos(
                 ruler_geometry=ruler_geometry,
                 test_geometry=test_geometry,
                 algorithm_flags=algorithm_flags,
-                abs_tolerance=abs_tolerance,
+                abs_tolerance=effective_tolerance,
             ):
                 indexes[i] = curr_idx
 
