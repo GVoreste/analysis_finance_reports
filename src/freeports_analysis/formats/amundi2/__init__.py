@@ -29,7 +29,7 @@ TextBlockType: TypeAlias = EquityBondTextBlockType
     body_font="TrebuchetMS",
     y_range=(None, None),
     algorithm_flags=[False, False, True, False],
-    tolerance=5.0,
+    tolerance=0,
 )
 def pdf_filter(xml_root) -> dict:
     pass

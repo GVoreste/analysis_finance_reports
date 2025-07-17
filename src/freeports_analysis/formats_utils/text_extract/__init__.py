@@ -195,7 +195,7 @@ def standard_text_extraction(
                 logger.error(str(e))
                 return None
 
-            content = pdf_blocks[i].content
+            content = pdf_blocks[i].content.replace("\n", "")
             instrument = EquityBondTextBlockType.EQUITY_TARGET
             for reg in perc_regexes:
                 interest_rate_match = re.match(reg, content, re.DOTALL)
