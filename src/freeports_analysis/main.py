@@ -28,6 +28,9 @@ from freeports_analysis.consts import (
     _get_module,
     Equity,
     Currency,
+    FinancialData,
+    PromisesResolutionContext,
+    flatten_promise_map,
     STANDARD_LOG_FORMATTER,
     STANDARD_LOG_FORMATTER_MP,
 )
@@ -67,22 +70,26 @@ def pipeline_batch(
     n_pages: int,
     targets: List[str],
     module_name: str,
-) -> pd.DataFrame:
-    """Apply the pipeline of actions in order to get data in `csv`
+) -> List[FinancialData | PromisesResolutionContext]:
+    """Apply the pipeline of actions in order to get financial data from PDF pages
 
     Parameters
     ----------
-    pdf_file : pypdf.Document
-        `pdf` document to process in the format used in the python package `pymupdf`
+    batch_pages : List[str]
+        List of XML strings representing PDF pages to process
+    i_page_batch : int
+        Starting page number of this batch (1-based index)
+    n_pages : int
+        Total number of pages in the document
     targets : List[str]
-        the list of relevant companies in the report from which data is relevant
-    funcs : dict
-        the dictionary containing the functions to use in order to parse the pdf
+        List of relevant company names to extract from the report
+    module_name : str
+        Name of the module containing format-specific parsing functions
 
     Returns
     -------
-    pd.DataFrame
-        pandas dataframe with extracted data
+    List[FinancialData | PromisesResolutionContext]
+        List of extracted financial data objects or promise resolution contexts
     """
     end_page_batch = i_page_batch + len(batch_pages)
     logger.info(
@@ -105,26 +112,8 @@ def pipeline_batch(
         end_page_batch,
     )
     filtered_text = text_extract_exec(pdf_blocks, targets, module.text_extract)
-    financtial_data = deserialize_exec(filtered_text, targets, module.deserialize)
-    error_msg = _("ERROR, SOMETHING WENT WRONG!!!!")
-    df = pd.DataFrame(
-        [
-            fd.to_dict()
-            if fd is not None
-            else Equity(
-                page=9999,
-                targets=[error_msg],
-                company=error_msg,
-                subfund=None,
-                nominal_quantity=None,
-                market_value=None,
-                perc_net_assets=0.0,
-                currency=Currency.EUR,
-            ).to_dict()
-            for fd in financtial_data
-        ]
-    )
-    return df
+    results = deserialize_exec(filtered_text, targets, module.deserialize)
+    return results
 
 
 def batch_job_confs(config: dict) -> List[dict]:
@@ -295,8 +284,38 @@ def _main_job(config, n_workers):
         stderr_log.setFormatter(STANDARD_LOG_FORMATTER)
     else:
         results_batches = [pipeline_batch(*batches[0])]
-    result = pd.concat(results_batches)
-    return result, format_pdf, prefix_out
+    promises_resolution_map = {}
+    results = []
+    for batch in results_batches:
+        for result in batch:
+            if isinstance(result, PromisesResolutionContext):
+                promises_resolution_map |= result
+            else:
+                results.append(result)
+
+    flat_promises_map = flatten_promise_map(promises_resolution_map)
+    dict_results = []
+    error_msg = _("ERROR, SOMETHING WENT WRONG!!!!")
+    for result in results:
+        if result is not None:
+            result.fulfill_promises(flat_promises_map, targets)
+            dict_results.append(result.to_dict())
+        else:
+            dict_results.append(
+                Equity(
+                    page=9999,
+                    targets=[error_msg],
+                    company=error_msg,
+                    subfund=None,
+                    nominal_quantity=None,
+                    market_value=None,
+                    perc_net_assets=0.0,
+                    currency=Currency.EUR,
+                ).to_dict()
+            )
+
+    df = pd.DataFrame(dict_results)
+    return df, format_pdf, prefix_out
 
 
 def main(config):
