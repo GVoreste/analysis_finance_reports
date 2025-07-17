@@ -84,7 +84,6 @@ def _area_intersection_algorithm(
     ruler_bounds = ruler_geometry[1]
     min_bound_t, max_bound_t = test_bounds
     min_bound_r, max_bound_r = ruler_bounds
-
     return (
         (min_bound_r - abs_tolerance) <= max_bound_t <= (max_bound_r + abs_tolerance)
     ) or ((min_bound_r - abs_tolerance) <= min_bound_t <= (max_bound_r + abs_tolerance))
