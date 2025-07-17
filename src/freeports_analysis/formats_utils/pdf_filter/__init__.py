@@ -10,7 +10,7 @@ from lxml import etree
 from freeports_analysis.formats import PdfBlock, ExpectedPdfBlockNotFound, TextBlock
 from freeports_analysis.i18n import _
 from .xml.font import get_lines_with_font, is_present_txt_font, get_lines_with_txt_font
-from .select_position import select_inside, get_table_positions
+from .select_position import select_inside, get_table_positions, TablePosAlgorithm
 from .pdf_parts.position import YRange
 from .pdf_parts.font import Font
 from .pdf_parts import ExtractedPdfLine
@@ -116,6 +116,8 @@ def standard_pdf_filtering(
         Tuple[Optional[float | Tuple[str, str]], Optional[float | Tuple[str, str]]]
     ] = None,
     deselection_list: Optional[Tuple[str, Font]] = None,
+    algorithm_flags: List = [False, False, False, False],
+    tolerance: float = 0.0,
 ) -> Callable[[PdfFilterFunc], PdfFilterFunc]:
     """Decorator factory for creating PDF filters with standardized processing.
 
@@ -185,7 +187,22 @@ def standard_pdf_filtering(
             table_rows = select_inside(
                 lines, YRange(y_range_numeric_top, y_range_numeric_btm)
             )
-            table_positions = get_table_positions(table_rows)
+
+            all_flags = [
+                TablePosAlgorithm.ROW,
+                TablePosAlgorithm.BIG_RULE,
+                TablePosAlgorithm.RULER_AREA,
+                TablePosAlgorithm.TEST_POS,
+            ]
+
+            algo = TablePosAlgorithm(0)  # valore vuoto (nessun flag attivo)
+            for flag, enabled in zip(all_flags, algorithm_flags):
+                if enabled:
+                    algo |= flag
+
+            table_positions = get_table_positions(
+                table_rows, algorithm_flags=algo, tolerance=tolerance
+            )
             return [
                 PdfBlock(
                     OnePdfBlockType.RELEVANT_BLOCK,
