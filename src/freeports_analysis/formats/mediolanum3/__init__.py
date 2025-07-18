@@ -29,6 +29,8 @@ def pdf_filter(xml_root) -> dict:
     perc_net_assets_pos=+5,
     currency=+2,
     acquisition_cost_pos=+3,
+    match_func=lambda x, y: target_fuzzy_match(x, y, 0.8)
+    and target_prefix_match(x, y, 0.3),
 )
 def text_extract(pdf_blocks, targets):
     pass
