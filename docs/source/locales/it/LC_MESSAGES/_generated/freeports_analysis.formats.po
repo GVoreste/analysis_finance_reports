@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -233,11 +233,15 @@ msgid "Targets companies to validate the object creation"
 msgstr ""
 
 #: freeports_analysis.formats.deserialize_exec:8 of
-msgid "Function that converts a TextBlock into a finantial data class."
+msgid ""
+"Function that converts a TextBlock into a finantial data class or into a "
+"bit of context for resolving deferred values"
 msgstr ""
 
-#: freeports_analysis.formats.deserialize_exec:11 of
-msgid "FinantialData classes containing the deserialized data."
+#: freeports_analysis.formats.deserialize_exec:12 of
+msgid ""
+"FinantialData classes containing the deserialized data or context for "
+"resolving deferred values"
 msgstr ""
 
 #: freeports_analysis.formats.pdf_filter_exec:3 of
@@ -371,4 +375,10 @@ msgstr ""
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "MEDIOLANUM format submodule"
 msgstr ""
+
+#~ msgid "Function that converts a TextBlock into a finantial data class."
+#~ msgstr ""
+
+#~ msgid "FinantialData classes containing the deserialized data."
+#~ msgstr ""
 

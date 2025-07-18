@@ -27,6 +27,6 @@ def test_deserialize(page):
     generic_test_deserialize(fmt, page)
 
 
-# @pytest.mark.integration_tests
-# def test_pipeline():
-#     generic_test_pipeline(fmt)
+@pytest.mark.integration_tests
+def test_pipeline():
+    generic_test_pipeline(fmt)

@@ -1,0 +1,38 @@
+
+
+.wy-side-nav-search {
+    background-color: #8f6dd6;
+}
+
+.wy-menu-vertical p.caption {
+    color: #ffab4a;
+}
+
+a {
+    color: #a41133;
+}
+
+a:active, a:hover, a:visited {
+    color: #d33559;
+}
+
+.wy-menu-vertical a {
+    color: #d9d9d9;
+}
+
+.rst-content code.literal, .rst-content tt.literal {
+    color: #d98d37;
+}
+
+/* .highlight {
+  background: #ffab4a;
+} */
+.highlight .go{
+    color: #795cb7;
+}
+
+.wy-side-nav-search .wy-dropdown > a, .wy-side-nav-search > a {
+    color: #fcfcfc;
+}
+
+

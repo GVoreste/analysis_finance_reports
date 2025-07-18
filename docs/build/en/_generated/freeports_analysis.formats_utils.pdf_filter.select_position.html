@@ -9,6 +9,7 @@
   <title>freeports_analysis.formats_utils.pdf_filter.select_position &mdash; freeports_analysis 0.0.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=b70daf84" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -33,6 +34,7 @@
           
           <a href="../index.html" class="icon icon-home">
             freeports_analysis
+              <img src="https://www.freeports.org/assets/logo/square.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -71,6 +73,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Developer documentation</a></li>
 </ul>
 
         </div>
@@ -107,7 +110,7 @@
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions" title="freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_table_positions</span></code></a>(lines[, return_columns, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions" title="freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_table_positions</span></code></a>(lines[, ...])</p></td>
 <td><p>Compute either row or column indexes for areas in a tabular layout.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.select_position.select_inside" title="freeports_analysis.formats_utils.pdf_filter.select_position.select_inside"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_inside</span></code></a>(lines, bounds)</p></td>
@@ -118,9 +121,30 @@
 </tr>
 </tbody>
 </table>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm" title="freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TablePosAlgorithm</span></code></a>(*values)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.select_position.TablePosMeasureUnit" title="freeports_analysis.formats_utils.pdf_filter.select_position.TablePosMeasureUnit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TablePosMeasureUnit</span></code></a>(*values)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.select_position.</span></span><span class="sig-name descname"><span class="pre">TablePosAlgorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.select_position.TablePosMeasureUnit">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.select_position.</span></span><span class="sig-name descname"><span class="pre">TablePosMeasureUnit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.select_position.TablePosMeasureUnit" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions">
-<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.select_position.</span></span><span class="sig-name descname"><span class="pre">get_table_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><span class="pre">ExtractedPdfLine</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_rule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ruler_pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.select_position.</span></span><span class="sig-name descname"><span class="pre">get_table_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">lines:</span> <span class="pre">~typing.List[~freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine],</span> <span class="pre">algorithm_flags:</span> <span class="pre">~freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm</span> <span class="pre">=</span> <span class="pre">&lt;TablePosAlgorithm:</span> <span class="pre">0&gt;,</span> <span class="pre">tolerance:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0,</span> <span class="pre">tolerance_mu:</span> <span class="pre">~freeports_analysis.formats_utils.pdf_filter.select_position.TablePosMeasureUnit</span> <span class="pre">=</span> <span class="pre">TablePosMeasureUnit.EM</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions" title="Link to this definition"></a></dt>
 <dd><p>Compute either row or column indexes for areas in a tabular layout.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

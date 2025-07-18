@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -34,46 +34,63 @@ msgstr ""
 msgid "Functions"
 msgstr ""
 
-#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:1:<autosummary>:1
-#: of
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
 msgid ""
 ":py:obj:`get_table_positions "
 "<freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions>`\\"
-" \\(lines\\[\\, return\\_columns\\, ...\\]\\)"
+" \\(lines\\[\\, ...\\]\\)"
 msgstr ""
 
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
 #: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:1
-#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:1:<autosummary>:1
 #: of
 msgid "Compute either row or column indexes for areas in a tabular layout."
 msgstr ""
 
-#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:1:<autosummary>:1
-#: of
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
 msgid ""
 ":py:obj:`select_inside "
 "<freeports_analysis.formats_utils.pdf_filter.select_position.select_inside>`\\"
 " \\(lines\\, bounds\\)"
 msgstr ""
 
-#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:1:<autosummary>:1
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
 #: freeports_analysis.formats_utils.pdf_filter.select_position.select_inside:1
 #: of
 msgid "Select only lines inside a range"
 msgstr ""
 
-#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:1:<autosummary>:1
-#: of
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
 msgid ""
 ":py:obj:`select_outside "
 "<freeports_analysis.formats_utils.pdf_filter.select_position.select_outside>`\\"
 " \\(lines\\, bounds\\)"
 msgstr ""
 
-#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:1:<autosummary>:1
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
 #: freeports_analysis.formats_utils.pdf_filter.select_position.select_outside:1
 #: of
 msgid "Select only lines outside a range"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:17
+msgid "Classes"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`TablePosAlgorithm "
+"<freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm>`\\"
+" \\(\\*values\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`TablePosMeasureUnit "
+"<freeports_analysis.formats_utils.pdf_filter.select_position.TablePosMeasureUnit>`\\"
+" \\(\\*values\\)"
 msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst
@@ -134,4 +151,10 @@ msgstr ""
 #: of
 msgid "lines outside `bounds`"
 msgstr ""
+
+#~ msgid ""
+#~ ":py:obj:`get_table_positions "
+#~ "<freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions>`\\"
+#~ " \\(lines\\[\\, return\\_columns\\, ...\\]\\)"
+#~ msgstr ""
 
