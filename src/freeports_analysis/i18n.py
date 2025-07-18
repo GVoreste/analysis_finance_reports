@@ -1,20 +1,21 @@
 import locale
 import tempfile
 from pathlib import Path
-from importlib_resources import files
 import gettext
+from importlib_resources import files
 
-loc = locale.getlocale()[0]
-if loc is None:
-    loc = "en_US.UFT-8"
-lang = loc.split("_")[0]
-translation = None
+
+LOC = locale.getlocale()[0]
+if LOC is None:
+    LOC = "en_US.UFT-8"
+lang = LOC.split("_")[0]
+TRANSLATION = None
 with tempfile.TemporaryDirectory() as tmp_dir:
     for f in (files("freeports_analysis.locales") / lang / "LC_MESSAGES").iterdir():
         translation_dir = Path(tmp_dir) / lang / "LC_MESSAGES"
         translation_dir.mkdir(parents=True, exist_ok=True)
         tmp_file = translation_dir / f.name
         tmp_file.write_bytes(f.read_bytes())
-    translation = gettext.translation("messages", tmp_dir, [lang])
-    translation.install()
-_ = translation.gettext
+    TRANSLATION = gettext.translation("messages", tmp_dir, [lang])
+    TRANSLATION.install()
+_ = TRANSLATION.gettext
