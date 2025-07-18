@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -29,15 +29,18 @@ msgid ""
 "This module is the one that contains the function called in order to "
 "decode the information from the pdf and to save the `csv` file. This file"
 " is also the source code to be launched (providing the options with a "
-"configuration file or with `env variables`) to mimic the behaviour of the"
-" command from commandline (to use the package as a script)."
+"configuration file or with `env variables`) to mimic the behaviour of "
+"from the pdf and to save the `csv` file. This file is also the source "
+"code to be launched (providing the options with a configuration file or "
+"with `env variables`) to mimic the behaviour of the command from "
+"commandline (to use the package as a script)."
 msgstr ""
 
-#: freeports_analysis.main:7 of
+#: freeports_analysis.main:9 of
 msgid "Example"
 msgstr ""
 
-#: freeports_analysis.main:8 of
+#: freeports_analysis.main:10 of
 msgid "```python main.py```"
 msgstr ""
 
@@ -86,7 +89,9 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 #: freeports_analysis.main.pipeline_batch:1 of
-msgid "Apply the pipeline of actions in order to get data in `csv`"
+msgid ""
+"Apply the pipeline of actions in order to get financial data from PDF "
+"pages"
 msgstr ""
 
 #: ../../source/_generated/freeports_analysis.main.rst:18
@@ -158,20 +163,64 @@ msgid ""
 msgstr ""
 
 #: freeports_analysis.main.pipeline_batch:3 of
-msgid ""
-"`pdf` document to process in the format used in the python package "
-"`pymupdf`"
+msgid "List of XML strings representing PDF pages to process"
 msgstr ""
 
 #: freeports_analysis.main.pipeline_batch:5 of
-msgid "the list of relevant companies in the report from which data is relevant"
+msgid "Starting page number of this batch (1-based index)"
 msgstr ""
 
 #: freeports_analysis.main.pipeline_batch:7 of
-msgid "the dictionary containing the functions to use in order to parse the pdf"
+msgid "Total number of pages in the document"
 msgstr ""
 
-#: freeports_analysis.main.pipeline_batch:10 of
-msgid "pandas dataframe with extracted data"
+#: freeports_analysis.main.pipeline_batch:9 of
+msgid "List of relevant company names to extract from the report"
 msgstr ""
+
+#: freeports_analysis.main.pipeline_batch:11 of
+msgid "Name of the module containing format-specific parsing functions"
+msgstr ""
+
+#: freeports_analysis.main.pipeline_batch:14 of
+msgid "List of extracted financial data objects or promise resolution contexts"
+msgstr ""
+
+#~ msgid ""
+#~ "This module is the one that "
+#~ "contains the function called in order"
+#~ " to decode the information from the"
+#~ " pdf and to save the `csv` "
+#~ "file. This file is also the source"
+#~ " code to be launched (providing the"
+#~ " options with a configuration file or"
+#~ " with `env variables`) to mimic the"
+#~ " behaviour of the command from "
+#~ "commandline (to use the package as "
+#~ "a script)."
+#~ msgstr ""
+
+#~ msgid "Apply the pipeline of actions in order to get data in `csv`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`pdf` document to process in the "
+#~ "format used in the python package "
+#~ "`pymupdf`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the list of relevant companies in "
+#~ "the report from which data is "
+#~ "relevant"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the dictionary containing the functions "
+#~ "to use in order to parse the "
+#~ "pdf"
+#~ msgstr ""
+
+#~ msgid "pandas dataframe with extracted data"
+#~ msgstr ""
 

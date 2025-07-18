@@ -13,9 +13,14 @@ import yaml
 from importlib_resources import files
 from freeports_analysis import data
 from freeports_analysis.i18n import _
+from freeports_analysis.i18n import _
 
 
 logger = log.getLogger(__name__)
+STANDARD_LOG_FORMATTER = log.Formatter("%(levelname)s %(name)s: %(message)s")
+STANDARD_LOG_FORMATTER_MP = log.Formatter(
+    "%(levelname)s[%(process)d] %(name)s: %(message)s"
+)
 STANDARD_LOG_FORMATTER = log.Formatter("%(levelname)s %(name)s: %(message)s")
 STANDARD_LOG_FORMATTER_MP = log.Formatter(
     "%(levelname)s[%(process)d] %(name)s: %(message)s"
@@ -281,6 +286,7 @@ class FinancialData(ABC):
         If perc_net_assets is not between 0 and 1.
         If page is not a positive number.
         If company is not in targets.
+        If company is not in targets.
     """
 
     def __init__(
@@ -446,10 +452,28 @@ class FinancialData(ABC):
         if self.acquisition_cost is not None:
             translated_field = _("Acquisition cost")
             string += f"\t\t{translated_field}:\t{self.acquisition_cost:.2f}{self.currency.value}\n"
+            translated_field = _("Acquisition cost")
+            string += f"\t\t{translated_field}:\t{self.acquisition_cost:.2f}{self.currency.value}\n"
         return string
 
     def __str__(self) -> str:
         string = f"{self.__class__.__name__}:\n"
+        translated_field = _("Type match")
+        string += f"\t{translated_field}:\t{self.instrument.name}\t(pag. {self.page})\n"
+        translated_field = _("Subfund")
+        string += f"\t{translated_field}:\t{self.subfund}\n"
+        translated_field = _("Company")
+        string += f"\t{translated_field}:\t{self.company}\n"
+        translated_field = _("Currency")
+        string += f"\t{translated_field}:\t{self.currency.name}\n"
+        translated_field = _("Market value")
+        string += f"\t{translated_field}:\t{self.market_value:.2f}{self.currency.value}"
+        translated_field = _("of net assets")
+        string += f"\t({self.perc_net_assets:.3%} {translated_field})\n"
+        translated_field = _("Quantity")
+        string += f"\t{translated_field}:\t{self.nominal_quantity}\n"
+        translated_field = _("Additional infos")
+        string += f"\t{translated_field}: {{"
         translated_field = _("Type match")
         string += f"\t{translated_field}:\t{self.instrument.name}\t(pag. {self.page})\n"
         translated_field = _("Subfund")
@@ -621,11 +645,16 @@ class Bond(FinancialData):
         string = super()._str_additional_infos()
         translated_maturity = _("Maturity")
         translated_interest_rate = _("Interest rate")
+        translated_maturity = _("Maturity")
+        translated_interest_rate = _("Interest rate")
         if self.maturity is not None and self.interest_rate is not None:
+            string += f"\t\t{translated_maturity}:\t\t{self.maturity} +{self.interest_rate:.3%}\n"
             string += f"\t\t{translated_maturity}:\t\t{self.maturity} +{self.interest_rate:.3%}\n"
         elif self.maturity is not None:
             string += f"\t\t{translated_maturity}:\t\t{self.maturity}\n"
+            string += f"\t\t{translated_maturity}:\t\t{self.maturity}\n"
         elif self.interest_rate is not None:
+            string += f"\t\t{translated_interest_rate}:\t{self.interest_rate:.3%}\n"
             string += f"\t\t{translated_interest_rate}:\t{self.interest_rate:.3%}\n"
         return string
 
@@ -642,6 +671,9 @@ def _get_module(module_name: str):
             f"freeports_analysis.formats.{module_name.lower()}", package=__package__
         )
     except ImportError:
+        logger.error(
+            _("Module {} ({}) not found").format(module_name.lower(), module_name)
+        )
         logger.error(
             _("Module {} ({}) not found").format(module_name.lower(), module_name)
         )

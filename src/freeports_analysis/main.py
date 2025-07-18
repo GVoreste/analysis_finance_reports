@@ -1,6 +1,8 @@
 """This module is the one that contains the function called in order to decode the information
 from the pdf and to save the `csv` file. This file is also the source code to be launched
 (providing the options with a configuration file or with `env variables`) to mimic the behaviour of
+from the pdf and to save the `csv` file. This file is also the source code to be launched
+(providing the options with a configuration file or with `env variables`) to mimic the behaviour of
 the command from commandline (to use the package as a script).
 
 Example:

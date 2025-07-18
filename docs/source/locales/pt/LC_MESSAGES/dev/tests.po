@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 11:57+0200\n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../source/dev/tests.rst:3
-msgid "Tests"
+msgid "Creating tests"
 msgstr ""
 
 #: ../../source/dev/tests.rst:5
@@ -133,4 +133,7 @@ msgid ""
 "``single_page_tests`` array a key with the format name in capslock and "
 "the list of the pages to test."
 msgstr ""
+
+#~ msgid "Tests"
+#~ msgstr ""
 

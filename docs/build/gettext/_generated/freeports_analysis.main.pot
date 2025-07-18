@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,14 +21,14 @@ msgid "freeports\\_analysis.main"
 msgstr ""
 
 #: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main:1
-msgid "This module is the one that contains the function called in order to decode the information from the pdf and to save the `csv` file. This file is also the source code to be launched (providing the options with a configuration file or with `env variables`) to mimic the behaviour of the command from commandline (to use the package as a script)."
+msgid "This module is the one that contains the function called in order to decode the information from the pdf and to save the `csv` file. This file is also the source code to be launched (providing the options with a configuration file or with `env variables`) to mimic the behaviour of from the pdf and to save the `csv` file. This file is also the source code to be launched (providing the options with a configuration file or with `env variables`) to mimic the behaviour of the command from commandline (to use the package as a script)."
 msgstr ""
 
-#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main:7
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main:9
 msgid "Example"
 msgstr ""
 
-#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main:8
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main:10
 msgid "```python main.py```"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 #: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:1
-msgid "Apply the pipeline of actions in order to get data in `csv`"
+msgid "Apply the pipeline of actions in order to get financial data from PDF pages"
 msgstr ""
 
 #: ../../source/_generated/freeports_analysis.main.rst:18
@@ -130,17 +130,25 @@ msgid "if no explicit format is provided and an url is not provided     or not a
 msgstr ""
 
 #: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:3
-msgid "`pdf` document to process in the format used in the python package `pymupdf`"
+msgid "List of XML strings representing PDF pages to process"
 msgstr ""
 
 #: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:5
-msgid "the list of relevant companies in the report from which data is relevant"
+msgid "Starting page number of this batch (1-based index)"
 msgstr ""
 
 #: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:7
-msgid "the dictionary containing the functions to use in order to parse the pdf"
+msgid "Total number of pages in the document"
 msgstr ""
 
-#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:10
-msgid "pandas dataframe with extracted data"
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:9
+msgid "List of relevant company names to extract from the report"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:11
+msgid "Name of the module containing format-specific parsing functions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:14
+msgid "List of extracted financial data objects or promise resolution contexts"
 msgstr ""

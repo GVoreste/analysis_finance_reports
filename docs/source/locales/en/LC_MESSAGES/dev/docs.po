@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 11:57+0200\n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -25,6 +25,37 @@ msgid "Documentation development"
 msgstr ""
 
 #: ../../source/dev/docs.rst:5
-msgid "The documentation is"
+msgid ""
+"The documentation is generated, built and configured using a tool called "
+"`Sphinx <https://www.sphinx-doc.org/en/master/>`_ and is located in the "
+"``docs/`` directory of the repository. The actual files where this text "
+"is written are written using `reStructuredText <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/index.html>`_ and are placed in "
+"the ``docs/source`` directory. A part of the documentation is "
+"autogenerate by the `autodoc <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/autodoc.html>`_ and `autosummary "
+"<https://www.sphinx-"
+"doc.org/en/master/usage/extensions/autosummary.html>`_ sphinx extensions "
+"directly from the source code (this is why is important to add docstrings"
+" to the source code and correctly type hint the different functions). "
+"After each modify of the source you can apply the change compiling the "
+"documentation in one of the supported languages with:"
 msgstr ""
+
+#: ../../source/dev/docs.rst:17
+#, python-brace-format
+msgid ""
+"where ``{LANG CODE}`` has to be substituted with the `ISO 639 "
+"<https://en.wikipedia.org/wiki/ISO_639>`_ code of the language."
+msgstr ""
+
+#: ../../source/dev/docs.rst:19
+#, python-brace-format
+msgid ""
+"To see the result you can open with your favourite browser the file "
+"``docs/build/{LANG CODE}/index.html``."
+msgstr ""
+
+#~ msgid "The documentation is"
+#~ msgstr ""
 
