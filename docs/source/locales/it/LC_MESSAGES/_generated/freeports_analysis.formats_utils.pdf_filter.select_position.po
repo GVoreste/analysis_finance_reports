@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:2
+msgid "freeports\\_analysis.formats\\_utils.pdf\\_filter.select\\_position"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position:1 of
+msgid ""
+"Utilities for selecting or deselecting lines or getting infos based of "
+"geometrical information"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
+msgid ""
+":py:obj:`get_table_positions "
+"<freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions>`\\"
+" \\(lines\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
+#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:1
+#: of
+msgid "Compute either row or column indexes for areas in a tabular layout."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
+msgid ""
+":py:obj:`select_inside "
+"<freeports_analysis.formats_utils.pdf_filter.select_position.select_inside>`\\"
+" \\(lines\\, bounds\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
+#: freeports_analysis.formats_utils.pdf_filter.select_position.select_inside:1
+#: of
+msgid "Select only lines inside a range"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
+msgid ""
+":py:obj:`select_outside "
+"<freeports_analysis.formats_utils.pdf_filter.select_position.select_outside>`\\"
+" \\(lines\\, bounds\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:15:<autosummary>:1
+#: freeports_analysis.formats_utils.pdf_filter.select_position.select_outside:1
+#: of
+msgid "Select only lines outside a range"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst:17
+msgid "Classes"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`TablePosAlgorithm "
+"<freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm>`\\"
+" \\(\\*values\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.TablePosAlgorithm:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`TablePosMeasureUnit "
+"<freeports_analysis.formats_utils.pdf_filter.select_position.TablePosMeasureUnit>`\\"
+" \\(\\*values\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst
+msgid "Parameters"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:3
+#: of
+msgid "Whether to return column indexes (True) or row indexes (False)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:5
+#: of
+msgid "List of areas representing table cells"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:7
+#: of
+msgid "Whether to use smallest (True) or largest (False) dimension for rulers"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:9
+#: of
+msgid "Whether to use ruler position (True) or bounds (False) for classification"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst
+msgid "Returns"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions:12
+#: of
+msgid "A list of indexes corresponding to each area"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst
+msgid "Return type"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.select_inside:3
+#: freeports_analysis.formats_utils.pdf_filter.select_position.select_outside:3
+#: of
+msgid "lines to filter"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.select_inside:5
+#: freeports_analysis.formats_utils.pdf_filter.select_position.select_outside:5
+#: of
+msgid "area to filter from"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.select_inside:8
+#: of
+msgid "lines inside `bounds`"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_position.select_outside:8
+#: of
+msgid "lines outside `bounds`"
+msgstr ""
+
+#~ msgid ""
+#~ ":py:obj:`get_table_positions "
+#~ "<freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions>`\\"
+#~ " \\(lines\\[\\, return\\_columns\\, ...\\]\\)"
+#~ msgstr ""
+

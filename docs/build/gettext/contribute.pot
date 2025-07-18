@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 01:59+0200\n"
+"POT-Creation-Date: 2025-07-12 13:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,57 +77,57 @@ msgid "Before making any contribution activate your developing virtual environme
 msgstr ""
 
 #: ../../source/contribute.rst:47
-msgid "in other to *deactivate* it, just launch the ``deactivate`` command."
+msgid "in other to *deactivate* it, just launch the ``deactivate`` command. If you want to know more about how the project is structured, you can continue reading the :doc:`developer documentation <dev/index>`"
 msgstr ""
 
-#: ../../source/contribute.rst:51
+#: ../../source/contribute.rst:52
 msgid "Guidelines"
 msgstr ""
 
-#: ../../source/contribute.rst:53
+#: ../../source/contribute.rst:54
 msgid "comment your code"
 msgstr ""
 
-#: ../../source/contribute.rst:54
+#: ../../source/contribute.rst:55
 msgid "add the `docstings <https://peps.python.org/pep-0257/>`_ in order to autogenerate the documentation"
 msgstr ""
 
-#: ../../source/contribute.rst:55
+#: ../../source/contribute.rst:56
 msgid "`type hint <https://peps.python.org/pep-0484/>`_ your code"
 msgstr ""
 
-#: ../../source/contribute.rst:56
+#: ../../source/contribute.rst:57
 msgid "write `tests <https://docs.pytest.org/en/stable/>`_ for your code"
 msgstr ""
 
-#: ../../source/contribute.rst:57
+#: ../../source/contribute.rst:58
 msgid "add meaningful commit messages (add the issue id if it refears to one)"
 msgstr ""
 
-#: ../../source/contribute.rst:58
+#: ../../source/contribute.rst:59
 msgid "`lint <https://www.pylint.org/>`_ your code"
 msgstr ""
 
-#: ../../source/contribute.rst:62
+#: ../../source/contribute.rst:63
 msgid "Contribution to the website"
 msgstr ""
 
-#: ../../source/contribute.rst:64
+#: ../../source/contribute.rst:65
 msgid "It is possible to contribute to the `official website <https://www.freeports.org>`_ of the project from the specific `GitHub repository <https://github.com/GVoreste/analysis_finance_reports_website>`_."
 msgstr ""
 
-#: ../../source/contribute.rst:70
+#: ../../source/contribute.rst:71
 msgid "Resources"
 msgstr ""
 
-#: ../../source/contribute.rst:71
+#: ../../source/contribute.rst:72
 msgid "`How to Contribute to Open Source <https://opensource.guide/how-to-contribute/>`_"
 msgstr ""
 
-#: ../../source/contribute.rst:72
+#: ../../source/contribute.rst:73
 msgid "`Using Pull Requests <https://help.github.com/articles/about-pull-requests/>`_"
 msgstr ""
 
-#: ../../source/contribute.rst:73
+#: ../../source/contribute.rst:74
 msgid "`GitHub Help <https://help.github.com>`_"
 msgstr ""

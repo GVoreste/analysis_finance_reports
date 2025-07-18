@@ -21,6 +21,7 @@ release = "0.0.3"
 
 locale_dirs = ["locales/"]
 language = "en"
+gettext_compact = False
 
 extensions = [
     "sphinx_rtd_theme",

@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.text_extract.match.rst:2
+msgid "freeports\\_analysis.formats\\_utils.text\\_extract.match"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match:1
+msgid "Functions for different target matching algorithms"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.text_extract.match.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1:<autosummary>:1
+msgid ":py:obj:`prefix_similarity <freeports_analysis.formats_utils.text_extract.match.prefix_similarity>`\\ \\(a\\, b\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1:<autosummary>:1
+msgid "Compute a similarity ratio from the beginning of the two strings."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1:<autosummary>:1
+msgid ":py:obj:`target_fuzzy_match <freeports_analysis.formats_utils.text_extract.match.target_fuzzy_match>`\\ \\(text\\, target\\, ratio\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_fuzzy_match:1
+msgid "Perform fuzzy string matching between normalized text and target."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1:<autosummary>:1
+msgid ":py:obj:`target_match <freeports_analysis.formats_utils.text_extract.match.target_match>`\\ \\(text\\, target\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_match:1
+msgid "Check if normalized target string is contained within normalized text."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1:<autosummary>:1
+msgid ":py:obj:`target_prefix_match <freeports_analysis.formats_utils.text_extract.match.target_prefix_match>`\\ \\(text\\, target\\, ratio\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_prefix_match:1
+msgid "Check if the normalized prefix of the target string matches the normalized text with a given similarity ratio."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:1
+msgid "Compute a similarity ratio from the beginning of the two strings. Only matching prefixes are considered."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.text_extract.match.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:4
+msgid "first string to compare"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:6
+msgid "second string to compare"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.text_extract.match.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.prefix_similarity:9
+msgid "similarity ratio between 0.0 and 1.0"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.text_extract.match.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_fuzzy_match:3
+msgid "The input text to compare"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_fuzzy_match:5
+msgid "The target string to compare against"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_fuzzy_match:7
+msgid "The minimum similarity ratio threshold (0.0 to 1.0)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_fuzzy_match:10
+msgid "True if similarity ratio meets or exceeds threshold, False otherwise"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_match:3
+msgid "The input text to search within"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_match:5
+msgid "The target string to search for"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_match:8
+msgid "True if target is found in text after normalization, False otherwise"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_prefix_match:4
+msgid "The input text to compare against the target prefix"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_prefix_match:6
+msgid "The target string whose prefix is being matched"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_prefix_match:8
+msgid "The minimum similarity ratio threshold (0.0 to 1.0) for the prefix match"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/text_extract/match.py:docstring of freeports_analysis.formats_utils.text_extract.match.target_prefix_match:11
+msgid "True if the normalized prefix similarity meets or exceeds the threshold, False otherwise"
+msgstr ""

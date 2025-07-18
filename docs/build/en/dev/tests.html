@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating tests &mdash; freeports_analysis 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=47de8214"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Interazionalization (i18n)" href="i18n.html" />
+    <link rel="prev" title="Documentation development" href="docs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">Package reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="code.html">Code development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html">Documentation development</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Creating tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-file">Test file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-dataset">Test dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#activate-single-page-tests">Activate single page tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html">Interazionalization <em>(i18n)</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Example of a contribution</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Developer documentation</a></li>
+      <li class="breadcrumb-item active">Creating tests</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dev/tests.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-tests">
+<h1>Creating tests<a class="headerlink" href="#creating-tests" title="Link to this heading"></a></h1>
+<p>The tests are developed using <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a> and they are located in the <code class="docutils literal notranslate"><span class="pre">tests/</span></code> directory.
+This guide will forcus on the development of the tests related to the creation of a format. In order to make a test there are three steps:</p>
+<ul class="simple">
+<li><p>create the test file in the <code class="docutils literal notranslate"><span class="pre">tests/formats/</span></code> directory. It has to be called <code class="docutils literal notranslate"><span class="pre">test_{format</span> <span class="pre">name}.py</span></code></p></li>
+<li><p>create the dataset to test and with validated results into <code class="docutils literal notranslate"><span class="pre">tests/data/{FORMAT</span> <span class="pre">NAME}/</span></code></p></li>
+<li><p>activate the relevant single page tests in the <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code> file</p></li>
+</ul>
+<section id="test-file">
+<h2>Test file<a class="headerlink" href="#test-file" title="Link to this heading"></a></h2>
+<p>You can take as reference any test file for the others formats. As you can see usually there are four tests:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> single page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> single page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Deserialize</span></code> single page</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipeline</span></code></p></li>
+</ul>
+<p>The first three are parametrized tests on a single page of a pdf report that usually behave in the same manner and call an utility
+to test in a standardized way. The last one is marked as <code class="docutils literal notranslate"><span class="pre">integration_tests</span></code> (because it is slow) and it is not run after each commit
+but only in the CI pipeline upon push on <code class="docutils literal notranslate"><span class="pre">dev</span></code> or <code class="docutils literal notranslate"><span class="pre">main</span></code> remote branches (or by the user launching <code class="docutils literal notranslate"><span class="pre">pytest</span></code> command without any option).
+This test is run on an entire document and check on the output <code class="docutils literal notranslate"><span class="pre">csv</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is not mandatory to test and provide single page tests or pipeline test for all three functions
+if some of them are not defined or not working.</p>
+</div>
+</section>
+<section id="test-dataset">
+<h2>Test dataset<a class="headerlink" href="#test-dataset" title="Link to this heading"></a></h2>
+<p>The dataset to assert the validity of tests and to recreate them consists in different files placed in <code class="docutils literal notranslate"><span class="pre">tests/data/{FORMAT</span> <span class="pre">NAME}/</span></code>.
+One document pdf named <code class="docutils literal notranslate"><span class="pre">report.pdf</span></code> has to be present to validate the <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> function and for the integration test.
+In order to check the results of the pipeline test has to be present a csv file named <code class="docutils literal notranslate"><span class="pre">out.csv</span></code>. All the other file are used
+for validating and generating the results of the single page tests for <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code>, <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> and <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code> functions.
+The files are named respectively <code class="docutils literal notranslate"><span class="pre">pdf_blks-{page</span> <span class="pre">number}.pkl</span></code>, <code class="docutils literal notranslate"><span class="pre">txt_blks-{page</span> <span class="pre">number}.pkl</span></code> and <code class="docutils literal notranslate"><span class="pre">financial_data-{page</span> <span class="pre">number}.pkl</span></code>
+and are direct dump of the object generated calling the different functions on a specific <code class="docutils literal notranslate"><span class="pre">xml</span> <span class="pre">tree</span></code> (page of the document). These files
+are <a class="reference external" href="https://docs.python.org/3/library/pickle.html">pickle files</a> containing respectively a list of <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code>, <code class="docutils literal notranslate"><span class="pre">TextBlocks</span></code> and
+<code class="docutils literal notranslate"><span class="pre">FinancialData</span></code>. To generate these files is present some utility functions in the <code class="docutils literal notranslate"><span class="pre">devtools/make_tests.py</span></code> file.</p>
+</section>
+<section id="activate-single-page-tests">
+<h2>Activate single page tests<a class="headerlink" href="#activate-single-page-tests" title="Link to this heading"></a></h2>
+<p>The dataset referring a format can contain a variable number of single page tests to be performed. In not specified no test is performed,
+even if the dataset contains the required data. To activate it is necessary to modify the <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code> file adding
+to the <code class="docutils literal notranslate"><span class="pre">single_page_tests</span></code> array a key with the format name in capslock and the list of the pages to test.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="docs.html" class="btn btn-neutral float-left" title="Documentation development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="i18n.html" class="btn btn-neutral float-right" title="Interazionalization (i18n)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

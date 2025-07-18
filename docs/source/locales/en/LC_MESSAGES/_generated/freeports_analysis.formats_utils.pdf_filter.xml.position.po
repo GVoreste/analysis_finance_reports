@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.position.rst:2
+msgid "freeports\\_analysis.formats\\_utils.pdf\\_filter.xml.position"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position:1 of
+msgid "PDF block element utilities for spatial analysis and manipulation."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position:3 of
+msgid ""
+"This module provides functions for working with PDF block elements "
+"(represented as lxml.etree.Element objects) that contain bounding box "
+"information. It includes utilities for checking spatial relationships, "
+"extracting coordinates, and calculating dimensions of PDF content blocks."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.position.rst:9
+msgid "Functions"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`get_bounds "
+"<freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds>`\\ "
+"\\(blk\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid "Get the horizontal and vertical bounds of a block's bounding box."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`get_lines_contained "
+"<freeports_analysis.formats_utils.pdf_filter.xml.position.get_lines_contained>`\\"
+" \\(blk\\[\\, x\\_range\\, y\\_range\\]\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`get_position "
+"<freeports_analysis.formats_utils.pdf_filter.xml.position.get_position>`\\"
+" \\(blk\\, mean\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid ""
+"Return the coordinates or center of a bounding box from a PDF block "
+"element. :param blk: XML element representing the PDF block, expected to "
+"contain a 'bbox' attribute. :type blk: etree.Element :param mean: If "
+"True, return the center point (x, y) of the bounding box. If False, "
+"return the full bounding box coordinates (x0, y0, x1, y1). :type mean: "
+"bool."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`get_size "
+"<freeports_analysis.formats_utils.pdf_filter.xml.position.get_size>`\\ "
+"\\(blk\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_size:1 of
+msgid "Calculate the width and height of a block's bounding box."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`is_contained "
+"<freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained>`\\"
+" \\(blk\\[\\, x\\_range\\, y\\_range\\]\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained:1 of
+msgid ""
+"Check if a block's bounding box is fully contained within specified "
+"ranges."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`is_positioned "
+"<freeports_analysis.formats_utils.pdf_filter.xml.position.is_positioned>`\\"
+" \\(blk\\[\\, x\\_range\\, y\\_range\\]\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:1:<autosummary>:1
+#: of
+msgid "Check if a block is positioned within specified x and/or y ranges."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.position.rst
+msgid "Parameters"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:3 of
+msgid ""
+"XML element representing a PDF block, expected to contain a 'bbox' "
+"attribute."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.position.rst
+msgid "Returns"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds:6 of
+msgid ""
+"A list containing two tuples representing horizontal (x0, x1) and "
+"vertical (y0, y1) bounds. Returns None if no 'bbox' attribute is found."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.position.rst
+msgid "Return type"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_position:1 of
+msgid ""
+"Return the coordinates or center of a bounding box from a PDF block "
+"element. :param blk: XML element representing the PDF block, expected to "
+"contain a 'bbox' attribute. :type blk: etree.Element :param mean: If "
+"True, return the center point (x, y) of the bounding box."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_position:5 of
+msgid "If False, return the full bounding box coordinates (x0, y0, x1, y1)."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_position:8 of
+msgid ""
+"A list of float values representing either the full bounding box or its "
+"center. Returns None if no 'bbox' attribute is found."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_size:3 of
+msgid "XML element representing a PDF block with a 'bbox' attribute"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.get_size:6 of
+msgid "A tuple containing (width, height) of the bounding box"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained:3 of
+msgid "XML element representing a PDF block"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained:5 of
+msgid "Horizontal range (min_x, max_x)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained:7 of
+msgid "Vertical range (min_y, max_y)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained:10 of
+msgid "True if entire bbox is within ranges, False otherwise"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.is_positioned:1 of
+msgid ""
+"Check if a block is positioned within specified x and/or y ranges. :param"
+" blk: XML element representing a PDF block :type blk: etree.Element "
+":param x_range: Minimum and maximum x-coordinate values (left, right) "
+":type x_range: Optional[Tuple[float, float]], optional :param y_range: "
+"Minimum and maximum y-coordinate values (bottom, top) :type y_range: "
+"Optional[Tuple[float, float]], optional"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.xml.position.is_positioned:9 of
+msgid "True if block's coordinates are within specified ranges, False otherwise"
+msgstr ""
+

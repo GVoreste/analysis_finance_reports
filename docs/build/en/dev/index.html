@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer documentation &mdash; freeports_analysis 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=47de8214"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Code development" href="code.html" />
+    <link rel="prev" title="How to contribute" href="../contribute.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">Package reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code.html">Code development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html">Documentation development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Creating tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html">Interazionalization <em>(i18n)</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Example of a contribution</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Developer documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dev/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="developer-documentation">
+<h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Documentation development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Creating tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i18n.html">Interazionalization <em>(i18n)</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example of a contribution</a></li>
+</ul>
+</div>
+<p>The project consists in different repositories, specifically this section focus on the repository
+containing the source code and the documentation.</p>
+<p>This repository has two protected branches <code class="docutils literal notranslate"><span class="pre">main</span></code> and <code class="docutils literal notranslate"><span class="pre">dev</span></code>, plus any other additional non protected branches.
+The logic is that <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch is used for the active development, <code class="docutils literal notranslate"><span class="pre">main</span></code> for the deployment.
+On both branches each commit triggers a <a class="reference external" href="https://en.wikipedia.org/wiki/Continuous_integration">CI</a> pipeline
+on the <a class="reference external" href="https://jenkins.freeports.org">Freeport Jenkins server</a> this server do some checks on the code (specified in the
+<code class="docutils literal notranslate"><span class="pre">Jenkinsfile</span></code> on top of the repository). Specifically it:</p>
+<ol class="arabic simple">
+<li><p>Lint the code</p></li>
+<li><p>Fail if a minimal linting vote is reached</p></li>
+<li><p>Test the code and fail if some test is not passed</p></li>
+<li><p>Fail if a minimal percentage of code is not tested</p></li>
+<li><p>Build the documentation</p></li>
+<li><p>Fail if a minimal percentage of the code is not documented</p></li>
+<li><p>If the commit is tagged as <cite>release version</cite> (using <a class="reference external" href="https://semver.org/">semantic versioning specification</a>) it publishes it to <a class="reference external" href="https://pypi.org/project/freeports-analysis/">PyPI</a></p></li>
+</ol>
+<p>The difference between the two branches is that the state of the pipeline is only informative on the <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch
+(it means that it only shows the failing) but the positive outcome is <strong>imposed a requirement</strong> for the PR on <code class="docutils literal notranslate"><span class="pre">main</span></code> branch to be approved and merged.</p>
+<p>In particular the development divide between:</p>
+<ul class="simple">
+<li><p>development of tools for helping the contribution process</p></li>
+<li><p>development of the code common for the different <cite>pdf reports</cite>
+(for example the source code related to the options and behaviour of the <code class="docutils literal notranslate"><span class="pre">freeports</span></code> command)</p></li>
+<li><p>development of the code for parsing the different <cite>pdf report formats</cite></p></li>
+<li><p>development of tests on the code</p></li>
+<li><p>writing of the documentation</p></li>
+<li><p>internationalization of the code (translation of messages in output of the command)</p></li>
+<li><p>internationalization of the documentation (translation of the documentation)</p></li>
+</ul>
+<p>you can consult the specific guide related to the type of contribution that you want to do.
+When you feel comfortable with the concepts you can go forward with the workflow <a class="reference internal" href="example.html"><span class="doc">examples provided</span></a>;
+this page not only contains video expaining the possible contributions but also how to deploy them.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../contribute.html" class="btn btn-neutral float-left" title="How to contribute" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="code.html" class="btn btn-neutral float-right" title="Code development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

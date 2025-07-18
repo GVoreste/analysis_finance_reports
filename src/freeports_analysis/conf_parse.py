@@ -331,11 +331,9 @@ def validate_conf(config: dict):
     batch_path = config["BATCH"]
     out_path = config["OUT_CSV"]
     if config["URL"] is None and config["PDF"] is None:
-        raise ValueError(
-            _(
-                "You have to specify at least one input option: the url or the resource, the pdf file path or both"
-            )
-        )
+        string = _("You have to specify at least one input option: ")
+        string += _("the url or the resource, the pdf file path or both")
+        raise ValueError(string)
     if not out_path.parent.exists():
         raise ValueError(
             _("Out path is not valid because directory '{}' doesn't exists").format(

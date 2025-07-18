@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-14 11:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/dev/index.rst:6
+msgid "Contents:"
+msgstr ""
+
+#: ../../source/dev/index.rst:3
+msgid "Developer documentation"
+msgstr ""
+
+#: ../../source/dev/index.rst:17
+msgid ""
+"The project consists in different repositories, specifically this section"
+" focus on the repository containing the source code and the "
+"documentation."
+msgstr ""
+
+#: ../../source/dev/index.rst:20
+msgid ""
+"This repository has two protected branches ``main`` and ``dev``, plus any"
+" other additional non protected branches. The logic is that ``dev`` "
+"branch is used for the active development, ``main`` for the deployment. "
+"On both branches each commit triggers a `CI "
+"<https://en.wikipedia.org/wiki/Continuous_integration>`_ pipeline on the "
+"`Freeport Jenkins server <https://jenkins.freeports.org>`_ this server do"
+" some checks on the code (specified in the ``Jenkinsfile`` on top of the "
+"repository). Specifically it:"
+msgstr ""
+
+#: ../../source/dev/index.rst:26
+msgid "Lint the code"
+msgstr ""
+
+#: ../../source/dev/index.rst:27
+msgid "Fail if a minimal linting vote is reached"
+msgstr ""
+
+#: ../../source/dev/index.rst:28
+msgid "Test the code and fail if some test is not passed"
+msgstr ""
+
+#: ../../source/dev/index.rst:29
+msgid "Fail if a minimal percentage of code is not tested"
+msgstr ""
+
+#: ../../source/dev/index.rst:30
+msgid "Build the documentation"
+msgstr ""
+
+#: ../../source/dev/index.rst:31
+msgid "Fail if a minimal percentage of the code is not documented"
+msgstr ""
+
+#: ../../source/dev/index.rst:32
+msgid ""
+"If the commit is tagged as `release version` (using `semantic versioning "
+"specification <https://semver.org/>`_) it publishes it to `PyPI "
+"<https://pypi.org/project/freeports-analysis/>`_"
+msgstr ""
+
+#: ../../source/dev/index.rst:34
+msgid ""
+"The difference between the two branches is that the state of the pipeline"
+" is only informative on the ``dev`` branch (it means that it only shows "
+"the failing) but the positive outcome is **imposed a requirement** for "
+"the PR on ``main`` branch to be approved and merged."
+msgstr ""
+
+#: ../../source/dev/index.rst:37
+msgid "In particular the development divide between:"
+msgstr ""
+
+#: ../../source/dev/index.rst:39
+msgid "development of tools for helping the contribution process"
+msgstr ""
+
+#: ../../source/dev/index.rst:40
+msgid ""
+"development of the code common for the different `pdf reports` (for "
+"example the source code related to the options and behaviour of the "
+"``freeports`` command)"
+msgstr ""
+
+#: ../../source/dev/index.rst:42
+msgid "development of the code for parsing the different `pdf report formats`"
+msgstr ""
+
+#: ../../source/dev/index.rst:43
+msgid "development of tests on the code"
+msgstr ""
+
+#: ../../source/dev/index.rst:44
+msgid "writing of the documentation"
+msgstr ""
+
+#: ../../source/dev/index.rst:45
+msgid ""
+"internationalization of the code (translation of messages in output of "
+"the command)"
+msgstr ""
+
+#: ../../source/dev/index.rst:46
+msgid ""
+"internationalization of the documentation (translation of the "
+"documentation)"
+msgstr ""
+
+#: ../../source/dev/index.rst:48
+msgid ""
+"you can consult the specific guide related to the type of contribution "
+"that you want to do. When you feel comfortable with the concepts you can "
+"go forward with the workflow :doc:`examples provided <example>`; this "
+"page not only contains video expaining the possible contributions but "
+"also how to deploy them."
+msgstr ""
+
+#~ msgid ""
+#~ "you can consult the specific guide "
+#~ "related to the type of contribution "
+#~ "that you want to do."
+#~ msgstr ""
+

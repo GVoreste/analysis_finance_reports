@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freeports_analysis \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 01:59+0200\n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -22,19 +22,21 @@ msgstr ""
 
 #: ../../source/index.rst:10
 msgid "Contents:"
-msgstr ""
+msgstr "Contenuto:"
 
 #: ../../source/index.rst:8
 msgid "freeports_analysis documentation"
-msgstr ""
+msgstr "documentazione di freeports_analysis"
 
 #: ../../source/index.rst:21
 msgid ""
 "This packages is intended for generate a `csv` file from different "
 "finance `pdf` reports"
 msgstr ""
+"Questo pacchetto serve a generare dataset `csv` a partire da "
+"diversi report finanziari in formato `pdf`"
 
 #: ../../source/index.rst:25
 msgid "This project is under active development."
-msgstr ""
+msgstr "Questo progetto è attivamente sotto sviluppo"
 

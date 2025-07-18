@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.rst:2
+msgid "freeports\\_analysis.formats\\_utils.pdf\\_filter.pdf\\_parts.position"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position:1 of
+msgid ""
+"Definition of types for identify characteristic related with geometrical "
+"aspects of the line."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.rst:9
+msgid "Classes"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`Area "
+"<freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area>`\\ "
+"\\(x\\_range\\, y\\_range\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:1
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:1:<autosummary>:1
+#: of
+msgid "A class representing a 2D area defined by X and Y ranges."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`XRange "
+"<freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange>`\\"
+" \\(start\\, end\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:1:<autosummary>:1
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange:1 of
+msgid "A class representing a range along the X-axis."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`YRange "
+"<freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange>`\\"
+" \\(start\\, end\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:1:<autosummary>:1
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange:1 of
+msgid "A class representing a range along the Y-axis."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:5
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.x_bounds:3
+#: of
+msgid "The range along the X-axis."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange of
+msgid "type"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:7 of
+msgid "XRange"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:11
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.y_bounds:3
+#: of
+msgid "The range along the Y-axis."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:13 of
+msgid "YRange"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:17 of
+msgid "The center coordinate of the area."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:19 of
+msgid "Coord"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:23 of
+msgid "The corner coordinates of the area."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:25 of
+msgid "tuple"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:29 of
+msgid "The width of the area (x_bounds.size)."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:31
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:37
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange:7
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange:13
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange:7
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange:13 of
+msgid "float"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area:35 of
+msgid "The height of the area (y_bounds.size)."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.c:1 of
+msgid "Calculate the center coordinate of the area."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.rst
+msgid "Returns"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.c:3 of
+msgid "The (x, y) center coordinate."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.rst
+msgid "Return type"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.corners:1
+#: of
+msgid "Get the corner coordinates of the area."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.corners:3
+#: of
+msgid ""
+"The corner coordinates in the format (((x0,y0), (x1,y0)), ((x0,y1), "
+"(x1,y1)))."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.height:1
+#: of
+msgid "Get the height of the area."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.height:3
+#: of
+msgid "The height (y_bounds.size)."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.width:1
+#: of
+msgid "Get the width of the area."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.width:3
+#: of
+msgid "The width (x_bounds.size)."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.x_bounds:1
+#: of
+msgid "Get the X-range bounds."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area.y_bounds:1
+#: of
+msgid "Get the Y-range bounds."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange:5
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange:5 of
+msgid "Alias for start of the range."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange:11
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange:11 of
+msgid "Alias for end of the range."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange.x0:1
+#: of
+msgid ""
+"Get the start value of the X-range. :returns: The start value of the "
+"range. :rtype: float"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange.x1:1
+#: of
+msgid ""
+"Get the end value of the X-range. :returns: The end value of the range. "
+":rtype: float"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange.y0:1
+#: of
+msgid "Get the start value of the Y-range."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange.y0:3
+#: of
+msgid "The start value of the range."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange.y1:1
+#: of
+msgid "Get the end value of the Y-range."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange.y1:3
+#: of
+msgid "The end value of the range."
+msgstr ""
+

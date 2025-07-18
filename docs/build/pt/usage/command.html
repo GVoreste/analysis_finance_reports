@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command reference &mdash; Documentação freeports_analysis 0.0.3</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0ec8805b"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=beaedd51"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Command line arguments" href="config/cmd_args.html" />
+    <link rel="prev" title="Quickstart guide" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar docs" aria-label="Pesquisar docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config/cmd_args.html">Command line arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/env_variables.html">Environment variables reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/config_file.html">Config file reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-options">The options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verbosity"><code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#url-pdf-and-save-pdf"><code class="docutils literal notranslate"><span class="pre">URL</span></code>, <code class="docutils literal notranslate"><span class="pre">PDF</span></code> and <code class="docutils literal notranslate"><span class="pre">SAVE_PDF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#out-csv"><code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#format"><code class="docutils literal notranslate"><span class="pre">FORMAT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-file"><code class="docutils literal notranslate"><span class="pre">CONFIG_FILE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#n-workwers"><code class="docutils literal notranslate"><span class="pre">N_WORKWERS</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#validation-of-resulting-configuration">Validation of resulting configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#batch-mode"><code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#out-csv-and-prefix-out"><code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code> and <code class="docutils literal notranslate"><span class="pre">prefix</span> <span class="pre">out</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">Package reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/usage/command.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-reference">
+<h1>Command reference<a class="headerlink" href="#command-reference" title="Link to this heading"></a></h1>
+<p>The command can be used launching</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">freeports</span>
+</pre></div>
+</div>
+<p>from the command line. To get a contextual help use the option <code class="docutils literal notranslate"><span class="pre">--help</span></code> shortened to <code class="docutils literal notranslate"><span class="pre">-h</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">freeports -h</span>
+</pre></div>
+</div>
+<p>the options can be specified in different ways that overwrite each other. The same option can be specified in 3 different ways:</p>
+<ol class="arabic simple">
+<li><p><strong>configuration file</strong></p></li>
+<li><p><strong>environment variables</strong></p></li>
+<li><p><strong>command line options</strong></p></li>
+</ol>
+<p>option not specified default to values specified in the <span class="xref std std-ref">conf_parse submodule</span>.
+Those are overwritten by the options specified in the <strong>configuration file</strong>, then the result is overwritten by the <strong>environment variables</strong>,
+<strong>command line options</strong> and finally if when in <a class="reference internal" href="#batch-mode"><span class="std std-ref">BATCH MODE</span></a> by the <em>job contextual options</em>.
+The option available to be overwritten and how are documented in the respective reference page:</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference config pages:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="config/cmd_args.html">Command line arguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/env_variables.html">Environment variables reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config/config_file.html">Config file reference</a></li>
+</ul>
+</div>
+<p>After specified the options are overwritten as described in <a class="reference internal" href="#conf-validation"><span class="std std-ref">the section about validation</span></a>.
+Each method of overwriting also has a specific validation mechanism documented in the respective page and applied before
+the validation of resulting configuration.
+Each way of specify option set one of the program option described in this page.
+The options here documented have an effecton the behaviour of the <code class="docutils literal notranslate"><span class="pre">freeports</span></code> call.</p>
+<section id="the-options">
+<h2>The options<a class="headerlink" href="#the-options" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p>Describe how much the program verbosity</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BATCH</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
+<td><p>If set to path of batch file, it triggers <code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">N_WORKERS</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p>Number of parallel processes in <code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">os.process_cpu_count()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
+<td><p>File where to output <code class="docutils literal notranslate"><span class="pre">csv</span></code> files</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/dev/stdout</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SAVE_PDF</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p>If set and <code class="docutils literal notranslate"><span class="pre">URL</span></code> is specified, it save the input pdf</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">URL</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p>Url of the pdf to take in input</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PDF</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
+<td><p>Path to local pdf</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FORMAT</span></code></p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PdfFormats</span></code></p></td>
+<td><p>Format to parse the pdf document</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_FILE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
+<td><p>Custom config file location</p></td>
+<td><p>Calculated dynamically</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SEPARATE_OUT_FILES</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p>In <code class="docutils literal notranslate"><span class="pre">BATCH_MODE</span></code> do not merge the results of the batch</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PREFIX_OUT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p>In <code class="docutils literal notranslate"><span class="pre">BATCH_MODE</span></code> define an id for the different outputs</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<section id="verbosity">
+<h3><code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code><a class="headerlink" href="#verbosity" title="Link to this heading"></a></h3>
+<p>This values goes from 0 to 5, 0 indicate min verbosity called <code class="docutils literal notranslate"><span class="pre">CRITICAL</span> <span class="pre">VERBOSITY</span></code> and 4 indicate the max verbosity also called <code class="docutils literal notranslate"><span class="pre">DEBUG</span> <span class="pre">VERBOSITY</span></code>, 5 is the <code class="docutils literal notranslate"><span class="pre">NOSET</span> <span class="pre">VERBOSITY</span></code>.
+The meaning of the others levels are the ones used by the python <a class="reference external" href="https://docs.python.org/3/library/logging.html">logging package</a>:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>freeports</p></th>
+<th class="head"><p><a class="reference external" href="https://docs.python.org/3/library/logging.html#logging-levels">logging</a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">loggign.CRITICAL</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">logging.ERROR</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">loggign.WARNING</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">loggign.INFO</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">logging.DEBUG</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">logging.NOSET</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="url-pdf-and-save-pdf">
+<h3><code class="docutils literal notranslate"><span class="pre">URL</span></code>, <code class="docutils literal notranslate"><span class="pre">PDF</span></code> and <code class="docutils literal notranslate"><span class="pre">SAVE_PDF</span></code><a class="headerlink" href="#url-pdf-and-save-pdf" title="Link to this heading"></a></h3>
+<p>One between <code class="docutils literal notranslate"><span class="pre">URL</span></code> or <code class="docutils literal notranslate"><span class="pre">PDF</span></code> has to be specified, directly or by consequently to
+<em>job contextual options</em> overwriting.
+If <code class="docutils literal notranslate"><span class="pre">URL</span></code> is specified the program use the pdf resource corresponding to the url,
+if <code class="docutils literal notranslate"><span class="pre">PDF</span></code> is specified it load a pdf file from local filesystem. If both are specified
+it tries to load from local storage, then fallback to the url.
+If both are specified and <code class="docutils literal notranslate"><span class="pre">SAVE_PDF</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, if the file is not present locally, it download it
+and save on disk with name indicate by <code class="docutils literal notranslate"><span class="pre">PDF</span></code> option.</p>
+</section>
+<section id="out-csv">
+<h3><code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code><a class="headerlink" href="#out-csv" title="Link to this heading"></a></h3>
+<p>When not in <code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code> it indicate the file where to output the resulting <code class="docutils literal notranslate"><span class="pre">csv</span></code> parsed from the pdf document.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code> default on <code class="docutils literal notranslate"><span class="pre">Windows</span></code> systems is <code class="docutils literal notranslate"><span class="pre">CON</span></code></p>
+</div>
+</section>
+<section id="format">
+<h3><code class="docutils literal notranslate"><span class="pre">FORMAT</span></code><a class="headerlink" href="#format" title="Link to this heading"></a></h3>
+<p>It indicate which algorithm to use to parse the pdf, these algorithms are called the “formats” of the pdf reports.
+It is mandatory to specify this variable if no <code class="docutils literal notranslate"><span class="pre">URL</span></code> is provided, if it is provided the format try to be inferred using
+a mapping file that map different url regular expressions to a format. The file is called <code class="docutils literal notranslate"><span class="pre">format_url_mapping.yaml</span></code> in the source code.</p>
+</section>
+<section id="config-file">
+<h3><code class="docutils literal notranslate"><span class="pre">CONFIG_FILE</span></code><a class="headerlink" href="#config-file" title="Link to this heading"></a></h3>
+<p>This option indicate the config file loaded to overwrite the default options, this option can only be specified
+using an environment variable or using a command line argument, and it is evaluated before any other option.</p>
+</section>
+<section id="n-workwers">
+<h3><code class="docutils literal notranslate"><span class="pre">N_WORKWERS</span></code><a class="headerlink" href="#n-workwers" title="Link to this heading"></a></h3>
+<p>Integer that rappresent the number of process spawned (if not set default to number of available CPUs).
+When in <code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code> it indicate the process to spawn concurrently to achieve parrallelization on the
+processing of different files. When not in <code class="docutils literal notranslate"><span class="pre">BATCH_MODE</span></code> the program divide the pdf document in different
+section of pages and parallelize processing document wise.</p>
+</section>
+</section>
+<section id="validation-of-resulting-configuration">
+<span id="conf-validation"></span><h2>Validation of resulting configuration<a class="headerlink" href="#validation-of-resulting-configuration" title="Link to this heading"></a></h2>
+<p>Each way of specify options have his algorithm to validate the user choice, but after those checks
+it is performed a consistency check on the resulting configuration.
+Noticebly the most important performed chekcs are:</p>
+<ul class="simple">
+<li><p>In <code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code> <code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code> is the name of an archive or of a directory</p></li>
+<li><p>After <em>job contextual options</em> overwriting at least one between <code class="docutils literal notranslate"><span class="pre">PDF</span></code> or <code class="docutils literal notranslate"><span class="pre">URL</span></code> is defined</p></li>
+</ul>
+</section>
+<section id="batch-mode">
+<span id="id1"></span><h2><code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code><a class="headerlink" href="#batch-mode" title="Link to this heading"></a></h2>
+<p>This mode permit to process different files all at one in parallel. This mode is caratterized by the <code class="docutils literal notranslate"><span class="pre">BATCH</span></code>
+variable set to a <em>batch csv file</em> and the possibility of setting <code class="docutils literal notranslate"><span class="pre">SEPARATE_OUT_FILES</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code>
+( in this case <code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code> should be a directory name or the name of a <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> archive to create)
+The <em>batch csv file</em> is a csv file with some header that indicate the option to overwrite to the
+resulting configuration. These option are called <em>job contextual options</em> and each row of the csv file is called a <em>job</em>.
+The available overwrittables options are:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Header</p></th>
+<th class="head"><p>Overwritten option</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">URL</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">save</span> <span class="pre">pdf</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SAVE_PDF</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pdf</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PDF</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">format</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FORMAT</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">prefix</span> <span class="pre">out</span></code></p></td>
+<td><p><em>See below</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>the header is case insensitive, so for example <em>url</em>, <em>URL</em> and <em>Url</em> are considered the same header.
+the bool matching is done so that cast to <code class="docutils literal notranslate"><span class="pre">True</span></code> if csv value is one between (case insensitive)
+<em>true, on, yes, y, t, 1</em> to <code class="docutils literal notranslate"><span class="pre">False</span></code> if between <em>false, off, no, n, f, 0</em>.</p>
+<section id="out-csv-and-prefix-out">
+<h3><code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code> and <code class="docutils literal notranslate"><span class="pre">prefix</span> <span class="pre">out</span></code><a class="headerlink" href="#out-csv-and-prefix-out" title="Link to this heading"></a></h3>
+<p>When in <code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code> there are two output profiles, the standard one on a single <em>csv</em> and
+on separate files (this distinction can be made setting <code class="docutils literal notranslate"><span class="pre">SEPARATE_OUT_FILES</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>).
+The <code class="docutils literal notranslate"><span class="pre">prefix</span> <span class="pre">out</span></code> cell of the batch file set the <code class="docutils literal notranslate"><span class="pre">PREFIX_OUT</span></code> option.
+When output on same file the usual <em>csv</em> add a column (<em>Format</em>) to indicate the format used to parse the
+pdf report from which the data come from. To identify precisely the line of the batch file that generate
+the data can if is present <code class="docutils literal notranslate"><span class="pre">PREFIX_OUT</span></code> it is added a column called <em>Report identifier</em>
+with the corresponding value.</p>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Set <code class="docutils literal notranslate"><span class="pre">PREFIX_OUT</span></code> something meaning full that distinguish the input document, like for example
+the date of the publication of the pdf and istitution that created the report</p>
+</div>
+<p>When on different files <code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code> has to be a directory or a <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> archive.
+The program create if it doesn’t exists a directory named as <code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code> if is not an archive
+or the name of the archive without <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> exstension and for each <em>job</em>, save an output file
+named <code class="docutils literal notranslate"><span class="pre">{PREFIX_OUT}-{FORMAT}.csv</span></code> or just <code class="docutils literal notranslate"><span class="pre">{FORMAT}.csv</span></code> if absent or empty prefix.
+If <code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code> was specified  as an archive, the directory
+is compressed into <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code>. If the directory didn’t existed and an archive is created, after creation
+the directory is deleted from the filesystem.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quickstart guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="config/cmd_args.html" class="btn btn-neutral float-right" title="Command line arguments" accesskey="n" rel="next">Seguinte <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

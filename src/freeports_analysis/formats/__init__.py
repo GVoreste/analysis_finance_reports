@@ -4,7 +4,7 @@ from enum import Enum
 from typing import Optional, List, Callable
 import logging as log
 from lxml import etree
-from freeports_analysis.consts import FinancialData
+from freeports_analysis.consts import FinancialData, PromisesResolutionContext
 from freeports_analysis.i18n import _
 
 logger = log.getLogger(__name__)
@@ -315,8 +315,10 @@ def text_extract_exec(
 def deserialize_exec(
     text_blocks: List[TextBlock],
     targets: List[str],
-    deserialize_func: Callable[[TextBlock, List[str]], FinancialData],
-) -> List[FinancialData]:
+    deserialize_func: Callable[
+        [TextBlock, List[str]], FinancialData | PromisesResolutionContext
+    ],
+) -> List[FinancialData | PromisesResolutionContext]:
     """Converts TextBlocks into tabular data using a specified function that
     from an expected formatting, return a python object.
 
@@ -326,13 +328,15 @@ def deserialize_exec(
         TextBlock objects to process.
     targets : List[str]
         Targets companies to validate the object creation
-    deserialize_func : Callable[[TextBlock, List[str]], FinancialData]
-        Function that converts a TextBlock into a finantial data class.
+    deserialize_func : Callable[[TextBlock, List[str]], FinancialData | PromisesResolutionContext]
+        Function that converts a TextBlock into a finantial data class or into
+        a bit of context for resolving deferred values
 
     Returns
     -------
-    List[FinancialData]
-        FinantialData classes containing the deserialized data.
+    List[FinancialData | PromisesResolutionContext]
+        FinantialData classes containing the deserialized data or context
+        for resolving deferred values
     """
     return [deserialize_func(txtblk, targets) for txtblk in text_blocks]
 

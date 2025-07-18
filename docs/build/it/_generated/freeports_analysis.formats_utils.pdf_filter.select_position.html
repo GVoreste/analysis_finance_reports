@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freeports_analysis.formats_utils.pdf_filter.select_position &mdash; Documentazione freeports_analysis 0.0.3 </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=21205c44"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=45930005"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="freeports_analysis.formats_utils.pdf_filter.xml" href="freeports_analysis.formats_utils.pdf_filter.xml.html" />
+    <link rel="prev" title="freeports_analysis.formats_utils.pdf_filter.select_font" href="freeports_analysis.formats_utils.pdf_filter.select_font.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Package reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="freeports_analysis.html">freeports_analysis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.conf_parse.html">freeports_analysis.conf_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.consts.html">freeports_analysis.consts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.download.html">freeports_analysis.download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats.html">freeports_analysis.formats</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.default_if_not_implemented"><code class="docutils literal notranslate"><span class="pre">default_if_not_implemented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.normalize_string"><code class="docutils literal notranslate"><span class="pre">normalize_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.normalize_word"><code class="docutils literal notranslate"><span class="pre">normalize_word()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.overwrite_if_implemented"><code class="docutils literal notranslate"><span class="pre">overwrite_if_implemented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.deserialize.html">freeports_analysis.formats_utils.deserialize</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.html">freeports_analysis.formats_utils.pdf_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.text_extract.html">freeports_analysis.formats_utils.text_extract</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.i18n.html">freeports_analysis.i18n</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.main.html">freeports_analysis.main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">Package reference</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.html">freeports_analysis</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.formats_utils.pdf_filter.html">freeports_analysis.formats_utils.pdf_filter</a></li>
+      <li class="breadcrumb-item active">freeports_analysis.formats_utils.pdf_filter.select_position</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_generated/freeports_analysis.formats_utils.pdf_filter.select_position.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-freeports_analysis.formats_utils.pdf_filter.select_position">
+<span id="freeports-analysis-formats-utils-pdf-filter-select-position"></span><h1>freeports_analysis.formats_utils.pdf_filter.select_position<a class="headerlink" href="#module-freeports_analysis.formats_utils.pdf_filter.select_position" title="Link to this heading"></a></h1>
+<p>Utilities for selecting or deselecting lines or getting infos based of geometrical information</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions" title="freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_table_positions</span></code></a>(lines[, return_columns, ...])</p></td>
+<td><p>Compute either row or column indexes for areas in a tabular layout.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.select_position.select_inside" title="freeports_analysis.formats_utils.pdf_filter.select_position.select_inside"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_inside</span></code></a>(lines, bounds)</p></td>
+<td><p>Select only lines inside a range</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.select_position.select_outside" title="freeports_analysis.formats_utils.pdf_filter.select_position.select_outside"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_outside</span></code></a>(lines, bounds)</p></td>
+<td><p>Select only lines outside a range</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.select_position.</span></span><span class="sig-name descname"><span class="pre">get_table_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><span class="pre">ExtractedPdfLine</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_rule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ruler_pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.select_position.get_table_positions" title="Link to this definition"></a></dt>
+<dd><p>Compute either row or column indexes for areas in a tabular layout.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>return_columns</strong> (<em>bool</em>) – Whether to return column indexes (True) or row indexes (False)</p></li>
+<li><p><strong>areas</strong> (<em>list</em><em> of </em><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area"><em>Area</em></a>) – List of areas representing table cells</p></li>
+<li><p><strong>small_rule</strong> (<em>bool</em>) – Whether to use smallest (True) or largest (False) dimension for rulers</p></li>
+<li><p><strong>use_ruler_pos</strong> (<em>bool</em>) – Whether to use ruler position (True) or bounds (False) for classification</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of indexes corresponding to each area</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.select_position.select_inside">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.select_position.</span></span><span class="sig-name descname"><span class="pre">select_inside</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><span class="pre">ExtractedPdfLine</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange"><span class="pre">XRange</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange"><span class="pre">YRange</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><span class="pre">ExtractedPdfLine</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.select_position.select_inside" title="Link to this definition"></a></dt>
+<dd><p>Select only lines inside a range</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lines</strong> (<em>List</em><em>[</em><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><em>ExtractedPdfLine</em></a><em>]</em>) – lines to filter</p></li>
+<li><p><strong>bounds</strong> (<a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange"><em>XRange</em></a><em> | </em><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange"><em>YRange</em></a>) – area to filter from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>lines inside <cite>bounds</cite></p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine">ExtractedPdfLine</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.select_position.select_outside">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.select_position.</span></span><span class="sig-name descname"><span class="pre">select_outside</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><span class="pre">ExtractedPdfLine</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange"><span class="pre">XRange</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange"><span class="pre">YRange</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><span class="pre">ExtractedPdfLine</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.select_position.select_outside" title="Link to this definition"></a></dt>
+<dd><p>Select only lines outside a range</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lines</strong> (<em>List</em><em>[</em><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><em>ExtractedPdfLine</em></a><em>]</em>) – lines to filter</p></li>
+<li><p><strong>bounds</strong> (<a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.XRange"><em>XRange</em></a><em> | </em><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.YRange"><em>YRange</em></a>) – area to filter from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>lines outside <cite>bounds</cite></p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine">ExtractedPdfLine</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="freeports_analysis.formats_utils.pdf_filter.select_font.html" class="btn btn-neutral float-left" title="freeports_analysis.formats_utils.pdf_filter.select_font" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="freeports_analysis.formats_utils.pdf_filter.xml.html" class="btn btn-neutral float-right" title="freeports_analysis.formats_utils.pdf_filter.xml" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

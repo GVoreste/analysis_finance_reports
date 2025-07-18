@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.rst:2
+msgid "freeports\\_analysis.formats\\_utils.pdf\\_filter.pdf\\_parts.generic"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic:1
+msgid "Utilities for handling generic PDF parts and components."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.rst:9
+msgid "Classes"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:1:<autosummary>:1
+msgid ":py:obj:`Range <freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range>`\\ \\(start\\, end\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:1
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:1:<autosummary>:1
+msgid "A class representing a range with start and end values."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:5
+msgid "The starting value of the range."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:0
+msgid "type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:7
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:13
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:19
+msgid "float"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:11
+msgid "The ending value of the range."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range:17
+msgid "The size of the range (end - start)."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range.end:1
+msgid "Get the end value of the range."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range.end:3
+msgid "The end value of the range."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range.size:1
+msgid "Calculate the size of the range (end - start)."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range.size:3
+msgid "The size of the range."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/pdf_parts/generic.py:docstring of freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.Range.start:1
+msgid "Get the start value of the range. :returns: The start value of the range. :rtype: float"
+msgstr ""

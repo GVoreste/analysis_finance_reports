@@ -85,3 +85,7 @@ class Range:
             The string representation of the range in the format [start,end].
         """
         return f"[{self.start},{self.end}]"
+
+    def __iter__(self):
+        yield self.start
+        yield self.end

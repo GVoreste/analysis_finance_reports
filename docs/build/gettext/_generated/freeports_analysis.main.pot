@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.main.rst:2
+msgid "freeports\\_analysis.main"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main:1
+msgid "This module is the one that contains the function called in order to decode the information from the pdf and to save the `csv` file. This file is also the source code to be launched (providing the options with a configuration file or with `env variables`) to mimic the behaviour of from the pdf and to save the `csv` file. This file is also the source code to be launched (providing the options with a configuration file or with `env variables`) to mimic the behaviour of the command from commandline (to use the package as a script)."
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main:9
+msgid "Example"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main:10
+msgid "```python main.py```"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
+msgid ":py:obj:`batch_job_confs <freeports_analysis.main.batch_job_confs>`\\ \\(config\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.batch_job_confs:1
+msgid "Create a list of configurations overwritten after reading a batch file with job contextual options"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
+msgid ":py:obj:`get_targets <freeports_analysis.main.get_targets>`\\ \\(\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.get_targets:1
+msgid "Read target names from a CSV file and return them as a list."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
+msgid ":py:obj:`main <freeports_analysis.main.main>`\\ \\(config\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.main:1
+msgid "Main function that expect the configuration to be already provided (for example with arguments on command line or with `env variables`)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
+msgid ":py:obj:`pipeline_batch <freeports_analysis.main.pipeline_batch>`\\ \\(batch\\_pages\\, i\\_page\\_batch\\, ...\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:1
+msgid "Apply the pipeline of actions in order to get financial data from PDF pages"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:18
+msgid "Exceptions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.NoPDFormatDetected:1:<autosummary>:1
+msgid ":py:obj:`NoPDFormatDetected <freeports_analysis.main.NoPDFormatDetected>`\\"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.NoPDFormatDetected:1
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.NoPDFormatDetected:1:<autosummary>:1
+msgid "Exception that should rise when the script is not capable of detecting a PDF format to use to decode the report, and no explicit format is specified"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.batch_job_confs:4
+msgid "configuration to overwrite"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.batch_job_confs:7
+msgid "list of configurations"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.get_targets:3
+msgid "Reads the first column of 'target.csv' (excluding header row) and returns the values as a list of strings. The file is expected to be in the package's data directory."
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.get_targets:7
+msgid "list of target names extracted from the CSV file."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.main.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.get_targets:10
+msgid "If 'target.csv' doesn't exist in the data directory."
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.get_targets:11
+msgid "If the CSV file is empty or malformed."
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.main:4
+msgid "if no explicit format is provided and an url is not provided     or not associated with any format the program cannot choose a way to     decode the pdf, so it raises this exception"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:3
+msgid "List of XML strings representing PDF pages to process"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:5
+msgid "Starting page number of this batch (1-based index)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:7
+msgid "Total number of pages in the document"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:9
+msgid "List of relevant company names to extract from the report"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:11
+msgid "Name of the module containing format-specific parsing functions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/main.py:docstring of freeports_analysis.main.pipeline_batch:14
+msgid "List of extracted financial data objects or promise resolution contexts"
+msgstr ""

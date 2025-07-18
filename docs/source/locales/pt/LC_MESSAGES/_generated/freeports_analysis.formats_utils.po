@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:2
+msgid "freeports\\_analysis.formats\\_utils"
+msgstr ""
+
+#: freeports_analysis.formats_utils:1 of
+msgid ""
+"Utilities of general interest common to all formats and that can be used "
+"for creating `pdf_filter` or `text_extract` or `deserialize` functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:9
+msgid "Functions"
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`default_if_not_implemented "
+"<freeports_analysis.formats_utils.default_if_not_implemented>`\\ "
+"\\(default\\_func\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:1
+#: freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: of
+msgid ""
+"Replace the decorated function with a default given as argument of the "
+"decorator if the decorated function raise a `NotImplementedError` or "
+"return `None`"
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`normalize_string "
+"<freeports_analysis.formats_utils.normalize_string>`\\ \\(string\\[\\, "
+"lower\\]\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: of
+msgid "Normalize a string by: 1."
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`normalize_word "
+"<freeports_analysis.formats_utils.normalize_word>`\\ \\(word\\[\\, "
+"lower\\]\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: of
+msgid "Normalize a word by: 1."
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`overwrite_if_implemented "
+"<freeports_analysis.formats_utils.overwrite_if_implemented>`\\ "
+"\\(primary\\_func\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: freeports_analysis.formats_utils.overwrite_if_implemented:1 of
+msgid ""
+"Replace the decorated default function with a function given as argument "
+"of the decorator if that function do not raise a `NotImplementedError` or"
+" return `None`"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst
+msgid "Parameters"
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:4 of
+msgid "default function"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst
+msgid "Returns"
+msgstr ""
+
+#: freeports_analysis.formats_utils.default_if_not_implemented:7 of
+msgid ""
+"the default function if the deorated function is overwritten, if not the "
+"decorated function"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst
+msgid "Return type"
+msgstr ""
+
+#: freeports_analysis.formats_utils.normalize_string:1 of
+msgid ""
+"Normalize a string by: 1. Stripping leading/trailing whitespace 2. "
+"Converting to lowercase if `lower` 3. Collapsing multiple whitespaces "
+"into single spaces"
+msgstr ""
+
+#: freeports_analysis.formats_utils.normalize_string:6 of
+msgid "Input string to normalize"
+msgstr ""
+
+#: freeports_analysis.formats_utils.normalize_string:8
+#: freeports_analysis.formats_utils.normalize_word:8 of
+msgid "Determine if the string has to be lowered"
+msgstr ""
+
+#: freeports_analysis.formats_utils.normalize_string:11 of
+msgid "Normalized string"
+msgstr ""
+
+#: freeports_analysis.formats_utils.normalize_word:1 of
+msgid ""
+"Normalize a word by: 1. Stripping leading/trailing whitespace 2. Removing"
+" all whitespace between characters 3. Converting to lowercase if `lower`"
+msgstr ""
+
+#: freeports_analysis.formats_utils.normalize_word:6 of
+msgid "Input word to normalize"
+msgstr ""
+
+#: freeports_analysis.formats_utils.normalize_word:11 of
+msgid "Normalized word with no whitespace"
+msgstr ""
+
+#: freeports_analysis.formats_utils.overwrite_if_implemented:4 of
+msgid "implementation of a function"
+msgstr ""
+
+#: freeports_analysis.formats_utils.overwrite_if_implemented:7 of
+msgid ""
+"the function given as argument of the decorator if implemented, otherwise"
+" the decorated default"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:18
+msgid "Modules"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid ":py:obj:`deserialize <freeports_analysis.formats_utils.deserialize>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid "Utils for creating deserialize routines and functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid ":py:obj:`pdf_filter <freeports_analysis.formats_utils.pdf_filter>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid "Utilities for writing `pdf_filter` functions."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid ":py:obj:`text_extract <freeports_analysis.formats_utils.text_extract>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid "Module for text block processing and extraction in document analysis."
+msgstr ""
+

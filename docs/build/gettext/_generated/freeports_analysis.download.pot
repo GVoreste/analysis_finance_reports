@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.download.rst:2
+msgid "freeports\\_analysis.download"
+msgstr ""
+
+#: ../../../src/freeports_analysis/download.py:docstring of freeports_analysis.download:1
+msgid "Functions to download pdf from internet and for scraping"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.download.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/download.py:docstring of freeports_analysis.download.download_pdf:1:<autosummary>:1
+msgid ":py:obj:`download_pdf <freeports_analysis.download.download_pdf>`\\ \\(url\\[\\, pdf\\]\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/download.py:docstring of freeports_analysis.download.download_pdf:1
+#: ../../../src/freeports_analysis/download.py:docstring of freeports_analysis.download.download_pdf:1:<autosummary>:1
+msgid "Function to download pdf file from url"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.download.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../src/freeports_analysis/download.py:docstring of freeports_analysis.download.download_pdf:3
+msgid "unique resource identifier on internet"
+msgstr ""
+
+#: ../../../src/freeports_analysis/download.py:docstring of freeports_analysis.download.download_pdf:5
+msgid "path of the file where to save the file in filesystem"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.download.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/download.py:docstring of freeports_analysis.download.download_pdf:8
+msgid "output byte stream with input output operation like file"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.download.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.download.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../src/freeports_analysis/download.py:docstring of freeports_analysis.download.download_pdf:11
+msgid "if the code returned from the http get call is an error code, an exception occurs"
+msgstr ""

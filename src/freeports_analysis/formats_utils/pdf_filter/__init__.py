@@ -1,4 +1,8 @@
-"""Utilities for writing `pdf_filter` functions"""
+"""Utilities for writing `pdf_filter` functions.
+
+This module provides decorators and utilities for filtering and processing PDF content
+based on XML elements, fonts, and positional data.
+"""
 
 from typing import List, Optional, Tuple, TypeAlias, Callable
 from enum import Enum, auto
@@ -6,7 +10,7 @@ from lxml import etree
 from freeports_analysis.formats import PdfBlock, ExpectedPdfBlockNotFound, TextBlock
 from freeports_analysis.i18n import _
 from .xml.font import get_lines_with_font, is_present_txt_font, get_lines_with_txt_font
-from .select_position import select_inside, get_table_positions
+from .select_position import select_inside, get_table_positions, TablePosAlgorithm
 from .pdf_parts.position import YRange
 from .pdf_parts.font import Font
 from .pdf_parts import ExtractedPdfLine
@@ -20,12 +24,12 @@ PdfFilterFunc: TypeAlias = Callable[[etree.Element], List[TextBlock]]
 
 
 class OnePdfBlockType(Enum):
-    """Enum representing one type of pdf blocks in document processing.
+    """Enum representing types of PDF blocks in document processing.
 
     Attributes
     ----------
     RELEVANT_BLOCK : enum
-        Pdf block with relevant information to extract.
+        PDF block containing relevant information to extract.
     """
 
     RELEVANT_BLOCK = auto()
@@ -42,16 +46,12 @@ def filter_page_if(
     Parameters
     ----------
     condition : Callable[[etree.Element], bool]
-        A function that takes an XML element and returns True if the filter should be applied
+        A predicate function that determines whether the filter should be applied.
 
     Returns
     -------
-    Callable
-        A decorator that can be applied to PDF filter functions
-
-    Notes
-    -----
-    The decorated PDF filter function must accept an XML root element and return a list of PdfBlocks
+    Callable[[PdfFilterFunc], PdfFilterFunc]
+        A decorator that conditionally applies the PDF filter.
     """
 
     def wrapper(pdf_filter: PdfFilterFunc) -> PdfFilterFunc:
@@ -70,19 +70,19 @@ def standard_extraction_subfund(
     subfund_height: YRange,
     subfund_font: str,
 ) -> Callable[[UpdateMetadataFunc], UpdateMetadataFunc]:
-    """Decorator with argument for extracting subfund text
+    """Decorator for extracting subfund text and updating metadata.
 
     Parameters
     ----------
     subfund_height : YRange
-        where to find the subfund
+        The vertical range in which the subfund text is expected.
     subfund_font : str
-        font of the subfund
+        The font used by the subfund text.
 
     Returns
     -------
-    Callable[[UpdateMetadataFunc],UpdateMetadataFunc]
-        decorator to add metadata on a update metadata func
+    Callable[[UpdateMetadataFunc], UpdateMetadataFunc]
+        A decorator that updates metadata with the extracted subfund text.
     """
 
     def decorator(old_page_metadata):
@@ -95,7 +95,7 @@ def standard_extraction_subfund(
                 subfund = top_lines[0].xml_blk.xpath(".//@text")[0]
             if subfund is None:
                 raise ExpectedPdfBlockNotFound(
-                    _("subfound block on top of page not found")
+                    _("subfund block on top of page not found")
                 )
             metadata = old_page_metadata(xml_root)
             metadata["subfund"] = subfund
@@ -116,38 +116,38 @@ def standard_pdf_filtering(
         Tuple[Optional[float | Tuple[str, str]], Optional[float | Tuple[str, str]]]
     ] = None,
     deselection_list: Optional[Tuple[str, Font]] = None,
+    algorithm_flags: List = [False, False, False, False],
+    tolerance: float = 0.0,
 ) -> Callable[[PdfFilterFunc], PdfFilterFunc]:
-    """Decorator factory for creating PDF filters
-    that process pages with specific header and body fonts and extract subfund information
+    """Decorator factory for creating PDF filters with standardized processing.
 
     Creates a filter that:
-    1. Only processes pages containing the specified header text in the specified header font
-    2. Extracts all lines with the specified body font as relevant blocks
-    3. Extracts subfund in a range or over a certain height using his font
-    4. Allows customization of page metadata and block types through decorated functions
+    1. Processes pages containing the specified header text in the specified header font.
+    2. Extracts lines with the specified body font as relevant blocks.
+    3. Extracts subfund text within a specified range or height.
+    4. Allows customization of page metadata and block types.
 
     Parameters
     ----------
     header_txt : str
-        Text that must be present in header to process the page
+        The text that must be present in the header to process the page.
     header_font : Font
-        Font name that header text must use
+        The font used by the header text.
     subfund_height : YRange
-        Range in which the subfund has to be extracted or height over which extract
-    sufund_font: Font
-        Font name that the subfund uses
+        The vertical range or height for subfund extraction.
+    subfund_font : Font
+        The font used by the subfund text.
     body_font : str
-        Font name for lines to extract as relevant blocks
+        The font used by the body text to extract as relevant blocks.
+    y_range : Optional[Tuple[Optional[float | Tuple[str, str]], Optional[float | Tuple[str, str]]]
+        The vertical range for filtering lines, by default None.
+    deselection_list : Optional[Tuple[str, Font]], optional
+        A list of text and font pairs to exclude from extraction, by default None.
 
     Returns
     -------
-    function
-        Decorator that can be applied to PDF filter functions
-
-    Notes
-    -----
-    The decorated function can override:
-    - page_metadata(): returns additional metadata dictionary for each page
+    Callable[[PdfFilterFunc], PdfFilterFunc]
+        A decorator that applies the standardized PDF filter.
     """
 
     def decorator(f):
@@ -187,7 +187,22 @@ def standard_pdf_filtering(
             table_rows = select_inside(
                 lines, YRange(y_range_numeric_top, y_range_numeric_btm)
             )
-            table_positions = get_table_positions(table_rows)
+
+            all_flags = [
+                TablePosAlgorithm.ROW,
+                TablePosAlgorithm.BIG_RULE,
+                TablePosAlgorithm.RULER_AREA,
+                TablePosAlgorithm.TEST_POS,
+            ]
+
+            algo = TablePosAlgorithm(0)  # valore vuoto (nessun flag attivo)
+            for flag, enabled in zip(all_flags, algorithm_flags):
+                if enabled:
+                    algo |= flag
+
+            table_positions = get_table_positions(
+                table_rows, algorithm_flags=algo, tolerance=tolerance
+            )
             return [
                 PdfBlock(
                     OnePdfBlockType.RELEVANT_BLOCK,

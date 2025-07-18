@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/usage/config/config_file.rst:3
+msgid "Config file reference"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:5
+msgid ""
+"By default the config file is searched in the current directory using the"
+" following regular expressions:"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:7
+msgid "``^\\.?(config|conf)[-\\._]?freeports\\.ya?ml$``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:8
+msgid "``^\\.?freeports[-\\._]?(config|conf)\\.ya?ml$``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:11
+msgid "Our preferred way of calling the config file are:"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:13
+msgid "config.freeports.yaml"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:14
+msgid "freeports.conf.yaml"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:15
+msgid "freeports-config.yaml"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:17
+msgid ""
+"If not present it fallback conforming to `XDG Base Directory "
+"Specification <https://specifications.freedesktop.org/basedir-"
+"spec/latest/>`_ (usually to ``~/.config``) and search for a "
+"``freeports.yaml`` or ``freeports.yml`` file. If no configuration is "
+"found last attempt is to *system wise* configuration file "
+"(``/etc/freeports.yaml`` or ``/etc/freeport.yml``)."
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:23
+msgid ""
+"In ``Windows`` systems the check on `XDG base directories` is substitute "
+"with ``%LOCALAPPDATA%`` (fallback to ``~\\\\AppData\\\\Local``) or "
+"``%PROGRAMDATA%`` (fallback to ``C:\\\\ProgramData``). The check to "
+"system wise configuration is done on ``%SystemRoot%`` (fallback to "
+"``C:\\\\Windows``)."
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:28
+msgid "The map between command line config file variables and options is:"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:31
+msgid "Environment variable"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:31
+msgid "Corresponding option"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:31
+msgid "Type"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:33
+msgid "``verbosity``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:33
+msgid "``VERBOSITY``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:33
+#: ../../source/usage/config/config_file.rst:37
+msgid "``int``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:35
+msgid "``batch_path``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:35
+msgid "``BATCH``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:35
+#: ../../source/usage/config/config_file.rst:39
+#: ../../source/usage/config/config_file.rst:45
+msgid "``Path``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:37
+msgid "``n_workers``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:37
+msgid "``N_WORKERS``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:39
+msgid "``out_path``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:39
+msgid "``OUT_CSV``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:41
+msgid "``save_pdf``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:41
+msgid "``SAVE_PDF``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:41
+#: ../../source/usage/config/config_file.rst:49
+msgid "``bool``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:43
+msgid "``url``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:43
+msgid "``URL``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:43
+msgid "``str``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:45
+msgid "``pdf``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:45
+msgid "``PDF``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:47
+msgid "``format``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:47
+msgid "``FORMAT``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:47
+msgid ":py:class:`PdfFormats`"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:49
+msgid "``separate_out``"
+msgstr ""
+
+#: ../../source/usage/config/config_file.rst:49
+msgid "``SEPARATE_OUT_FILES``"
+msgstr ""
+

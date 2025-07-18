@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:2
+msgid "freeports\\_analysis.conf\\_parse"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse:1
+msgid "Submodule containing all the utilities for validating and parsing the configuration"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+msgid ":py:obj:`apply_config <freeports_analysis.conf_parse.apply_config>`\\ \\(config\\, config\\_location\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.apply_config:1
+msgid "Update configuration and `dict` rappresenting from where the configuration is loaded using the configuration file and the environment variables"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+msgid ":py:obj:`get_config_file <freeports_analysis.conf_parse.get_config_file>`\\ \\(config\\, config\\_location\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+msgid "Overwrite the configuration and the `dict` that rappresent from where the configuration is loaded on the `CONFIG_FILE` entry."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+msgid ":py:obj:`log_config <freeports_analysis.conf_parse.log_config>`\\ \\(logger\\, config\\, config\\_location\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.log_config:1
+msgid "Log with debug priority the configuration provided"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+msgid ":py:obj:`overwrite_with_config_file <freeports_analysis.conf_parse.overwrite_with_config_file>`\\ \\(config\\, ...\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.overwrite_with_config_file:1
+msgid "Overwrite configuration provided and update the dictionary containing from where the configuration are loaded from accordingly, using the configuration file"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+msgid ":py:obj:`overwrite_with_env_vars <freeports_analysis.conf_parse.overwrite_with_env_vars>`\\ \\(config\\, config\\_location\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.overwrite_with_env_vars:1
+msgid "Overwrite configuration provided and update the dictionary containing from where the configuration are loaded from accordingly, using environment variables"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+msgid ":py:obj:`validate_conf <freeports_analysis.conf_parse.validate_conf>`\\ \\(config\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:18:<autosummary>:1
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.validate_conf:1
+msgid "Function that validate the configuration provided"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:20
+msgid "Classes"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.PossibleLocationConfig:1:<autosummary>:1
+msgid ":py:obj:`PossibleLocationConfig <freeports_analysis.conf_parse.PossibleLocationConfig>`\\ \\(\\*values\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.PossibleLocationConfig:1
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.PossibleLocationConfig:1:<autosummary>:1
+msgid "Rappresent from where the options can come from"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.apply_config:4
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.get_config_file:5
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.overwrite_with_config_file:4
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.overwrite_with_env_vars:4
+msgid "configuration to overwrite"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.apply_config:6
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.get_config_file:7
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.overwrite_with_config_file:6
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.overwrite_with_env_vars:6
+msgid "location of configuration to update"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.apply_config:9
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.get_config_file:10
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.overwrite_with_config_file:9
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.overwrite_with_env_vars:9
+msgid "first `dict` is the new configuration, second is the updated location `dict`"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.get_config_file:1
+msgid "Overwrite the configuration and the `dict` that rappresent from where the configuration is loaded on the `CONFIG_FILE` entry. This has to be parsed before overwriting all the other options in order to set the correct configuration file to load"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.log_config:3
+msgid "the logger that has to log"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.validate_conf:3
+msgid "configuration to validate"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.conf_parse.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.validate_conf:6
+msgid "verbosity must be in [0:5]"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.validate_conf:7
+msgid "at least one location for input file (from url or local filesystem) should be specified"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.validate_conf:8
+msgid "invalid out path"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.validate_conf:9
+msgid "invalid batch file path"
+msgstr ""
+
+#: ../../../src/freeports_analysis/conf_parse.py:docstring of freeports_analysis.conf_parse.validate_conf:10
+msgid "if in `BATCH MODE` out path has to be directory or `.tar.gz` archive"
+msgstr ""

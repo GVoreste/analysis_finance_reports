@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/usage/config/env_variables.rst:3
+msgid "Environment variables reference"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:5
+msgid "The map between available environment variables and options is:"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:8
+msgid "Environment variable"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:8
+msgid "Corresponding option"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:8
+msgid "Type"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:10
+msgid "``AFINANCE_VERBOSITY``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:10
+msgid "``VERBOSITY``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:10
+#: ../../source/usage/config/env_variables.rst:14
+msgid "``int``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:12
+msgid "``AFINANCE_BATCH``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:12
+msgid "``BATCH``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:12
+#: ../../source/usage/config/env_variables.rst:16
+#: ../../source/usage/config/env_variables.rst:22
+#: ../../source/usage/config/env_variables.rst:26
+msgid "``Path``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:14
+msgid "``AFINANCE_N_WORKERS``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:14
+msgid "``N_WORKERS``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:16
+msgid "``AFINANCE_OUT_CSV``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:16
+msgid "``OUT_CSV``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:18
+msgid "``AFINANCE_SAVE_PDF``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:18
+msgid "``SAVE_PDF``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:18
+#: ../../source/usage/config/env_variables.rst:28
+msgid "``bool``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:20
+msgid "``AFINANCE_URL``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:20
+msgid "``URL``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:20
+msgid "``str``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:22
+msgid "``AFINANCE_PDF``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:22
+msgid "``PDF``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:24
+msgid "``AFINANCE_FORMAT``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:24
+msgid "``FORMAT``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:24
+msgid ":py:class:`PdfFormats`"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:26
+msgid "``AFINANCE_CONFIG_FILE``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:26
+msgid "``CONFIG_FILE``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:28
+msgid "``AFINANCE_SEPARATE_OUT``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:28
+msgid "``SEPARATE_OUT_FILES``"
+msgstr ""
+
+#: ../../source/usage/config/env_variables.rst:32
+msgid "The ``bool`` values are evaluated in the same manner that from :ref:`batch csv file <batch_mode>`."
+msgstr ""

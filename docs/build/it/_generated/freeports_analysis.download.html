@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freeports_analysis.download &mdash; Documentazione freeports_analysis 0.0.3 </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=21205c44"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=45930005"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="freeports_analysis.formats" href="freeports_analysis.formats.html" />
+    <link rel="prev" title="freeports_analysis.consts" href="freeports_analysis.consts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Package reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="freeports_analysis.html">freeports_analysis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.conf_parse.html">freeports_analysis.conf_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.consts.html">freeports_analysis.consts</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">freeports_analysis.download</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.download.download_pdf"><code class="docutils literal notranslate"><span class="pre">download_pdf()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats.html">freeports_analysis.formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.i18n.html">freeports_analysis.i18n</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.main.html">freeports_analysis.main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">Package reference</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.html">freeports_analysis</a></li>
+      <li class="breadcrumb-item active">freeports_analysis.download</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_generated/freeports_analysis.download.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-freeports_analysis.download">
+<span id="freeports-analysis-download"></span><h1>freeports_analysis.download<a class="headerlink" href="#module-freeports_analysis.download" title="Link to this heading"></a></h1>
+<p>Functions to download pdf from internet and for scraping</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.download.download_pdf" title="freeports_analysis.download.download_pdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_pdf</span></code></a>(url[, pdf])</p></td>
+<td><p>Function to download pdf file from url</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.download.download_pdf">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.download.</span></span><span class="sig-name descname"><span class="pre">download_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BytesIO</span></span></span><a class="headerlink" href="#freeports_analysis.download.download_pdf" title="Link to this definition"></a></dt>
+<dd><p>Function to download pdf file from url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – unique resource identifier on internet</p></li>
+<li><p><strong>pdf</strong> (<em>str</em>) – path of the file where to save the file in filesystem</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>output byte stream with input output operation like file</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>BytesIO</p>
+</dd>
+<dt class="field-even">Solleva<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – if the code returned from the http get call is an error code, an exception occurs</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="freeports_analysis.consts.html" class="btn btn-neutral float-left" title="freeports_analysis.consts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="freeports_analysis.formats.html" class="btn btn-neutral float-right" title="freeports_analysis.formats" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

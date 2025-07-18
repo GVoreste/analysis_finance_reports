@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:2
+msgid "freeports\\_analysis.formats\\_utils.pdf\\_filter.pdf\\_parts"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts:1 of
+msgid "Pdf xml parts in a friendly format (custom python classes)."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:9
+msgid "Classes"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`ExtractedPdfLine "
+"<freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine>`\\"
+" \\(blk\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine:1
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine:1:<autosummary>:1
+#: of
+msgid "A class representing a line extracted from a PDF XML structure."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine:3 of
+msgid ""
+"This class provides a friendly interface to access geometric properties, "
+"font information, and text size of a line in a PDF document."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst
+msgid "Parameters"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine:6 of
+msgid "The XML element containing the line data."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.c:1
+#: of
+msgid "Get the center coordinate of the line."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst
+msgid "Returns"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.c:3
+#: of
+msgid "The center coordinate (x, y) of the line."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst
+msgid "Return type"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.corners:1
+#: of
+msgid "Get the corner coordinates of the line."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.corners:3
+#: of
+msgid ""
+"A tuple of tuples representing the line's corners in the format (((x_tl, "
+"y_tl), (x_tr, y_tr)), ((x_bl, y_bl), (x_br, y_br)))."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.font:1
+#: of
+msgid "Get the font used in the line."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.font:3
+#: of
+msgid "The font used in the line."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.geometry:1
+#: of
+msgid "Get the geometric properties of the line."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.geometry:3
+#: of
+msgid "The area representing the line's bounds."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.text_size:1
+#: of
+msgid "Get the text size used in the line."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.text_size:3
+#: of
+msgid "The text size used in the line."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.xml_blk:1
+#: of
+msgid "Get the original XML element containing the line data."
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.xml_blk:3
+#: of
+msgid "The original XML element containing the line data."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:15
+msgid "Modules"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:22:<autosummary>:1
+msgid ""
+":py:obj:`font "
+"<freeports_analysis.formats_utils.pdf_filter.pdf_parts.font>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:22:<autosummary>:1
+msgid ""
+"Definition of types for identify carateristic related with typographic "
+"aspect of the line"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:22:<autosummary>:1
+msgid ""
+":py:obj:`generic "
+"<freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:22:<autosummary>:1
+msgid "Utilities for handling generic PDF parts and components."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:22:<autosummary>:1
+msgid ""
+":py:obj:`position "
+"<freeports_analysis.formats_utils.pdf_filter.pdf_parts.position>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst:22:<autosummary>:1
+msgid ""
+"Definition of types for identify characteristic related with geometrical "
+"aspects of the line."
+msgstr ""
+

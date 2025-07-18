@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environment variables reference &mdash; Documentazione freeports_analysis 0.0.3 </title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=21205c44"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/translations.js?v=45930005"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../../genindex.html" />
+    <link rel="search" title="Cerca" href="../../search.html" />
+    <link rel="next" title="Config file reference" href="config_file.html" />
+    <link rel="prev" title="Command line arguments" href="cmd_args.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../command.html">Command reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cmd_args.html">Command line arguments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Environment variables reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config_file.html">Config file reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#the-options">The options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#validation-of-resulting-configuration">Validation of resulting configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#batch-mode"><code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../API.html">Package reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../command.html">Command reference</a></li>
+      <li class="breadcrumb-item active">Environment variables reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/usage/config/env_variables.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="environment-variables-reference">
+<h1>Environment variables reference<a class="headerlink" href="#environment-variables-reference" title="Link to this heading"></a></h1>
+<p>The map between available environment variables and options is:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Environment variable</p></th>
+<th class="head"><p>Corresponding option</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_VERBOSITY</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_BATCH</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">BATCH</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_N_WORKERS</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">N_WORKERS</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_OUT_CSV</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OUT_CSV</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_SAVE_PDF</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SAVE_PDF</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_URL</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">URL</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_PDF</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PDF</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_FORMAT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FORMAT</span></code></p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PdfFormats</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_CONFIG_FILE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CONFIG_FILE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AFINANCE_SEPARATE_OUT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SEPARATE_OUT_FILES</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">bool</span></code> values are evaluated in the same manner that from <a class="reference internal" href="../command.html#batch-mode"><span class="std std-ref">batch csv file</span></a>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="cmd_args.html" class="btn btn-neutral float-left" title="Command line arguments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="config_file.html" class="btn btn-neutral float-right" title="Config file reference" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/usage/command.rst:28
+msgid "Reference config pages:"
+msgstr ""
+
+#: ../../source/usage/command.rst:3
+msgid "Command reference"
+msgstr ""
+
+#: ../../source/usage/command.rst:5
+msgid "The command can be used launching"
+msgstr ""
+
+#: ../../source/usage/command.rst:11
+msgid ""
+"from the command line. To get a contextual help use the option ``--help``"
+" shortened to ``-h``"
+msgstr ""
+
+#: ../../source/usage/command.rst:17
+msgid ""
+"the options can be specified in different ways that overwrite each other."
+" The same option can be specified in 3 different ways:"
+msgstr ""
+
+#: ../../source/usage/command.rst:19
+msgid "**configuration file**"
+msgstr ""
+
+#: ../../source/usage/command.rst:20
+msgid "**environment variables**"
+msgstr ""
+
+#: ../../source/usage/command.rst:21
+msgid "**command line options**"
+msgstr ""
+
+#: ../../source/usage/command.rst:23
+msgid ""
+"option not specified default to values specified in the :ref:`conf_parse "
+"submodule <freeports\\_analysis.conf\\_parse>`. Those are overwritten by "
+"the options specified in the **configuration file**, then the result is "
+"overwritten by the **environment variables**, **command line options** "
+"and finally if when in :ref:`BATCH MODE <batch_mode>` by the *job "
+"contextual options*. The option available to be overwritten and how are "
+"documented in the respective reference page:"
+msgstr ""
+
+#: ../../source/usage/command.rst:36
+msgid ""
+"After specified the options are overwritten as described in :ref:`the "
+"section about validation <conf_validation>`. Each method of overwriting "
+"also has a specific validation mechanism documented in the respective "
+"page and applied before the validation of resulting configuration. Each "
+"way of specify option set one of the program option described in this "
+"page. The options here documented have an effecton the behaviour of the "
+"``freeports`` call."
+msgstr ""
+
+#: ../../source/usage/command.rst:44
+msgid "The options"
+msgstr ""
+
+#: ../../source/usage/command.rst:47
+msgid "Option"
+msgstr ""
+
+#: ../../source/usage/command.rst:47
+msgid "Type"
+msgstr ""
+
+#: ../../source/usage/command.rst:47
+msgid "Description"
+msgstr ""
+
+#: ../../source/usage/command.rst:47
+msgid "Default"
+msgstr ""
+
+#: ../../source/usage/command.rst:49 ../../source/usage/command.rst:74
+msgid "``VERBOSITY``"
+msgstr ""
+
+#: ../../source/usage/command.rst:49 ../../source/usage/command.rst:53
+msgid "``int``"
+msgstr ""
+
+#: ../../source/usage/command.rst:49
+msgid "Describe how much the program verbosity"
+msgstr ""
+
+#: ../../source/usage/command.rst:49 ../../source/usage/command.rst:86
+msgid "2"
+msgstr ""
+
+#: ../../source/usage/command.rst:51
+msgid "``BATCH``"
+msgstr ""
+
+#: ../../source/usage/command.rst:51 ../../source/usage/command.rst:55
+#: ../../source/usage/command.rst:61 ../../source/usage/command.rst:65
+msgid "``Path``"
+msgstr ""
+
+#: ../../source/usage/command.rst:51
+msgid "If set to path of batch file, it triggers ``BATCH MODE``"
+msgstr ""
+
+#: ../../source/usage/command.rst:53
+msgid "``N_WORKERS``"
+msgstr ""
+
+#: ../../source/usage/command.rst:53
+msgid "Number of parallel processes in ``BATCH MODE``"
+msgstr ""
+
+#: ../../source/usage/command.rst:53
+msgid "``os.process_cpu_count()``"
+msgstr ""
+
+#: ../../source/usage/command.rst:55 ../../source/usage/command.rst:109
+msgid "``OUT_CSV``"
+msgstr ""
+
+#: ../../source/usage/command.rst:55
+msgid "File where to output ``csv`` files"
+msgstr ""
+
+#: ../../source/usage/command.rst:55
+msgid "``/dev/stdout``"
+msgstr ""
+
+#: ../../source/usage/command.rst:57 ../../source/usage/command.rst:175
+msgid "``SAVE_PDF``"
+msgstr ""
+
+#: ../../source/usage/command.rst:57 ../../source/usage/command.rst:67
+msgid "``bool``"
+msgstr ""
+
+#: ../../source/usage/command.rst:57
+msgid "If set and ``URL`` is specified, it save the input pdf"
+msgstr ""
+
+#: ../../source/usage/command.rst:57
+msgid "``True``"
+msgstr ""
+
+#: ../../source/usage/command.rst:59 ../../source/usage/command.rst:173
+msgid "``URL``"
+msgstr ""
+
+#: ../../source/usage/command.rst:59 ../../source/usage/command.rst:69
+msgid "``str``"
+msgstr ""
+
+#: ../../source/usage/command.rst:59
+msgid "Url of the pdf to take in input"
+msgstr ""
+
+#: ../../source/usage/command.rst:61 ../../source/usage/command.rst:177
+msgid "``PDF``"
+msgstr ""
+
+#: ../../source/usage/command.rst:61
+msgid "Path to local pdf"
+msgstr ""
+
+#: ../../source/usage/command.rst:63 ../../source/usage/command.rst:120
+#: ../../source/usage/command.rst:179
+msgid "``FORMAT``"
+msgstr ""
+
+#: ../../source/usage/command.rst:63
+msgid ":py:class:`PdfFormats`"
+msgstr ""
+
+#: ../../source/usage/command.rst:63
+msgid "Format to parse the pdf document"
+msgstr ""
+
+#: ../../source/usage/command.rst:65 ../../source/usage/command.rst:128
+msgid "``CONFIG_FILE``"
+msgstr ""
+
+#: ../../source/usage/command.rst:65
+msgid "Custom config file location"
+msgstr ""
+
+#: ../../source/usage/command.rst:65
+msgid "Calculated dynamically"
+msgstr ""
+
+#: ../../source/usage/command.rst:67
+msgid "``SEPARATE_OUT_FILES``"
+msgstr ""
+
+#: ../../source/usage/command.rst:67
+msgid "In ``BATCH_MODE`` do not merge the results of the batch"
+msgstr ""
+
+#: ../../source/usage/command.rst:67
+msgid "``False``"
+msgstr ""
+
+#: ../../source/usage/command.rst:69
+msgid "``PREFIX_OUT``"
+msgstr ""
+
+#: ../../source/usage/command.rst:69
+msgid "In ``BATCH_MODE`` define an id for the different outputs"
+msgstr ""
+
+#: ../../source/usage/command.rst:76
+msgid ""
+"This values goes from 0 to 5, 0 indicate min verbosity called ``CRITICAL "
+"VERBOSITY`` and 4 indicate the max verbosity also called ``DEBUG "
+"VERBOSITY``, 5 is the ``NOSET VERBOSITY``. The meaning of the others "
+"levels are the ones used by the python `logging package "
+"<https://docs.python.org/3/library/logging.html>`_:"
+msgstr ""
+
+#: ../../source/usage/command.rst:80
+msgid "freeports"
+msgstr ""
+
+#: ../../source/usage/command.rst:80
+msgid "`logging <https://docs.python.org/3/library/logging.html#logging-levels>`_"
+msgstr ""
+
+#: ../../source/usage/command.rst:82
+msgid "0"
+msgstr ""
+
+#: ../../source/usage/command.rst:82
+msgid "``loggign.CRITICAL``"
+msgstr ""
+
+#: ../../source/usage/command.rst:84
+msgid "1"
+msgstr ""
+
+#: ../../source/usage/command.rst:84
+msgid "``logging.ERROR``"
+msgstr ""
+
+#: ../../source/usage/command.rst:86
+msgid "``loggign.WARNING``"
+msgstr ""
+
+#: ../../source/usage/command.rst:88
+msgid "3"
+msgstr ""
+
+#: ../../source/usage/command.rst:88
+msgid "``loggign.INFO``"
+msgstr ""
+
+#: ../../source/usage/command.rst:90
+msgid "4"
+msgstr ""
+
+#: ../../source/usage/command.rst:90
+msgid "``logging.DEBUG``"
+msgstr ""
+
+#: ../../source/usage/command.rst:92
+msgid "5"
+msgstr ""
+
+#: ../../source/usage/command.rst:92
+msgid "``logging.NOSET``"
+msgstr ""
+
+#: ../../source/usage/command.rst:97
+msgid "``URL``, ``PDF`` and ``SAVE_PDF``"
+msgstr ""
+
+#: ../../source/usage/command.rst:99
+msgid ""
+"One between ``URL`` or ``PDF`` has to be specified, directly or by "
+"consequently to *job contextual options* overwriting. If ``URL`` is "
+"specified the program use the pdf resource corresponding to the url, if "
+"``PDF`` is specified it load a pdf file from local filesystem. If both "
+"are specified it tries to load from local storage, then fallback to the "
+"url. If both are specified and ``SAVE_PDF`` is ``True``, if the file is "
+"not present locally, it download it and save on disk with name indicate "
+"by ``PDF`` option."
+msgstr ""
+
+#: ../../source/usage/command.rst:111
+msgid ""
+"When not in ``BATCH MODE`` it indicate the file where to output the "
+"resulting ``csv`` parsed from the pdf document."
+msgstr ""
+
+#: ../../source/usage/command.rst:115
+msgid "The ``OUT_CSV`` default on ``Windows`` systems is ``CON``"
+msgstr ""
+
+#: ../../source/usage/command.rst:122
+msgid ""
+"It indicate which algorithm to use to parse the pdf, these algorithms are"
+" called the 'formats' of the pdf reports. It is mandatory to specify this"
+" variable if no ``URL`` is provided, if it is provided the format try to "
+"be inferred using a mapping file that map different url regular "
+"expressions to a format. The file is called ``format_url_mapping.yaml`` "
+"in the source code."
+msgstr ""
+
+#: ../../source/usage/command.rst:130
+msgid ""
+"This option indicate the config file loaded to overwrite the default "
+"options, this option can only be specified using an environment variable "
+"or using a command line argument, and it is evaluated before any other "
+"option."
+msgstr ""
+
+#: ../../source/usage/command.rst:135
+msgid "``N_WORKWERS``"
+msgstr ""
+
+#: ../../source/usage/command.rst:137
+msgid ""
+"Integer that rappresent the number of process spawned (if not set default"
+" to number of available CPUs). When in ``BATCH MODE`` it indicate the "
+"process to spawn concurrently to achieve parrallelization on the "
+"processing of different files. When not in ``BATCH_MODE`` the program "
+"divide the pdf document in different section of pages and parallelize "
+"processing document wise."
+msgstr ""
+
+#: ../../source/usage/command.rst:146
+msgid "Validation of resulting configuration"
+msgstr ""
+
+#: ../../source/usage/command.rst:148
+msgid ""
+"Each way of specify options have his algorithm to validate the user "
+"choice, but after those checks it is performed a consistency check on the"
+" resulting configuration. Noticebly the most important performed chekcs "
+"are:"
+msgstr ""
+
+#: ../../source/usage/command.rst:152
+msgid "In ``BATCH MODE`` ``OUT_CSV`` is the name of an archive or of a directory"
+msgstr ""
+
+#: ../../source/usage/command.rst:153
+msgid ""
+"After *job contextual options* overwriting at least one between ``PDF`` "
+"or ``URL`` is defined"
+msgstr ""
+
+#: ../../source/usage/command.rst:161
+msgid "``BATCH MODE``"
+msgstr ""
+
+#: ../../source/usage/command.rst:163
+msgid ""
+"This mode permit to process different files all at one in parallel. This "
+"mode is caratterized by the ``BATCH`` variable set to a *batch csv file* "
+"and the possibility of setting ``SEPARATE_OUT_FILES`` to ``True`` ( in "
+"this case ``OUT_CSV`` should be a directory name or the name of a "
+"``.tar.gz`` archive to create) The *batch csv file* is a csv file with "
+"some header that indicate the option to overwrite to the resulting "
+"configuration. These option are called *job contextual options* and each "
+"row of the csv file is called a *job*. The available overwrittables "
+"options are:"
+msgstr ""
+
+#: ../../source/usage/command.rst:171
+msgid "Header"
+msgstr ""
+
+#: ../../source/usage/command.rst:171
+msgid "Overwritten option"
+msgstr ""
+
+#: ../../source/usage/command.rst:173
+msgid "``url``"
+msgstr ""
+
+#: ../../source/usage/command.rst:175
+msgid "``save pdf``"
+msgstr ""
+
+#: ../../source/usage/command.rst:177
+msgid "``pdf``"
+msgstr ""
+
+#: ../../source/usage/command.rst:179
+msgid "``format``"
+msgstr ""
+
+#: ../../source/usage/command.rst:181
+msgid "``prefix out``"
+msgstr ""
+
+#: ../../source/usage/command.rst:181
+msgid "*See below*"
+msgstr ""
+
+#: ../../source/usage/command.rst:184
+msgid ""
+"the header is case insensitive, so for example *url*, *URL* and *Url* are"
+" considered the same header. the bool matching is done so that cast to "
+"``True`` if csv value is one between (case insensitive) *true, on, yes, "
+"y, t, 1* to ``False`` if between *false, off, no, n, f, 0*."
+msgstr ""
+
+#: ../../source/usage/command.rst:190
+msgid "``OUT_CSV`` and ``prefix out``"
+msgstr ""
+
+#: ../../source/usage/command.rst:192
+msgid ""
+"When in ``BATCH MODE`` there are two output profiles, the standard one on"
+" a single *csv* and on separate files (this distinction can be made "
+"setting ``SEPARATE_OUT_FILES`` to ``True`` or ``False``). The ``prefix "
+"out`` cell of the batch file set the ``PREFIX_OUT`` option. When output "
+"on same file the usual *csv* add a column (*Format*) to indicate the "
+"format used to parse the pdf report from which the data come from. To "
+"identify precisely the line of the batch file that generate the data can "
+"if is present ``PREFIX_OUT`` it is added a column called *Report "
+"identifier* with the corresponding value."
+msgstr ""
+
+#: ../../source/usage/command.rst:201
+msgid ""
+"Set ``PREFIX_OUT`` something meaning full that distinguish the input "
+"document, like for example the date of the publication of the pdf and "
+"istitution that created the report"
+msgstr ""
+
+#: ../../source/usage/command.rst:205
+#, python-brace-format
+msgid ""
+"When on different files ``OUT_CSV`` has to be a directory or a "
+"``.tar.gz`` archive. The program create if it doesn't exists a directory "
+"named as ``OUT_CSV`` if is not an archive or the name of the archive "
+"without ``.tar.gz`` exstension and for each *job*, save an output file "
+"named ``{PREFIX_OUT}-{FORMAT}.csv`` or just ``{FORMAT}.csv`` if absent or"
+" empty prefix. If ``OUT_CSV`` was specified  as an archive, the directory"
+" is compressed into ``.tar.gz``. If the directory didn't existed and an "
+"archive is created, after creation the directory is deleted from the "
+"filesystem."
+msgstr ""
+

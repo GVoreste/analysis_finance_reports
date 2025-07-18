@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freeports_analysis.formats_utils.deserialize &mdash; Documentazione freeports_analysis 0.0.3 </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=21205c44"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=45930005"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="freeports_analysis.formats_utils.pdf_filter" href="freeports_analysis.formats_utils.pdf_filter.html" />
+    <link rel="prev" title="freeports_analysis.formats_utils" href="freeports_analysis.formats_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Package reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="freeports_analysis.html">freeports_analysis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.conf_parse.html">freeports_analysis.conf_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.consts.html">freeports_analysis.consts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.download.html">freeports_analysis.download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats.html">freeports_analysis.formats</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.default_if_not_implemented"><code class="docutils literal notranslate"><span class="pre">default_if_not_implemented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.normalize_string"><code class="docutils literal notranslate"><span class="pre">normalize_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.normalize_word"><code class="docutils literal notranslate"><span class="pre">normalize_word()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.overwrite_if_implemented"><code class="docutils literal notranslate"><span class="pre">overwrite_if_implemented()</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">freeports_analysis.formats_utils.deserialize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.html">freeports_analysis.formats_utils.pdf_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.text_extract.html">freeports_analysis.formats_utils.text_extract</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.i18n.html">freeports_analysis.i18n</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.main.html">freeports_analysis.main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">Package reference</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.html">freeports_analysis</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a></li>
+      <li class="breadcrumb-item active">freeports_analysis.formats_utils.deserialize</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_generated/freeports_analysis.formats_utils.deserialize.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-freeports_analysis.formats_utils.deserialize">
+<span id="freeports-analysis-formats-utils-deserialize"></span><h1>freeports_analysis.formats_utils.deserialize<a class="headerlink" href="#module-freeports_analysis.formats_utils.deserialize" title="Link to this heading"></a></h1>
+<p>Utils for creating deserialize routines and functions</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.deserialize.perc_to_float" title="freeports_analysis.formats_utils.deserialize.perc_to_float"><code class="xref py py-obj docutils literal notranslate"><span class="pre">perc_to_float</span></code></a>(perc[, norm])</p></td>
+<td><p>Convert a percentage string to float value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.deserialize.standard_deserialization" title="freeports_analysis.formats_utils.deserialize.standard_deserialization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">standard_deserialization</span></code></a>([...])</p></td>
+<td><p>Decorator factory that creates a deserializer function for TextBlock metadata.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.deserialize.to_currency" title="freeports_analysis.formats_utils.deserialize.to_currency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_currency</span></code></a>(data)</p></td>
+<td><p>Convert a string to a Currency enum value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.deserialize.to_date" title="freeports_analysis.formats_utils.deserialize.to_date"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_date</span></code></a>(data)</p></td>
+<td><p>Convert a date string to a date object using multiple possible formats.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.deserialize.to_float" title="freeports_analysis.formats_utils.deserialize.to_float"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_float</span></code></a>(data)</p></td>
+<td><p>Cast to float in a more loose way than the standard python <cite>float</cite> namely it removes dots or commas and spaces around the string and handles thousand separators.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.deserialize.to_int" title="freeports_analysis.formats_utils.deserialize.to_int"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_int</span></code></a>(data)</p></td>
+<td><p>Cast to int in a more loose way than the standard python <cite>int</cite> namely it remove dots or commas and spaces around the string</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.deserialize.to_str" title="freeports_analysis.formats_utils.deserialize.to_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_str</span></code></a>(data)</p></td>
+<td><p>Normalize a string by stripping whitespace from both ends.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.deserialize.perc_to_float">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.deserialize.</span></span><span class="sig-name descname"><span class="pre">perc_to_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">perc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.deserialize.perc_to_float" title="Link to this definition"></a></dt>
+<dd><p>Convert a percentage string to float value.</p>
+<p>Handles various percentage string formats by:
+- Normalizing the string (removing spaces, converting commas to dots)
+- Removing percentage signs (if percentage sign is present,</p>
+<blockquote>
+<div><p>the number gets normalized dividing by 100)</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Optionally converting to decimal form (dividing by 100)</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>perc</strong> (<em>str</em>) – The percentage string to convert (may contain “%”, “,”, or “.”)</p></li>
+<li><p><strong>norm</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to normalize the result by dividing by 100 (default True)
+If False, returns the raw numeric value from the string</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>The converted float value</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Solleva<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the string cannot be converted to a float after processing</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.deserialize.standard_deserialization">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.deserialize.</span></span><span class="sig-name descname"><span class="pre">standard_deserialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cost_and_value_interpret_int</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity_interpret_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.formats.html#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><span class="pre">TextBlock</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.Equity" title="freeports_analysis.consts.Equity"><span class="pre">Equity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.Bond" title="freeports_analysis.consts.Bond"><span class="pre">Bond</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.formats.html#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><span class="pre">TextBlock</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.Equity" title="freeports_analysis.consts.Equity"><span class="pre">Equity</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.Bond" title="freeports_analysis.consts.Bond"><span class="pre">Bond</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.deserialize.standard_deserialization" title="Link to this definition"></a></dt>
+<dd><p>Decorator factory that creates a deserializer function for TextBlock metadata.</p>
+<p>The resulting decorator transforms a TextBlock’s metadata into a financial data object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cost_and_value_interpret_int</strong> (<em>bool</em>) – interpret market value and acquisition cost column as int before casting to float</p></li>
+<li><p><strong>quantity_interpret_float</strong> (<em>bool</em>) – interpret quantity column as int before casting to int</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>Decorator to wrap the deserializer functions</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable[[DeserializeFunc],DeserializeFunc]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.deserialize.to_currency">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.deserialize.</span></span><span class="sig-name descname"><span class="pre">to_currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.deserialize.to_currency" title="Link to this definition"></a></dt>
+<dd><p>Convert a string to a Currency enum value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – The currency string to convert (e.g. «USD», «EUR»)</p>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding Currency enum value</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency">Currency</a></p>
+</dd>
+<dt class="field-even">Solleva<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>KeyError</strong> – If the string doesn’t match any Currency enum member</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.deserialize.to_date">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.deserialize.</span></span><span class="sig-name descname"><span class="pre">to_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">date</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.deserialize.to_date" title="Link to this definition"></a></dt>
+<dd><p>Convert a date string to a date object using multiple possible formats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – The date string to parse</p>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>The parsed date object</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>date</p>
+</dd>
+<dt class="field-even">Solleva<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the string doesn’t match any of the supported date formats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.deserialize.to_float">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.deserialize.</span></span><span class="sig-name descname"><span class="pre">to_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.deserialize.to_float" title="Link to this definition"></a></dt>
+<dd><p>Cast to float in a more loose way than the standard python <cite>float</cite>
+namely it removes dots or commas and spaces around the string and handles
+thousand separators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – number written in string form</p>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>casted result</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Solleva<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – the resulting processed string cannot be casted to <cite>float</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.deserialize.to_int">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.deserialize.</span></span><span class="sig-name descname"><span class="pre">to_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.deserialize.to_int" title="Link to this definition"></a></dt>
+<dd><p>Cast to int in a more loose way than the standard python <cite>int</cite>
+namely it remove dots or commas and spaces around the string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – number written in string form</p>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>casted result</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">Solleva<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – the resulting processed string cannot be casted to <cite>int</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.deserialize.to_str">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.deserialize.</span></span><span class="sig-name descname"><span class="pre">to_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.deserialize.to_str" title="Link to this definition"></a></dt>
+<dd><p>Normalize a string by stripping whitespace from both ends.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>str</em>) – The input string to be normalized</p>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>The stripped string</p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="freeports_analysis.formats_utils.html" class="btn btn-neutral float-left" title="freeports_analysis.formats_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="freeports_analysis.formats_utils.pdf_filter.html" class="btn btn-neutral float-right" title="freeports_analysis.formats_utils.pdf_filter" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -15,6 +15,8 @@ def normalize_string(string: str, lower: bool = True) -> str:
     ----------
     string : str
         Input string to normalize
+    lower : bool
+        Determine if the string has to be lowered
 
     Returns
     -------
@@ -32,11 +34,14 @@ def normalize_word(word: str, lower: bool = False) -> str:
     """Normalize a word by:
     1. Stripping leading/trailing whitespace
     2. Removing all whitespace between characters
+    3. Converting to lowercase if `lower`
 
     Parameters
     ----------
     word : str
         Input word to normalize
+    lower : bool
+        Determine if the string has to be lowered
 
     Returns
     -------

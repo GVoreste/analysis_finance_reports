@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:2
+msgid "freeports\\_analysis.formats\\_utils"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils:1
+msgid "Utilities of general interest common to all formats and that can be used for creating `pdf_filter` or `text_extract` or `deserialize` functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+msgid ":py:obj:`default_if_not_implemented <freeports_analysis.formats_utils.default_if_not_implemented>`\\ \\(default\\_func\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+msgid "Replace the decorated function with a default given as argument of the decorator if the decorated function raise a `NotImplementedError` or return `None`"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+msgid ":py:obj:`normalize_string <freeports_analysis.formats_utils.normalize_string>`\\ \\(string\\[\\, lower\\]\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+msgid "Normalize a string by: 1."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+msgid ":py:obj:`normalize_word <freeports_analysis.formats_utils.normalize_word>`\\ \\(word\\[\\, lower\\]\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+msgid "Normalize a word by: 1."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+msgid ":py:obj:`overwrite_if_implemented <freeports_analysis.formats_utils.overwrite_if_implemented>`\\ \\(primary\\_func\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.overwrite_if_implemented:1
+msgid "Replace the decorated default function with a function given as argument of the decorator if that function do not raise a `NotImplementedError` or return `None`"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:4
+msgid "default function"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.default_if_not_implemented:7
+msgid "the default function if the deorated function is overwritten, if not the decorated function"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.normalize_string:1
+msgid "Normalize a string by: 1. Stripping leading/trailing whitespace 2. Converting to lowercase if `lower` 3. Collapsing multiple whitespaces into single spaces"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.normalize_string:6
+msgid "Input string to normalize"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.normalize_string:8
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.normalize_word:8
+msgid "Determine if the string has to be lowered"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.normalize_string:11
+msgid "Normalized string"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.normalize_word:1
+msgid "Normalize a word by: 1. Stripping leading/trailing whitespace 2. Removing all whitespace between characters 3. Converting to lowercase if `lower`"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.normalize_word:6
+msgid "Input word to normalize"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.normalize_word:11
+msgid "Normalized word with no whitespace"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.overwrite_if_implemented:4
+msgid "implementation of a function"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/__init__.py:docstring of freeports_analysis.formats_utils.overwrite_if_implemented:7
+msgid "the function given as argument of the decorator if implemented, otherwise the decorated default"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:18
+msgid "Modules"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid ":py:obj:`deserialize <freeports_analysis.formats_utils.deserialize>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid "Utils for creating deserialize routines and functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid ":py:obj:`pdf_filter <freeports_analysis.formats_utils.pdf_filter>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid "Utilities for writing `pdf_filter` functions."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid ":py:obj:`text_extract <freeports_analysis.formats_utils.text_extract>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.rst:25:<autosummary>:1
+msgid "Module for text block processing and extraction in document analysis."
+msgstr ""

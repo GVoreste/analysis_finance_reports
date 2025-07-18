@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.deserialize.rst:2
+msgid "freeports\\_analysis.formats\\_utils.deserialize"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize:1
+msgid "Utils for creating deserialize routines and functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.deserialize.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+msgid ":py:obj:`perc_to_float <freeports_analysis.formats_utils.deserialize.perc_to_float>`\\ \\(perc\\[\\, norm\\]\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+msgid "Convert a percentage string to float value."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+msgid ":py:obj:`standard_deserialization <freeports_analysis.formats_utils.deserialize.standard_deserialization>`\\ \\(\\[...\\]\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.standard_deserialization:1
+msgid "Decorator factory that creates a deserializer function for TextBlock metadata."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+msgid ":py:obj:`to_currency <freeports_analysis.formats_utils.deserialize.to_currency>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_currency:1
+msgid "Convert a string to a Currency enum value."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+msgid ":py:obj:`to_date <freeports_analysis.formats_utils.deserialize.to_date>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_date:1
+msgid "Convert a date string to a date object using multiple possible formats."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+msgid ":py:obj:`to_float <freeports_analysis.formats_utils.deserialize.to_float>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_float:1
+msgid "Cast to float in a more loose way than the standard python `float` namely it removes dots or commas and spaces around the string and handles thousand separators."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+msgid ":py:obj:`to_int <freeports_analysis.formats_utils.deserialize.to_int>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_int:1
+msgid "Cast to int in a more loose way than the standard python `int` namely it remove dots or commas and spaces around the string"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+msgid ":py:obj:`to_str <freeports_analysis.formats_utils.deserialize.to_str>`\\ \\(data\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:1:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_str:1
+msgid "Normalize a string by stripping whitespace from both ends."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:3
+msgid "Handles various percentage string formats by: - Normalizing the string (removing spaces, converting commas to dots) - Removing percentage signs (if percentage sign is present,"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:6
+msgid "the number gets normalized dividing by 100)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:7
+msgid "Optionally converting to decimal form (dividing by 100)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.deserialize.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:9
+msgid "The percentage string to convert (may contain '%', ',', or '.')"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:11
+msgid "Whether to normalize the result by dividing by 100 (default True) If False, returns the raw numeric value from the string"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.deserialize.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:15
+msgid "The converted float value"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.deserialize.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.deserialize.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.perc_to_float:18
+msgid "If the string cannot be converted to a float after processing"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.standard_deserialization:3
+msgid "The resulting decorator transforms a TextBlock's metadata into a financial data object."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.standard_deserialization:5
+msgid "interpret market value and acquisition cost column as int before casting to float"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.standard_deserialization:7
+msgid "interpret quantity column as int before casting to int"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.standard_deserialization:10
+msgid "Decorator to wrap the deserializer functions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_currency:3
+msgid "The currency string to convert (e.g. \"USD\", \"EUR\")"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_currency:6
+msgid "The corresponding Currency enum value"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_currency:9
+msgid "If the string doesn't match any Currency enum member"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_date:3
+msgid "The date string to parse"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_date:6
+msgid "The parsed date object"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_date:9
+msgid "If the string doesn't match any of the supported date formats"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_float:5
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_int:4
+msgid "number written in string form"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_float:8
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_int:7
+msgid "casted result"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_float:11
+msgid "the resulting processed string cannot be casted to `float`"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_int:10
+msgid "the resulting processed string cannot be casted to `int`"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_str:3
+msgid "The input string to be normalized"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/deserialize.py:docstring of freeports_analysis.formats_utils.deserialize.to_str:6
+msgid "The stripped string"
+msgstr ""

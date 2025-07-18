@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freeports_analysis.conf_parse &mdash; Documentazione freeports_analysis 0.0.3 </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=21205c44"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=45930005"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="freeports_analysis.consts" href="freeports_analysis.consts.html" />
+    <link rel="prev" title="freeports_analysis.cmd" href="freeports_analysis.cmd.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Package reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="freeports_analysis.html">freeports_analysis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">freeports_analysis.conf_parse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.conf_parse.PossibleLocationConfig"><code class="docutils literal notranslate"><span class="pre">PossibleLocationConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.conf_parse.apply_config"><code class="docutils literal notranslate"><span class="pre">apply_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.conf_parse.get_config_file"><code class="docutils literal notranslate"><span class="pre">get_config_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.conf_parse.log_config"><code class="docutils literal notranslate"><span class="pre">log_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.conf_parse.overwrite_with_config_file"><code class="docutils literal notranslate"><span class="pre">overwrite_with_config_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.conf_parse.overwrite_with_env_vars"><code class="docutils literal notranslate"><span class="pre">overwrite_with_env_vars()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.conf_parse.validate_conf"><code class="docutils literal notranslate"><span class="pre">validate_conf()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.consts.html">freeports_analysis.consts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.download.html">freeports_analysis.download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats.html">freeports_analysis.formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.i18n.html">freeports_analysis.i18n</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.main.html">freeports_analysis.main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">Package reference</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.html">freeports_analysis</a></li>
+      <li class="breadcrumb-item active">freeports_analysis.conf_parse</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_generated/freeports_analysis.conf_parse.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-freeports_analysis.conf_parse">
+<span id="freeports-analysis-conf-parse"></span><h1>freeports_analysis.conf_parse<a class="headerlink" href="#module-freeports_analysis.conf_parse" title="Link to this heading"></a></h1>
+<p>Submodule containing all the utilities for validating and parsing the configuration</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.conf_parse.apply_config" title="freeports_analysis.conf_parse.apply_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_config</span></code></a>(config, config_location)</p></td>
+<td><p>Update configuration and <cite>dict</cite> rappresenting from where the configuration is loaded using the configuration file and the environment variables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.conf_parse.get_config_file" title="freeports_analysis.conf_parse.get_config_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_config_file</span></code></a>(config, config_location)</p></td>
+<td><p>Overwrite the configuration and the <cite>dict</cite> that rappresent from where the configuration is loaded on the <cite>CONFIG_FILE</cite> entry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.conf_parse.log_config" title="freeports_analysis.conf_parse.log_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_config</span></code></a>(logger, config, config_location)</p></td>
+<td><p>Log with debug priority the configuration provided</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.conf_parse.overwrite_with_config_file" title="freeports_analysis.conf_parse.overwrite_with_config_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite_with_config_file</span></code></a>(config, ...)</p></td>
+<td><p>Overwrite configuration provided and update the dictionary containing from where the configuration are loaded from accordingly, using the configuration file</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.conf_parse.overwrite_with_env_vars" title="freeports_analysis.conf_parse.overwrite_with_env_vars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite_with_env_vars</span></code></a>(config, config_location)</p></td>
+<td><p>Overwrite configuration provided and update the dictionary containing from where the configuration are loaded from accordingly, using environment variables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.conf_parse.validate_conf" title="freeports_analysis.conf_parse.validate_conf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_conf</span></code></a>(config)</p></td>
+<td><p>Function that validate the configuration provided</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.conf_parse.PossibleLocationConfig" title="freeports_analysis.conf_parse.PossibleLocationConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PossibleLocationConfig</span></code></a>(*values)</p></td>
+<td><p>Rappresent from where the options can come from</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.conf_parse.PossibleLocationConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.conf_parse.</span></span><span class="sig-name descname"><span class="pre">PossibleLocationConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.conf_parse.PossibleLocationConfig" title="Link to this definition"></a></dt>
+<dd><p>Rappresent from where the options can come from</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.conf_parse.apply_config">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.conf_parse.</span></span><span class="sig-name descname"><span class="pre">apply_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.conf_parse.apply_config" title="Link to this definition"></a></dt>
+<dd><p>Update configuration and <cite>dict</cite> rappresenting from where the configuration is loaded
+using the configuration file and the environment variables</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>dict</em>) – configuration to overwrite</p></li>
+<li><p><strong>config_location</strong> (<em>dict</em>) – location of configuration to update</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>first <cite>dict</cite> is the new configuration, second is the updated location <cite>dict</cite></p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[dict,dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.conf_parse.get_config_file">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.conf_parse.</span></span><span class="sig-name descname"><span class="pre">get_config_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.conf_parse.get_config_file" title="Link to this definition"></a></dt>
+<dd><p>Overwrite the configuration and the <cite>dict</cite> that rappresent from where the configuration
+is loaded on the <cite>CONFIG_FILE</cite> entry. This has to be parsed before overwriting all the other
+options in order to set the correct configuration file to load</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>dict</em>) – configuration to overwrite</p></li>
+<li><p><strong>config_location</strong> (<em>dict</em>) – location of configuration to update</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>first <cite>dict</cite> is the new configuration, second is the updated location <cite>dict</cite></p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[dict,dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.conf_parse.log_config">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.conf_parse.</span></span><span class="sig-name descname"><span class="pre">log_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.conf_parse.log_config" title="Link to this definition"></a></dt>
+<dd><p>Log with debug priority the configuration provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>logger</strong> (<em>log.Logger</em>) – the logger that has to log</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.conf_parse.overwrite_with_config_file">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.conf_parse.</span></span><span class="sig-name descname"><span class="pre">overwrite_with_config_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.conf_parse.overwrite_with_config_file" title="Link to this definition"></a></dt>
+<dd><p>Overwrite configuration provided and update the dictionary containing
+from where the configuration are loaded from accordingly, using the configuration file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>dict</em>) – configuration to overwrite</p></li>
+<li><p><strong>config_location</strong> (<em>dict</em>) – location of configuration to update</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>first <cite>dict</cite> is the new configuration, second is the updated location <cite>dict</cite></p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[dict,dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.conf_parse.overwrite_with_env_vars">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.conf_parse.</span></span><span class="sig-name descname"><span class="pre">overwrite_with_env_vars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.conf_parse.overwrite_with_env_vars" title="Link to this definition"></a></dt>
+<dd><p>Overwrite configuration provided and update the dictionary containing
+from where the configuration are loaded from accordingly, using environment variables</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>dict</em>) – configuration to overwrite</p></li>
+<li><p><strong>config_location</strong> (<em>dict</em>) – location of configuration to update</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ritorna<span class="colon">:</span></dt>
+<dd class="field-even"><p>first <cite>dict</cite> is the new configuration, second is the updated location <cite>dict</cite></p>
+</dd>
+<dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[dict,dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.conf_parse.validate_conf">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.conf_parse.</span></span><span class="sig-name descname"><span class="pre">validate_conf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.conf_parse.validate_conf" title="Link to this definition"></a></dt>
+<dd><p>Function that validate the configuration provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> (<em>dict</em>) – configuration to validate</p>
+</dd>
+<dt class="field-even">Solleva<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – verbosity must be in [0:5]</p></li>
+<li><p><strong>ValueError</strong> – at least one location for input file (from url or local filesystem) should be specified</p></li>
+<li><p><strong>ValueError</strong> – invalid out path</p></li>
+<li><p><strong>ValueError</strong> – invalid batch file path</p></li>
+<li><p><strong>ValueError</strong> – if in <cite>BATCH MODE</cite> out path has to be directory or <cite>.tar.gz</cite> archive</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="freeports_analysis.cmd.html" class="btn btn-neutral float-left" title="freeports_analysis.cmd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="freeports_analysis.consts.html" class="btn btn-neutral float-right" title="freeports_analysis.consts" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

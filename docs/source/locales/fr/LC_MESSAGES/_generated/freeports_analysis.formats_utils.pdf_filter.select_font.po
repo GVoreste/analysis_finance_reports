@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_font.rst:2
+msgid "freeports\\_analysis.formats\\_utils.pdf\\_filter.select\\_font"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_font:1 of
+msgid ""
+"Utilities for selecting or deselecting lines based of font and text "
+"information"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_font.rst:9
+msgid "Functions"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_font.deselect_txt_font:1:<autosummary>:1
+#: of
+msgid ""
+":py:obj:`deselect_txt_font "
+"<freeports_analysis.formats_utils.pdf_filter.select_font.deselect_txt_font>`\\"
+" \\(lines\\, deselection\\_list\\)"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_font.deselect_txt_font:1
+#: freeports_analysis.formats_utils.pdf_filter.select_font.deselect_txt_font:1:<autosummary>:1
+#: of
+msgid "Deselect text with a certain font and text combination"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_font.rst
+msgid "Parameters"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_font.deselect_txt_font:3
+#: of
+msgid "list to filter"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_font.deselect_txt_font:5
+#: of
+msgid "list of text and font to search for"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_font.rst
+msgid "Returns"
+msgstr ""
+
+#: freeports_analysis.formats_utils.pdf_filter.select_font.deselect_txt_font:8
+#: of
+msgid "filtered list"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.select_font.rst
+msgid "Return type"
+msgstr ""
+

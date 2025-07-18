@@ -5,7 +5,7 @@ should facilitate avoiding circular imports
 from abc import ABC, abstractmethod
 import datetime
 from enum import Enum, auto
-from typing import List
+from typing import List, TypeAlias, Any
 import logging as log
 import importlib
 
@@ -13,9 +13,14 @@ import yaml
 from importlib_resources import files
 from freeports_analysis import data
 from freeports_analysis.i18n import _
+from freeports_analysis.i18n import _
 
 
 logger = log.getLogger(__name__)
+STANDARD_LOG_FORMATTER = log.Formatter("%(levelname)s %(name)s: %(message)s")
+STANDARD_LOG_FORMATTER_MP = log.Formatter(
+    "%(levelname)s[%(process)d] %(name)s: %(message)s"
+)
 STANDARD_LOG_FORMATTER = log.Formatter("%(levelname)s %(name)s: %(message)s")
 STANDARD_LOG_FORMATTER_MP = log.Formatter(
     "%(levelname)s[%(process)d] %(name)s: %(message)s"
@@ -29,7 +34,6 @@ YAML_DATA = None
 with files(data).joinpath("format_url_mapping.yaml").open("r") as f:
     YAML_DATA = yaml.safe_load(f)
 
-logger.debug(YAML_DATA)
 PdfFormats = Enum(
     "PdfFormats", {k: v if v is not None else [] for k, v in YAML_DATA.items()}
 )
@@ -93,6 +97,162 @@ class Currency(Enum):
     NZD = "$"
 
 
+PromisesResolutionMap: TypeAlias = dict
+PromisesResolutionContext: TypeAlias = dict
+
+
+class Promise:
+    """Base class for deferred value resolution in financial data processing.
+    Implements a promise pattern where values can be resolved later from a mapping.
+    Attributes
+    ----------
+    id : str
+        The key used to lookup the promised value in the resolution mapping.
+    Methods
+    -------
+    fulfill_with(mapping: PromisesResolutionMap) -> Any
+        Resolves the promised value from the given mapping.
+    """
+
+    def __init__(self, ID: str):
+        """Initialize a Promise with the given lookup ID.
+        Parameters
+        ----------
+        ID : str
+            The key to use when resolving this promise from a mapping.
+        """
+        self._id = ID
+
+    @property
+    def id(self) -> str:
+        """str: The lookup key for this promise."""
+        return self._id
+
+    def fulfill_with(self, mapping: PromisesResolutionMap) -> Any:
+        """Resolve this promise's value from the given mapping.
+        Parameters
+        ----------
+        mapping : PromisesResolutionMap
+            Dictionary containing values to resolve promises from.
+        Returns
+        -------
+        Any
+            The resolved value from the mapping.
+        """
+        return mapping[self.id]
+
+    def __str__(self) -> str:
+        """str: String representation showing promise class and ID."""
+        return f'{self.__class__.__name__}("{self.id}")'
+
+
+class CompanyPromise(Promise):
+    """Promise for resolving company names in financial data."""
+
+
+class SubfundPromise(Promise):
+    """Promise for resolving subfund names in financial data."""
+
+
+class CurrencyPromise(Promise):
+    """Promise for resolving currency values in financial data."""
+
+
+class NominalQuantityPromise(Promise):
+    """Promise for resolving nominal quantity values in financial data."""
+
+
+class MarkedValuePromise(Promise):
+    """Promise for resolving marked value amounts in financial data."""
+
+
+class PercNetAssetsPromise(Promise):
+    """Promise for resolving percentage of net assets values."""
+
+
+class AcquisitionCostPromise(Promise):
+    """Promise for resolving acquisition cost values."""
+
+
+class MaturityPromise(Promise):
+    """Promise for resolving maturity dates in bond instruments."""
+
+
+class InterestRatePromise(Promise):
+    """Promise for resolving interest rate values in bond instruments."""
+
+
+class CircularPromisesChain(Exception):
+    """Exception raised when a circular dependency is detected in promise resolution.
+    This occurs when a promise chain references itself either directly or indirectly,
+    creating an infinite loop that cannot be resolved.
+    """
+
+
+def flatten_promise_map(mapping: PromisesResolutionMap) -> PromisesResolutionMap:
+    """Flatten a mapping containing Promise objects by resolving all references.
+    Processes a dictionary that may contain Promise objects, resolving each promise
+    by looking up its value in the mapping until all values are concrete (non-Promise).
+    Detects and prevents circular references that would cause infinite resolution loops.
+    Parameters
+    ----------
+    mapping : PromisesResolutionMap
+        Dictionary containing both direct values and Promise objects to be resolved.
+    Returns
+    -------
+    PromisesResolutionMap
+        A new dictionary with all Promise objects resolved to their final values.
+    Raises
+    ------
+    CircularPromisesChain
+        If a circular reference is detected in the promise resolution chain.
+    """
+    flattened = {}
+    resolve_history = {}
+    promises = []
+
+    # Initial pass: separate promises from concrete values
+    for key, value in mapping.items():
+        if isinstance(value, Promise):
+            promises.append(key)
+            resolve_history[key] = []
+        else:
+            flattened[key] = value
+    if len(promises) == 0:
+        return flattened
+
+    # Process promises until all are resolved
+    while True:
+        i = 0
+        while True:
+            p = promises[i]
+            value = mapping[p]
+            if not isinstance(value, Promise):
+                # Found concrete value - add to flattened and remove from processing
+                flattened[p] = value
+                promises.pop(i)
+            else:
+                # Check for circular reference
+                if value.id in resolve_history[p]:
+                    _debug_str = f"{resolve_history[p]} -> {value.id}"
+                    raise CircularPromisesChain(
+                        _("Circular reference detected in promise resolution chain: ")
+                        + _debug_str
+                    )
+
+                # Track resolution path and follow the reference
+                resolve_history[p].append(value.id)
+                mapping[p] = mapping[value.id]
+                i += 1
+            if i >= len(promises):
+                break
+
+        if len(promises) == 0:
+            break
+
+    return flattened
+
+
 class FinancialData(ABC):
     """Abstract base class representing financial data.
 
@@ -105,19 +265,19 @@ class FinancialData(ABC):
         The page number where the financial data appears (must be positive).
     targets: List[str]
         The list of companies to search for, used as company validation
-    company : str
+    company : str | CompanyPromise
         The name of the company or issuer.
-    market_value : float
+    market_value : float | MarketValuePromise
         The current market value of the instrument.
-    currency : Currency
+    currency : Currency | CurrencyPromise
         The currency in which the value is denominated.
-    perc_net_assets : float
+    perc_net_assets : float | PercNetAssetsPromise
         Percentage of net assets (must be between 0 and 1).
-    subfund : str
+    subfund : str | SubfundPromise
         The subfund to which this instrument belongs.
-    nominal_quantity : int, optional
+    nominal_quantity : int | NominalQuantityPromise , optional
         The nominal quantity of the instrument, if applicable.
-    acquisition_cost : float, optional
+    acquisition_cost : float | AcquisitionCostPromise , optional
         The original acquisition cost of the instrument.
 
     Raises
@@ -126,32 +286,28 @@ class FinancialData(ABC):
         If perc_net_assets is not between 0 and 1.
         If page is not a positive number.
         If company is not in targets.
+        If company is not in targets.
     """
 
     def __init__(
         self,
         page: int,
         targets: List[str],
-        company: str,
-        subfund: str,
-        nominal_quantity: int,
-        market_value: float,
-        currency: Currency,
-        perc_net_assets: float,
-        acquisition_cost: float = None,
+        company: str | CompanyPromise,
+        subfund: str | SubfundPromise,
+        nominal_quantity: int | NominalQuantityPromise,
+        market_value: float | MarkedValuePromise,
+        currency: Currency | CurrencyPromise,
+        perc_net_assets: float | PercNetAssetsPromise,
+        acquisition_cost: float | AcquisitionCostPromise = None,
     ):
-        if not 0.0 <= perc_net_assets <= 1.0:
-            raise ValueError(
-                _("perc_net_assets must be between 0 and 1, not {}").format(
-                    perc_net_assets
-                )
-            )
         if not page > 0:
             raise ValueError(_("page should be a positive number, not {}").format(page))
-        if company not in targets:
-            raise ValueError(
-                _("company should be between targets, not {}").format(company)
-            )
+        if not isinstance(perc_net_assets, PercNetAssetsPromise):
+            self._validate_perc_net_assets(perc_net_assets)
+        if not isinstance(company, CompanyPromise):
+            self._validate_company(company, targets)
+
         self._company = company
         self._page = page
         self._market_value = market_value
@@ -211,6 +367,64 @@ class FinancialData(ABC):
         """float or None: The original acquisition cost of the instrument."""
         return self._acquisition_cost
 
+    def _validate_perc_net_assets(self, perc_net_assets: float):
+        if not 0.0 <= perc_net_assets <= 1.0:
+            raise ValueError(
+                _("perc_net_assets must be between 0 and 1, not {}").format(
+                    perc_net_assets
+                )
+            )
+
+    def _validate_company(self, company: str, targets: List[str]):
+        if company not in targets:
+            raise ValueError(
+                _("company should be between targets, not {}").format(company)
+            )
+
+    def fulfill_promises(
+        self, mapping: PromisesResolutionMap, targets: List[str]
+    ) -> None:
+        """Resolve all promise objects in this financial data instance.
+
+        Processes each attribute that may contain a Promise object, resolving it
+        using the provided mapping and performing validation where required.
+
+        Parameters
+        ----------
+        mapping : PromisesResolutionMap
+            Dictionary containing values to resolve promises from.
+        targets : List[str]
+            List of valid company names for validation.
+
+        Notes
+        -----
+        For attributes that require validation (perc_net_assets, company),
+        the resolved values will be validated before assignment.
+        """
+        if isinstance(self._subfund, SubfundPromise):
+            self._subfund = self._subfund.fulfill_with(mapping)
+
+        if isinstance(self._currency, CurrencyPromise):
+            self._currency = self._currency.fulfill_with(mapping)
+
+        if isinstance(self._nominal_quantity, NominalQuantityPromise):
+            self._nominal_quantity = self._nominal_quantity.fulfill_with(mapping)
+
+        if isinstance(self._acquisition_cost, AcquisitionCostPromise):
+            self._acquisition_cost = self._acquisition_cost.fulfill_with(mapping)
+
+        if isinstance(self._market_value, MarkedValuePromise):
+            self._market_value = self._market_value.fulfill_with(mapping)
+
+        if isinstance(self._perc_net_assets, PercNetAssetsPromise):
+            perc_net_assets = self._perc_net_assets.fulfill_with(mapping)
+            self._validate_perc_net_assets(perc_net_assets)
+            self._perc_net_assets = perc_net_assets
+        if isinstance(self._company, CompanyPromise):
+            company = self._company.fulfill_with(mapping)
+            self._validate_company(company, targets)
+            self._company = company
+
     def to_dict(self) -> dict:
         """Cast financial data to python dictionary
 
@@ -238,10 +452,28 @@ class FinancialData(ABC):
         if self.acquisition_cost is not None:
             translated_field = _("Acquisition cost")
             string += f"\t\t{translated_field}:\t{self.acquisition_cost:.2f}{self.currency.value}\n"
+            translated_field = _("Acquisition cost")
+            string += f"\t\t{translated_field}:\t{self.acquisition_cost:.2f}{self.currency.value}\n"
         return string
 
     def __str__(self) -> str:
         string = f"{self.__class__.__name__}:\n"
+        translated_field = _("Type match")
+        string += f"\t{translated_field}:\t{self.instrument.name}\t(pag. {self.page})\n"
+        translated_field = _("Subfund")
+        string += f"\t{translated_field}:\t{self.subfund}\n"
+        translated_field = _("Company")
+        string += f"\t{translated_field}:\t{self.company}\n"
+        translated_field = _("Currency")
+        string += f"\t{translated_field}:\t{self.currency.name}\n"
+        translated_field = _("Market value")
+        string += f"\t{translated_field}:\t{self.market_value:.2f}{self.currency.value}"
+        translated_field = _("of net assets")
+        string += f"\t({self.perc_net_assets:.3%} {translated_field})\n"
+        translated_field = _("Quantity")
+        string += f"\t{translated_field}:\t{self.nominal_quantity}\n"
+        translated_field = _("Additional infos")
+        string += f"\t{translated_field}: {{"
         translated_field = _("Type match")
         string += f"\t{translated_field}:\t{self.instrument.name}\t(pag. {self.page})\n"
         translated_field = _("Subfund")
@@ -413,11 +645,16 @@ class Bond(FinancialData):
         string = super()._str_additional_infos()
         translated_maturity = _("Maturity")
         translated_interest_rate = _("Interest rate")
+        translated_maturity = _("Maturity")
+        translated_interest_rate = _("Interest rate")
         if self.maturity is not None and self.interest_rate is not None:
+            string += f"\t\t{translated_maturity}:\t\t{self.maturity} +{self.interest_rate:.3%}\n"
             string += f"\t\t{translated_maturity}:\t\t{self.maturity} +{self.interest_rate:.3%}\n"
         elif self.maturity is not None:
             string += f"\t\t{translated_maturity}:\t\t{self.maturity}\n"
+            string += f"\t\t{translated_maturity}:\t\t{self.maturity}\n"
         elif self.interest_rate is not None:
+            string += f"\t\t{translated_interest_rate}:\t{self.interest_rate:.3%}\n"
             string += f"\t\t{translated_interest_rate}:\t{self.interest_rate:.3%}\n"
         return string
 
@@ -434,6 +671,9 @@ def _get_module(module_name: str):
             f"freeports_analysis.formats.{module_name.lower()}", package=__package__
         )
     except ImportError:
+        logger.error(
+            _("Module {} ({}) not found").format(module_name.lower(), module_name)
+        )
         logger.error(
             _("Module {} ({}) not found").format(module_name.lower(), module_name)
         )

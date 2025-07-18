@@ -1,3 +1,10 @@
+"""PDF block element utilities for spatial analysis and manipulation.
+
+This module provides functions for working with PDF block elements (represented as lxml.etree.Element objects)
+that contain bounding box information. It includes utilities for checking spatial relationships,
+extracting coordinates, and calculating dimensions of PDF content blocks.
+"""
+
 from typing import Optional, Tuple
 from lxml import etree
 
@@ -45,6 +52,19 @@ def is_contained(
 
 
 def get_bounds(blk: etree.Element) -> list | None:
+    """Get the horizontal and vertical bounds of a block's bounding box.
+
+    Parameters
+    ----------
+    blk : etree.Element
+        XML element representing a PDF block, expected to contain a 'bbox' attribute.
+
+    Returns
+    -------
+    list of tuple or None
+        A list containing two tuples representing horizontal (x0, x1) and vertical (y0, y1) bounds.
+        Returns None if no 'bbox' attribute is found.
+    """
     bbox = blk.xpath(".//@bbox")
     if not bbox:
         return None
@@ -90,6 +110,18 @@ def get_position(blk: etree.Element, mean: bool) -> list | None:
 
 
 def get_size(blk: etree.Element) -> Tuple[float, float]:
+    """Calculate the width and height of a block's bounding box.
+
+    Parameters
+    ----------
+    blk : etree.Element
+        XML element representing a PDF block with a 'bbox' attribute
+
+    Returns
+    -------
+    Tuple[float, float]
+        A tuple containing (width, height) of the bounding box
+    """
     x_bounds, y_bounds = get_bounds(blk)
     return (x_bounds[1] - x_bounds[0], y_bounds[1] - y_bounds[0])
 

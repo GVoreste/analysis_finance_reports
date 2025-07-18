@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/dev/i18n.rst:3
+msgid "Interazionalization *(i18n)*"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:5
+msgid ""
+"This guide focus on the translation process of the documentation and of "
+"the source code. The system and the conventions used by both "
+"documentation and source code internationalization are the one used by "
+"the `GNU gettext <https://en.wikipedia.org/wiki/Gettext>`_ system. In "
+"particular on the root of the repository is present a file called "
+"``freeports.pot`` with the updated list of the strings present in the "
+"source code, and under ``docs/build/gettext`` the files with the "
+"templates of documentation translatable content. Translators will mostly "
+"work with ``.po`` files ready to be translated. In a second time this "
+"files are compiled in a machine readable format with exstension ``.mo``. "
+"So the ``.mo`` files are the one the actively contain the translation, "
+"but they are generated from the ``.po`` files."
+msgstr ""
+
+#: ../../source/dev/i18n.rst:17
+msgid "Translation of the code"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:19
+msgid ""
+"You can find a folder into ``src/freeports_analysis/locales`` whit "
+"different language folders. The id is the `ISO 639 "
+"<https://en.wikipedia.org/wiki/ISO_639>`_ code of the language. In the "
+"folder of the language that you want to translate there should be a "
+"directory called ``LC_MESSAGES`` and a file called ``messages.po``. This "
+"file contains all the text strings present in the source code. You can "
+"translate the strings using a text editor or using a specific program to "
+"translate ``.po`` files like for example `Poedit <https://poedit.net/>`_."
+msgstr ""
+
+#: ../../source/dev/i18n.rst:29
+msgid "Translation of the documentation"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:31
+msgid ""
+"You can find a folder into ``docs/source/locales`` whit different "
+"language folders. The id identifyng the lang is the `ISO 639 "
+"<https://en.wikipedia.org/wiki/ISO_639>`_ code of the language. In the "
+"folder of the language that you want to translate there should be a "
+"directory called ``LC_MESSAGES`` and a some ``.po`` files. This files "
+"contain all the text strings present in the source code. You can "
+"translate the strings using a text editor or using a specific program to "
+"translate ``.po`` files like for example `Poedit <https://poedit.net/>`_."
+msgstr ""
+
+#: ../../source/dev/i18n.rst:41
+msgid "Building the translations"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:43
+msgid ""
+"For updating the translations the deploy mechanism is similar in the case"
+" of source code and documentation and is caraterized by three steps:"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:46
+msgid ""
+"generate the ``.pot`` file(s) using the source code or the modified "
+"documentation"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:47
+msgid "updating the ``.po`` files using the new ``.pot`` file(s)"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:48
+msgid "compile ``.po`` files in ``.mo`` files"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:50
+msgid "In the case of the source code the command to launch are:"
+msgstr ""
+
+#: ../../source/dev/i18n.rst:58
+msgid ""
+"In the case of the documentation are (from inside the ``docs/`` "
+"directory):"
+msgstr ""
+
+#~ msgid ""
+#~ "This guide focus on the translation "
+#~ "process of the documentation and of "
+#~ "the source code. The system and "
+#~ "the conventions used by both "
+#~ "documentation and source code "
+#~ "internationalization are the one used by"
+#~ " the `GNU "
+#~ "gettext<https://en.wikipedia.org/wiki/Gettext>` system. In"
+#~ " particular on the root of the "
+#~ "repository is present a file called "
+#~ "``freeports.pot`` with the updated list "
+#~ "of the strings present in the "
+#~ "source code, and under ``docs/build/gettext``"
+#~ " the files with the templates of "
+#~ "documentation translatable content. Translators "
+#~ "will mostly work with ``.po`` files "
+#~ "ready to be translated. In a "
+#~ "second time this files are compiled "
+#~ "in a machine readable format with "
+#~ "exstension ``.mo``. So the ``.mo`` files"
+#~ " are the one the actively contain "
+#~ "the translation, but they are generated"
+#~ " from the ``.po`` files."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can find a folder into "
+#~ "``docs/source/locales`` whit different language "
+#~ "folders. The id is the `ISO "
+#~ "639<https://en.wikipedia.org/wiki/ISO_639>`_ code of "
+#~ "the language. In the folder of the"
+#~ " language that you want to translate"
+#~ " there should be a directory called"
+#~ " ``LC_MESSAGES`` and a some ``.po`` "
+#~ "files. This files contain all the "
+#~ "text strings present in the source "
+#~ "code. You can translate the strings "
+#~ "using a text editor or using a "
+#~ "specific program to translate ``.po`` "
+#~ "files like for example `Poedit "
+#~ "<https://poedit.net/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can find a folder into "
+#~ "``src/freeports_analysis/locales`` whit different "
+#~ "language folders. The id is the "
+#~ "`ISO 639<https://en.wikipedia.org/wiki/ISO_639>`_ code "
+#~ "of the language. In the folder of"
+#~ " the language that you want to "
+#~ "translate there should be a directory"
+#~ " called ``LC_MESSAGES`` and a file "
+#~ "called ``messages.po``. This file contains "
+#~ "all the text strings present in "
+#~ "the source code. You can translate "
+#~ "the strings using a text editor or"
+#~ " using a specific program to "
+#~ "translate ``.po`` files like for example"
+#~ " `Poedit <https://poedit.net/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can find a folder into "
+#~ "``docs/source/locales`` whit different language "
+#~ "folders. The id is the `ISO 639"
+#~ " <https://en.wikipedia.org/wiki/ISO_639>`_ code of "
+#~ "the language. In the folder of the"
+#~ " language that you want to translate"
+#~ " there should be a directory called"
+#~ " ``LC_MESSAGES`` and a some ``.po`` "
+#~ "files. This files contain all the "
+#~ "text strings present in the source "
+#~ "code. You can translate the strings "
+#~ "using a text editor or using a "
+#~ "specific program to translate ``.po`` "
+#~ "files like for example `Poedit "
+#~ "<https://poedit.net/>`_."
+#~ msgstr ""
+

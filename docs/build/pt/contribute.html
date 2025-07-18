@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to contribute &mdash; Documentação freeports_analysis 0.0.3</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=0ec8805b"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=beaedd51"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Pesquisar" href="search.html" />
+    <link rel="prev" title="freeports_analysis.main" href="_generated/freeports_analysis.main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar docs" aria-label="Pesquisar docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/command.html">Command reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="API.html">Package reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-local-repo">Setting up the local repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribute">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guidelines">Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribution-to-the-website">Contribution to the website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How to contribute</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/contribute.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-contribute">
+<h1>How to contribute<a class="headerlink" href="#how-to-contribute" title="Link to this heading"></a></h1>
+<p>The general workflow to contribute is:</p>
+<ol class="arabic simple">
+<li><p><em>forking the repository</em></p></li>
+<li><p>making your edits to the code</p></li>
+<li><p><em>submitting a pull request</em></p></li>
+</ol>
+<p>Before doing so you need to setup your local repository</p>
+<section id="setting-up-the-local-repo">
+<h2>Setting up the local repo<a class="headerlink" href="#setting-up-the-local-repo" title="Link to this heading"></a></h2>
+<p>First thing clone locally your <em>forked repository</em></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone &lt;url-forked-repo&gt;</span>
+</pre></div>
+</div>
+<p>then enter your local copy and initialize the repository launching from within the root folder of your repository</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">contrib/init.sh</span>
+</pre></div>
+</div>
+<p>this script does:</p>
+<ul class="simple">
+<li><p>install the <a class="reference external" href="https://git-scm.com/docs/githooks">githooks</a> of the project</p></li>
+<li><p>create a python <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a></p></li>
+<li><p>install the required packages for developing the project</p></li>
+</ul>
+</section>
+<section id="contribute">
+<h2>Contribute<a class="headerlink" href="#contribute" title="Link to this heading"></a></h2>
+<p>Before making any contribution activate your developing virtual environment located in <code class="docutils literal notranslate"><span class="pre">venv/freeports-dev</span></code>.
+If you want to create other virtual environment, please do that in the <em>gitignored</em> <code class="docutils literal notranslate"><span class="pre">venv/</span></code> directory.
+To activate the virtual environment launch:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source venv/freeports-dev/bin/activate</span>
+</pre></div>
+</div>
+<p>in other to <em>deactivate</em> it, just launch the <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> command.</p>
+</section>
+<section id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>comment your code</p></li>
+<li><p>add the <a class="reference external" href="https://peps.python.org/pep-0257/">docstings</a> in order to autogenerate the documentation</p></li>
+<li><p><a class="reference external" href="https://peps.python.org/pep-0484/">type hint</a> your code</p></li>
+<li><p>write <a class="reference external" href="https://docs.pytest.org/en/stable/">tests</a> for your code</p></li>
+<li><p>add meaningful commit messages (add the issue id if it refears to one)</p></li>
+<li><p><a class="reference external" href="https://www.pylint.org/">lint</a> your code</p></li>
+</ul>
+</section>
+<section id="contribution-to-the-website">
+<h2>Contribution to the website<a class="headerlink" href="#contribution-to-the-website" title="Link to this heading"></a></h2>
+<p>It is possible to contribute to the <a class="reference external" href="https://www.freeports.org">official website</a> of the project
+from the specific <a class="reference external" href="https://github.com/GVoreste/analysis_finance_reports_website">GitHub repository</a>.</p>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://opensource.guide/how-to-contribute/">How to Contribute to Open Source</a></p></li>
+<li><p><a class="reference external" href="https://help.github.com/articles/about-pull-requests/">Using Pull Requests</a></p></li>
+<li><p><a class="reference external" href="https://help.github.com">GitHub Help</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="_generated/freeports_analysis.main.html" class="btn btn-neutral float-left" title="freeports_analysis.main" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

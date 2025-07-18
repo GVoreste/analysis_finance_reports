@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/_generated/freeports_analysis.rst:2
+msgid "freeports\\_analysis"
+msgstr ""
+
+#: freeports_analysis:1 of
+msgid "Freeports analysis package."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:9
+msgid "Modules"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ":py:obj:`cmd <freeports_analysis.cmd>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ""
+"Contains all the functions related to command line use of the `freeport` "
+"script"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ":py:obj:`conf_parse <freeports_analysis.conf_parse>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ""
+"Submodule containing all the utilities for validating and parsing the "
+"configuration"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ":py:obj:`consts <freeports_analysis.consts>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ""
+"Provide basic constant and types used by all submodules, should "
+"facilitate avoiding circular imports"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ":py:obj:`download <freeports_analysis.download>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid "Functions to download pdf from internet and for scraping"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ":py:obj:`formats <freeports_analysis.formats>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ""
+"Module common to each format, it contains the definitions used by all the"
+" formats"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ":py:obj:`formats_utils <freeports_analysis.formats_utils>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ""
+"Utilities of general interest common to all formats and that can be used "
+"for creating `pdf_filter` or `text_extract` or `deserialize` functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ":py:obj:`i18n <freeports_analysis.i18n>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ":py:obj:`main <freeports_analysis.main>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
+msgid ""
+"This module is the one that contains the function called in order to "
+"decode the information from the pdf and to save the `csv` file."
+msgstr ""
+

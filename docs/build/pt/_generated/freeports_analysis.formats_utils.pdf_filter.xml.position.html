@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freeports_analysis.formats_utils.pdf_filter.xml.position &mdash; Documentação freeports_analysis 0.0.3</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0ec8805b"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=beaedd51"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="freeports_analysis.formats_utils.text_extract" href="freeports_analysis.formats_utils.text_extract.html" />
+    <link rel="prev" title="freeports_analysis.formats_utils.pdf_filter.xml.font" href="freeports_analysis.formats_utils.pdf_filter.xml.font.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar docs" aria-label="Pesquisar docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Package reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="freeports_analysis.html">freeports_analysis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.conf_parse.html">freeports_analysis.conf_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.consts.html">freeports_analysis.consts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.download.html">freeports_analysis.download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats.html">freeports_analysis.formats</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.default_if_not_implemented"><code class="docutils literal notranslate"><span class="pre">default_if_not_implemented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.normalize_string"><code class="docutils literal notranslate"><span class="pre">normalize_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.normalize_word"><code class="docutils literal notranslate"><span class="pre">normalize_word()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.overwrite_if_implemented"><code class="docutils literal notranslate"><span class="pre">overwrite_if_implemented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.deserialize.html">freeports_analysis.formats_utils.deserialize</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.html">freeports_analysis.formats_utils.pdf_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.text_extract.html">freeports_analysis.formats_utils.text_extract</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.i18n.html">freeports_analysis.i18n</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.main.html">freeports_analysis.main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">Package reference</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.html">freeports_analysis</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.formats_utils.pdf_filter.html">freeports_analysis.formats_utils.pdf_filter</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.formats_utils.pdf_filter.xml.html">freeports_analysis.formats_utils.pdf_filter.xml</a></li>
+      <li class="breadcrumb-item active">freeports_analysis.formats_utils.pdf_filter.xml.position</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_generated/freeports_analysis.formats_utils.pdf_filter.xml.position.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-freeports_analysis.formats_utils.pdf_filter.xml.position">
+<span id="freeports-analysis-formats-utils-pdf-filter-xml-position"></span><h1>freeports_analysis.formats_utils.pdf_filter.xml.position<a class="headerlink" href="#module-freeports_analysis.formats_utils.pdf_filter.xml.position" title="Link to this heading"></a></h1>
+<p>PDF block element utilities for spatial analysis and manipulation.</p>
+<p>This module provides functions for working with PDF block elements (represented as lxml.etree.Element objects)
+that contain bounding box information. It includes utilities for checking spatial relationships,
+extracting coordinates, and calculating dimensions of PDF content blocks.</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds" title="freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_bounds</span></code></a>(blk)</p></td>
+<td><p>Get the horizontal and vertical bounds of a block's bounding box.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_lines_contained</span></code>(blk[, x_range, y_range])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.get_position" title="freeports_analysis.formats_utils.pdf_filter.xml.position.get_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_position</span></code></a>(blk, mean)</p></td>
+<td><p>Return the coordinates or center of a bounding box from a PDF block element. :param blk: XML element representing the PDF block, expected to contain a 'bbox' attribute. :type blk: etree.Element :param mean: If True, return the center point (x, y) of the bounding box. If False, return the full bounding box coordinates (x0, y0, x1, y1). :type mean: bool.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.get_size" title="freeports_analysis.formats_utils.pdf_filter.xml.position.get_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code></a>(blk)</p></td>
+<td><p>Calculate the width and height of a block's bounding box.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained" title="freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_contained</span></code></a>(blk[, x_range, y_range])</p></td>
+<td><p>Check if a block's bounding box is fully contained within specified ranges.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.is_positioned" title="freeports_analysis.formats_utils.pdf_filter.xml.position.is_positioned"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_positioned</span></code></a>(blk[, x_range, y_range])</p></td>
+<td><p>Check if a block is positioned within specified x and/or y ranges.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.xml.position.</span></span><span class="sig-name descname"><span class="pre">get_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Element</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.get_bounds" title="Link to this definition"></a></dt>
+<dd><p>Get the horizontal and vertical bounds of a block’s bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parâmetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>blk</strong> (<em>etree.Element</em>) – XML element representing a PDF block, expected to contain a “bbox” attribute.</p>
+</dd>
+<dt class="field-even">Retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list containing two tuples representing horizontal (x0, x1) and vertical (y0, y1) bounds.
+Returns None if no “bbox” attribute is found.</p>
+</dd>
+<dt class="field-odd">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of tuple or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.xml.position.get_position">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.xml.position.</span></span><span class="sig-name descname"><span class="pre">get_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.get_position" title="Link to this definition"></a></dt>
+<dd><p>Return the coordinates or center of a bounding box from a PDF block element.
+:param blk: XML element representing the PDF block, expected to contain a “bbox” attribute.
+:type blk: etree.Element
+:param mean: If True, return the center point (x, y) of the bounding box.</p>
+<blockquote>
+<div><p>If False, return the full bounding box coordinates (x0, y0, x1, y1).</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of float values representing either the full bounding box or its center.
+Returns None if no “bbox” attribute is found.</p>
+</dd>
+<dt class="field-even">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of float or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.xml.position.get_size">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.xml.position.</span></span><span class="sig-name descname"><span class="pre">get_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Element</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.get_size" title="Link to this definition"></a></dt>
+<dd><p>Calculate the width and height of a block’s bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parâmetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>blk</strong> (<em>etree.Element</em>) – XML element representing a PDF block with a “bbox” attribute</p>
+</dd>
+<dt class="field-even">Retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing (width, height) of the bounding box</p>
+</dd>
+<dt class="field-odd">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[float, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.xml.position.</span></span><span class="sig-name descname"><span class="pre">is_contained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.is_contained" title="Link to this definition"></a></dt>
+<dd><p>Check if a block’s bounding box is fully contained within specified ranges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parâmetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk</strong> (<em>etree.Element</em>) – XML element representing a PDF block</p></li>
+<li><p><strong>x_range</strong> (<em>Optional</em><em>[</em><em>Tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Horizontal range (min_x, max_x)</p></li>
+<li><p><strong>y_range</strong> (<em>Optional</em><em>[</em><em>Tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Vertical range (min_y, max_y)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if entire bbox is within ranges, False otherwise</p>
+</dd>
+<dt class="field-odd">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.xml.position.is_positioned">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.xml.position.</span></span><span class="sig-name descname"><span class="pre">is_positioned</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.xml.position.is_positioned" title="Link to this definition"></a></dt>
+<dd><p>Check if a block is positioned within specified x and/or y ranges.
+:param blk: XML element representing a PDF block
+:type blk: etree.Element
+:param x_range: Minimum and maximum x-coordinate values (left, right)
+:type x_range: Optional[Tuple[float, float]], optional
+:param y_range: Minimum and maximum y-coordinate values (bottom, top)
+:type y_range: Optional[Tuple[float, float]], optional</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if block’s coordinates are within specified ranges, False otherwise</p>
+</dd>
+<dt class="field-even">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="freeports_analysis.formats_utils.pdf_filter.xml.font.html" class="btn btn-neutral float-left" title="freeports_analysis.formats_utils.pdf_filter.xml.font" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="freeports_analysis.formats_utils.text_extract.html" class="btn btn-neutral float-right" title="freeports_analysis.formats_utils.text_extract" accesskey="n" rel="next">Seguinte <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

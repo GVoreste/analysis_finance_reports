@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.rst:2
+msgid "freeports\\_analysis.formats\\_utils.pdf\\_filter.xml"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.rst:9
+msgid "Modules"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.rst:15:<autosummary>:1
+msgid ":py:obj:`font <freeports_analysis.formats_utils.pdf_filter.xml.font>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.rst:15:<autosummary>:1
+msgid "Low level utilities for handling typographic related aspects of the xml tree."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.rst:15:<autosummary>:1
+msgid ":py:obj:`position <freeports_analysis.formats_utils.pdf_filter.xml.position>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.xml.rst:15:<autosummary>:1
+msgid "PDF block element utilities for spatial analysis and manipulation."
+msgstr ""

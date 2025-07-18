@@ -1,7 +1,7 @@
 """Utils for creating deserialize routines and functions"""
 
 from logging import getLogger
-from typing import List
+from typing import List, Callable, TypeAlias
 from datetime import date, datetime
 import re
 from freeports_analysis.formats import TextBlock
@@ -12,13 +12,16 @@ from . import normalize_word, overwrite_if_implemented, normalize_string
 
 logger = getLogger(__name__)
 
+DeserializeFunc: TypeAlias = Callable[[TextBlock], Equity | Bond]
+
 
 def perc_to_float(perc: str, norm: bool = True) -> float:
     """Convert a percentage string to float value.
 
     Handles various percentage string formats by:
     - Normalizing the string (removing spaces, converting commas to dots)
-    - Removing percentage signs
+    - Removing percentage signs (if percentage sign is present,
+      the number gets normalized dividing by 100)
     - Optionally converting to decimal form (dividing by 100)
 
     Parameters
@@ -57,15 +60,17 @@ def perc_to_float(perc: str, norm: bool = True) -> float:
         f = to_float(perc)
         return f / 100.0 if norm else f
     except ValueError as e:
-        logger.error(_("Failed to convert percentage string '%f' to float"), perc)
-        raise ValueError(_("Could not convert '{}' to float").format(perc)) from e
+        logger.exception(_("Failed to convert percentage string '%s' to float"), perc)
+        raise e
 
 
 def _force_numeric(data: str) -> str:
     reg_num = r"^\d+([\.,]\d+)*$"
     data = normalize_word(data)
     if not re.match(reg_num, data):
-        logger.warning(_("Trying to cast to number but found %s forcing cast..."), data)
+        logger.warning(
+            _("Trying to cast to number but found '%s' - forcing cast"), data
+        )
         data = re.sub(r"[^a-zA-Z.,0-9]+", "", data)
     return data
 
@@ -155,6 +160,7 @@ def to_str(data: str) -> str:
     ----------
     data : str
         The input string to be normalized
+
     Returns
     -------
     str
@@ -223,25 +229,22 @@ def to_date(data: str) -> date:
 
 def standard_deserialization(
     cost_and_value_interpret_int=True, quantity_interpret_float=False
-) -> Bond | Equity:
+) -> Callable[[DeserializeFunc], DeserializeFunc]:
     """Decorator factory that creates a deserializer function for TextBlock metadata.
 
-    The resulting decorator transforms a TextBlock's metadata into a dictionary
-    with values cast according to the provided mapping. Special handling is done
-    for 'match' key which is renamed to 'company'.
+    The resulting decorator transforms a TextBlock's metadata into a financial data object.
 
     Parameters
     ----------
-    mapping : dict
-        Dictionary mapping output keys to type casting functions
-    deserialize_enanched_types : bool, optional
-        Whether to use enhanced type casting for int and str (default True)
-        When True, replaces int with to_int and str with to_str
+    cost_and_value_interpret_int : bool
+        interpret market value and acquisition cost column as int before casting to float
+    quantity_interpret_float : bool
+        interpret quantity column as int before casting to int
 
     Returns
     -------
-    callable
-        A decorator that takes a function and returns a deserializer function
+    Callable[[DeserializeFunc],DeserializeFunc]
+        Decorator to wrap the deserializer functions
     """
 
     def wrapper(f):
@@ -262,11 +265,14 @@ def standard_deserialization(
             ----------
             blk : TextBlock
                 The text block containing metadata to deserialize
+            targets : List[str]
+                List of target companies used as validation when initializing
+                the financial data object
 
             Returns
             -------
-            dict
-                Dictionary with keys from mapping and casted values
+            Bond | Equity
+                Finantial data deserialized from text block
             """
             if blk is None:
                 logger.error(_("Something wrong happened, text block is None..."))
@@ -311,13 +317,9 @@ def standard_deserialization(
                     )
                 return default_other_txt_blk_deserializer(blk, targets)
             except ValueError as e:
-                logger.error(
-                    _("Cast error page %i company %s"), md["page"], md["company"]
-                )
-                logger.error(str(e))
-                logger.warning(
-                    _("Skipping page %i company %s"), md["page"], md["company"]
-                )
+                logger.error(_("Cast error in company %s"), md["company"])
+                logger.exception(str(e))
+                logger.warning(_("Skipping page"))
 
         return deserialize
 

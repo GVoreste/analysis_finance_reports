@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/usage/config/cmd_args.rst:3
+msgid "Command line arguments"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:5
+msgid "The map between command line options and program variables is:"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:8
+msgid "Argument"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:8
+msgid "Corresponding option / behaviour"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:8
+msgid "Type"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:10
+msgid "``-v``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:10
+msgid "Increase default ``VERBOSITY`` *(See below)*"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:10
+#: ../../source/usage/config/cmd_args.rst:12
+#: ../../source/usage/config/cmd_args.rst:16
+msgid "``int``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:12
+msgid "``-q``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:12
+msgid "Decrease default ``VERBOSITY`` *(See below)*"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:14
+msgid "``--batch``, ``-b``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:14
+msgid "``BATCH``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:14
+#: ../../source/usage/config/cmd_args.rst:18
+#: ../../source/usage/config/cmd_args.rst:24
+#: ../../source/usage/config/cmd_args.rst:28
+msgid "``Path``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:16
+msgid "``--workers``, ``-j``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:16
+msgid "``N_WORKERS``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:18
+msgid "``--out``, ``-o``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:18
+msgid "``OUT_CSV``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:20
+msgid "``--no-download``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:20
+msgid "Set ``SAVE_PDF`` to ``False`` if present"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:20
+#: ../../source/usage/config/cmd_args.rst:30
+msgid "``bool``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:22
+msgid "``--url``, ``-u``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:22
+msgid "``URL``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:22
+msgid "``str``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:24
+msgid "``--pdf``, ``-i``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:24
+msgid "``PDF``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:26
+msgid "``--format``, ``-f``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:26
+msgid "``FORMAT``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:26
+msgid ":py:class:`PdfFormats`"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:28
+msgid "``--config``, ``-c``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:28
+msgid "``CONFIG_FILE``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:30
+msgid "``--separate-out``"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:30
+msgid "Save ``SEPARATE_OUT_FILES``   to ``True`` if present"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:34
+msgid ""
+"``-v`` and ``-q`` options are cumulabes and increase or decrease the "
+"default ``VERBOSITY``, for example ``-vvv`` increase verbosity by 3, "
+"``-qq`` decrease by 2, ``-v`` increase of 1, ecc. ecc."
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:40
+msgid "Validation of the command line arguments"
+msgstr ""
+
+#: ../../source/usage/config/cmd_args.rst:42
+msgid "Cannot be specified both ``-v`` and ``-q`` options"
+msgstr ""
+

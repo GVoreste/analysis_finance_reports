@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freeports_analysis.consts &mdash; Documentação freeports_analysis 0.0.3</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0ec8805b"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=beaedd51"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="freeports_analysis.download" href="freeports_analysis.download.html" />
+    <link rel="prev" title="freeports_analysis.conf_parse" href="freeports_analysis.conf_parse.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar docs" aria-label="Pesquisar docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Package reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="freeports_analysis.html">freeports_analysis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.conf_parse.html">freeports_analysis.conf_parse</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">freeports_analysis.consts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.Bond"><code class="docutils literal notranslate"><span class="pre">Bond</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.Currency"><code class="docutils literal notranslate"><span class="pre">Currency</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.Equity"><code class="docutils literal notranslate"><span class="pre">Equity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.FinancialData"><code class="docutils literal notranslate"><span class="pre">FinancialData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument"><code class="docutils literal notranslate"><span class="pre">FinancialInstrument</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.PdfFormats"><code class="docutils literal notranslate"><span class="pre">PdfFormats</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.download.html">freeports_analysis.download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats.html">freeports_analysis.formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.i18n.html">freeports_analysis.i18n</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.main.html">freeports_analysis.main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">Package reference</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.html">freeports_analysis</a></li>
+      <li class="breadcrumb-item active">freeports_analysis.consts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_generated/freeports_analysis.consts.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-freeports_analysis.consts">
+<span id="freeports-analysis-consts"></span><h1>freeports_analysis.consts<a class="headerlink" href="#module-freeports_analysis.consts" title="Link to this heading"></a></h1>
+<p>Provide basic constant and types used by all submodules,
+should facilitate avoiding circular imports</p>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.Bond" title="freeports_analysis.consts.Bond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bond</span></code></a>(page, targets, company, subfund, ...[, ...])</p></td>
+<td><p>Concrete class representing bond financial instruments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Currency</span></code></a>(*values)</p></td>
+<td><p>Enumeration of supported currency codes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.Equity" title="freeports_analysis.consts.Equity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Equity</span></code></a>(page, targets, company, subfund, ...)</p></td>
+<td><p>Concrete class representing equity financial instruments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FinancialData</span></code></a>(page, targets, company, ...[, ...])</p></td>
+<td><p>Abstract base class representing financial data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FinancialInstrument</span></code></a>(*values)</p></td>
+<td><p>Enumeration of financial instrument types.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.PdfFormats" title="freeports_analysis.consts.PdfFormats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PdfFormats</span></code></a>(*values)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Bond">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">Bond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfund</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal_quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_net_assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquisition_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interest_rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Bond" title="Link to this definition"></a></dt>
+<dd><p>Concrete class representing bond financial instruments.</p>
+<p>Extends FinancialData with bond-specific attributes including maturity date
+and interest rate.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Bond.maturity">
+<span class="sig-name descname"><span class="pre">maturity</span></span><a class="headerlink" href="#freeports_analysis.consts.Bond.maturity" title="Link to this definition"></a></dt>
+<dd><p>The maturity date of the bond.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime.date, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Bond.interest_rate">
+<span class="sig-name descname"><span class="pre">interest_rate</span></span><a class="headerlink" href="#freeports_analysis.consts.Bond.interest_rate" title="Link to this definition"></a></dt>
+<dd><p>The interest rate of the bond (should be between 0 and 1).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Bond.instrument">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instrument</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument"><span class="pre">FinancialInstrument</span></a></em><a class="headerlink" href="#freeports_analysis.consts.Bond.instrument" title="Link to this definition"></a></dt>
+<dd><p>Identifies this instrument as BOND type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Always returns FinancialInstrument.BOND</p>
+</dd>
+<dt class="field-even">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument">FinancialInstrument</a></p>
+</dd>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument">FinancialInstrument</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interest_rate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>The interest rate of the bond.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The interest rate value</p>
+</dd>
+<dt class="field-even">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Logs a warning if interest rate is not normalized (0-1 range).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id1">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">maturity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">date</span></em><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>The maturity date of the bond.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime.date or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Bond.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Bond.to_dict" title="Link to this definition"></a></dt>
+<dd><p>Cast financial data to python dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>casted data</p>
+</dd>
+<dt class="field-even">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Currency">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">Currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Currency" title="Link to this definition"></a></dt>
+<dd><p>Enumeration of supported currency codes.</p>
+<p>Contains standard 3-letter ISO currency codes for major world currencies.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Equity">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">Equity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfund</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal_quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_net_assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquisition_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Equity" title="Link to this definition"></a></dt>
+<dd><p>Concrete class representing equity financial instruments.</p>
+<p>Inherits from FinancialData and implements the instrument property
+to identify as EQUITY type.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Equity.instrument">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instrument</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument"><span class="pre">FinancialInstrument</span></a></em><a class="headerlink" href="#freeports_analysis.consts.Equity.instrument" title="Link to this definition"></a></dt>
+<dd><p>Identifies this instrument as EQUITY type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Always returns FinancialInstrument.EQUITY</p>
+</dd>
+<dt class="field-even">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument">FinancialInstrument</a></p>
+</dd>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument">FinancialInstrument</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">FinancialData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfund</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal_quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_net_assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquisition_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.FinancialData" title="Link to this definition"></a></dt>
+<dd><p>Abstract base class representing financial data.</p>
+<p>This class serves as the foundation for specific financial instrument types,
+providing common attributes and validation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.page">
+<span class="sig-name descname"><span class="pre">page</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.page" title="Link to this definition"></a></dt>
+<dd><p>The page number where the financial data appears (must be positive).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.targets">
+<span class="sig-name descname"><span class="pre">targets</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.targets" title="Link to this definition"></a></dt>
+<dd><p>The list of companies to search for, used as company validation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.company">
+<span class="sig-name descname"><span class="pre">company</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.company" title="Link to this definition"></a></dt>
+<dd><p>The name of the company or issuer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.market_value">
+<span class="sig-name descname"><span class="pre">market_value</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.market_value" title="Link to this definition"></a></dt>
+<dd><p>The current market value of the instrument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.currency">
+<span class="sig-name descname"><span class="pre">currency</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.currency" title="Link to this definition"></a></dt>
+<dd><p>The currency in which the value is denominated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency">Currency</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.perc_net_assets">
+<span class="sig-name descname"><span class="pre">perc_net_assets</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.perc_net_assets" title="Link to this definition"></a></dt>
+<dd><p>Percentage of net assets (must be between 0 and 1).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.subfund">
+<span class="sig-name descname"><span class="pre">subfund</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.subfund" title="Link to this definition"></a></dt>
+<dd><p>The subfund to which this instrument belongs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.nominal_quantity">
+<span class="sig-name descname"><span class="pre">nominal_quantity</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.nominal_quantity" title="Link to this definition"></a></dt>
+<dd><p>The nominal quantity of the instrument, if applicable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.acquisition_cost">
+<span class="sig-name descname"><span class="pre">acquisition_cost</span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.acquisition_cost" title="Link to this definition"></a></dt>
+<dd><p>The original acquisition cost of the instrument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Levanta<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If perc_net_assets is not between 0 and 1.
+    If page is not a positive number.
+    If company is not in targets.</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="id2">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acquisition_cost</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>The original acquisition cost of the instrument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id3">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">company</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>The name of the company or issuer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id4">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">currency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a></em><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>The currency in which the value is denominated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency">Currency</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.instrument">
+<em class="property"><span class="k"><span class="pre">abstract</span></span><span class="w"> </span><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instrument</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument"><span class="pre">FinancialInstrument</span></a></em><a class="headerlink" href="#freeports_analysis.consts.FinancialData.instrument" title="Link to this definition"></a></dt>
+<dd><p>Abstract property to identify the financial instrument type.
+:returns: The type of financial instrument (EQUITY, BOND, etc.)
+:rtype: FinancialInstrument</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id5">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">market_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>The current market value of the instrument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id6">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nominal_quantity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>The nominal quantity of the instrument, if applicable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id7">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">page</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>The page number where the financial data appears.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id8">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">perc_net_assets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#id8" title="Link to this definition"></a></dt>
+<dd><p>Percentage of net assets (between 0 and 1).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id9">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subfund</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#id9" title="Link to this definition"></a></dt>
+<dd><p>The subfund to which this instrument belongs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.to_dict" title="Link to this definition"></a></dt>
+<dd><p>Cast financial data to python dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorno<span class="colon">:</span></dt>
+<dd class="field-odd"><p>casted data</p>
+</dd>
+<dt class="field-even">Tipo de retorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialInstrument">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">FinancialInstrument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.FinancialInstrument" title="Link to this definition"></a></dt>
+<dd><p>Enumeration of financial instrument types.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.PdfFormats">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">PdfFormats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.PdfFormats" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="freeports_analysis.conf_parse.html" class="btn btn-neutral float-left" title="freeports_analysis.conf_parse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="freeports_analysis.download.html" class="btn btn-neutral float-right" title="freeports_analysis.download" accesskey="n" rel="next">Seguinte <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

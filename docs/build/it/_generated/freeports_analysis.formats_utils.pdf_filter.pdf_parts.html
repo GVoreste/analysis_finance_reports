@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>freeports_analysis.formats_utils.pdf_filter.pdf_parts &mdash; Documentazione freeports_analysis 0.0.3 </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=21205c44"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=45930005"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.font" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.font.html" />
+    <link rel="prev" title="freeports_analysis.formats_utils.pdf_filter" href="freeports_analysis.formats_utils.pdf_filter.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Package reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="freeports_analysis.html">freeports_analysis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.conf_parse.html">freeports_analysis.conf_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.consts.html">freeports_analysis.consts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.download.html">freeports_analysis.download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.formats.html">freeports_analysis.formats</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.default_if_not_implemented"><code class="docutils literal notranslate"><span class="pre">default_if_not_implemented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.normalize_string"><code class="docutils literal notranslate"><span class="pre">normalize_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.normalize_word"><code class="docutils literal notranslate"><span class="pre">normalize_word()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.html#freeports_analysis.formats_utils.overwrite_if_implemented"><code class="docutils literal notranslate"><span class="pre">overwrite_if_implemented()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.deserialize.html">freeports_analysis.formats_utils.deserialize</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.html">freeports_analysis.formats_utils.pdf_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="freeports_analysis.formats_utils.text_extract.html">freeports_analysis.formats_utils.text_extract</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.i18n.html">freeports_analysis.i18n</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freeports_analysis.main.html">freeports_analysis.main</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">Package reference</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.html">freeports_analysis</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.formats_utils.html">freeports_analysis.formats_utils</a></li>
+          <li class="breadcrumb-item"><a href="freeports_analysis.formats_utils.pdf_filter.html">freeports_analysis.formats_utils.pdf_filter</a></li>
+      <li class="breadcrumb-item active">freeports_analysis.formats_utils.pdf_filter.pdf_parts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_generated/freeports_analysis.formats_utils.pdf_filter.pdf_parts.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-freeports_analysis.formats_utils.pdf_filter.pdf_parts">
+<span id="freeports-analysis-formats-utils-pdf-filter-pdf-parts"></span><h1>freeports_analysis.formats_utils.pdf_filter.pdf_parts<a class="headerlink" href="#module-freeports_analysis.formats_utils.pdf_filter.pdf_parts" title="Link to this heading"></a></h1>
+<p>Pdf xml parts in a friendly format (custom python classes).</p>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExtractedPdfLine</span></code></a>(blk)</p></td>
+<td><p>A class representing a line extracted from a PDF XML structure.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats_utils.pdf_filter.pdf_parts.</span></span><span class="sig-name descname"><span class="pre">ExtractedPdfLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine" title="Link to this definition"></a></dt>
+<dd><p>A class representing a line extracted from a PDF XML structure.</p>
+<p>This class provides a friendly interface to access geometric properties,
+font information, and text size of a line in a PDF document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parametri<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>blk</strong> (<em>etree.Element</em>) – The XML element containing the line data.</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.c">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">c</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.c" title="Link to this definition"></a></dt>
+<dd><p>Get the center coordinate of the line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ritorna<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The center coordinate (x, y) of the line.</p>
+</dd>
+<dt class="field-even">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>Coord</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.corners">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">corners</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span></em><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.corners" title="Link to this definition"></a></dt>
+<dd><p>Get the corner coordinates of the line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ritorna<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple of tuples representing the line’s corners in the format
+(((x_tl, y_tl), (x_tr, y_tr)), ((x_bl, y_bl), (x_br, y_br))).</p>
+</dd>
+<dt class="field-even">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.font">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">font</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.font" title="Link to this definition"></a></dt>
+<dd><p>Get the font used in the line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ritorna<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The font used in the line.</p>
+</dd>
+<dt class="field-even">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>Font</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.geometry">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">geometry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area"><span class="pre">Area</span></a></em><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.geometry" title="Link to this definition"></a></dt>
+<dd><p>Get the geometric properties of the line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ritorna<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The area representing the line’s bounds.</p>
+</dd>
+<dt class="field-even">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.Area">Area</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.text_size">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">text_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.text_size" title="Link to this definition"></a></dt>
+<dd><p>Get the text size used in the line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ritorna<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The text size used in the line.</p>
+</dd>
+<dt class="field-even">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>TextSize</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.xml_blk">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xml_blk</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Element</span></em><a class="headerlink" href="#freeports_analysis.formats_utils.pdf_filter.pdf_parts.ExtractedPdfLine.xml_blk" title="Link to this definition"></a></dt>
+<dd><p>Get the original XML element containing the line data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ritorna<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The original XML element containing the line data.</p>
+</dd>
+<dt class="field-even">Tipo di ritorno<span class="colon">:</span></dt>
+<dd class="field-even"><p>etree.Element</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p class="rubric">Modules</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.font.html#module-freeports_analysis.formats_utils.pdf_filter.pdf_parts.font" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.font"><code class="xref py py-obj docutils literal notranslate"><span class="pre">font</span></code></a></p></td>
+<td><p>Definition of types for identify carateristic related with typographic aspect of the line</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic.html#module-freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.generic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generic</span></code></a></p></td>
+<td><p>Utilities for handling generic PDF parts and components.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position.html#module-freeports_analysis.formats_utils.pdf_filter.pdf_parts.position" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">position</span></code></a></p></td>
+<td><p>Definition of types for identify characteristic related with geometrical aspects of the line.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="freeports_analysis.formats_utils.pdf_filter.html" class="btn btn-neutral float-left" title="freeports_analysis.formats_utils.pdf_filter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="freeports_analysis.formats_utils.pdf_filter.pdf_parts.font.html" class="btn btn-neutral float-right" title="freeports_analysis.formats_utils.pdf_filter.pdf_parts.font" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

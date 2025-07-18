@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:2
+msgid "freeports\\_analysis.formats\\_utils.pdf\\_filter"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter:1
+msgid "Utilities for writing `pdf_filter` functions."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter:3
+msgid "This module provides decorators and utilities for filtering and processing PDF content based on XML elements, fonts, and positional data."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:15:<autosummary>:1
+msgid ":py:obj:`filter_page_if <freeports_analysis.formats_utils.pdf_filter.filter_page_if>`\\ \\(condition\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:15:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.filter_page_if:1
+msgid "Decorator factory for conditionally applying a PDF filter based on a predicate."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:15:<autosummary>:1
+msgid ":py:obj:`standard_extraction_subfund <freeports_analysis.formats_utils.pdf_filter.standard_extraction_subfund>`\\ \\(subfund\\_height\\, ...\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:15:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_extraction_subfund:1
+msgid "Decorator for extracting subfund text and updating metadata."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:15:<autosummary>:1
+msgid ":py:obj:`standard_pdf_filtering <freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering>`\\ \\(header\\_txt\\, ...\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:15:<autosummary>:1
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:1
+msgid "Decorator factory for creating PDF filters with standardized processing."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:17
+msgid "Classes"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.OnePdfBlockType:1:<autosummary>:1
+msgid ":py:obj:`OnePdfBlockType <freeports_analysis.formats_utils.pdf_filter.OnePdfBlockType>`\\ \\(\\*values\\)"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.OnePdfBlockType:1
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.OnePdfBlockType:1:<autosummary>:1
+msgid "Enum representing types of PDF blocks in document processing."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.OnePdfBlockType:5
+msgid "PDF block containing relevant information to extract."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.OnePdfBlockType:0
+msgid "type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.OnePdfBlockType:7
+msgid "enum"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.filter_page_if:3
+msgid "Creates a decorator that will only execute the wrapped PDF filter function if the specified condition evaluates to True for the given XML root element."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.filter_page_if:6
+msgid "A predicate function that determines whether the filter should be applied."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.filter_page_if:9
+msgid "A decorator that conditionally applies the PDF filter."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_extraction_subfund:3
+msgid "The vertical range in which the subfund text is expected."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_extraction_subfund:5
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:15
+msgid "The font used by the subfund text."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_extraction_subfund:8
+msgid "A decorator that updates metadata with the extracted subfund text."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:3
+msgid "Creates a filter that: 1. Processes pages containing the specified header text in the specified header font. 2. Extracts lines with the specified body font as relevant blocks. 3. Extracts subfund text within a specified range or height. 4. Allows customization of page metadata and block types."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:9
+msgid "The text that must be present in the header to process the page."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:11
+msgid "The font used by the header text."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:13
+msgid "The vertical range or height for subfund extraction."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:17
+msgid "The font used by the body text to extract as relevant blocks."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:19
+msgid "The vertical range for filtering lines, by default None."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:21
+msgid "A list of text and font pairs to exclude from extraction, by default None."
+msgstr ""
+
+#: ../../../src/freeports_analysis/formats_utils/pdf_filter/__init__.py:docstring of freeports_analysis.formats_utils.pdf_filter.standard_pdf_filtering:24
+msgid "A decorator that applies the standardized PDF filter."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:23
+msgid "Modules"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:31:<autosummary>:1
+msgid ":py:obj:`pdf_parts <freeports_analysis.formats_utils.pdf_filter.pdf_parts>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:31:<autosummary>:1
+msgid "Pdf xml parts in a friendly format (custom python classes)."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:31:<autosummary>:1
+msgid ":py:obj:`select_font <freeports_analysis.formats_utils.pdf_filter.select_font>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:31:<autosummary>:1
+msgid "Utilities for selecting or deselecting lines based of font and text information"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:31:<autosummary>:1
+msgid ":py:obj:`select_position <freeports_analysis.formats_utils.pdf_filter.select_position>`\\"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:31:<autosummary>:1
+msgid "Utilities for selecting or deselecting lines or getting infos based of geometrical information"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.formats_utils.pdf_filter.rst:31:<autosummary>:1
+msgid ":py:obj:`xml <freeports_analysis.formats_utils.pdf_filter.xml>`\\"
+msgstr ""

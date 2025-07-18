@@ -1,0 +1,491 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Oreste Sciacqualegni
+# This file is distributed under the same license as the freeports_analysis package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: freeports_analysis \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-18 13:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/_generated/freeports_analysis.consts.rst:2
+msgid "freeports\\_analysis.consts"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts:1
+msgid "Provide basic constant and types used by all submodules, should facilitate avoiding circular imports"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:9
+msgid "Functions"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:13:<autosummary>:1
+msgid ":py:obj:`flatten_promise_map <freeports_analysis.consts.flatten_promise_map>`\\ \\(mapping\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:13:<autosummary>:1
+msgid "Flatten a mapping containing Promise objects by resolving all references."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:15
+msgid "Classes"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`AcquisitionCostPromise <freeports_analysis.consts.AcquisitionCostPromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.AcquisitionCostPromise:1
+msgid "Promise for resolving acquisition cost values."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`Bond <freeports_analysis.consts.Bond>`\\ \\(page\\, targets\\, company\\, subfund\\, ...\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond:1
+msgid "Concrete class representing bond financial instruments."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`CompanyPromise <freeports_analysis.consts.CompanyPromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.CompanyPromise:1
+msgid "Promise for resolving company names in financial data."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`Currency <freeports_analysis.consts.Currency>`\\ \\(\\*values\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Currency:1
+msgid "Enumeration of supported currency codes."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`CurrencyPromise <freeports_analysis.consts.CurrencyPromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.CurrencyPromise:1
+msgid "Promise for resolving currency values in financial data."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`Equity <freeports_analysis.consts.Equity>`\\ \\(page\\, targets\\, company\\, subfund\\, ...\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Equity:1
+msgid "Concrete class representing equity financial instruments."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`FinancialData <freeports_analysis.consts.FinancialData>`\\ \\(page\\, targets\\, company\\, ...\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:1
+msgid "Abstract base class representing financial data."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`FinancialInstrument <freeports_analysis.consts.FinancialInstrument>`\\ \\(\\*values\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialInstrument:1
+msgid "Enumeration of financial instrument types."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`InterestRatePromise <freeports_analysis.consts.InterestRatePromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.InterestRatePromise:1
+msgid "Promise for resolving interest rate values in bond instruments."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`MarkedValuePromise <freeports_analysis.consts.MarkedValuePromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.MarkedValuePromise:1
+msgid "Promise for resolving marked value amounts in financial data."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`MaturityPromise <freeports_analysis.consts.MaturityPromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.MaturityPromise:1
+msgid "Promise for resolving maturity dates in bond instruments."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`NominalQuantityPromise <freeports_analysis.consts.NominalQuantityPromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.NominalQuantityPromise:1
+msgid "Promise for resolving nominal quantity values in financial data."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`PdfFormats <freeports_analysis.consts.PdfFormats>`\\ \\(\\*values\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`PercNetAssetsPromise <freeports_analysis.consts.PercNetAssetsPromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.PercNetAssetsPromise:1
+msgid "Promise for resolving percentage of net assets values."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`Promise <freeports_analysis.consts.Promise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid "Base class for deferred value resolution in financial data processing."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+msgid ":py:obj:`SubfundPromise <freeports_analysis.consts.SubfundPromise>`\\ \\(ID\\)"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:34:<autosummary>:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.SubfundPromise:1
+msgid "Promise for resolving subfund names in financial data."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:36
+msgid "Exceptions"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.AcquisitionCostPromise:1:<autosummary>:1
+msgid ":py:obj:`CircularPromisesChain <freeports_analysis.consts.CircularPromisesChain>`\\"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.AcquisitionCostPromise:1:<autosummary>:1
+msgid "Exception raised when a circular dependency is detected in promise resolution."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond:3
+msgid "Extends FinancialData with bond-specific attributes including maturity date and interest rate."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond:8
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.maturity:1
+msgid "The maturity date of the bond."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.instrument:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.interest_rate:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.maturity:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Equity.instrument:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.acquisition_cost:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.company:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.currency:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.market_value:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.nominal_quantity:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.page:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.perc_net_assets:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.subfund:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise:0
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise.id:0
+msgid "type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond:10
+msgid "datetime.date, optional"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond:14
+msgid "The interest rate of the bond (should be between 0 and 1)."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond:16
+msgid "float, optional"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.instrument:1
+msgid "Identifies this instrument as BOND type."
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.instrument:3
+msgid "Always returns FinancialInstrument.BOND"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.instrument:6
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Equity.instrument:6
+msgid "FinancialInstrument"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.interest_rate:1
+msgid "The interest rate of the bond."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.interest_rate:3
+msgid "The interest rate value"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.interest_rate:7
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.fulfill_promises:12
+msgid "Notes"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.interest_rate:8
+msgid "Logs a warning if interest rate is not normalized (0-1 range)."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.interest_rate:10
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.acquisition_cost:3
+msgid "float or None"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.maturity:3
+msgid "datetime.date or None"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.to_dict:1
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.to_dict:1
+msgid "Cast financial data to python dictionary"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Bond.to_dict:3
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.to_dict:3
+msgid "casted data"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.CircularPromisesChain:1
+msgid "Exception raised when a circular dependency is detected in promise resolution. This occurs when a promise chain references itself either directly or indirectly, creating an infinite loop that cannot be resolved."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Currency:3
+msgid "Contains standard 3-letter ISO currency codes for major world currencies."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Equity:3
+msgid "Inherits from FinancialData and implements the instrument property to identify as EQUITY type."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Equity.instrument:1
+msgid "Identifies this instrument as EQUITY type."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Equity.instrument:3
+msgid "Always returns FinancialInstrument.EQUITY"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:3
+msgid "This class serves as the foundation for specific financial instrument types, providing common attributes and validation."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:8
+msgid "The page number where the financial data appears (must be positive)."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:10
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.page:3
+msgid "int"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:14
+msgid "The list of companies to search for, used as company validation"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:16
+msgid "List[str]"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:20
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.company:1
+msgid "The name of the company or issuer."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:22
+msgid "str | CompanyPromise"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:26
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.market_value:1
+msgid "The current market value of the instrument."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:28
+msgid "float | MarketValuePromise"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:32
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.currency:1
+msgid "The currency in which the value is denominated."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:34
+msgid "Currency | CurrencyPromise"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:38
+msgid "Percentage of net assets (must be between 0 and 1)."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:40
+msgid "float | PercNetAssetsPromise"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:44
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.subfund:1
+msgid "The subfund to which this instrument belongs."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:46
+msgid "str | SubfundPromise"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:50
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.nominal_quantity:1
+msgid "The nominal quantity of the instrument, if applicable."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:52
+msgid "int | NominalQuantityPromise , optional"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:56
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.acquisition_cost:1
+msgid "The original acquisition cost of the instrument."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:58
+msgid "float | AcquisitionCostPromise , optional"
+msgstr ""
+
+#: ../../source/_generated/freeports_analysis.consts.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData:60
+msgid "If perc_net_assets is not between 0 and 1.     If page is not a positive number.     If company is not in targets.     If company is not in targets."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.company:3
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.subfund:3
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise:7
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise.id:3
+msgid "str"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.currency:3
+msgid "Currency"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.fulfill_promises:1
+msgid "Resolve all promise objects in this financial data instance."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.fulfill_promises:3
+msgid "Processes each attribute that may contain a Promise object, resolving it using the provided mapping and performing validation where required."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.fulfill_promises:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.fulfill_promises:6
+msgid "Dictionary containing values to resolve promises from."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.fulfill_promises:8
+msgid "List of valid company names for validation."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.fulfill_promises:13
+msgid "For attributes that require validation (perc_net_assets, company), the resolved values will be validated before assignment."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.instrument:1
+msgid "Abstract property to identify the financial instrument type. :returns: The type of financial instrument (EQUITY, BOND, etc.) :rtype: FinancialInstrument"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.market_value:3
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.perc_net_assets:3
+msgid "float"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.nominal_quantity:3
+msgid "int or None"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.page:1
+msgid "The page number where the financial data appears."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.FinancialData.perc_net_assets:1
+msgid "Percentage of net assets (between 0 and 1)."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise:1
+msgid "Base class for deferred value resolution in financial data processing. Implements a promise pattern where values can be resolved later from a mapping. .. attribute:: id"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise:5
+msgid "The key used to lookup the promised value in the resolution mapping."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise:11
+msgid "Resolves the promised value from the given mapping."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise.fulfill_with:1
+msgid "Resolve this promise's value from the given mapping. :param mapping: Dictionary containing values to resolve promises from. :type mapping: PromisesResolutionMap"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise.fulfill_with:5
+msgid "The resolved value from the mapping."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.Promise.id:1
+msgid "The lookup key for this promise."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.flatten_promise_map:1
+msgid "Flatten a mapping containing Promise objects by resolving all references. Processes a dictionary that may contain Promise objects, resolving each promise by looking up its value in the mapping until all values are concrete (non-Promise). Detects and prevents circular references that would cause infinite resolution loops. :param mapping: Dictionary containing both direct values and Promise objects to be resolved. :type mapping: PromisesResolutionMap"
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.flatten_promise_map:8
+msgid "A new dictionary with all Promise objects resolved to their final values."
+msgstr ""
+
+#: ../../../src/freeports_analysis/consts.py:docstring of freeports_analysis.consts.flatten_promise_map:11
+msgid "If a circular reference is detected in the promise resolution chain."
+msgstr ""
