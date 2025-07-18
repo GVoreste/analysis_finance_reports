@@ -69,6 +69,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Developer documentation</a></li>
 </ul>
 
         </div>
@@ -118,7 +119,7 @@ the command from commandline (to use the package as a script).</p>
 <td><p>Main function that expect the configuration to be already provided (for example with arguments on command line or with <cite>env variables</cite>)</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.main.pipeline_batch" title="freeports_analysis.main.pipeline_batch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipeline_batch</span></code></a>(batch_pages, i_page_batch, ...)</p></td>
-<td><p>Apply the pipeline of actions in order to get data in <cite>csv</cite></p></td>
+<td><p>Apply the pipeline of actions in order to get financial data from PDF pages</p></td>
 </tr>
 </tbody>
 </table>
@@ -195,21 +196,23 @@ data directory.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="freeports_analysis.main.pipeline_batch">
-<span class="sig-prename descclassname"><span class="pre">freeports_analysis.main.</span></span><span class="sig-name descname"><span class="pre">pipeline_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_pages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_page_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_pages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#freeports_analysis.main.pipeline_batch" title="Link to this definition"></a></dt>
-<dd><p>Apply the pipeline of actions in order to get data in <cite>csv</cite></p>
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.main.</span></span><span class="sig-name descname"><span class="pre">pipeline_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_pages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_page_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_pages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData"><span class="pre">FinancialData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.main.pipeline_batch" title="Link to this definition"></a></dt>
+<dd><p>Apply the pipeline of actions in order to get financial data from PDF pages</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pdf_file</strong> (<em>pypdf.Document</em>) – <cite>pdf</cite> document to process in the format used in the python package <cite>pymupdf</cite></p></li>
-<li><p><strong>targets</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – the list of relevant companies in the report from which data is relevant</p></li>
-<li><p><strong>funcs</strong> (<em>dict</em>) – the dictionary containing the functions to use in order to parse the pdf</p></li>
+<li><p><strong>batch_pages</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – List of XML strings representing PDF pages to process</p></li>
+<li><p><strong>i_page_batch</strong> (<em>int</em>) – Starting page number of this batch (1-based index)</p></li>
+<li><p><strong>n_pages</strong> (<em>int</em>) – Total number of pages in the document</p></li>
+<li><p><strong>targets</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – List of relevant company names to extract from the report</p></li>
+<li><p><strong>module_name</strong> (<em>str</em>) – Name of the module containing format-specific parsing functions</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>pandas dataframe with extracted data</p>
+<dd class="field-even"><p>List of extracted financial data objects or promise resolution contexts</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>pd.DataFrame</p>
+<dd class="field-odd"><p>List[<a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData">FinancialData</a> | PromisesResolutionContext]</p>
 </dd>
 </dl>
 </dd></dl>

@@ -29,14 +29,16 @@ but we would be forced to parse the document subsequent times in order to get th
     In this example it seems that the `Customer`, the `Product` and the `Order` records are interdependent, but depending of the report design the algorithm can parse
     the self contained information of `Customers`, `Products` and `Orders` and just right before the csv output relate the different record with an ``id`` field
     (for uderstanding better the proposed approach for how to treat these kind of cases think at the concept of `foreign key <https://en.wikipedia.org/wiki/Foreign_key>`_
-    in the database realm). The assumption breaks in the presence of a true dependence of the information.
+    in the database realm). The mechanism for supporting this degree of interdependance it is by the use of ``Promises`` and the output of ``PromisesResolutionContexs``.
+    The assumption breaks in the presence of a true dependence of the information.
 
 The developer that wants to add a series of reports to the supported ones, has to provide the specific implementation of the ``PdfFilter``, ``TextExtract`` and ``Deserialize``
 functions (with them of the ``PdfBlock`` and ``TextBlock`` classes).
 Each ``xml`` page will be parsed by a ``PdfFilter`` function that will output a list of relevant ``PdfBlocks``. The content of these blocks is related and parsed by
 a function called ``TextExtract`` and output a list of blocks that have a one to one relation with the information that will populate a csv row called ``TextBlock``.
-Each block is parsed independently into an object (an abstract ``FinancialData``) that as to be one between the one reconnaissed by the system (for now ``Equity`` and ``Bond``).
-The financial data is then serialized in a python dict in a predefined way and output to a the resulting csv file.
+Each block is parsed independently into an object (an abstract ``FinancialData``) that as to be one between the one reconnaissed by the system (for now ``Equity`` and ``Bond``)
+or a ``PromisesResolutionContext``. The ``FinancialData`` can contain the actual data or deferred values called in this context 'promises' of value. In the most common case
+the financial data contain all the relevant data and is serialized in a python dict in a predefined way and output to a the resulting csv file.
 
 -------------
 ``PdfFilter``
@@ -62,13 +64,14 @@ and to extract the relevant information of the financial data related with the c
 ``Deserialize``
 ---------------
 
-The aim of this function is to transform the accumulated information into a python object with some standard fields and validate them. This function will cast the data into the
-python types that more reflect the nature of the accumulated data. In this steps no filtering is done, each ``TextBlock`` will correspond to a python object.
+The aim of this function is to transform the parsed information into a python object with some standard fields and validate them. This function will cast the data into the
+python types that more reflect the nature of the data. In this steps no filtering is done, each ``TextBlock`` will correspond to a python object.
 This constraint impose the focus of this function to the cast operation of the different field. The abstract class that this function output
 is called ``FinancialData``. Each class field is read only and consists in some core information and some additional infos. The concrete classes that inherit
 from ``FinancialData`` for now are the ``Equity`` and ``Bond`` classes (the bond class has the interest rate and the maturity date as additional infos).
 This objects are then casted in a predefined way in a python dict and then with `Pandas <https://en.wikipedia.org/wiki/Pandas_(software)>`_ on a dataframe
-dumped directly in a `csv file`.
+dumped directly in a `csv file`. The ``FinancialData`` usually contain all the concrete values but sometimes can happen that some fields are resolvables only
+after complete parsing; for cases like that refear to the :ref:`Promises section <promises>`
 
 ------------------------------
 ``PdfBlock`` and ``TextBlock``
@@ -84,6 +87,24 @@ These block consists of three part:
 
 in addition to these fields, the ``TextBlock`` has a ``PdfBlock`` related to him from which is is taken from (if it is computed from more, the most important).
 
+
+.. _promises:
+
+-----------
+``Promise``
+-----------
+
+This class is a generic class that exists in more concrete forms like ``SubfundPromise`` or ``CurrencyPromise`` and it represent a placeholder to an information
+that can be resolved only after the pdf is completely parsed. When a ``FinancialData`` is istantiated the developer can `'promise'` that the data
+will be provided putting a promise as a value. The promise is caraterized by an ``id`` field that identify it in order to resolved to a specific value after the parsing.
+The value will be resolved using a ``PromisesResolutionMap`` that link ``id`` to values or to other ``Promises`` in a chain that has to close with a concrete value.
+In this way right before generating the ``csv`` the sobstitution are made and the actual field are computed using the map. This map is built merging
+all the ``PromisesResolutionContexts`` in output of the ``deserialize`` function. The ``PromisesResolutionContexs`` should be something in the form of a python dict
+with a key (that will be matched on the ``Promises`` ids) and a value (concrete or itself a ``Promise``). 
+
+.. warning::
+    The ``id`` is expected to be provided one and only one time in the whole parsing process.
+    If the same id is provided in two different ``PromisesResolutionContexs`` the value is overwritten in a unpredictable way.
 
 
 -----------

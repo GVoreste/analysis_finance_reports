@@ -231,7 +231,7 @@ def flatten_promise_map(mapping: PromisesResolutionMap) -> PromisesResolutionMap
                 if value.id in resolve_history[p]:
                     _debug_str = f"{resolve_history[p]} -> {value.id}"
                     raise CircularPromisesChain(
-                        "Circular reference detected in promise resolution chain: "
+                        _("Circular reference detected in promise resolution chain: ")
                         + _debug_str
                     )
 
@@ -375,7 +375,26 @@ class FinancialData(ABC):
                 _("company should be between targets, not {}").format(company)
             )
 
-    def fulfill_promises(self, mapping: PromisesResolutionMap, targets: List[str]):
+    def fulfill_promises(
+        self, mapping: PromisesResolutionMap, targets: List[str]
+    ) -> None:
+        """Resolve all promise objects in this financial data instance.
+
+        Processes each attribute that may contain a Promise object, resolving it
+        using the provided mapping and performing validation where required.
+
+        Parameters
+        ----------
+        mapping : PromisesResolutionMap
+            Dictionary containing values to resolve promises from.
+        targets : List[str]
+            List of valid company names for validation.
+
+        Notes
+        -----
+        For attributes that require validation (perc_net_assets, company),
+        the resolved values will be validated before assignment.
+        """
         if isinstance(self._subfund, SubfundPromise):
             self._subfund = self._subfund.fulfill_with(mapping)
 

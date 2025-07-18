@@ -1,4 +1,4 @@
-freeports\_analysis.formats\_utils.pdf\_filter.select\_position
+﻿freeports\_analysis.formats\_utils.pdf\_filter.select\_position
 ===============================================================
 
 .. automodule:: freeports_analysis.formats_utils.pdf_filter.select_position
@@ -12,4 +12,11 @@ freeports\_analysis.formats\_utils.pdf\_filter.select\_position
       get_table_positions
       select_inside
       select_outside
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      TablePosAlgorithm
+      TablePosMeasureUnit
    

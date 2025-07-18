@@ -52,12 +52,24 @@
 <li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freeports_analysis.conf_parse.html">freeports_analysis.conf_parse</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">freeports_analysis.consts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.AcquisitionCostPromise"><code class="docutils literal notranslate"><span class="pre">AcquisitionCostPromise</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.Bond"><code class="docutils literal notranslate"><span class="pre">Bond</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.CircularPromisesChain"><code class="docutils literal notranslate"><span class="pre">CircularPromisesChain</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.CompanyPromise"><code class="docutils literal notranslate"><span class="pre">CompanyPromise</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.Currency"><code class="docutils literal notranslate"><span class="pre">Currency</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.CurrencyPromise"><code class="docutils literal notranslate"><span class="pre">CurrencyPromise</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.Equity"><code class="docutils literal notranslate"><span class="pre">Equity</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.FinancialData"><code class="docutils literal notranslate"><span class="pre">FinancialData</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument"><code class="docutils literal notranslate"><span class="pre">FinancialInstrument</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.InterestRatePromise"><code class="docutils literal notranslate"><span class="pre">InterestRatePromise</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.MarkedValuePromise"><code class="docutils literal notranslate"><span class="pre">MarkedValuePromise</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.MaturityPromise"><code class="docutils literal notranslate"><span class="pre">MaturityPromise</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.NominalQuantityPromise"><code class="docutils literal notranslate"><span class="pre">NominalQuantityPromise</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.PdfFormats"><code class="docutils literal notranslate"><span class="pre">PdfFormats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.PercNetAssetsPromise"><code class="docutils literal notranslate"><span class="pre">PercNetAssetsPromise</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.Promise"><code class="docutils literal notranslate"><span class="pre">Promise</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.SubfundPromise"><code class="docutils literal notranslate"><span class="pre">SubfundPromise</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freeports_analysis.consts.flatten_promise_map"><code class="docutils literal notranslate"><span class="pre">flatten_promise_map()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="freeports_analysis.download.html">freeports_analysis.download</a></li>
@@ -70,6 +82,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Developer documentation</a></li>
 </ul>
 
         </div>
@@ -102,29 +115,81 @@
 <span id="freeports-analysis-consts"></span><h1>freeports_analysis.consts<a class="headerlink" href="#module-freeports_analysis.consts" title="Link to this heading"></a></h1>
 <p>Provide basic constant and types used by all submodules,
 should facilitate avoiding circular imports</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.flatten_promise_map" title="freeports_analysis.consts.flatten_promise_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flatten_promise_map</span></code></a>(mapping)</p></td>
+<td><p>Flatten a mapping containing Promise objects by resolving all references.</p></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.Bond" title="freeports_analysis.consts.Bond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bond</span></code></a>(page, targets, company, subfund, ...[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.AcquisitionCostPromise" title="freeports_analysis.consts.AcquisitionCostPromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AcquisitionCostPromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving acquisition cost values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.Bond" title="freeports_analysis.consts.Bond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bond</span></code></a>(page, targets, company, subfund, ...[, ...])</p></td>
 <td><p>Concrete class representing bond financial instruments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.CompanyPromise" title="freeports_analysis.consts.CompanyPromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CompanyPromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving company names in financial data.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Currency</span></code></a>(*values)</p></td>
 <td><p>Enumeration of supported currency codes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.Equity" title="freeports_analysis.consts.Equity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Equity</span></code></a>(page, targets, company, subfund, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.CurrencyPromise" title="freeports_analysis.consts.CurrencyPromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CurrencyPromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving currency values in financial data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.Equity" title="freeports_analysis.consts.Equity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Equity</span></code></a>(page, targets, company, subfund, ...)</p></td>
 <td><p>Concrete class representing equity financial instruments.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FinancialData</span></code></a>(page, targets, company, ...[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FinancialData</span></code></a>(page, targets, company, ...[, ...])</p></td>
 <td><p>Abstract base class representing financial data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FinancialInstrument</span></code></a>(*values)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.FinancialInstrument" title="freeports_analysis.consts.FinancialInstrument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FinancialInstrument</span></code></a>(*values)</p></td>
 <td><p>Enumeration of financial instrument types.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.PdfFormats" title="freeports_analysis.consts.PdfFormats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PdfFormats</span></code></a>(*values)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.InterestRatePromise" title="freeports_analysis.consts.InterestRatePromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InterestRatePromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving interest rate values in bond instruments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.MarkedValuePromise" title="freeports_analysis.consts.MarkedValuePromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MarkedValuePromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving marked value amounts in financial data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.MaturityPromise" title="freeports_analysis.consts.MaturityPromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaturityPromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving maturity dates in bond instruments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.NominalQuantityPromise" title="freeports_analysis.consts.NominalQuantityPromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NominalQuantityPromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving nominal quantity values in financial data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.PdfFormats" title="freeports_analysis.consts.PdfFormats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PdfFormats</span></code></a>(*values)</p></td>
 <td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.PercNetAssetsPromise" title="freeports_analysis.consts.PercNetAssetsPromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PercNetAssetsPromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving percentage of net assets values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.Promise" title="freeports_analysis.consts.Promise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Promise</span></code></a>(ID)</p></td>
+<td><p>Base class for deferred value resolution in financial data processing.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.consts.SubfundPromise" title="freeports_analysis.consts.SubfundPromise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SubfundPromise</span></code></a>(ID)</p></td>
+<td><p>Promise for resolving subfund names in financial data.</p></td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Exceptions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.consts.CircularPromisesChain" title="freeports_analysis.consts.CircularPromisesChain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CircularPromisesChain</span></code></a></p></td>
+<td><p>Exception raised when a circular dependency is detected in promise resolution.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.AcquisitionCostPromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">AcquisitionCostPromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.AcquisitionCostPromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving acquisition cost values.</p>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="freeports_analysis.consts.Bond">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">Bond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfund</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal_quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_net_assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquisition_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interest_rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Bond" title="Link to this definition"></a></dt>
@@ -218,6 +283,20 @@ and interest rate.</p>
 
 </dd></dl>
 
+<dl class="py exception">
+<dt class="sig sig-object py" id="freeports_analysis.consts.CircularPromisesChain">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">CircularPromisesChain</span></span><a class="headerlink" href="#freeports_analysis.consts.CircularPromisesChain" title="Link to this definition"></a></dt>
+<dd><p>Exception raised when a circular dependency is detected in promise resolution.
+This occurs when a promise chain references itself either directly or indirectly,
+creating an infinite loop that cannot be resolved.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.CompanyPromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">CompanyPromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.CompanyPromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving company names in financial data.</p>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="freeports_analysis.consts.Currency">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">Currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Currency" title="Link to this definition"></a></dt>
@@ -226,8 +305,14 @@ and interest rate.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.CurrencyPromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">CurrencyPromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.CurrencyPromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving currency values in financial data.</p>
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="freeports_analysis.consts.Equity">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">Equity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfund</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal_quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_net_assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquisition_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Equity" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">Equity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.CompanyPromise" title="freeports_analysis.consts.CompanyPromise"><span class="pre">CompanyPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfund</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.SubfundPromise" title="freeports_analysis.consts.SubfundPromise"><span class="pre">SubfundPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal_quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.NominalQuantityPromise" title="freeports_analysis.consts.NominalQuantityPromise"><span class="pre">NominalQuantityPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.MarkedValuePromise" title="freeports_analysis.consts.MarkedValuePromise"><span class="pre">MarkedValuePromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.CurrencyPromise" title="freeports_analysis.consts.CurrencyPromise"><span class="pre">CurrencyPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_net_assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.PercNetAssetsPromise" title="freeports_analysis.consts.PercNetAssetsPromise"><span class="pre">PercNetAssetsPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquisition_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.AcquisitionCostPromise" title="freeports_analysis.consts.AcquisitionCostPromise"><span class="pre">AcquisitionCostPromise</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Equity" title="Link to this definition"></a></dt>
 <dd><p>Concrete class representing equity financial instruments.</p>
 <p>Inherits from FinancialData and implements the instrument property
 to identify as EQUITY type.</p>
@@ -252,7 +337,7 @@ to identify as EQUITY type.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">FinancialData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfund</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal_quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_net_assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquisition_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.FinancialData" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">FinancialData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.CompanyPromise" title="freeports_analysis.consts.CompanyPromise"><span class="pre">CompanyPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfund</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.SubfundPromise" title="freeports_analysis.consts.SubfundPromise"><span class="pre">SubfundPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal_quantity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.NominalQuantityPromise" title="freeports_analysis.consts.NominalQuantityPromise"><span class="pre">NominalQuantityPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.MarkedValuePromise" title="freeports_analysis.consts.MarkedValuePromise"><span class="pre">MarkedValuePromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency"><span class="pre">Currency</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.CurrencyPromise" title="freeports_analysis.consts.CurrencyPromise"><span class="pre">CurrencyPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc_net_assets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.PercNetAssetsPromise" title="freeports_analysis.consts.PercNetAssetsPromise"><span class="pre">PercNetAssetsPromise</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquisition_cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#freeports_analysis.consts.AcquisitionCostPromise" title="freeports_analysis.consts.AcquisitionCostPromise"><span class="pre">AcquisitionCostPromise</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.FinancialData" title="Link to this definition"></a></dt>
 <dd><p>Abstract base class representing financial data.</p>
 <p>This class serves as the foundation for specific financial instrument types,
 providing common attributes and validation.</p>
@@ -284,7 +369,7 @@ providing common attributes and validation.</p>
 <dd><p>The name of the company or issuer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
+<dd class="field-odd"><p>str | <a class="reference internal" href="#freeports_analysis.consts.CompanyPromise" title="freeports_analysis.consts.CompanyPromise">CompanyPromise</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -295,7 +380,7 @@ providing common attributes and validation.</p>
 <dd><p>The current market value of the instrument.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
+<dd class="field-odd"><p>float | MarketValuePromise</p>
 </dd>
 </dl>
 </dd></dl>
@@ -306,7 +391,7 @@ providing common attributes and validation.</p>
 <dd><p>The currency in which the value is denominated.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency">Currency</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency">Currency</a> | <a class="reference internal" href="#freeports_analysis.consts.CurrencyPromise" title="freeports_analysis.consts.CurrencyPromise">CurrencyPromise</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -317,7 +402,7 @@ providing common attributes and validation.</p>
 <dd><p>Percentage of net assets (must be between 0 and 1).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
+<dd class="field-odd"><p>float | <a class="reference internal" href="#freeports_analysis.consts.PercNetAssetsPromise" title="freeports_analysis.consts.PercNetAssetsPromise">PercNetAssetsPromise</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -328,7 +413,7 @@ providing common attributes and validation.</p>
 <dd><p>The subfund to which this instrument belongs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
+<dd class="field-odd"><p>str | <a class="reference internal" href="#freeports_analysis.consts.SubfundPromise" title="freeports_analysis.consts.SubfundPromise">SubfundPromise</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -339,7 +424,7 @@ providing common attributes and validation.</p>
 <dd><p>The nominal quantity of the instrument, if applicable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int, optional</p>
+<dd class="field-odd"><p>int | <a class="reference internal" href="#freeports_analysis.consts.NominalQuantityPromise" title="freeports_analysis.consts.NominalQuantityPromise">NominalQuantityPromise</a> , optional</p>
 </dd>
 </dl>
 </dd></dl>
@@ -350,7 +435,7 @@ providing common attributes and validation.</p>
 <dd><p>The original acquisition cost of the instrument.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float, optional</p>
+<dd class="field-odd"><p>float | <a class="reference internal" href="#freeports_analysis.consts.AcquisitionCostPromise" title="freeports_analysis.consts.AcquisitionCostPromise">AcquisitionCostPromise</a> , optional</p>
 </dd>
 </dl>
 </dd></dl>
@@ -393,6 +478,25 @@ providing common attributes and validation.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.consts.Currency" title="freeports_analysis.consts.Currency">Currency</a></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="freeports_analysis.consts.FinancialData.fulfill_promises">
+<span class="sig-name descname"><span class="pre">fulfill_promises</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#freeports_analysis.consts.FinancialData.fulfill_promises" title="Link to this definition"></a></dt>
+<dd><p>Resolve all promise objects in this financial data instance.</p>
+<p>Processes each attribute that may contain a Promise object, resolving it
+using the provided mapping and performing validation where required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mapping</strong> (<em>PromisesResolutionMap</em>) – Dictionary containing values to resolve promises from.</p></li>
+<li><p><strong>targets</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – List of valid company names for validation.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>For attributes that require validation (perc_net_assets, company),
+the resolved values will be validated before assignment.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -481,9 +585,116 @@ providing common attributes and validation.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.InterestRatePromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">InterestRatePromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.InterestRatePromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving interest rate values in bond instruments.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.MarkedValuePromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">MarkedValuePromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.MarkedValuePromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving marked value amounts in financial data.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.MaturityPromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">MaturityPromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.MaturityPromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving maturity dates in bond instruments.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.NominalQuantityPromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">NominalQuantityPromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.NominalQuantityPromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving nominal quantity values in financial data.</p>
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="freeports_analysis.consts.PdfFormats">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">PdfFormats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.PdfFormats" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.PercNetAssetsPromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">PercNetAssetsPromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.PercNetAssetsPromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving percentage of net assets values.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Promise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">Promise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.Promise" title="Link to this definition"></a></dt>
+<dd><p>Base class for deferred value resolution in financial data processing.
+Implements a promise pattern where values can be resolved later from a mapping.
+.. attribute:: id</p>
+<blockquote>
+<div><p>The key used to lookup the promised value in the resolution mapping.</p>
+<dl class="field-list simple">
+<dt class="field-odd">type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Promise.fulfill_with">
+<span class="sig-name descname"><span class="pre">fulfill_with</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PromisesResolutionMap</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#freeports_analysis.consts.Promise.fulfill_with" title="Link to this definition"></a></dt>
+<dd><p>Resolves the promised value from the given mapping.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">fulfill_with</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#id10" title="Link to this definition"></a></dt>
+<dd><p>Resolve this promise’s value from the given mapping.
+:param mapping: Dictionary containing values to resolve promises from.
+:type mapping: PromisesResolutionMap</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The resolved value from the mapping.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeports_analysis.consts.Promise.id">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#freeports_analysis.consts.Promise.id" title="Link to this definition"></a></dt>
+<dd><p>The lookup key for this promise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="freeports_analysis.consts.SubfundPromise">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">SubfundPromise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.consts.SubfundPromise" title="Link to this definition"></a></dt>
+<dd><p>Promise for resolving subfund names in financial data.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="freeports_analysis.consts.flatten_promise_map">
+<span class="sig-prename descclassname"><span class="pre">freeports_analysis.consts.</span></span><span class="sig-name descname"><span class="pre">flatten_promise_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#freeports_analysis.consts.flatten_promise_map" title="Link to this definition"></a></dt>
+<dd><p>Flatten a mapping containing Promise objects by resolving all references.
+Processes a dictionary that may contain Promise objects, resolving each promise
+by looking up its value in the mapping until all values are concrete (non-Promise).
+Detects and prevents circular references that would cause infinite resolution loops.
+:param mapping: Dictionary containing both direct values and Promise objects to be resolved.
+:type mapping: PromisesResolutionMap</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A new dictionary with all Promise objects resolved to their final values.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>PromisesResolutionMap</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.consts.CircularPromisesChain" title="freeports_analysis.consts.CircularPromisesChain"><strong>CircularPromisesChain</strong></a> – If a circular reference is detected in the promise resolution chain.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 
