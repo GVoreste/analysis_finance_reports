@@ -14,7 +14,7 @@ from freeports_analysis.formats_utils.text_extract.match import (
     header_font="TT5D22o00",
     subfund_height=YRange(47, 62),
     subfund_font="TT5CC2o00",
-    body_font="TT5D42o00",
+    body_font=["TT5D42o00", "TT6162o00"],
     y_range=None,
     algorithm_flags=[False, False, False, False],
     tolerance=0,
