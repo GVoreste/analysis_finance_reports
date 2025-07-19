@@ -1,6 +1,6 @@
 """Low level utilities for handling typographic related aspects of the xml tree."""
 
-from typing import List
+from typing import List, Union
 from lxml import etree
 
 
@@ -53,19 +53,30 @@ def get_lines_with_txt_font(
     return blks if all_elem else blks[0] if len(blks) > 0 else None
 
 
-def get_lines_with_font(blk: etree.Element, font: str) -> List[etree.Element]:
-    """Return all the line with a certain font in a tree
+def get_lines_with_font(
+    blk: etree.Element, font: Union[str, List[str]]
+) -> List[etree.Element]:
+    """Return all the lines with certain font(s) in a tree
 
     Parameters
     ----------
     blk : etree.Element
-        tree from which extract lines
-    font : str
-        font to extract
+        Tree from which to extract lines
+    font : Union[str, List[str]]
+        Font or list of fonts to extract
 
     Returns
     -------
     List[etree.Element]
-        list of relevant blocks
+        List of relevant lines
     """
-    return blk.xpath(f"./descendant-or-self::line[font[@name='{font}']]")
+    if isinstance(font, str):
+        fonts = [font]
+    else:
+        fonts = font
+
+    # Costruisci la condizione XPath per ogni font
+    font_conditions = " or ".join([f"font[@name='{f}']" for f in fonts])
+    xpath_query = f"./descendant-or-self::line[{font_conditions}]"
+
+    return blk.xpath(xpath_query)
