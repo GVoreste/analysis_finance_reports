@@ -6,10 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer documentation &mdash; Documentazione freeports_analysis 0.0.3 </title>
+  <title>Documentazione per sviluppatori &mdash; Documentazione freeports_analysis 0.0.3 </title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=d9280227" />
+      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=c9ec9885" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -47,15 +47,15 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installazione</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Guida al comando</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../API.html">Guida del pacchetto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Come contribuire</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer documentation</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentazione per sviluppatori</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="code.html">Code development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docs.html">Documentation development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.html">Creating tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Creazione dei test</a></li>
 <li class="toctree-l2"><a class="reference internal" href="i18n.html">Interazionalization <em>(i18n)</em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="example.html">Example of a contribution</a></li>
 </ul>
@@ -76,7 +76,7 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Developer documentation</li>
+      <li class="breadcrumb-item active">Documentazione per sviluppatori</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/dev/index.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -87,49 +87,40 @@
            <div itemprop="articleBody">
              
   <section id="developer-documentation">
-<h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Link to this heading"></a></h1>
+<h1>Documentazione per sviluppatori<a class="headerlink" href="#developer-documentation" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code.html">Code development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs.html">Documentation development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tests.html">Creating tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Creazione dei test</a></li>
 <li class="toctree-l1"><a class="reference internal" href="i18n.html">Interazionalization <em>(i18n)</em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="example.html">Example of a contribution</a></li>
 </ul>
 </div>
-<p>The project consists in different repositories, specifically this section focus on the repository
-containing the source code and the documentation.</p>
-<p>This repository has two protected branches <code class="docutils literal notranslate"><span class="pre">main</span></code> and <code class="docutils literal notranslate"><span class="pre">dev</span></code>, plus any other additional non protected branches.
-The logic is that <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch is used for the active development, <code class="docutils literal notranslate"><span class="pre">main</span></code> for the deployment.
-On both branches each commit triggers a <a class="reference external" href="https://en.wikipedia.org/wiki/Continuous_integration">CI</a> pipeline
-on the <a class="reference external" href="https://jenkins.freeports.org">Freeport Jenkins server</a> this server do some checks on the code (specified in the
-<code class="docutils literal notranslate"><span class="pre">Jenkinsfile</span></code> on top of the repository). Specifically it:</p>
+<p>Il progetto consiste in diversi repositori, nello specifico questa sezione si concentra sul repositorio contenente il codice sorgente e la documentazione.</p>
+<p>Questo repositorio ha due rami protetti <code class="docutils literal notranslate"><span class="pre">main</span></code> e <code class="docutils literal notranslate"><span class="pre">dev</span></code>, più eventuali altri rami non protetti. La logica è che il ramo <code class="docutils literal notranslate"><span class="pre">dev</span></code> sia usato per lo sviluppo attivo, <code class="docutils literal notranslate"><span class="pre">main</span></code> per la distribuzione. Su tutti e due i rami ogni commit innesca una <a class="reference external" href="https://en.wikipedia.org/wiki/Continuous_integration">CI</a> pipeline sul <a class="reference external" href="https://jenkins.freeports.org">Freeport Jenkins server</a> , questo server effettua delle routine di controllo sul codice (specificate nel file <code class="docutils literal notranslate"><span class="pre">Jenkinsfile</span></code> localizzato in cima all’albero delle cartelle del repositorio). Nello specifico:</p>
 <ol class="arabic simple">
-<li><p>Lint the code</p></li>
-<li><p>Fail if a minimal linting vote is reached</p></li>
-<li><p>Test the code and fail if some test is not passed</p></li>
-<li><p>Fail if a minimal percentage of code is not tested</p></li>
-<li><p>Build the documentation</p></li>
-<li><p>Fail if a minimal percentage of the code is not documented</p></li>
-<li><p>If the commit is tagged as <cite>release version</cite> (using <a class="reference external" href="https://semver.org/">semantic versioning specification</a>) it publishes it to <a class="reference external" href="https://pypi.org/project/freeports-analysis/">PyPI</a></p></li>
+<li><p>Fa il <em>lint</em> del codice (ne controlla la qualità)</p></li>
+<li><p>Fallisce se non vengono raggiunti requisiti minimi di qualità del codice</p></li>
+<li><p>Esegue i test del codice e fallisce nel caso non vengano passati tutti</p></li>
+<li><p>Fallisce se una percentuale minima del codice non è testata</p></li>
+<li><p>Compila la documentazione</p></li>
+<li><p>Fallisce se una percentuale minima del codice non è documentato</p></li>
+<li><p>Se il commit è caratterizzato e classificato come <cite>versione di rilascio</cite> (seguendo la <a class="reference external" href="https://semver.org/">specificazione semantic versioning</a>) lo pubblica su <a class="reference external" href="https://pypi.org/project/freeports-analysis/">PyPI</a></p></li>
 </ol>
-<p>The difference between the two branches is that the state of the pipeline is only informative on the <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch
-(it means that it only shows the failing) but the positive outcome is <strong>imposed a requirement</strong> for the PR on <code class="docutils literal notranslate"><span class="pre">main</span></code> branch to be approved and merged.</p>
-<p>In particular the development divide between:</p>
+<p>La differenza tra in due rami è che lo stato della pipeline è unicamente informativo sul ramo <code class="docutils literal notranslate"><span class="pre">dev</span></code> (significa che il fallimento di essa è solo notificato) ma l’esito positivo è invece un <strong>requisito necessario</strong> per l’approvazione di una PR sul ramo <code class="docutils literal notranslate"><span class="pre">main</span></code> e la sua integrazione nel repositorio.</p>
+<p>In particolare lo sviluppo si divide tra:</p>
 <ul class="simple">
-<li><p>development of tools for helping the contribution process</p></li>
-<li><p>development of the code common for the different <cite>pdf reports</cite>
-(for example the source code related to the options and behaviour of the <code class="docutils literal notranslate"><span class="pre">freeports</span></code> command)</p></li>
-<li><p>development of the code for parsing the different <cite>pdf report formats</cite></p></li>
-<li><p>development of tests on the code</p></li>
-<li><p>writing of the documentation</p></li>
-<li><p>internationalization of the code (translation of messages in output of the command)</p></li>
-<li><p>internationalization of the documentation (translation of the documentation)</p></li>
+<li><p>sviluppo degli strumenti per aiutare il processo di contribuzione</p></li>
+<li><p>sviluppo del codice comune tra i diversi <cite>report pdf</cite> (per esempio il codice sorgente relativo alle opzioni e il comportamento del comando <code class="docutils literal notranslate"><span class="pre">freeports</span></code>)</p></li>
+<li><p>sviluppo del codice per elaborare diversi <cite>formati dei report pdf</cite></p></li>
+<li><p>sviluppo dei test sul codice</p></li>
+<li><p>scrittura della documentazione</p></li>
+<li><p>internazionalizzazione del codice (traduzione dei messaggi in output al comando)</p></li>
+<li><p>internazionalizzazione della documentazione (traduzione della documentazione)</p></li>
 </ul>
-<p>you can consult the specific guide related to the type of contribution that you want to do.
-When you feel comfortable with the concepts you can go forward with the workflow <a class="reference internal" href="example.html"><span class="doc">examples provided</span></a>;
-this page not only contains video expaining the possible contributions but also how to deploy them.</p>
+<p>puoi consultare la guida specifica relativa al tipo di contribuzione che vorresti fare. Quando ti senti a tuo agio con i concetti trattati puoi andare avanti con il <a class="reference internal" href="example.html"><span class="doc">workflow di esempio</span></a> fornito; questa pagina non contiene solo video tutoria spiegando i modi possibili di contribuzione ma anche come integrarli con il repositorio di freeports.</p>
 </section>
 
 

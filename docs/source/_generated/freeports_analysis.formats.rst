@@ -1,4 +1,4 @@
-freeports\_analysis.formats
+﻿freeports\_analysis.formats
 ===========================
 
 .. automodule:: freeports_analysis.formats
@@ -45,3 +45,4 @@ freeports\_analysis.formats
    eurizon_old
    fideuram
    mediolanum
+   mediolanum3

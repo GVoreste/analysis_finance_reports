@@ -6,10 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Creating tests &mdash; Documentazione freeports_analysis 0.0.3 </title>
+  <title>Creazione dei test &mdash; Documentazione freeports_analysis 0.0.3 </title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=d9280227" />
+      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=c9ec9885" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -47,18 +47,18 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installazione</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Guida al comando</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../API.html">Guida del pacchetto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Come contribuire</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer documentation</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentazione per sviluppatori</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="code.html">Code development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docs.html">Documentation development</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Creating tests</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#test-file">Test file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#test-dataset">Test dataset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#activate-single-page-tests">Activate single page tests</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Creazione dei test</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-file">File di test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-dataset">Dataset di test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#activate-single-page-tests">Attivazione del test di pagina singola</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="i18n.html">Interazionalization <em>(i18n)</em></a></li>
@@ -81,8 +81,8 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">Developer documentation</a></li>
-      <li class="breadcrumb-item active">Creating tests</li>
+          <li class="breadcrumb-item"><a href="index.html">Documentazione per sviluppatori</a></li>
+      <li class="breadcrumb-item active">Creazione dei test</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/dev/tests.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -93,49 +93,35 @@
            <div itemprop="articleBody">
              
   <section id="creating-tests">
-<h1>Creating tests<a class="headerlink" href="#creating-tests" title="Link to this heading"></a></h1>
-<p>The tests are developed using <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a> and they are located in the <code class="docutils literal notranslate"><span class="pre">tests/</span></code> directory.
-This guide will forcus on the development of the tests related to the creation of a format. In order to make a test there are three steps:</p>
+<h1>Creazione dei test<a class="headerlink" href="#creating-tests" title="Link to this heading"></a></h1>
+<p>I test sono sviluppati usando <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>  e sono messi nella cartella <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. Questa guida si concentra sullo sviluppo dei test in relazione alla creazione di un formato. Per creare un test ci sono 3 diversi passaggi:</p>
 <ul class="simple">
-<li><p>create the test file in the <code class="docutils literal notranslate"><span class="pre">tests/formats/</span></code> directory. It has to be called <code class="docutils literal notranslate"><span class="pre">test_{format</span> <span class="pre">name}.py</span></code></p></li>
-<li><p>create the dataset to test and with validated results into <code class="docutils literal notranslate"><span class="pre">tests/data/{FORMAT</span> <span class="pre">NAME}/</span></code></p></li>
-<li><p>activate the relevant single page tests in the <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code> file</p></li>
+<li><p>creare il file di test nella cartella <code class="docutils literal notranslate"><span class="pre">tests/formats/</span></code> . Deve essere chiamato <code class="docutils literal notranslate"><span class="pre">test_{format</span> <span class="pre">name}.py</span></code></p></li>
+<li><p>creare un dataset da testare e con il quale validare i risultati e metterlo in <code class="docutils literal notranslate"><span class="pre">tests/data/{FORMAT</span> <span class="pre">NAME}/</span></code></p></li>
+<li><p>attivare i test di pagina singola rilevanti nel file <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code></p></li>
 </ul>
 <section id="test-file">
-<h2>Test file<a class="headerlink" href="#test-file" title="Link to this heading"></a></h2>
-<p>You can take as reference any test file for the others formats. As you can see usually there are four tests:</p>
+<h2>File di test<a class="headerlink" href="#test-file" title="Link to this heading"></a></h2>
+<p>Puoi prendere come esempio qualunque altro test per gli altri formati. Come puoi vedere ci sono quattro test:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> single page</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> single page</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Deserialize</span></code> single page</p></li>
+<li><p>pagina singola <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code></p></li>
+<li><p>pagina singola <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code></p></li>
+<li><p>pagina singola <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pipeline</span></code></p></li>
 </ul>
-<p>The first three are parametrized tests on a single page of a pdf report that usually behave in the same manner and call an utility
-to test in a standardized way. The last one is marked as <code class="docutils literal notranslate"><span class="pre">integration_tests</span></code> (because it is slow) and it is not run after each commit
-but only in the CI pipeline upon push on <code class="docutils literal notranslate"><span class="pre">dev</span></code> or <code class="docutils literal notranslate"><span class="pre">main</span></code> remote branches (or by the user launching <code class="docutils literal notranslate"><span class="pre">pytest</span></code> command without any option).
-This test is run on an entire document and check on the output <code class="docutils literal notranslate"><span class="pre">csv</span></code>.</p>
+<p>I primi tre sono test parametrizzati su una singola pagina di un report pdf e di solito sono strutturati allo stesso modo e chiamano una funzione di aiuto per effettuare il test in modo standardizzato. L’ultimo è segnato come <code class="docutils literal notranslate"><span class="pre">integration_tests</span></code> (questo perché è di lenta esecuzione) e non è lanciato dopo ogni commit ma solo nella CI pipeline come risposta a una integrazione o modifica ai rami remoti <code class="docutils literal notranslate"><span class="pre">dev</span></code> o <code class="docutils literal notranslate"><span class="pre">main</span></code> (o lanciando il comando <code class="docutils literal notranslate"><span class="pre">pytest</span></code> senza alcuna opzione). Questo test è lanciato su un intero documento ed è validato sul <code class="docutils literal notranslate"><span class="pre">csv</span></code> in output.</p>
 <div class="admonition tip">
 <p class="admonition-title">Suggerimento</p>
-<p>It is not mandatory to test and provide single page tests or pipeline test for all three functions
-if some of them are not defined or not working.</p>
+<p>Non è necessario testare e fornire test di pagina singola o di pipeline per tutte e tre le funzioni se alcune di queste non sono definite o funzionanti.</p>
 </div>
 </section>
 <section id="test-dataset">
-<h2>Test dataset<a class="headerlink" href="#test-dataset" title="Link to this heading"></a></h2>
-<p>The dataset to assert the validity of tests and to recreate them consists in different files placed in <code class="docutils literal notranslate"><span class="pre">tests/data/{FORMAT</span> <span class="pre">NAME}/</span></code>.
-One document pdf named <code class="docutils literal notranslate"><span class="pre">report.pdf</span></code> has to be present to validate the <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> function and for the integration test.
-In order to check the results of the pipeline test has to be present a csv file named <code class="docutils literal notranslate"><span class="pre">out.csv</span></code>. All the other file are used
-for validating and generating the results of the single page tests for <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code>, <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> and <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code> functions.
-The files are named respectively <code class="docutils literal notranslate"><span class="pre">pdf_blks-{page</span> <span class="pre">number}.pkl</span></code>, <code class="docutils literal notranslate"><span class="pre">txt_blks-{page</span> <span class="pre">number}.pkl</span></code> and <code class="docutils literal notranslate"><span class="pre">financial_data-{page</span> <span class="pre">number}.pkl</span></code>
-and are direct dump of the object generated calling the different functions on a specific <code class="docutils literal notranslate"><span class="pre">xml</span> <span class="pre">tree</span></code> (page of the document). These files
-are <a class="reference external" href="https://docs.python.org/3/library/pickle.html">pickle files</a> containing respectively a list of <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code>, <code class="docutils literal notranslate"><span class="pre">TextBlocks</span></code> and
-<code class="docutils literal notranslate"><span class="pre">FinancialData</span></code>. To generate these files is present some utility functions in the <code class="docutils literal notranslate"><span class="pre">devtools/make_tests.py</span></code> file.</p>
+<h2>Dataset di test<a class="headerlink" href="#test-dataset" title="Link to this heading"></a></h2>
+<p>Il dataset per determinare la validità dei test e per ricrearli, consiste in diversi file localizzati in <cite>tests/data/{FORMAT NAME}/`</cite>. Per poter validare la funzione <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> o per effettuare il test di integrazione dell’intero documento deve essere presente un documento pdf chiamato <code class="docutils literal notranslate"><span class="pre">report.pdf</span></code>. Per poter controllare i risultati del test di pipeline deve essere presente un file csv chiamato <code class="docutils literal notranslate"><span class="pre">out.csv</span></code>. Tutti gli altri file sono usati per la validazione e per la generazione dei risultati dei test di pagina singola per le funzioni <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code>, <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> e <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code>. Questi file sono chiamati rispettivamente <code class="docutils literal notranslate"><span class="pre">pdf_blks-{page</span> <span class="pre">number}.pkl</span></code>, <code class="docutils literal notranslate"><span class="pre">txt_blks-{page</span> <span class="pre">number}.pkl</span></code> e <code class="docutils literal notranslate"><span class="pre">financial_data-{page</span> <span class="pre">number}.pkl</span></code> e sono dump diretti degli oggetti creati creati alla chiamata delle differenti funzioni su uno specifico <code class="docutils literal notranslate"><span class="pre">albero</span> <span class="pre">xml</span></code> (pagina del documento). Questi ile sono <a class="reference external" href="https://docs.python.org/3/library/pickle.html">file pickle</a> contenenti rispettivamente una lista di <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code>, <code class="docutils literal notranslate"><span class="pre">TextBlocks</span></code> and <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code>. Per generare questi file è presente una funzione di aiuto nel file <code class="docutils literal notranslate"><span class="pre">devtools/make_tests.py</span></code>.</p>
 </section>
 <section id="activate-single-page-tests">
-<h2>Activate single page tests<a class="headerlink" href="#activate-single-page-tests" title="Link to this heading"></a></h2>
-<p>The dataset referring a format can contain a variable number of single page tests to be performed. In not specified no test is performed,
-even if the dataset contains the required data. To activate it is necessary to modify the <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code> file adding
-to the <code class="docutils literal notranslate"><span class="pre">single_page_tests</span></code> array a key with the format name in capslock and the list of the pages to test.</p>
+<h2>Attivazione del test di pagina singola<a class="headerlink" href="#activate-single-page-tests" title="Link to this heading"></a></h2>
+<p>Il dataset riferito ad un formato può contenere un numero variabile di test a singola pagina da effettuare. Se non specificato altrimenti non è effettuato alcun test, anche se il dataset contiene i dati necessari per eseguirlo. Per attivarli è necessario modificare il file <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code> aggiungendo alla lista <code class="docutils literal notranslate"><span class="pre">single_page_tests</span></code> una chiave con il nome del formato tutto maiuscolo e l’elenco delle pagine da testare.</p>
 </section>
 </section>
 
