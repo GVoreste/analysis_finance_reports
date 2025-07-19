@@ -22,150 +22,94 @@ msgstr ""
 
 #: ../../source/usage/config/cmd_args.rst:3
 msgid "Command line arguments"
-msgstr ""
+msgstr "Argomenti da linea di comando"
 
 #: ../../source/usage/config/cmd_args.rst:5
 msgid "The map between command line options and program variables is:"
-msgstr ""
+msgstr "La mappa tra opzioni da linea di comando e variabili del programma è:"
 
 #: ../../source/usage/config/cmd_args.rst:8
 msgid "Argument"
-msgstr ""
+msgstr "Argomento"
 
 #: ../../source/usage/config/cmd_args.rst:8
 msgid "Corresponding option / behaviour"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:8
-msgid "Type"
-msgstr ""
+msgstr "Opzione / comportamento corrispondenti"
 
 #: ../../source/usage/config/cmd_args.rst:10
 msgid "``-v``"
-msgstr ""
+msgstr "``-v``"
 
 #: ../../source/usage/config/cmd_args.rst:10
 msgid "Increase default ``VERBOSITY`` *(See below)*"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:10
-#: ../../source/usage/config/cmd_args.rst:12
-#: ../../source/usage/config/cmd_args.rst:16
-msgid "``int``"
-msgstr ""
+msgstr "Aumenta la ``VERBOSITY`` (verbosità) di default *(Vedi sotto)*"
 
 #: ../../source/usage/config/cmd_args.rst:12
 msgid "``-q``"
-msgstr ""
+msgstr "``-q``"
 
 #: ../../source/usage/config/cmd_args.rst:12
 msgid "Decrease default ``VERBOSITY`` *(See below)*"
-msgstr ""
+msgstr "Diminuisce la ``VERBOSITY`` (verbosità) di default *(Vedi sotto)*"
 
 #: ../../source/usage/config/cmd_args.rst:14
 msgid "``--batch``, ``-b``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:14
-msgid "``BATCH``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:14
-#: ../../source/usage/config/cmd_args.rst:18
-#: ../../source/usage/config/cmd_args.rst:24
-#: ../../source/usage/config/cmd_args.rst:28
-msgid "``Path``"
-msgstr ""
+msgstr "``--batch``, ``-b``"
 
 #: ../../source/usage/config/cmd_args.rst:16
 msgid "``--workers``, ``-j``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:16
-msgid "``N_WORKERS``"
-msgstr ""
+msgstr "``--workers``, ``-j``"
 
 #: ../../source/usage/config/cmd_args.rst:18
 msgid "``--out``, ``-o``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:18
-msgid "``OUT_CSV``"
-msgstr ""
+msgstr "``--out``, ``-o``"
 
 #: ../../source/usage/config/cmd_args.rst:20
 msgid "``--no-download``"
-msgstr ""
+msgstr "``--no-download``"
 
 #: ../../source/usage/config/cmd_args.rst:20
 msgid "Set ``SAVE_PDF`` to ``False`` if present"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:20
-#: ../../source/usage/config/cmd_args.rst:30
-msgid "``bool``"
-msgstr ""
+msgstr "Se presente, fissa ``SAVE_PDF`` a ``False`` (falso)"
 
 #: ../../source/usage/config/cmd_args.rst:22
 msgid "``--url``, ``-u``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:22
-msgid "``URL``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:22
-msgid "``str``"
-msgstr ""
+msgstr "``--url``, ``-u``"
 
 #: ../../source/usage/config/cmd_args.rst:24
 msgid "``--pdf``, ``-i``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:24
-msgid "``PDF``"
-msgstr ""
+msgstr "``--pdf``, ``-i``"
 
 #: ../../source/usage/config/cmd_args.rst:26
 msgid "``--format``, ``-f``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:26
-msgid "``FORMAT``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:26
-msgid ":py:class:`PdfFormats`"
-msgstr ""
+msgstr "``--format``, ``-f``"
 
 #: ../../source/usage/config/cmd_args.rst:28
 msgid "``--config``, ``-c``"
-msgstr ""
-
-#: ../../source/usage/config/cmd_args.rst:28
-msgid "``CONFIG_FILE``"
-msgstr ""
+msgstr "``--config``, ``-c``"
 
 #: ../../source/usage/config/cmd_args.rst:30
 msgid "``--separate-out``"
-msgstr ""
+msgstr "``--separate-out``"
 
 #: ../../source/usage/config/cmd_args.rst:30
 msgid "Save ``SEPARATE_OUT_FILES``   to ``True`` if present"
-msgstr ""
+msgstr "Se presente, fissa ``SEPARATE_OUT_FILES`` a ``True`` (vero)"
 
 #: ../../source/usage/config/cmd_args.rst:34
 msgid ""
-"``-v`` and ``-q`` options are cumulabes and increase or decrease the "
-"default ``VERBOSITY``, for example ``-vvv`` increase verbosity by 3, "
-"``-qq`` decrease by 2, ``-v`` increase of 1, ecc. ecc."
+"``-v`` and ``-q`` options are cumulabes and increase or decrease the default "
+"``VERBOSITY``, for example ``-vvv`` increase verbosity by 3, ``-qq`` decrease "
+"by 2, ``-v`` increase of 1, ecc. ecc."
 msgstr ""
+"le opzioni ``-v`` e ``-q`` sono cumulative e aumentano o diminuiscono la "
+"``VERBOSITY`` (verbosità) di default, per esempio ``-vvv`` aumenta la verbosità "
+"di 3, ``-qq`` la diminuisce di 2, ``-v`` la aumenta di 1, ecc. ecc."
 
 #: ../../source/usage/config/cmd_args.rst:40
 msgid "Validation of the command line arguments"
-msgstr ""
+msgstr "Validazione degli argomenti da linea di comando"
 
 #: ../../source/usage/config/cmd_args.rst:42
 msgid "Cannot be specified both ``-v`` and ``-q`` options"
-msgstr ""
-
+msgstr "Non si possono specificare sia l'opzione ``-v`` che ``-q``"

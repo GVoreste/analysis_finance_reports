@@ -6,9 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Command line arguments &mdash; Documentazione freeports_analysis 0.0.3 </title>
+  <title>Argomenti da linea di comando &mdash; Documentazione freeports_analysis 0.0.3 </title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/colors.css?v=c9ec9885" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
@@ -20,8 +21,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../../genindex.html" />
     <link rel="search" title="Cerca" href="../../search.html" />
-    <link rel="next" title="Environment variables reference" href="env_variables.html" />
-    <link rel="prev" title="Command reference" href="../command.html" /> 
+    <link rel="next" title="Guida alle variabili di ambiente" href="env_variables.html" />
+    <link rel="prev" title="Guida del comando" href="../command.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -34,6 +35,7 @@
           
           <a href="../../index.html" class="icon icon-home">
             freeports_analysis
+              <img src="https://www.freeports.org/assets/logo/square.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -45,22 +47,23 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../command.html">Command reference</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Command line arguments</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#validation-of-the-command-line-arguments">Validation of the command line arguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installazione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Guida quickstart</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../command.html">Guida del comando</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Argomenti da linea di comando</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#validation-of-the-command-line-arguments">Validazione degli argomenti da linea di comando</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="env_variables.html">Environment variables reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config_file.html">Config file reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../command.html#the-options">The options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../command.html#validation-of-resulting-configuration">Validation of resulting configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="env_variables.html">Guida alle variabili di ambiente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config_file.html">Guida al file di configurazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#the-options">Le opzioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#validation-of-resulting-configuration">Validazione della configurazione risultante</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../command.html#batch-mode"><code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../API.html">Package reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../API.html">Guida del pacchetto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">Come contribuire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Developer documentation</a></li>
 </ul>
 
         </div>
@@ -77,8 +80,8 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../command.html">Command reference</a></li>
-      <li class="breadcrumb-item active">Command line arguments</li>
+          <li class="breadcrumb-item"><a href="../command.html">Guida del comando</a></li>
+      <li class="breadcrumb-item active">Argomenti da linea di comando</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/usage/config/cmd_args.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -89,22 +92,22 @@
            <div itemprop="articleBody">
              
   <section id="command-line-arguments">
-<h1>Command line arguments<a class="headerlink" href="#command-line-arguments" title="Link to this heading"></a></h1>
-<p>The map between command line options and program variables is:</p>
+<h1>Argomenti da linea di comando<a class="headerlink" href="#command-line-arguments" title="Link to this heading"></a></h1>
+<p>La mappa tra opzioni da linea di comando e variabili del programma è:</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Argument</p></th>
-<th class="head"><p>Corresponding option / behaviour</p></th>
+<tr class="row-odd"><th class="head"><p>Argomento</p></th>
+<th class="head"><p>Opzione / comportamento corrispondenti</p></th>
 <th class="head"><p>Type</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-v</span></code></p></td>
-<td><p>Increase default <code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code> <em>(See below)</em></p></td>
+<td><p>Aumenta la <code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code> (verbosità) di default <em>(Vedi sotto)</em></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-q</span></code></p></td>
-<td><p>Decrease default <code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code> <em>(See below)</em></p></td>
+<td><p>Diminuisce la <code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code> (verbosità) di default <em>(Vedi sotto)</em></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--batch</span></code>, <code class="docutils literal notranslate"><span class="pre">-b</span></code></p></td>
@@ -120,7 +123,7 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--no-download</span></code></p></td>
-<td><p>Set <code class="docutils literal notranslate"><span class="pre">SAVE_PDF</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code> if present</p></td>
+<td><p>Se presente, fissa <code class="docutils literal notranslate"><span class="pre">SAVE_PDF</span></code> a <code class="docutils literal notranslate"><span class="pre">False</span></code> (falso)</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--url</span></code>, <code class="docutils literal notranslate"><span class="pre">-u</span></code></p></td>
@@ -140,16 +143,15 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">Path</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--separate-out</span></code></p></td>
-<td><p>Save <code class="docutils literal notranslate"><span class="pre">SEPARATE_OUT_FILES</span></code>   to <code class="docutils literal notranslate"><span class="pre">True</span></code> if present</p></td>
+<td><p>Se presente, fissa <code class="docutils literal notranslate"><span class="pre">SEPARATE_OUT_FILES</span></code> a <code class="docutils literal notranslate"><span class="pre">True</span></code> (vero)</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 </tr>
 </tbody>
 </table>
-<p><code class="docutils literal notranslate"><span class="pre">-v</span></code> and <code class="docutils literal notranslate"><span class="pre">-q</span></code> options are cumulabes and increase or decrease the default <code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code>, for example <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> increase verbosity by 3, <code class="docutils literal notranslate"><span class="pre">-qq</span></code> decrease by 2,
-<code class="docutils literal notranslate"><span class="pre">-v</span></code> increase of 1, ecc. ecc.</p>
+<p>le opzioni <code class="docutils literal notranslate"><span class="pre">-v</span></code> e <code class="docutils literal notranslate"><span class="pre">-q</span></code> sono cumulative e aumentano o diminuiscono la <code class="docutils literal notranslate"><span class="pre">VERBOSITY</span></code> (verbosità) di default, per esempio <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> aumenta la verbosità di 3, <code class="docutils literal notranslate"><span class="pre">-qq</span></code> la diminuisce di 2, <code class="docutils literal notranslate"><span class="pre">-v</span></code> la aumenta di 1, ecc. ecc.</p>
 <section id="validation-of-the-command-line-arguments">
-<h2>Validation of the command line arguments<a class="headerlink" href="#validation-of-the-command-line-arguments" title="Link to this heading"></a></h2>
-<p>Cannot be specified both <code class="docutils literal notranslate"><span class="pre">-v</span></code> and <code class="docutils literal notranslate"><span class="pre">-q</span></code> options</p>
+<h2>Validazione degli argomenti da linea di comando<a class="headerlink" href="#validation-of-the-command-line-arguments" title="Link to this heading"></a></h2>
+<p>Non si possono specificare sia l’opzione <code class="docutils literal notranslate"><span class="pre">-v</span></code> che <code class="docutils literal notranslate"><span class="pre">-q</span></code></p>
 </section>
 </section>
 
@@ -157,8 +159,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="../command.html" class="btn btn-neutral float-left" title="Command reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
-        <a href="env_variables.html" class="btn btn-neutral float-right" title="Environment variables reference" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../command.html" class="btn btn-neutral float-left" title="Guida del comando" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="env_variables.html" class="btn btn-neutral float-right" title="Guida alle variabili di ambiente" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

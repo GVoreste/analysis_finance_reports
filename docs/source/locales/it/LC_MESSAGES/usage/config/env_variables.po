@@ -22,132 +22,56 @@ msgstr ""
 
 #: ../../source/usage/config/env_variables.rst:3
 msgid "Environment variables reference"
-msgstr ""
+msgstr "Guida alle variabili di ambiente"
 
 #: ../../source/usage/config/env_variables.rst:5
 msgid "The map between available environment variables and options is:"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:8
-msgid "Environment variable"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:8
-msgid "Corresponding option"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:8
-msgid "Type"
-msgstr ""
+msgstr "La mappa tra le variabili di ambiente disponibili e le opzioni è:"
 
 #: ../../source/usage/config/env_variables.rst:10
 msgid "``AFINANCE_VERBOSITY``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:10
-msgid "``VERBOSITY``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:10
-#: ../../source/usage/config/env_variables.rst:14
-msgid "``int``"
-msgstr ""
+msgstr "``AFINANCE_VERBOSITY``"
 
 #: ../../source/usage/config/env_variables.rst:12
 msgid "``AFINANCE_BATCH``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:12
-msgid "``BATCH``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:12
-#: ../../source/usage/config/env_variables.rst:16
-#: ../../source/usage/config/env_variables.rst:22
-#: ../../source/usage/config/env_variables.rst:26
-msgid "``Path``"
-msgstr ""
+msgstr "``AFINANCE_BATCH``"
 
 #: ../../source/usage/config/env_variables.rst:14
 msgid "``AFINANCE_N_WORKERS``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:14
-msgid "``N_WORKERS``"
-msgstr ""
+msgstr "``AFINANCE_N_WORKERS``"
 
 #: ../../source/usage/config/env_variables.rst:16
 msgid "``AFINANCE_OUT_CSV``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:16
-msgid "``OUT_CSV``"
-msgstr ""
+msgstr "``AFINANCE_OUT_CSV``"
 
 #: ../../source/usage/config/env_variables.rst:18
 msgid "``AFINANCE_SAVE_PDF``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:18
-msgid "``SAVE_PDF``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:18
-#: ../../source/usage/config/env_variables.rst:28
-msgid "``bool``"
-msgstr ""
+msgstr "``AFINANCE_SAVE_PDF``"
 
 #: ../../source/usage/config/env_variables.rst:20
 msgid "``AFINANCE_URL``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:20
-msgid "``URL``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:20
-msgid "``str``"
-msgstr ""
+msgstr "``AFINANCE_URL``"
 
 #: ../../source/usage/config/env_variables.rst:22
 msgid "``AFINANCE_PDF``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:22
-msgid "``PDF``"
-msgstr ""
+msgstr "``AFINANCE_PDF``"
 
 #: ../../source/usage/config/env_variables.rst:24
 msgid "``AFINANCE_FORMAT``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:24
-msgid "``FORMAT``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:24
-msgid ":py:class:`PdfFormats`"
-msgstr ""
+msgstr "``AFINANCE_FORMAT``"
 
 #: ../../source/usage/config/env_variables.rst:26
 msgid "``AFINANCE_CONFIG_FILE``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:26
-msgid "``CONFIG_FILE``"
-msgstr ""
+msgstr "``AFINANCE_CONFIG_FILE``"
 
 #: ../../source/usage/config/env_variables.rst:28
 msgid "``AFINANCE_SEPARATE_OUT``"
-msgstr ""
-
-#: ../../source/usage/config/env_variables.rst:28
-msgid "``SEPARATE_OUT_FILES``"
-msgstr ""
+msgstr "``AFINANCE_SEPARATE_OUT``"
 
 #: ../../source/usage/config/env_variables.rst:32
 msgid ""
-"The ``bool`` values are evaluated in the same manner that from "
-":ref:`batch csv file <batch_mode>`."
+"The ``bool`` values are evaluated in the same manner that from :ref:`batch csv "
+"file <batch_mode>`."
 msgstr ""
-
+"Il valori booleani sono valutati nello stesso modo che nel contesto "
+"del :ref:`file batch csv <batch_mode>`."

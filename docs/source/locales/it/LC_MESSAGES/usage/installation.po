@@ -22,55 +22,56 @@ msgstr ""
 
 #: ../../source/usage/installation.rst:5
 msgid "Installation"
-msgstr ""
+msgstr "Installazione"
 
 #: ../../source/usage/installation.rst:7
 msgid "There are for now 2 installation method:"
-msgstr ""
+msgstr "Sono supportati per ora 2 metodi di installazione:"
 
 #: ../../source/usage/installation.rst:9
 msgid "using ``pip`` *(Recommended)*"
-msgstr ""
+msgstr "usando ``pip``  *(Raccomandato)*"
 
 #: ../../source/usage/installation.rst:10
 msgid "from source"
-msgstr ""
+msgstr "da sorgente"
 
 #: ../../source/usage/installation.rst:14
 msgid "Using ``pip``"
-msgstr ""
+msgstr "Usando ``pip``"
 
 #: ../../source/usage/installation.rst:16
 msgid "Install in a python virtual environment launching"
-msgstr ""
+msgstr "Installa in un ambiente python virtuale lanciando"
 
 #: ../../source/usage/installation.rst:24
 msgid "From source"
-msgstr ""
+msgstr "Da codice sorgente"
 
 #: ../../source/usage/installation.rst:27
 msgid ""
-"You need to have the python ``build`` package installed. You can install "
-"it in your virtual environment with ``pip install build``"
+"You need to have the python ``build`` package installed. You can install it in "
+"your virtual environment with ``pip install build``"
 msgstr ""
+"Devi avere il pacchetto python ``build`` installato. Puoi installarlo "
+"nell'ambiente virtuale con ``pip install build``"
 
 #: ../../source/usage/installation.rst:30
 msgid "Clone the repository:"
-msgstr ""
+msgstr "Clona il repositorio:"
 
 #: ../../source/usage/installation.rst:37
 msgid "`cd` into the created directory"
-msgstr ""
+msgstr "esegui `cd` per entrare nella cartella appena creata"
 
 #: ../../source/usage/installation.rst:43
 msgid "build the package"
-msgstr ""
+msgstr "compila il pacchetto"
 
 #: ../../source/usage/installation.rst:49
 msgid "install local package"
-msgstr ""
+msgstr "installa localmente il pacchetto"
 
 #: ../../source/usage/installation.rst:55
 msgid "enjoy"
-msgstr ""
-
+msgstr "buon divertimento"

@@ -35,4 +35,11 @@ a:active, a:hover, a:visited {
     color: #fcfcfc;
 }
 
+.wy-nav-top {
+    background-color: #8f6dd6;
+}
 
+
+.wy-nav-top a {
+    color: #fcfcfc;
+}
