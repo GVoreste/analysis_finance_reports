@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.main.rst:2
 msgid "freeports\\_analysis.main"
-msgstr ""
+msgstr "freeports\\_analysis.main"
 
 #: freeports_analysis.main:1 of
 msgid ""
@@ -38,21 +38,23 @@ msgstr ""
 
 #: freeports_analysis.main:9 of
 msgid "Example"
-msgstr ""
+msgstr "Esempio"
 
 #: freeports_analysis.main:10 of
 msgid "```python main.py```"
-msgstr ""
+msgstr "```python main.py```"
 
 #: ../../source/_generated/freeports_analysis.main.rst:9
 msgid "Functions"
-msgstr ""
+msgstr "Funzioni"
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 msgid ""
 ":py:obj:`batch_job_confs <freeports_analysis.main.batch_job_confs>`\\ "
 "\\(config\\)"
 msgstr ""
+":py:obj:`batch_job_confs <freeports_analysis.main.batch_job_confs>`\\ "
+"\\(config\\)"
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 #: freeports_analysis.main.batch_job_confs:1 of
@@ -63,7 +65,7 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 msgid ":py:obj:`get_targets <freeports_analysis.main.get_targets>`\\ \\(\\)"
-msgstr ""
+msgstr ":py:obj:`get_targets <freeports_analysis.main.get_targets>`\\ \\(\\)"
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 #: freeports_analysis.main.get_targets:1 of
@@ -72,7 +74,7 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 msgid ":py:obj:`main <freeports_analysis.main.main>`\\ \\(config\\)"
-msgstr ""
+msgstr ":py:obj:`main <freeports_analysis.main.main>`\\ \\(config\\)"
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 #: freeports_analysis.main.main:1 of
@@ -86,6 +88,8 @@ msgid ""
 ":py:obj:`pipeline_batch <freeports_analysis.main.pipeline_batch>`\\ "
 "\\(batch\\_pages\\, i\\_page\\_batch\\, ...\\)"
 msgstr ""
+":py:obj:`pipeline_batch <freeports_analysis.main.pipeline_batch>`\\ "
+"\\(batch\\_pages\\, i\\_page\\_batch\\, ...\\)"
 
 #: ../../source/_generated/freeports_analysis.main.rst:16:<autosummary>:1
 #: freeports_analysis.main.pipeline_batch:1 of
@@ -96,13 +100,15 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.main.rst:18
 msgid "Exceptions"
-msgstr ""
+msgstr "Eccezioni"
 
 #: freeports_analysis.main.NoPDFormatDetected:1:<autosummary>:1 of
 msgid ""
 ":py:obj:`NoPDFormatDetected "
 "<freeports_analysis.main.NoPDFormatDetected>`\\"
 msgstr ""
+":py:obj:`NoPDFormatDetected "
+"<freeports_analysis.main.NoPDFormatDetected>`\\"
 
 #: freeports_analysis.main.NoPDFormatDetected:1
 #: freeports_analysis.main.NoPDFormatDetected:1:<autosummary>:1 of
@@ -184,7 +190,7 @@ msgstr ""
 
 #: freeports_analysis.main.pipeline_batch:14 of
 msgid "List of extracted financial data objects or promise resolution contexts"
-msgstr ""
+msgstr "Lista di oggetti di dati finanziari o contesti per la risoluzione delle promesse"
 
 #~ msgid ""
 #~ "This module is the one that "

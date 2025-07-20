@@ -22,9 +22,9 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats.asteria_2023.rst:2
 msgid "freeports\\_analysis.formats.asteria\\_2023"
-msgstr ""
+msgstr "freeports\\_analysis.formats.asteria\\_2023"
 
 #: freeports_analysis.formats.asteria_2023:1 of
 msgid "ASTERIA 2023 submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato ASTERIA 2023"
 

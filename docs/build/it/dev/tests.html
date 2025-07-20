@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="Interazionalization (i18n)" href="i18n.html" />
-    <link rel="prev" title="Documentation development" href="docs.html" /> 
+    <link rel="next" title="Internazionalizzazione (i18n)" href="i18n.html" />
+    <link rel="prev" title="Sviluppo della documentazione" href="docs.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,16 +53,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../API.html">Guida del pacchetto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Come contribuire</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentazione per sviluppatori</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="code.html">Code development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docs.html">Documentation development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html">Sviluppo del codice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html">Sviluppo della documentazione</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Creazione dei test</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#test-file">File di test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#test-dataset">Dataset di test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#activate-single-page-tests">Attivazione del test di pagina singola</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="i18n.html">Interazionalization <em>(i18n)</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="example.html">Example of a contribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html">Internazionalizzazione <em>(i18n)</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Esempio di una contribuzione</a></li>
 </ul>
 </li>
 </ul>
@@ -117,7 +117,7 @@
 </section>
 <section id="test-dataset">
 <h2>Dataset di test<a class="headerlink" href="#test-dataset" title="Link to this heading"></a></h2>
-<p>Il dataset per determinare la validità dei test e per ricrearli, consiste in diversi file localizzati in <cite>tests/data/{FORMAT NAME}/`</cite>. Per poter validare la funzione <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> o per effettuare il test di integrazione dell’intero documento deve essere presente un documento pdf chiamato <code class="docutils literal notranslate"><span class="pre">report.pdf</span></code>. Per poter controllare i risultati del test di pipeline deve essere presente un file csv chiamato <code class="docutils literal notranslate"><span class="pre">out.csv</span></code>. Tutti gli altri file sono usati per la validazione e per la generazione dei risultati dei test di pagina singola per le funzioni <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code>, <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> e <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code>. Questi file sono chiamati rispettivamente <code class="docutils literal notranslate"><span class="pre">pdf_blks-{page</span> <span class="pre">number}.pkl</span></code>, <code class="docutils literal notranslate"><span class="pre">txt_blks-{page</span> <span class="pre">number}.pkl</span></code> e <code class="docutils literal notranslate"><span class="pre">financial_data-{page</span> <span class="pre">number}.pkl</span></code> e sono dump diretti degli oggetti creati creati alla chiamata delle differenti funzioni su uno specifico <code class="docutils literal notranslate"><span class="pre">albero</span> <span class="pre">xml</span></code> (pagina del documento). Questi ile sono <a class="reference external" href="https://docs.python.org/3/library/pickle.html">file pickle</a> contenenti rispettivamente una lista di <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code>, <code class="docutils literal notranslate"><span class="pre">TextBlocks</span></code> and <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code>. Per generare questi file è presente una funzione di aiuto nel file <code class="docutils literal notranslate"><span class="pre">devtools/make_tests.py</span></code>.</p>
+<p>Il dataset per determinare la validità dei test e per ricrearli, consiste in diversi file localizzati in <code class="docutils literal notranslate"><span class="pre">tests/data/{FORMAT</span> <span class="pre">NAME}/</span></code>. Per poter validare la funzione <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> o per effettuare il test di integrazione dell’intero documento deve essere presente un documento pdf chiamato <code class="docutils literal notranslate"><span class="pre">report.pdf</span></code>. Per poter controllare i risultati del test di pipeline deve essere presente un file csv chiamato <code class="docutils literal notranslate"><span class="pre">out.csv</span></code>. Tutti gli altri file sono usati per la validazione e per la generazione dei risultati dei test di pagina singola per le funzioni <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code>, <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> e <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code>. Questi file sono chiamati rispettivamente <code class="docutils literal notranslate"><span class="pre">pdf_blks-{page</span> <span class="pre">number}.pkl</span></code>, <code class="docutils literal notranslate"><span class="pre">txt_blks-{page</span> <span class="pre">number}.pkl</span></code> e <code class="docutils literal notranslate"><span class="pre">financial_data-{page</span> <span class="pre">number}.pkl</span></code> e sono dump diretti degli oggetti creati creati alla chiamata delle differenti funzioni su uno specifico <code class="docutils literal notranslate"><span class="pre">albero</span> <span class="pre">xml</span></code> (pagina del documento). Questi ile sono <a class="reference external" href="https://docs.python.org/3/library/pickle.html">file pickle</a> contenenti rispettivamente una lista di <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code>, <code class="docutils literal notranslate"><span class="pre">TextBlocks</span></code> and <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code>. Per generare questi file è presente una funzione di aiuto nel file <code class="docutils literal notranslate"><span class="pre">devtools/make_tests.py</span></code>.</p>
 </section>
 <section id="activate-single-page-tests">
 <h2>Attivazione del test di pagina singola<a class="headerlink" href="#activate-single-page-tests" title="Link to this heading"></a></h2>
@@ -129,8 +129,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="docs.html" class="btn btn-neutral float-left" title="Documentation development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
-        <a href="i18n.html" class="btn btn-neutral float-right" title="Interazionalization (i18n)" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="docs.html" class="btn btn-neutral float-left" title="Sviluppo della documentazione" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="i18n.html" class="btn btn-neutral float-right" title="Internazionalizzazione (i18n)" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

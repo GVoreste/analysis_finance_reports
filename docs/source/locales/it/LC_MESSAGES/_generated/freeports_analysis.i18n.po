@@ -22,5 +22,5 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.i18n.rst:2
 msgid "freeports\\_analysis.i18n"
-msgstr ""
+msgstr "freeports\\_analysis.i18n"
 

@@ -118,75 +118,72 @@
              
   <section id="module-freeports_analysis.formats">
 <span id="freeports-analysis-formats"></span><h1>freeports_analysis.formats<a class="headerlink" href="#module-freeports_analysis.formats" title="Link to this heading"></a></h1>
-<p>Module common to each format, it contains the definitions used by all the formats</p>
-<p class="rubric">Functions</p>
+<p>Modulo comune a tutti i formati, contiene le definizioni usate da tutti i formati</p>
+<p class="rubric">Funzioni</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats.deserialize_exec" title="freeports_analysis.formats.deserialize_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize_exec</span></code></a>(text_blocks, targets, ...)</p></td>
-<td><p>Converts TextBlocks into tabular data using a specified function that from an expected formatting, return a python object.</p></td>
+<td><p>Converte i TextBlocks in formati tabulari usando una specifica funzione che da un formato aspettato, restituisce un oggetto python.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats.pdf_filter_exec" title="freeports_analysis.formats.pdf_filter_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pdf_filter_exec</span></code></a>(batch_pages, i_batch_page, ...)</p></td>
-<td><p>Processes a PDF document through a filter function to extract relevant blocks.</p></td>
+<td><p>Processa un documento PDF attraverso un funzione filtro per estrarre i blocchi rilevanti.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats.text_extract_exec" title="freeports_analysis.formats.text_extract_exec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">text_extract_exec</span></code></a>(pdf_blocks, targets, ...)</p></td>
-<td><p>Extracts text content from PDF blocks using a specified extraction function.</p></td>
+<td><p>Estrae il contenuto testuale dai blocchi PDF usando una funzione di estrazione specificata.</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Classes</p>
+<p class="rubric">Classi</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats.LogFormatterWithPage" title="freeports_analysis.formats.LogFormatterWithPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogFormatterWithPage</span></code></a>(old_formatter)</p></td>
-<td><p>Formatter that inherit the behaviour from another formatter given in input, but insert into it an attrinbute that rappresent the page number of the pdf report</p></td>
+<td><p>Formattatore che eredita il comportamento da un'altro formattatore dato in input, ma a questo inserisce un attributo che rappresenta il numero di pagina del report pdf</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PdfBlock</span></code></a>(type_block, metadata, xml_ele)</p></td>
-<td><p>Represents a PDF content block with data to be extracted or relevant for subsequent filtering stages.</p></td>
+<td><p>Rappresenta il blocco di contenuto PDF con dati da estrarre o informazioni rilevanti per i stadi di filtraggio seguenti</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextBlock</span></code></a>(type_block, metadata, pdf_block)</p></td>
-<td><p>Represents a processed text block derived from a PdfBlock.</p></td>
+<td><p>Rappresenta un blocco di testo processato derivato da un PdfBlock.</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Exceptions</p>
+<p class="rubric">Eccezioni</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#freeports_analysis.formats.ExpectedPdfBlockNotFound" title="freeports_analysis.formats.ExpectedPdfBlockNotFound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExpectedPdfBlockNotFound</span></code></a></p></td>
-<td><p>Raised when a required PdfBlock is not found</p></td>
+<td><p>Lanciato quando non è possibile trovare un un PdfBlock necessario</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#freeports_analysis.formats.ExpectedTextBlockNotFound" title="freeports_analysis.formats.ExpectedTextBlockNotFound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExpectedTextBlockNotFound</span></code></a></p></td>
-<td><p>Raised when a required TextBlock is not found</p></td>
+<td><p>Lanciato quando non è possibile trovare un TextBlock necessario</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py exception">
 <dt class="sig sig-object py" id="freeports_analysis.formats.ExpectedPdfBlockNotFound">
 <em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats.</span></span><span class="sig-name descname"><span class="pre">ExpectedPdfBlockNotFound</span></span><a class="headerlink" href="#freeports_analysis.formats.ExpectedPdfBlockNotFound" title="Link to this definition"></a></dt>
-<dd><p>Raised when a required PdfBlock is not found</p>
+<dd><p>Lanciato quando non è possibile trovare un un PdfBlock necessario</p>
 </dd></dl>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="freeports_analysis.formats.ExpectedTextBlockNotFound">
 <em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats.</span></span><span class="sig-name descname"><span class="pre">ExpectedTextBlockNotFound</span></span><a class="headerlink" href="#freeports_analysis.formats.ExpectedTextBlockNotFound" title="Link to this definition"></a></dt>
-<dd><p>Raised when a required TextBlock is not found</p>
+<dd><p>Lanciato quando non è possibile trovare un TextBlock necessario</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="freeports_analysis.formats.LogFormatterWithPage">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats.</span></span><span class="sig-name descname"><span class="pre">LogFormatterWithPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_formatter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Formatter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.formats.LogFormatterWithPage" title="Link to this definition"></a></dt>
-<dd><p>Formatter that inherit the behaviour from
-another formatter given in input, but insert into it
-an attrinbute that rappresent the page number of the pdf report</p>
+<dd><p>Formattatore che eredita il comportamento da un’altro formattatore dato in input, ma a questo inserisce un attributo che rappresenta il numero di pagina del report pdf</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="freeports_analysis.formats.LogFormatterWithPage.format">
 <span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">LogRecord</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#freeports_analysis.formats.LogFormatterWithPage.format" title="Link to this definition"></a></dt>
-<dd><p>Method used to get the rappresentation of the report.
-overwrite the inherited one</p>
+<dd><p>Metodo utilizzato per avere una rappresentazione del report. Sovrascrive quella ereditata</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parametri<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>record</strong> (<em>logging.LogRecord</em>) – the record to format</p>
+<dd class="field-odd"><p><strong>record</strong> (<em>logging.LogRecord</em>) – il record da formattare</p>
 </dd>
 <dt class="field-even">Ritorna<span class="colon">:</span></dt>
-<dd class="field-even"><p>formatted version of the record</p>
+<dd class="field-even"><p>versioni formattate del record</p>
 </dd>
 <dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
@@ -199,14 +196,13 @@ overwrite the inherited one</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="freeports_analysis.formats.PdfBlock">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats.</span></span><span class="sig-name descname"><span class="pre">PdfBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_block</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xml_ele</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Element</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Element</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.formats.PdfBlock" title="Link to this definition"></a></dt>
-<dd><p>Represents a PDF content block with data to be extracted or relevant
-for subsequent filtering stages.</p>
+<dd><p>Rappresenta il blocco di contenuto PDF con dati da estrarre o informazioni rilevanti per i stadi di filtraggio seguenti</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="freeports_analysis.formats.PdfBlock.type_block">
 <span class="sig-name descname"><span class="pre">type_block</span></span><a class="headerlink" href="#freeports_analysis.formats.PdfBlock.type_block" title="Link to this definition"></a></dt>
-<dd><p>The type of the PDF block.</p>
+<dd><p>Il tipo di blocco PDF.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dt class="field-odd">tipo<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Enum</p>
 </dd>
 </dl>
@@ -215,10 +211,10 @@ for subsequent filtering stages.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="freeports_analysis.formats.PdfBlock.metadata">
 <span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#freeports_analysis.formats.PdfBlock.metadata" title="Link to this definition"></a></dt>
-<dd><p>Additional metadata associated with the block.</p>
+<dd><p>Metadati addizionali associati al blocco</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[dict]</p>
+<dt class="field-odd">tipo<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Opzionale[dict]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -226,10 +222,10 @@ for subsequent filtering stages.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="freeports_analysis.formats.PdfBlock.content">
 <span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#freeports_analysis.formats.PdfBlock.content" title="Link to this definition"></a></dt>
-<dd><p>The textual content extracted from the block.</p>
+<dd><p>Il contenuto testuale estratto dal blocco.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[str]</p>
+<dt class="field-odd">tipo<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Opzionale[str]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -239,13 +235,13 @@ for subsequent filtering stages.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="freeports_analysis.formats.TextBlock">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats.</span></span><span class="sig-name descname"><span class="pre">TextBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_block</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdf_block</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><span class="pre">PdfBlock</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#freeports_analysis.formats.TextBlock" title="Link to this definition"></a></dt>
-<dd><p>Represents a processed text block derived from a PdfBlock.</p>
+<dd><p>Rappresenta un blocco di testo processato derivato da un PdfBlock.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="freeports_analysis.formats.TextBlock.type_block">
 <span class="sig-name descname"><span class="pre">type_block</span></span><a class="headerlink" href="#freeports_analysis.formats.TextBlock.type_block" title="Link to this definition"></a></dt>
-<dd><p>The type of the text block.</p>
+<dd><p>Il tipo di blocco testuale</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dt class="field-odd">tipo<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Enum</p>
 </dd>
 </dl>
@@ -254,9 +250,9 @@ for subsequent filtering stages.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="freeports_analysis.formats.TextBlock.metadata">
 <span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#freeports_analysis.formats.TextBlock.metadata" title="Link to this definition"></a></dt>
-<dd><p>Additional metadata associated with the block.</p>
+<dd><p>Metadati addizionali associati al blocco</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dt class="field-odd">tipo<span class="colon">:</span></dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
@@ -265,9 +261,9 @@ for subsequent filtering stages.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="freeports_analysis.formats.TextBlock.content">
 <span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#freeports_analysis.formats.TextBlock.content" title="Link to this definition"></a></dt>
-<dd><p>The textual content of the block.</p>
+<dd><p>Il contenuto testuale del blocco</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dt class="field-odd">tipo<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -276,9 +272,9 @@ for subsequent filtering stages.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="freeports_analysis.formats.TextBlock.pdf_block">
 <span class="sig-name descname"><span class="pre">pdf_block</span></span><a class="headerlink" href="#freeports_analysis.formats.TextBlock.pdf_block" title="Link to this definition"></a></dt>
-<dd><p>The original PdfBlock this text was derived from.</p>
+<dd><p>Il PdfBlock originale dal quale è derivato il testo</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dt class="field-odd">tipo<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock">PdfBlock</a></p>
 </dd>
 </dl>
@@ -289,20 +285,17 @@ for subsequent filtering stages.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="freeports_analysis.formats.deserialize_exec">
 <span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats.</span></span><span class="sig-name descname"><span class="pre">deserialize_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_blocks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><span class="pre">TextBlock</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deserialize_func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><span class="pre">TextBlock</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData"><span class="pre">FinancialData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData"><span class="pre">FinancialData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats.deserialize_exec" title="Link to this definition"></a></dt>
-<dd><p>Converts TextBlocks into tabular data using a specified function that
-from an expected formatting, return a python object.</p>
+<dd><p>Converte i TextBlocks in formati tabulari usando una specifica funzione che da un formato aspettato, restituisce un oggetto python.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parametri<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>text_blocks</strong> (<em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><em>TextBlock</em></a><em>]</em>) – TextBlock objects to process.</p></li>
-<li><p><strong>targets</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Targets companies to validate the object creation</p></li>
-<li><p><strong>deserialize_func</strong> (<em>Callable</em><em>[</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><em>TextBlock</em></a><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData"><em>FinancialData</em></a><em> | </em><em>PromisesResolutionContext</em><em>]</em>) – Function that converts a TextBlock into a finantial data class or into
-a bit of context for resolving deferred values</p></li>
+<li><p><strong>text_blocks</strong> (<em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><em>TextBlock</em></a><em>]</em>) – oggetto TextBlock da processare</p></li>
+<li><p><strong>targets</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Compagnie target per validare la creazione degli oggetti</p></li>
+<li><p><strong>deserialize_func</strong> (<em>Callable</em><em>[</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><em>TextBlock</em></a><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData"><em>FinancialData</em></a><em> | </em><em>PromisesResolutionContext</em><em>]</em>) – Funzione che converte un blocco testuale in un oggetto di dati finanziari o una unità di contesto per risolvere valori differiti</p></li>
 </ul>
 </dd>
 <dt class="field-even">Ritorna<span class="colon">:</span></dt>
-<dd class="field-even"><p>FinantialData classes containing the deserialized data or context
-for resolving deferred values</p>
+<dd class="field-even"><p>classi FinantialData contenenti il dato deserializzato o il contesto per risolvere valori differiti</p>
 </dd>
 <dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List[<a class="reference internal" href="freeports_analysis.consts.html#freeports_analysis.consts.FinancialData" title="freeports_analysis.consts.FinancialData">FinancialData</a> | PromisesResolutionContext]</p>
@@ -313,19 +306,18 @@ for resolving deferred values</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="freeports_analysis.formats.pdf_filter_exec">
 <span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats.</span></span><span class="sig-name descname"><span class="pre">pdf_filter_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_pages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_batch_page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_pages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdf_filter_func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><span class="pre">PdfBlock</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><span class="pre">PdfBlock</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats.pdf_filter_exec" title="Link to this definition"></a></dt>
-<dd><p>Processes a PDF document through a filter function to extract relevant blocks.</p>
+<dd><p>Processa un documento PDF attraverso un funzione filtro per estrarre i blocchi rilevanti.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parametri<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>document</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The PDF document to process as a list of xml pages.</p></li>
-<li><p><strong>i_batch_page</strong> (<em>int</em>) – Starting page of the batch processed by the instance of <cite>pdf_filter_exec</cite> function,
-used for informative purposes</p></li>
-<li><p><strong>n_pages</strong> (<em>int</em>) – Total number of pages in the document, used for informative purposes.</p></li>
-<li><p><strong>pdf_filter_func</strong> (<em>Callable</em><em>[</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><em>PdfBlock</em></a><em>]</em><em>]</em>) – A function that takes an XML element and returns a list of relevant PdfBlock.</p></li>
+<li><p><strong>document</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Il documento PDF da processare come lista di pagine xml.</p></li>
+<li><p><strong>i_batch_page</strong> (<em>int</em>) – Pagina iniziale del batch processato dalla istanza della funzione <cite>pdf_filter_exec</cite>, usato per ragioni informative</p></li>
+<li><p><strong>n_pages</strong> (<em>int</em>) – Numero totale delle pagine del documento, usato per ragioni informative.</p></li>
+<li><p><strong>pdf_filter_func</strong> (<em>Callable</em><em>[</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><em>PdfBlock</em></a><em>]</em><em>]</em>) – Una funzione che prende un elemento XML e restituisce una lista di PdfBlock rilevanti.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Ritorna<span class="colon">:</span></dt>
-<dd class="field-even"><p>PdfBlock objects containing the filtered content.</p>
+<dd class="field-even"><p>oggetti PdfBlock con dentro il contenuto filtrato</p>
 </dd>
 <dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List[<a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock">PdfBlock</a>]</p>
@@ -336,17 +328,17 @@ used for informative purposes</p></li>
 <dl class="py function">
 <dt class="sig sig-object py" id="freeports_analysis.formats.text_extract_exec">
 <span class="sig-prename descclassname"><span class="pre">freeports_analysis.formats.</span></span><span class="sig-name descname"><span class="pre">text_extract_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf_blocks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><span class="pre">PdfBlock</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_extract_func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><span class="pre">PdfBlock</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><span class="pre">TextBlock</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><span class="pre">TextBlock</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#freeports_analysis.formats.text_extract_exec" title="Link to this definition"></a></dt>
-<dd><p>Extracts text content from PDF blocks using a specified extraction function.</p>
+<dd><p>Estrae il contenuto testuale dai blocchi PDF usando una funzione di estrazione specificata.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parametri<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pdf_blocks</strong> (<em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><em>PdfBlock</em></a><em>]</em>) – PdfBlock objects to process.</p></li>
-<li><p><strong>targets</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Target companies identified for extraction.</p></li>
-<li><p><strong>text_extract_func</strong> (<em>Callable</em><em>[</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><em>PdfBlock</em></a><em>]</em><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><em>TextBlock</em></a><em>]</em><em>]</em>) – Function that processes PdfBlocks and targets into TextBlocks.</p></li>
+<li><p><strong>pdf_blocks</strong> (<em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><em>PdfBlock</em></a><em>]</em>) – oggetti PdfBlock da processare</p></li>
+<li><p><strong>targets</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Compagnie target identificate per l’estrazione</p></li>
+<li><p><strong>text_extract_func</strong> (<em>Callable</em><em>[</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.PdfBlock" title="freeports_analysis.formats.PdfBlock"><em>PdfBlock</em></a><em>]</em><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>List</em><em>[</em><a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock"><em>TextBlock</em></a><em>]</em><em>]</em>) – Funzione che processa i PdfBlocks e i target in TextBlocks.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Ritorna<span class="colon">:</span></dt>
-<dd class="field-even"><p>TextBlock objects containing the extracted content.</p>
+<dd class="field-even"><p>oggetto TextBlock contentente il contenuto estratto</p>
 </dd>
 <dt class="field-odd">Tipo di ritorno<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List[<a class="reference internal" href="#freeports_analysis.formats.TextBlock" title="freeports_analysis.formats.TextBlock">TextBlock</a>]</p>
@@ -354,41 +346,41 @@ used for informative purposes</p></li>
 </dl>
 </dd></dl>
 
-<p class="rubric">Modules</p>
+<p class="rubric">Moduli</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats.amundi.html#module-freeports_analysis.formats.amundi" title="freeports_analysis.formats.amundi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amundi</span></code></a></p></td>
-<td><p>AMUNDI format submodule</p></td>
+<td><p>Sottomodulo per il formato AMUNDI</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.formats.amundi2.html#module-freeports_analysis.formats.amundi2" title="freeports_analysis.formats.amundi2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amundi2</span></code></a></p></td>
-<td><p>AMUNDI2 format submodule</p></td>
+<td><p>Sottomodulo per il formato AMUNDI2</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats.anima.html#module-freeports_analysis.formats.anima" title="freeports_analysis.formats.anima"><code class="xref py py-obj docutils literal notranslate"><span class="pre">anima</span></code></a></p></td>
-<td><p>ANIMA format submodule</p></td>
+<td><p>Sottomodulo per il formato ANIMA</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.formats.arca.html#module-freeports_analysis.formats.arca" title="freeports_analysis.formats.arca"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arca</span></code></a></p></td>
-<td><p>ARCA format submodule</p></td>
+<td><p>Sottomodulo per il formato ARCA</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats.asteria.html#module-freeports_analysis.formats.asteria" title="freeports_analysis.formats.asteria"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asteria</span></code></a></p></td>
-<td><p>ASTERIA submodule</p></td>
+<td><p>Sottomodulo per il formato ASTERIA</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.formats.asteria_2023.html#module-freeports_analysis.formats.asteria_2023" title="freeports_analysis.formats.asteria_2023"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asteria_2023</span></code></a></p></td>
-<td><p>ASTERIA 2023 submodule</p></td>
+<td><p>Sottomodulo per il formato ASTERIA 2023</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats.eurizon.html#module-freeports_analysis.formats.eurizon" title="freeports_analysis.formats.eurizon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eurizon</span></code></a></p></td>
-<td><p>EURIZON format submodule</p></td>
+<td><p>Sottomodulo per il formato EURIZON</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.formats.eurizon_it.html#module-freeports_analysis.formats.eurizon_it" title="freeports_analysis.formats.eurizon_it"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eurizon_it</span></code></a></p></td>
-<td><p>EURIZON_IT format submodule</p></td>
+<td><p>Sottomodulo per il formato EURIZON_IT</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats.eurizon_old.html#module-freeports_analysis.formats.eurizon_old" title="freeports_analysis.formats.eurizon_old"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eurizon_old</span></code></a></p></td>
-<td><p>EURIZON_OLD format submodule</p></td>
+<td><p>Sottomodulo per il formato EURIZON_OLD</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.formats.fideuram.html#module-freeports_analysis.formats.fideuram" title="freeports_analysis.formats.fideuram"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fideuram</span></code></a></p></td>
-<td><p>FIDEURAM format submodule</p></td>
+<td><p>Sottomodulo per il formato FIDEURAM</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats.mediolanum.html#module-freeports_analysis.formats.mediolanum" title="freeports_analysis.formats.mediolanum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mediolanum</span></code></a></p></td>
-<td><p>MEDIOLANUM format submodule</p></td>
+<td><p>Sottomodulo per il formato MEDIOLANUM</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.formats.mediolanum3.html#module-freeports_analysis.formats.mediolanum3" title="freeports_analysis.formats.mediolanum3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mediolanum3</span></code></a></p></td>
 <td><p>MEDIOLANUM3 submodule</p></td>

@@ -22,9 +22,9 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats.asteria.rst:2
 msgid "freeports\\_analysis.formats.asteria"
-msgstr ""
+msgstr "freeports\\_analysis.formats.asteria"
 
 #: freeports_analysis.formats.asteria:1 of
 msgid "ASTERIA submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato ASTERIA"
 

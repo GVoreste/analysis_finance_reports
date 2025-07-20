@@ -22,17 +22,19 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats.rst:2
 msgid "freeports\\_analysis.formats"
-msgstr ""
+msgstr "freeports\\_analysis.formats"
 
 #: freeports_analysis.formats:1 of
 msgid ""
 "Module common to each format, it contains the definitions used by all the"
 " formats"
 msgstr ""
+"Modulo comune a tutti i formati, contiene le definizioni usate da tutti i"
+" formati"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:9
 msgid "Functions"
-msgstr ""
+msgstr "Funzioni"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:15:<autosummary>:1
 msgid ""
@@ -40,6 +42,9 @@ msgid ""
 "<freeports_analysis.formats.deserialize_exec>`\\ \\(text\\_blocks\\, "
 "targets\\, ...\\)"
 msgstr ""
+":py:obj:`deserialize_exec "
+"<freeports_analysis.formats.deserialize_exec>`\\ \\(text\\_blocks\\, "
+"targets\\, ...\\)"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:15:<autosummary>:1
 #: freeports_analysis.formats.deserialize_exec:1 of
@@ -47,12 +52,16 @@ msgid ""
 "Converts TextBlocks into tabular data using a specified function that "
 "from an expected formatting, return a python object."
 msgstr ""
+"Converte i TextBlocks in formati tabulari usando una specifica funzione che "
+"da un formato aspettato, restituisce un oggetto python."
 
 #: ../../source/_generated/freeports_analysis.formats.rst:15:<autosummary>:1
 msgid ""
 ":py:obj:`pdf_filter_exec <freeports_analysis.formats.pdf_filter_exec>`\\ "
 "\\(batch\\_pages\\, i\\_batch\\_page\\, ...\\)"
 msgstr ""
+":py:obj:`pdf_filter_exec <freeports_analysis.formats.pdf_filter_exec>`\\ "
+"\\(batch\\_pages\\, i\\_batch\\_page\\, ...\\)"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:15:<autosummary>:1
 #: freeports_analysis.formats.pdf_filter_exec:1 of
@@ -60,6 +69,8 @@ msgid ""
 "Processes a PDF document through a filter function to extract relevant "
 "blocks."
 msgstr ""
+"Processa un documento PDF attraverso un funzione filtro per estrarre i "
+"blocchi rilevanti."
 
 #: ../../source/_generated/freeports_analysis.formats.rst:15:<autosummary>:1
 msgid ""
@@ -67,6 +78,9 @@ msgid ""
 "<freeports_analysis.formats.text_extract_exec>`\\ \\(pdf\\_blocks\\, "
 "targets\\, ...\\)"
 msgstr ""
+":py:obj:`text_extract_exec "
+"<freeports_analysis.formats.text_extract_exec>`\\ \\(pdf\\_blocks\\, "
+"targets\\, ...\\)"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:15:<autosummary>:1
 #: freeports_analysis.formats.text_extract_exec:1 of
@@ -74,10 +88,12 @@ msgid ""
 "Extracts text content from PDF blocks using a specified extraction "
 "function."
 msgstr ""
+"Estrae il contenuto testuale dai blocchi PDF usando una funzione di "
+"estrazione specificata."
 
 #: ../../source/_generated/freeports_analysis.formats.rst:17
 msgid "Classes"
-msgstr ""
+msgstr "Classi"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:23:<autosummary>:1
 msgid ""
@@ -85,6 +101,9 @@ msgid ""
 "<freeports_analysis.formats.LogFormatterWithPage>`\\ "
 "\\(old\\_formatter\\)"
 msgstr ""
+":py:obj:`LogFormatterWithPage "
+"<freeports_analysis.formats.LogFormatterWithPage>`\\ "
+"\\(old\\_formatter\\)"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:23:<autosummary>:1
 #: freeports_analysis.formats.LogFormatterWithPage:1 of
@@ -93,12 +112,17 @@ msgid ""
 "input, but insert into it an attrinbute that rappresent the page number "
 "of the pdf report"
 msgstr ""
+"Formattatore che eredita il comportamento da un'altro formattatore dato "
+"in input, ma a questo inserisce un attributo che rappresenta il numero di "
+"pagina del report pdf"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`PdfBlock <freeports_analysis.formats.PdfBlock>`\\ "
 "\\(type\\_block\\, metadata\\, xml\\_ele\\)"
 msgstr ""
+":py:obj:`PdfBlock <freeports_analysis.formats.PdfBlock>`\\ "
+"\\(type\\_block\\, metadata\\, xml\\_ele\\)"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:23:<autosummary>:1
 #: freeports_analysis.formats.PdfBlock:1 of
@@ -106,278 +130,296 @@ msgid ""
 "Represents a PDF content block with data to be extracted or relevant for "
 "subsequent filtering stages."
 msgstr ""
+"Rappresenta il blocco di contenuto PDF con dati da estrarre o informazioni "
+"rilevanti per i stadi di filtraggio seguenti"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:23:<autosummary>:1
 msgid ""
 ":py:obj:`TextBlock <freeports_analysis.formats.TextBlock>`\\ "
 "\\(type\\_block\\, metadata\\, pdf\\_block\\)"
 msgstr ""
+":py:obj:`TextBlock <freeports_analysis.formats.TextBlock>`\\ "
+"\\(type\\_block\\, metadata\\, pdf\\_block\\)"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:23:<autosummary>:1
 #: freeports_analysis.formats.TextBlock:1 of
 msgid "Represents a processed text block derived from a PdfBlock."
-msgstr ""
+msgstr "Rappresenta un blocco di testo processato derivato da un PdfBlock."
 
 #: ../../source/_generated/freeports_analysis.formats.rst:25
 msgid "Exceptions"
-msgstr ""
+msgstr "Eccezioni"
 
 #: freeports_analysis.formats.ExpectedPdfBlockNotFound:1:<autosummary>:1 of
 msgid ""
 ":py:obj:`ExpectedPdfBlockNotFound "
 "<freeports_analysis.formats.ExpectedPdfBlockNotFound>`\\"
 msgstr ""
+":py:obj:`ExpectedPdfBlockNotFound "
+"<freeports_analysis.formats.ExpectedPdfBlockNotFound>`\\"
 
 #: freeports_analysis.formats.ExpectedPdfBlockNotFound:1
 #: freeports_analysis.formats.ExpectedPdfBlockNotFound:1:<autosummary>:1 of
 msgid "Raised when a required PdfBlock is not found"
-msgstr ""
+msgstr "Lanciato quando non è possibile trovare un un PdfBlock necessario"
 
 #: freeports_analysis.formats.ExpectedPdfBlockNotFound:1:<autosummary>:1 of
 msgid ""
 ":py:obj:`ExpectedTextBlockNotFound "
 "<freeports_analysis.formats.ExpectedTextBlockNotFound>`\\"
 msgstr ""
+":py:obj:`ExpectedTextBlockNotFound "
+"<freeports_analysis.formats.ExpectedTextBlockNotFound>`\\"
 
 #: freeports_analysis.formats.ExpectedPdfBlockNotFound:1:<autosummary>:1
 #: freeports_analysis.formats.ExpectedTextBlockNotFound:1 of
 msgid "Raised when a required TextBlock is not found"
-msgstr ""
+msgstr "Lanciato quando non è possibile trovare un TextBlock necessario"
 
 #: freeports_analysis.formats.LogFormatterWithPage.format:1 of
 msgid ""
 "Method used to get the rappresentation of the report. overwrite the "
 "inherited one"
 msgstr ""
+"Metodo utilizzato per avere una rappresentazione del report. Sovrascrive"
+" quella ereditata"
 
 #: ../../source/_generated/freeports_analysis.formats.rst
 msgid "Parameters"
-msgstr ""
+msgstr "Parametri"
 
 #: freeports_analysis.formats.LogFormatterWithPage.format:4 of
 msgid "the record to format"
-msgstr ""
+msgstr "il record da formattare"
 
 #: ../../source/_generated/freeports_analysis.formats.rst
 msgid "Returns"
-msgstr ""
+msgstr "Risultati"
 
 #: freeports_analysis.formats.LogFormatterWithPage.format:7 of
 msgid "formatted version of the record"
-msgstr ""
+msgstr "versioni formattate del record"
 
 #: ../../source/_generated/freeports_analysis.formats.rst
 msgid "Return type"
-msgstr ""
+msgstr "Tipo del risultato"
 
 #: freeports_analysis.formats.PdfBlock:6 of
 msgid "The type of the PDF block."
-msgstr ""
+msgstr "Il tipo di blocco PDF."
 
 #: freeports_analysis.formats.PdfBlock freeports_analysis.formats.TextBlock of
 msgid "type"
-msgstr ""
+msgstr "tipo"
 
 #: freeports_analysis.formats.PdfBlock:8 freeports_analysis.formats.TextBlock:7
 #: of
 msgid "Enum"
-msgstr ""
+msgstr "Enum"
 
 #: freeports_analysis.formats.PdfBlock:12
 #: freeports_analysis.formats.TextBlock:11 of
 msgid "Additional metadata associated with the block."
-msgstr ""
+msgstr "Metadati addizionali associati al blocco"
 
 #: freeports_analysis.formats.PdfBlock:14 of
 msgid "Optional[dict]"
-msgstr ""
+msgstr "Opzionale[dict]"
 
 #: freeports_analysis.formats.PdfBlock:18 of
 msgid "The textual content extracted from the block."
-msgstr ""
+msgstr "Il contenuto testuale estratto dal blocco."
 
 #: freeports_analysis.formats.PdfBlock:20 of
 msgid "Optional[str]"
-msgstr ""
+msgstr "Opzionale[str]"
 
 #: freeports_analysis.formats.TextBlock:5 of
 msgid "The type of the text block."
-msgstr ""
+msgstr "Il tipo di blocco testuale"
 
 #: freeports_analysis.formats.TextBlock:13 of
 msgid "dict"
-msgstr ""
+msgstr "dict"
 
 #: freeports_analysis.formats.TextBlock:17 of
 msgid "The textual content of the block."
-msgstr ""
+msgstr "Il contenuto testuale del blocco"
 
 #: freeports_analysis.formats.TextBlock:19 of
 msgid "str"
-msgstr ""
+msgstr "str"
 
 #: freeports_analysis.formats.TextBlock:23 of
 msgid "The original PdfBlock this text was derived from."
-msgstr ""
+msgstr "Il PdfBlock originale dal quale è derivato il testo"
 
 #: freeports_analysis.formats.TextBlock:25 of
 msgid "PdfBlock"
-msgstr ""
+msgstr "PdfBlock"
 
 #: freeports_analysis.formats.deserialize_exec:4 of
 msgid "TextBlock objects to process."
-msgstr ""
+msgstr "oggetto TextBlock da processare"
 
 #: freeports_analysis.formats.deserialize_exec:6 of
 msgid "Targets companies to validate the object creation"
-msgstr ""
+msgstr "Compagnie target per validare la creazione degli oggetti"
 
 #: freeports_analysis.formats.deserialize_exec:8 of
 msgid ""
 "Function that converts a TextBlock into a finantial data class or into a "
 "bit of context for resolving deferred values"
 msgstr ""
+"Funzione che converte un blocco testuale in un oggetto di dati finanziari "
+"o una unità di contesto per risolvere valori differiti"
 
 #: freeports_analysis.formats.deserialize_exec:12 of
 msgid ""
 "FinantialData classes containing the deserialized data or context for "
 "resolving deferred values"
 msgstr ""
+"classi FinantialData contenenti il dato deserializzato o il contesto per "
+"risolvere valori differiti"
 
 #: freeports_analysis.formats.pdf_filter_exec:3 of
 msgid "The PDF document to process as a list of xml pages."
-msgstr ""
+msgstr "Il documento PDF da processare come lista di pagine xml."
 
 #: freeports_analysis.formats.pdf_filter_exec:5 of
 msgid ""
 "Starting page of the batch processed by the instance of `pdf_filter_exec`"
 " function, used for informative purposes"
 msgstr ""
+"Pagina iniziale del batch processato dalla istanza della funzione "
+"`pdf_filter_exec`, usato per ragioni informative"
 
 #: freeports_analysis.formats.pdf_filter_exec:8 of
 msgid "Total number of pages in the document, used for informative purposes."
-msgstr ""
+msgstr "Numero totale delle pagine del documento, usato per ragioni informative."
 
 #: freeports_analysis.formats.pdf_filter_exec:10 of
 msgid ""
 "A function that takes an XML element and returns a list of relevant "
 "PdfBlock."
 msgstr ""
+"Una funzione che prende un elemento XML e restituisce una lista di "
+"PdfBlock rilevanti."
 
 #: freeports_analysis.formats.pdf_filter_exec:13 of
 msgid "PdfBlock objects containing the filtered content."
-msgstr ""
+msgstr "oggetti PdfBlock con dentro il contenuto filtrato"
 
 #: freeports_analysis.formats.text_extract_exec:3 of
 msgid "PdfBlock objects to process."
-msgstr ""
+msgstr "oggetti PdfBlock da processare"
 
 #: freeports_analysis.formats.text_extract_exec:5 of
 msgid "Target companies identified for extraction."
-msgstr ""
+msgstr "Compagnie target identificate per l'estrazione"
 
 #: freeports_analysis.formats.text_extract_exec:7 of
 msgid "Function that processes PdfBlocks and targets into TextBlocks."
-msgstr ""
+msgstr "Funzione che processa i PdfBlocks e i target in TextBlocks."
 
 #: freeports_analysis.formats.text_extract_exec:10 of
 msgid "TextBlock objects containing the extracted content."
-msgstr ""
+msgstr "oggetto TextBlock contentente il contenuto estratto"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:32
 msgid "Modules"
-msgstr ""
+msgstr "Moduli"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`amundi <freeports_analysis.formats.amundi>`\\"
-msgstr ""
+msgstr ":py:obj:`amundi <freeports_analysis.formats.amundi>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "AMUNDI format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato AMUNDI"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`amundi2 <freeports_analysis.formats.amundi2>`\\"
-msgstr ""
+msgstr ":py:obj:`amundi2 <freeports_analysis.formats.amundi2>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "AMUNDI2 format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato AMUNDI2"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`anima <freeports_analysis.formats.anima>`\\"
-msgstr ""
+msgstr ":py:obj:`anima <freeports_analysis.formats.anima>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "ANIMA format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato ANIMA"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`arca <freeports_analysis.formats.arca>`\\"
-msgstr ""
+msgstr ":py:obj:`arca <freeports_analysis.formats.arca>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "ARCA format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato ARCA"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`asteria <freeports_analysis.formats.asteria>`\\"
-msgstr ""
+msgstr ":py:obj:`asteria <freeports_analysis.formats.asteria>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "ASTERIA submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato ASTERIA"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`asteria_2023 <freeports_analysis.formats.asteria_2023>`\\"
-msgstr ""
+msgstr ":py:obj:`asteria_2023 <freeports_analysis.formats.asteria_2023>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "ASTERIA 2023 submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato ASTERIA 2023"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`eurizon <freeports_analysis.formats.eurizon>`\\"
-msgstr ""
+msgstr ":py:obj:`eurizon <freeports_analysis.formats.eurizon>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "EURIZON format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato EURIZON"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`eurizon_it <freeports_analysis.formats.eurizon_it>`\\"
-msgstr ""
+msgstr ":py:obj:`eurizon_it <freeports_analysis.formats.eurizon_it>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "EURIZON_IT format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato EURIZON_IT"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`eurizon_old <freeports_analysis.formats.eurizon_old>`\\"
-msgstr ""
+msgstr ":py:obj:`eurizon_old <freeports_analysis.formats.eurizon_old>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "EURIZON_OLD format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato EURIZON_OLD"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`fideuram <freeports_analysis.formats.fideuram>`\\"
-msgstr ""
+msgstr ":py:obj:`fideuram <freeports_analysis.formats.fideuram>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "FIDEURAM format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato FIDEURAM"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid ":py:obj:`mediolanum <freeports_analysis.formats.mediolanum>`\\"
-msgstr ""
+msgstr ":py:obj:`mediolanum <freeports_analysis.formats.mediolanum>`\\"
 
 #: ../../source/_generated/freeports_analysis.formats.rst:47:<autosummary>:1
 msgid "MEDIOLANUM format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato MEDIOLANUM"
 
 #~ msgid "Function that converts a TextBlock into a finantial data class."
-#~ msgstr ""
+#~ msgstr "Funzione che converte un TextBlock in una classe di dato finanziario."
 
 #~ msgid "FinantialData classes containing the deserialized data."
 #~ msgstr ""

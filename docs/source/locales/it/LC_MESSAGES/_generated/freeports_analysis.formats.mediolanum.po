@@ -22,9 +22,9 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats.mediolanum.rst:2
 msgid "freeports\\_analysis.formats.mediolanum"
-msgstr ""
+msgstr "freeports\\_analysis.formats.mediolanum"
 
 #: freeports_analysis.formats.mediolanum:1 of
 msgid "MEDIOLANUM format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato MEDIOLANUM"
 

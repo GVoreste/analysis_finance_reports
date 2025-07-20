@@ -6,10 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interazionalization (i18n) &mdash; Documentazione freeports_analysis 0.0.3 </title>
+  <title>Internazionalizzazione (i18n) &mdash; Documentazione freeports_analysis 0.0.3 </title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=d9280227" />
+      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=c9ec9885" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="Example of a contribution" href="example.html" />
-    <link rel="prev" title="Creating tests" href="tests.html" /> 
+    <link rel="next" title="Esempio di una contribuzione" href="example.html" />
+    <link rel="prev" title="Creazione dei test" href="tests.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,22 +47,22 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installazione</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Guida al comando</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../API.html">Guida del pacchetto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Come contribuire</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="code.html">Code development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docs.html">Documentation development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.html">Creating tests</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Interazionalization <em>(i18n)</em></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#translation-of-the-code">Translation of the code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#translation-of-the-documentation">Translation of the documentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building-the-translations">Building the translations</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentazione per sviluppatori</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="code.html">Sviluppo del codice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html">Sviluppo della documentazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Creazione dei test</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Internazionalizzazione <em>(i18n)</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#translation-of-the-code">Traduzione del codice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translation-of-the-documentation">Traduzione della documentazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-translations">Compilazione delle traduzioni</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="example.html">Example of a contribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Esempio di una contribuzione</a></li>
 </ul>
 </li>
 </ul>
@@ -81,8 +81,8 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">Developer documentation</a></li>
-      <li class="breadcrumb-item active">Interazionalization <em>(i18n)</em></li>
+          <li class="breadcrumb-item"><a href="index.html">Documentazione per sviluppatori</a></li>
+      <li class="breadcrumb-item active">Internazionalizzazione <em>(i18n)</em></li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/dev/i18n.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -93,50 +93,31 @@
            <div itemprop="articleBody">
              
   <section id="interazionalization-i18n">
-<h1>Interazionalization <em>(i18n)</em><a class="headerlink" href="#interazionalization-i18n" title="Link to this heading"></a></h1>
-<p>This guide focus on the translation process of the documentation and of the source code.
-The system and the conventions used by both documentation and source code internationalization
-are the one used by the <a class="reference external" href="https://en.wikipedia.org/wiki/Gettext">GNU gettext</a> system. In particular
-on the root of the repository is present a file called <code class="docutils literal notranslate"><span class="pre">freeports.pot</span></code> with the updated list
-of the strings present in the source code, and under <code class="docutils literal notranslate"><span class="pre">docs/build/gettext</span></code> the files with the
-templates of documentation translatable content. Translators will mostly work with <code class="docutils literal notranslate"><span class="pre">.po</span></code> files
-ready to be translated. In a second time this files are compiled in a machine readable format
-with exstension <code class="docutils literal notranslate"><span class="pre">.mo</span></code>. So the <code class="docutils literal notranslate"><span class="pre">.mo</span></code> files are the one the actively contain the translation, but they are
-generated from the <code class="docutils literal notranslate"><span class="pre">.po</span></code> files.</p>
+<h1>Internazionalizzazione <em>(i18n)</em><a class="headerlink" href="#interazionalization-i18n" title="Link to this heading"></a></h1>
+<p>Questa guida si concentra sul processo di traduzione della documentazione e del codice sorgente. Il sistema e le convenzioni utilizzate sia dalla internazionalizzazione della documentazione che da quella del codice sorgente, sono quelle usate dal sistema <a class="reference external" href="https://en.wikipedia.org/wiki/Gettext">GNU gettext</a>. In particolare alla base del repositorio è presente un file chiamato <code class="docutils literal notranslate"><span class="pre">freeports.pot</span></code> con la lista aggiornata delle frasi presenti nel codice sorgente, e sotto <code class="docutils literal notranslate"><span class="pre">docs/build/gettext</span></code> i file con i template del contenuto traducibile della documentazione. I traduttori dovranno lavorare per la maggior parte del tempo con i file <code class="docutils literal notranslate"><span class="pre">.po</span></code> pronti per accogliere le traduzioni. In un secondo momento questi file sono compilati in un formato leggibile dal computer con le estensione <code class="docutils literal notranslate"><span class="pre">.mo</span></code>. Quindi i file <code class="docutils literal notranslate"><span class="pre">.mo</span></code> sono quelli che contengono attivamente la traduzione, ma essi sono generati a partire dai file <code class="docutils literal notranslate"><span class="pre">.po</span></code>.</p>
 <section id="translation-of-the-code">
-<h2>Translation of the code<a class="headerlink" href="#translation-of-the-code" title="Link to this heading"></a></h2>
-<p>You can find a folder into <code class="docutils literal notranslate"><span class="pre">src/freeports_analysis/locales</span></code> whit different language folders.
-The id is the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> code of the language.
-In the folder of the language that you want to translate there should be a directory called <code class="docutils literal notranslate"><span class="pre">LC_MESSAGES</span></code>
-and a file called <code class="docutils literal notranslate"><span class="pre">messages.po</span></code>. This file contains all the text strings present in the source code.
-You can translate the strings using a text editor or using a specific program to translate <code class="docutils literal notranslate"><span class="pre">.po</span></code> files
-like for example <a class="reference external" href="https://poedit.net/">Poedit</a>.</p>
+<h2>Traduzione del codice<a class="headerlink" href="#translation-of-the-code" title="Link to this heading"></a></h2>
+<p>Puoi trovare una cartella in <code class="docutils literal notranslate"><span class="pre">src/freeports_analysis/locales</span></code> con diverse sottocartelle della lingua. L’identificativo è il codice <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> della lingua. Nella cartella di un determinato idioma di cui vuoi contribuire alla traduzione, dovrebbe essere presente una cartella chiamata <code class="docutils literal notranslate"><span class="pre">LC_MESSAGES</span></code> e un file con nome <code class="docutils literal notranslate"><span class="pre">messages.po</span></code>. Questo file contiene tutte le stringhe di testo presente nel codice sorgente. Puoi tradurre queste frasi utilizzando un editor di testo o un programma specifico per tradurre file <code class="docutils literal notranslate"><span class="pre">.po</span></code> come per esempio <a class="reference external" href="https://poedit.net/">Poedit</a>.</p>
 </section>
 <section id="translation-of-the-documentation">
-<h2>Translation of the documentation<a class="headerlink" href="#translation-of-the-documentation" title="Link to this heading"></a></h2>
-<p>You can find a folder into <code class="docutils literal notranslate"><span class="pre">docs/source/locales</span></code> whit different language folders.
-The id identifyng the lang is the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> code of the language.
-In the folder of the language that you want to translate there should be a directory called <code class="docutils literal notranslate"><span class="pre">LC_MESSAGES</span></code>
-and a some <code class="docutils literal notranslate"><span class="pre">.po</span></code> files. This files contain all the text strings present in the source code.
-You can translate the strings using a text editor or using a specific program to translate <code class="docutils literal notranslate"><span class="pre">.po</span></code> files
-like for example <a class="reference external" href="https://poedit.net/">Poedit</a>.</p>
+<h2>Traduzione della documentazione<a class="headerlink" href="#translation-of-the-documentation" title="Link to this heading"></a></h2>
+<p>Puoi trovare una cartella in <code class="docutils literal notranslate"><span class="pre">docs/source/locales</span></code> con diverse sottocartelle della lingua. L’identificativo è il codice <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> della lingua. Nella cartella di un determinato idioma di cui vuoi contribuire alla traduzione, dovrebbe essere presente una cartella chiamata <code class="docutils literal notranslate"><span class="pre">LC_MESSAGES</span></code> e alcuni file <code class="docutils literal notranslate"><span class="pre">.po</span></code>. Questi file contengono tutte le stringhe di testo presente nel codice sorgente. Puoi tradurre queste frasi utilizzando un editor di testo o un programma specifico per tradurre file <code class="docutils literal notranslate"><span class="pre">.po</span></code> come per esempio <a class="reference external" href="https://poedit.net/">Poedit</a>.</p>
 </section>
 <section id="building-the-translations">
-<h2>Building the translations<a class="headerlink" href="#building-the-translations" title="Link to this heading"></a></h2>
-<p>For updating the translations the deploy mechanism is similar in the case of source code and documentation and
-is caraterized by three steps:</p>
+<h2>Compilazione delle traduzioni<a class="headerlink" href="#building-the-translations" title="Link to this heading"></a></h2>
+<p>Per aggiornare le traduzioni il meccanismo di integrazione nel caso del codice sorgente e della documentazione, è simile e caratterizzato da tre fasi:</p>
 <ul class="simple">
-<li><p>generate the <code class="docutils literal notranslate"><span class="pre">.pot</span></code> file(s) using the source code or the modified documentation</p></li>
-<li><p>updating the <code class="docutils literal notranslate"><span class="pre">.po</span></code> files using the new <code class="docutils literal notranslate"><span class="pre">.pot</span></code> file(s)</p></li>
-<li><p>compile <code class="docutils literal notranslate"><span class="pre">.po</span></code> files in <code class="docutils literal notranslate"><span class="pre">.mo</span></code> files</p></li>
+<li><p>generazione del/i file <code class="docutils literal notranslate"><span class="pre">.pot</span></code> usando il codice sorgente o la documentazione modificata</p></li>
+<li><p>aggiornamento dei file <code class="docutils literal notranslate"><span class="pre">.po</span></code> usando il/i nuovo/i file <code class="docutils literal notranslate"><span class="pre">.pot</span></code></p></li>
+<li><p>compilazione dei file <code class="docutils literal notranslate"><span class="pre">.po</span></code> in file <code class="docutils literal notranslate"><span class="pre">.mo</span></code></p></li>
 </ul>
-<p>In the case of the source code the command to launch are:</p>
+<p>Nel caso del codice sorgente i comandi da lanciare sono:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pybabel extract src/freeports_analysis/ -o freeports.pot</span>
 <span class="go">pybabel update -i freeports.pot -d src/freports_analysis/locales/</span>
 <span class="go">pybabel compile -d src/freports_analysis/locales/</span>
 </pre></div>
 </div>
-<p>In the case of the documentation are (from inside the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory):</p>
+<p>Nel caso della documentazione sono (da dentro la cartella <code class="docutils literal notranslate"><span class="pre">docs/</span></code>):</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">make gettext</span>
 <span class="go">sphinx-intl update</span>
 <span class="go">sphinx-intl build</span>
@@ -149,8 +130,8 @@ is caraterized by three steps:</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="tests.html" class="btn btn-neutral float-left" title="Creating tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
-        <a href="example.html" class="btn btn-neutral float-right" title="Example of a contribution" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tests.html" class="btn btn-neutral float-left" title="Creazione dei test" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="example.html" class="btn btn-neutral float-right" title="Esempio di una contribuzione" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

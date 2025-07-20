@@ -6,10 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Documentation development &mdash; Documentazione freeports_analysis 0.0.3 </title>
+  <title>Sviluppo della documentazione &mdash; Documentazione freeports_analysis 0.0.3 </title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=d9280227" />
+      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=c9ec9885" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="Creating tests" href="tests.html" />
-    <link rel="prev" title="Code development" href="code.html" /> 
+    <link rel="next" title="Creazione dei test" href="tests.html" />
+    <link rel="prev" title="Sviluppo del codice" href="code.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,17 +47,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installazione</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Guida al comando</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../API.html">Guida del pacchetto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Come contribuire</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="code.html">Code development</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.html">Creating tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="i18n.html">Interazionalization <em>(i18n)</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="example.html">Example of a contribution</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentazione per sviluppatori</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="code.html">Sviluppo del codice</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sviluppo della documentazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Creazione dei test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html">Internazionalizzazione <em>(i18n)</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Esempio di una contribuzione</a></li>
 </ul>
 </li>
 </ul>
@@ -76,8 +76,8 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">Developer documentation</a></li>
-      <li class="breadcrumb-item active">Documentation development</li>
+          <li class="breadcrumb-item"><a href="index.html">Documentazione per sviluppatori</a></li>
+      <li class="breadcrumb-item active">Sviluppo della documentazione</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/dev/docs.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -88,27 +88,21 @@
            <div itemprop="articleBody">
              
   <section id="documentation-development">
-<h1>Documentation development<a class="headerlink" href="#documentation-development" title="Link to this heading"></a></h1>
-<p>The documentation is generated, built and configured using a tool called <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a>
-and is located in the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory of the repository. The actual files where this text is written are written using
-<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a> and are placed in the <code class="docutils literal notranslate"><span class="pre">docs/source</span></code>
-directory. A part of the documentation is autogenerate by the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">autodoc</a>
-and <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html">autosummary</a> sphinx extensions directly from the source code
-(this is why is important to add docstrings to the source code and correctly type hint the different functions).
-After each modify of the source you can apply the change compiling the documentation in one of the supported languages with:</p>
+<h1>Sviluppo della documentazione<a class="headerlink" href="#documentation-development" title="Link to this heading"></a></h1>
+<p>La documentazione è generata, compilata e configurata usando uno strumento chiamato <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> e posizionata nella cartella <code class="docutils literal notranslate"><span class="pre">docs/</span></code> del repositorio. Il file con l’effettivo testo della documentazione sono scritti usando il formato <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a> e sono mesi nella cartella <code class="docutils literal notranslate"><span class="pre">docs/source</span></code>. Una parte della documentazione è generata automaticamente direttamente dal codice sorgente dalle estensioni di sphinx <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">autodoc</a> e <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html">autosummary</a> (per questo risulta cruciale aggiungere docstring corrette e tipizzare correttamente le funzioni nel codice sorgente). Dopo ogni modifica del codice sorgente, puoi applicare le modifiche compilando la documentazione in uno dei linguaggi supportati con:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sphinx-build -b html -D language=&#39;{LANG CODE}&#39; source  build/{LANG CODE}</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">{LANG</span> <span class="pre">CODE}</span></code> has to be substituted with the <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> code of the language.</p>
-<p>To see the result you can open with your favourite browser the file <code class="docutils literal notranslate"><span class="pre">docs/build/{LANG</span> <span class="pre">CODE}/index.html</span></code>.</p>
+<p>dove <code class="docutils literal notranslate"><span class="pre">{LANG</span> <span class="pre">CODE}</span></code> deve essere sostituito con il codice <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> della lingua.</p>
+<p>Per vedere il risultato puoi aprire il file <code class="docutils literal notranslate"><span class="pre">docs/build/{LANG</span> <span class="pre">CODE}/index.html</span></code> con il tuo browser preferito.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="code.html" class="btn btn-neutral float-left" title="Code development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
-        <a href="tests.html" class="btn btn-neutral float-right" title="Creating tests" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="code.html" class="btn btn-neutral float-left" title="Sviluppo del codice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="tests.html" class="btn btn-neutral float-right" title="Creazione dei test" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

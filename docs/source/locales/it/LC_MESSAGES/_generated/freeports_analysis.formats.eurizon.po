@@ -22,9 +22,9 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats.eurizon.rst:2
 msgid "freeports\\_analysis.formats.eurizon"
-msgstr ""
+msgstr "freeports\\_analysis.formats.eurizon"
 
 #: freeports_analysis.formats.eurizon:1 of
 msgid "EURIZON format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato EURIZON"
 
