@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentazione per sviluppatori &mdash; Documentazione freeports_analysis 0.0.3 </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=c9ec9885" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=21205c44"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=45930005"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="Sviluppo del codice" href="code.html" />
+    <link rel="prev" title="Come contribuire" href="../contribute.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+              <img src="https://www.freeports.org/assets/logo/square.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installazione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Guida al comando</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">Guida del pacchetto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Come contribuire</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentazione per sviluppatori</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code.html">Sviluppo del codice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html">Sviluppo della documentazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Creazione dei test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html">Internazionalizzazione <em>(i18n)</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Esempio di una contribuzione</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentazione per sviluppatori</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dev/index.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="developer-documentation">
+<h1>Documentazione per sviluppatori<a class="headerlink" href="#developer-documentation" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Sviluppo del codice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Sviluppo della documentazione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Creazione dei test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i18n.html">Internazionalizzazione <em>(i18n)</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Esempio di una contribuzione</a></li>
+</ul>
+</div>
+<p>Il progetto consiste in diversi repositori, nello specifico questa sezione si concentra sul repositorio contenente il codice sorgente e la documentazione.</p>
+<p>Questo repositorio ha due rami protetti <code class="docutils literal notranslate"><span class="pre">main</span></code> e <code class="docutils literal notranslate"><span class="pre">dev</span></code>, più eventuali altri rami non protetti. La logica è che il ramo <code class="docutils literal notranslate"><span class="pre">dev</span></code> sia usato per lo sviluppo attivo, <code class="docutils literal notranslate"><span class="pre">main</span></code> per la distribuzione. Su tutti e due i rami ogni commit innesca una <a class="reference external" href="https://en.wikipedia.org/wiki/Continuous_integration">CI</a> pipeline sul <a class="reference external" href="https://jenkins.freeports.org">Freeport Jenkins server</a> , questo server effettua delle routine di controllo sul codice (specificate nel file <code class="docutils literal notranslate"><span class="pre">Jenkinsfile</span></code> localizzato in cima all’albero delle cartelle del repositorio). Nello specifico:</p>
+<ol class="arabic simple">
+<li><p>Fa il <em>lint</em> del codice (ne controlla la qualità)</p></li>
+<li><p>Fallisce se non vengono raggiunti requisiti minimi di qualità del codice</p></li>
+<li><p>Esegue i test del codice e fallisce nel caso non vengano passati tutti</p></li>
+<li><p>Fallisce se una percentuale minima del codice non è testata</p></li>
+<li><p>Compila la documentazione</p></li>
+<li><p>Fallisce se una percentuale minima del codice non è documentato</p></li>
+<li><p>Se il commit è caratterizzato e classificato come <cite>versione di rilascio</cite> (seguendo la <a class="reference external" href="https://semver.org/">specificazione semantic versioning</a>) lo pubblica su <a class="reference external" href="https://pypi.org/project/freeports-analysis/">PyPI</a></p></li>
+</ol>
+<p>La differenza tra in due rami è che lo stato della pipeline è unicamente informativo sul ramo <code class="docutils literal notranslate"><span class="pre">dev</span></code> (significa che il fallimento di essa è solo notificato) ma l’esito positivo è invece un <strong>requisito necessario</strong> per l’approvazione di una PR sul ramo <code class="docutils literal notranslate"><span class="pre">main</span></code> e la sua integrazione nel repositorio.</p>
+<p>In particolare lo sviluppo si divide tra:</p>
+<ul class="simple">
+<li><p>sviluppo degli strumenti per aiutare il processo di contribuzione</p></li>
+<li><p>sviluppo del codice comune tra i diversi <cite>report pdf</cite> (per esempio il codice sorgente relativo alle opzioni e il comportamento del comando <code class="docutils literal notranslate"><span class="pre">freeports</span></code>)</p></li>
+<li><p>sviluppo del codice per elaborare diversi <cite>formati dei report pdf</cite></p></li>
+<li><p>sviluppo dei test sul codice</p></li>
+<li><p>scrittura della documentazione</p></li>
+<li><p>internazionalizzazione del codice (traduzione dei messaggi in output al comando)</p></li>
+<li><p>internazionalizzazione della documentazione (traduzione della documentazione)</p></li>
+</ul>
+<p>puoi consultare la guida specifica relativa al tipo di contribuzione che vorresti fare. Quando ti senti a tuo agio con i concetti trattati puoi andare avanti con il <a class="reference internal" href="example.html"><span class="doc">workflow di esempio</span></a> fornito; questa pagina non contiene solo video tutoria spiegando i modi possibili di contribuzione ma anche come integrarli con il repositorio di freeports.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="../contribute.html" class="btn btn-neutral float-left" title="Come contribuire" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="code.html" class="btn btn-neutral float-right" title="Sviluppo del codice" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

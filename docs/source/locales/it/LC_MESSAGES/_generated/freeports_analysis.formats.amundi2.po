@@ -22,9 +22,9 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats.amundi2.rst:2
 msgid "freeports\\_analysis.formats.amundi2"
-msgstr ""
+msgstr "freeports\\_analysis.formats.amundi2"
 
 #: freeports_analysis.formats.amundi2:1 of
 msgid "AMUNDI2 format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato AMUNDI2"
 

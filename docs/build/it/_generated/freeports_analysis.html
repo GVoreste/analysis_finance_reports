@@ -9,6 +9,7 @@
   <title>freeports_analysis &mdash; Documentazione freeports_analysis 0.0.3 </title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=c9ec9885" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -21,7 +22,7 @@
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
     <link rel="next" title="freeports_analysis.cmd" href="freeports_analysis.cmd.html" />
-    <link rel="prev" title="Package reference" href="../API.html" /> 
+    <link rel="prev" title="Guida del pacchetto" href="../API.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -34,6 +35,7 @@
           
           <a href="../index.html" class="icon icon-home">
             freeports_analysis
+              <img src="https://www.freeports.org/assets/logo/square.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -45,10 +47,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installazione</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Command reference</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Package reference</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Guida al comando</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">Guida del pacchetto</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">freeports_analysis</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="freeports_analysis.cmd.html">freeports_analysis.cmd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freeports_analysis.conf_parse.html">freeports_analysis.conf_parse</a></li>
@@ -62,7 +64,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Come contribuire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Documentazione per sviluppatori</a></li>
 </ul>
 
         </div>
@@ -79,7 +82,7 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../API.html">Package reference</a></li>
+          <li class="breadcrumb-item"><a href="../API.html">Guida del pacchetto</a></li>
       <li class="breadcrumb-item active">freeports_analysis</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/_generated/freeports_analysis.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
@@ -92,33 +95,33 @@
              
   <section id="module-freeports_analysis">
 <span id="freeports-analysis"></span><h1>freeports_analysis<a class="headerlink" href="#module-freeports_analysis" title="Link to this heading"></a></h1>
-<p>Freeports analysis package.</p>
-<p class="rubric">Modules</p>
+<p>Pacchetto analisi Freeports</p>
+<p class="rubric">Moduli</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.cmd.html#module-freeports_analysis.cmd" title="freeports_analysis.cmd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cmd</span></code></a></p></td>
-<td><p>Contains all the functions related to command line use of the <cite>freeport</cite> script</p></td>
+<td><p>Contiene tutte le funzioni relative al uso da linea di comando dello script <cite>freeport</cite></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.conf_parse.html#module-freeports_analysis.conf_parse" title="freeports_analysis.conf_parse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conf_parse</span></code></a></p></td>
-<td><p>Submodule containing all the utilities for validating and parsing the configuration</p></td>
+<td><p>Sottomodulo contentente tutte gli strumenti utili per la validazione e la elaborazione della configurazione</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.consts.html#module-freeports_analysis.consts" title="freeports_analysis.consts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">consts</span></code></a></p></td>
-<td><p>Provide basic constant and types used by all submodules, should facilitate avoiding circular imports</p></td>
+<td><p>Fornisce le costanti di base e i tipi usati da tutti i sottomoduli, dovrebbe aiutare ad evitare importazioni circolari</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.download.html#module-freeports_analysis.download" title="freeports_analysis.download"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download</span></code></a></p></td>
-<td><p>Functions to download pdf from internet and for scraping</p></td>
+<td><p>Funzioni per fare il download dei documenti pdf da internet</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.formats.html#module-freeports_analysis.formats" title="freeports_analysis.formats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">formats</span></code></a></p></td>
-<td><p>Module common to each format, it contains the definitions used by all the formats</p></td>
+<td><p>Modulo comune a tutti i formati, contiene le definizioni usate da tutti i formati</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.formats_utils.html#module-freeports_analysis.formats_utils" title="freeports_analysis.formats_utils"><code class="xref py py-obj docutils literal notranslate"><span class="pre">formats_utils</span></code></a></p></td>
-<td><p>Utilities of general interest common to all formats and that can be used for creating <cite>pdf_filter</cite> or <cite>text_extract</cite> or <cite>deserialize</cite> functions</p></td>
+<td><p>Strumenti generalisti utili e comuni a tutti i formati e che possono essere usati per creare le funzioni <cite>pdf_filter</cite>, <cite>text_extract</cite> o <cite>deserialize</cite></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="freeports_analysis.i18n.html#module-freeports_analysis.i18n" title="freeports_analysis.i18n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">i18n</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="freeports_analysis.main.html#module-freeports_analysis.main" title="freeports_analysis.main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code></a></p></td>
-<td><p>This module is the one that contains the function called in order to decode the information from the pdf and to save the <cite>csv</cite> file.</p></td>
+<td><p>Questo modulo è quello che contiene le funzioni chiamate per fare la decodifica delle informazioni dal pdf e per salvarle in un file <cite>csv</cite>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +131,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="../API.html" class="btn btn-neutral float-left" title="Package reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="../API.html" class="btn btn-neutral float-left" title="Guida del pacchetto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
         <a href="freeports_analysis.cmd.html" class="btn btn-neutral float-right" title="freeports_analysis.cmd" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

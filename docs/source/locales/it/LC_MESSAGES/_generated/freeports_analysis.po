@@ -22,85 +22,97 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.rst:2
 msgid "freeports\\_analysis"
-msgstr ""
+msgstr "freeports\\_analysis"
 
 #: freeports_analysis:1 of
 msgid "Freeports analysis package."
-msgstr ""
+msgstr "Pacchetto analisi Freeports"
 
 #: ../../source/_generated/freeports_analysis.rst:9
 msgid "Modules"
-msgstr ""
+msgstr "Moduli"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ":py:obj:`cmd <freeports_analysis.cmd>`\\"
-msgstr ""
+msgstr ":py:obj:`cmd <freeports_analysis.cmd>`\\"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ""
 "Contains all the functions related to command line use of the `freeport` "
 "script"
 msgstr ""
+"Contiene tutte le funzioni relative al uso da linea di comando dello script "
+"`freeport`"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ":py:obj:`conf_parse <freeports_analysis.conf_parse>`\\"
-msgstr ""
+msgstr ":py:obj:`conf_parse <freeports_analysis.conf_parse>`\\"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ""
 "Submodule containing all the utilities for validating and parsing the "
 "configuration"
 msgstr ""
+"Sottomodulo contentente tutte gli strumenti utili per la validazione e la "
+"elaborazione della configurazione"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ":py:obj:`consts <freeports_analysis.consts>`\\"
-msgstr ""
+msgstr ":py:obj:`consts <freeports_analysis.consts>`\\"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ""
 "Provide basic constant and types used by all submodules, should "
 "facilitate avoiding circular imports"
 msgstr ""
+"Fornisce le costanti di base e i tipi usati da tutti i sottomoduli, "
+"dovrebbe aiutare ad evitare importazioni circolari"
+
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ":py:obj:`download <freeports_analysis.download>`\\"
-msgstr ""
+msgstr ":py:obj:`download <freeports_analysis.download>`\\"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid "Functions to download pdf from internet and for scraping"
-msgstr ""
+msgstr "Funzioni per fare il download dei documenti pdf da internet"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ":py:obj:`formats <freeports_analysis.formats>`\\"
-msgstr ""
+msgstr ":py:obj:`formats <freeports_analysis.formats>`\\"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ""
 "Module common to each format, it contains the definitions used by all the"
 " formats"
 msgstr ""
+"Modulo comune a tutti i formati, contiene le definizioni usate da tutti i"
+" formati"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ":py:obj:`formats_utils <freeports_analysis.formats_utils>`\\"
-msgstr ""
+msgstr ":py:obj:`formats_utils <freeports_analysis.formats_utils>`\\"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ""
 "Utilities of general interest common to all formats and that can be used "
 "for creating `pdf_filter` or `text_extract` or `deserialize` functions"
 msgstr ""
+"Strumenti generalisti utili e comuni a tutti i formati e che possono essere usati per "
+"creare le funzioni `pdf_filter`, `text_extract` o `deserialize`"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ":py:obj:`i18n <freeports_analysis.i18n>`\\"
-msgstr ""
+msgstr ":py:obj:`i18n <freeports_analysis.i18n>`\\"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ":py:obj:`main <freeports_analysis.main>`\\"
-msgstr ""
+msgstr ":py:obj:`main <freeports_analysis.main>`\\"
 
 #: ../../source/_generated/freeports_analysis.rst:21:<autosummary>:1
 msgid ""
 "This module is the one that contains the function called in order to "
 "decode the information from the pdf and to save the `csv` file."
 msgstr ""
-
+"Questo modulo è quello che contiene le funzioni chiamate per fare la "
+"decodifica delle informazioni dal pdf e per salvarle in un file `csv`."

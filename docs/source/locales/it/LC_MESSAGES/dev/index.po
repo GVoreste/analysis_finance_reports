@@ -7,136 +7,160 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: freeports_analysis \n"
+"Project-Id-Version: freeports_analysis\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-14 11:57+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: it\n"
+"PO-Revision-Date: 2025-07-19 14:43+0200\n"
+"Last-Translator: \n"
 "Language-Team: it <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../source/dev/index.rst:6
 msgid "Contents:"
-msgstr ""
+msgstr "Contenuto:"
 
 #: ../../source/dev/index.rst:3
 msgid "Developer documentation"
-msgstr ""
+msgstr "Documentazione per sviluppatori"
 
 #: ../../source/dev/index.rst:17
 msgid ""
-"The project consists in different repositories, specifically this section"
-" focus on the repository containing the source code and the "
-"documentation."
+"The project consists in different repositories, specifically this section "
+"focus on the repository containing the source code and the documentation."
 msgstr ""
+"Il progetto consiste in diversi repositori, nello specifico questa sezione "
+"si concentra sul repositorio contenente il codice sorgente e la "
+"documentazione."
 
 #: ../../source/dev/index.rst:20
 msgid ""
-"This repository has two protected branches ``main`` and ``dev``, plus any"
-" other additional non protected branches. The logic is that ``dev`` "
-"branch is used for the active development, ``main`` for the deployment. "
-"On both branches each commit triggers a `CI "
-"<https://en.wikipedia.org/wiki/Continuous_integration>`_ pipeline on the "
-"`Freeport Jenkins server <https://jenkins.freeports.org>`_ this server do"
-" some checks on the code (specified in the ``Jenkinsfile`` on top of the "
-"repository). Specifically it:"
+"This repository has two protected branches ``main`` and ``dev``, plus any "
+"other additional non protected branches. The logic is that ``dev`` branch "
+"is used for the active development, ``main`` for the deployment. On both "
+"branches each commit triggers a `CI <https://en.wikipedia.org/wiki/"
+"Continuous_integration>`_ pipeline on the `Freeport Jenkins server <https://"
+"jenkins.freeports.org>`_ this server do some checks on the code (specified "
+"in the ``Jenkinsfile`` on top of the repository). Specifically it:"
 msgstr ""
+"Questo repositorio ha due rami protetti ``main`` e ``dev``, più eventuali "
+"altri rami non protetti. La logica è che il ramo ``dev`` sia usato per lo "
+"sviluppo attivo, ``main`` per la distribuzione. Su tutti e due i rami ogni "
+"commit innesca una `CI <https://en.wikipedia.org/wiki/"
+"Continuous_integration>`_ pipeline sul `Freeport Jenkins server <https://"
+"jenkins.freeports.org>`_ , questo server effettua delle routine di "
+"controllo sul codice (specificate nel file ``Jenkinsfile`` localizzato in "
+"cima all'albero delle cartelle del repositorio). Nello specifico:"
 
 #: ../../source/dev/index.rst:26
 msgid "Lint the code"
-msgstr ""
+msgstr "Fa il *lint* del codice (ne controlla la qualità)"
 
 #: ../../source/dev/index.rst:27
 msgid "Fail if a minimal linting vote is reached"
 msgstr ""
+"Fallisce se non vengono raggiunti requisiti minimi di qualità del codice"
 
 #: ../../source/dev/index.rst:28
 msgid "Test the code and fail if some test is not passed"
 msgstr ""
+"Esegue i test del codice e fallisce nel caso non vengano passati tutti"
 
 #: ../../source/dev/index.rst:29
 msgid "Fail if a minimal percentage of code is not tested"
-msgstr ""
+msgstr "Fallisce se una percentuale minima del codice non è testata"
 
 #: ../../source/dev/index.rst:30
 msgid "Build the documentation"
-msgstr ""
+msgstr "Compila la documentazione"
 
 #: ../../source/dev/index.rst:31
 msgid "Fail if a minimal percentage of the code is not documented"
-msgstr ""
+msgstr "Fallisce se una percentuale minima del codice non è documentato"
 
 #: ../../source/dev/index.rst:32
 msgid ""
 "If the commit is tagged as `release version` (using `semantic versioning "
-"specification <https://semver.org/>`_) it publishes it to `PyPI "
-"<https://pypi.org/project/freeports-analysis/>`_"
+"specification <https://semver.org/>`_) it publishes it to `PyPI <https://"
+"pypi.org/project/freeports-analysis/>`_"
 msgstr ""
+"Se il commit è caratterizzato e classificato come `versione di rilascio` "
+"(seguendo la `specificazione semantic versioning <https://semver.org/>`_) "
+"lo pubblica su `PyPI <https://pypi.org/project/freeports-analysis/>`_"
 
 #: ../../source/dev/index.rst:34
 msgid ""
-"The difference between the two branches is that the state of the pipeline"
-" is only informative on the ``dev`` branch (it means that it only shows "
-"the failing) but the positive outcome is **imposed a requirement** for "
-"the PR on ``main`` branch to be approved and merged."
+"The difference between the two branches is that the state of the pipeline "
+"is only informative on the ``dev`` branch (it means that it only shows the "
+"failing) but the positive outcome is **imposed a requirement** for the PR "
+"on ``main`` branch to be approved and merged."
 msgstr ""
+"La differenza tra in due rami è che lo stato della pipeline è unicamente "
+"informativo sul ramo ``dev`` (significa che il fallimento di essa è solo "
+"notificato) ma l'esito positivo è invece un **requisito necessario** per "
+"l'approvazione di una PR sul ramo ``main`` e la sua integrazione nel "
+"repositorio."
 
 #: ../../source/dev/index.rst:37
 msgid "In particular the development divide between:"
-msgstr ""
+msgstr "In particolare lo sviluppo si divide tra:"
 
 #: ../../source/dev/index.rst:39
 msgid "development of tools for helping the contribution process"
-msgstr ""
+msgstr "sviluppo degli strumenti per aiutare il processo di contribuzione"
 
 #: ../../source/dev/index.rst:40
 msgid ""
-"development of the code common for the different `pdf reports` (for "
-"example the source code related to the options and behaviour of the "
-"``freeports`` command)"
+"development of the code common for the different `pdf reports` (for example "
+"the source code related to the options and behaviour of the ``freeports`` "
+"command)"
 msgstr ""
+"sviluppo del codice comune tra i diversi `report pdf` (per esempio il "
+"codice sorgente relativo alle opzioni e il comportamento del comando "
+"``freeports``)"
 
 #: ../../source/dev/index.rst:42
 msgid "development of the code for parsing the different `pdf report formats`"
-msgstr ""
+msgstr "sviluppo del codice per elaborare diversi `formati dei report pdf`"
 
 #: ../../source/dev/index.rst:43
 msgid "development of tests on the code"
-msgstr ""
+msgstr "sviluppo dei test sul codice"
 
 #: ../../source/dev/index.rst:44
 msgid "writing of the documentation"
-msgstr ""
+msgstr "scrittura della documentazione"
 
 #: ../../source/dev/index.rst:45
 msgid ""
-"internationalization of the code (translation of messages in output of "
-"the command)"
+"internationalization of the code (translation of messages in output of the "
+"command)"
 msgstr ""
+"internazionalizzazione del codice (traduzione dei messaggi in output al "
+"comando)"
 
 #: ../../source/dev/index.rst:46
 msgid ""
-"internationalization of the documentation (translation of the "
-"documentation)"
+"internationalization of the documentation (translation of the documentation)"
 msgstr ""
+"internazionalizzazione della documentazione (traduzione della "
+"documentazione)"
 
 #: ../../source/dev/index.rst:48
 msgid ""
-"you can consult the specific guide related to the type of contribution "
-"that you want to do. When you feel comfortable with the concepts you can "
-"go forward with the workflow :doc:`examples provided <example>`; this "
-"page not only contains video expaining the possible contributions but "
-"also how to deploy them."
+"you can consult the specific guide related to the type of contribution that "
+"you want to do. When you feel comfortable with the concepts you can go "
+"forward with the workflow :doc:`examples provided <example>`; this page not "
+"only contains video expaining the possible contributions but also how to "
+"deploy them."
 msgstr ""
-
-#~ msgid ""
-#~ "you can consult the specific guide "
-#~ "related to the type of contribution "
-#~ "that you want to do."
-#~ msgstr ""
-
+"puoi consultare la guida specifica relativa al tipo di contribuzione che "
+"vorresti fare. Quando ti senti a tuo agio con i concetti trattati puoi "
+"andare avanti con il :doc:`workflow di esempio <example>` fornito; questa "
+"pagina non contiene solo video tutoria spiegando i modi possibili di "
+"contribuzione ma anche come integrarli con il repositorio di freeports."

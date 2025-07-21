@@ -7,18 +7,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: freeports_analysis \n"
+"Project-Id-Version: freeports_analysis\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-12 11:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: it\n"
+"PO-Revision-Date: 2025-07-18 18:36+0200\n"
+"Last-Translator: \n"
 "Language-Team: it <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../../source/index.rst:10
 msgid "Contents:"
@@ -38,5 +39,4 @@ msgstr ""
 
 #: ../../source/index.rst:25
 msgid "This project is under active development."
-msgstr "Questo progetto è attivamente sotto sviluppo"
-
+msgstr "Questo progetto è attivamente sotto sviluppo."

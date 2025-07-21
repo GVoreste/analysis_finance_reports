@@ -4,7 +4,7 @@ This module provides decorators and utilities for filtering and processing PDF c
 based on XML elements, fonts, and positional data.
 """
 
-from typing import List, Optional, Tuple, TypeAlias, Callable
+from typing import List, Optional, Tuple, TypeAlias, Callable, Union
 from enum import Enum, auto
 from lxml import etree
 from freeports_analysis.formats import PdfBlock, ExpectedPdfBlockNotFound, TextBlock
@@ -111,7 +111,7 @@ def standard_pdf_filtering(
     header_font: Font,
     subfund_height: YRange,
     subfund_font: Font,
-    body_font: str,
+    body_font: Union[str, List[str]],
     y_range: Optional[
         Tuple[Optional[float | Tuple[str, str]], Optional[float | Tuple[str, str]]]
     ] = None,
@@ -137,8 +137,8 @@ def standard_pdf_filtering(
         The vertical range or height for subfund extraction.
     subfund_font : Font
         The font used by the subfund text.
-    body_font : str
-        The font used by the body text to extract as relevant blocks.
+    body_font : Union[str, List[str]]
+        The font or list of fonts used by the body text to extract as relevant blocks.
     y_range : Optional[Tuple[Optional[float | Tuple[str, str]], Optional[float | Tuple[str, str]]]
         The vertical range for filtering lines, by default None.
     deselection_list : Optional[Tuple[str, Font]], optional
@@ -159,7 +159,13 @@ def standard_pdf_filtering(
         @filter_page_if(lambda x: is_present_txt_font(x, header_txt, header_font))
         def pdf_filter(xml_root: etree.Element) -> List[PdfBlock]:
             metadata = page_metadata(xml_root)
-            rows = get_lines_with_font(xml_root, body_font)
+
+            if isinstance(body_font, str):
+                body_fonts = [body_font]
+            else:
+                body_fonts = body_font
+
+            rows = get_lines_with_font(xml_root, body_fonts)
             lines = [ExtractedPdfLine(r) for r in rows]
             y_range_numeric_top = None
             y_range_numeric_btm = None

@@ -6,9 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Environment variables reference &mdash; Documentazione freeports_analysis 0.0.3 </title>
+  <title>Guida alle variabili di ambiente &mdash; Documentazione freeports_analysis 0.0.3 </title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/colors.css?v=c9ec9885" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
@@ -20,8 +21,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../../genindex.html" />
     <link rel="search" title="Cerca" href="../../search.html" />
-    <link rel="next" title="Config file reference" href="config_file.html" />
-    <link rel="prev" title="Command line arguments" href="cmd_args.html" /> 
+    <link rel="next" title="Guida al file di configurazione" href="config_file.html" />
+    <link rel="prev" title="Argomenti da linea di comando" href="cmd_args.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -34,6 +35,7 @@
           
           <a href="../../index.html" class="icon icon-home">
             freeports_analysis
+              <img src="https://www.freeports.org/assets/logo/square.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -45,19 +47,20 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installazione</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../command.html">Command reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="cmd_args.html">Command line arguments</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Environment variables reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config_file.html">Config file reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../command.html#the-options">The options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../command.html#validation-of-resulting-configuration">Validation of resulting configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../command.html">Guida al comando</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cmd_args.html">Argomenti da linea di comando</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Guida alle variabili di ambiente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config_file.html">Guida al file di configurazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#the-options">Le opzioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#validation-of-resulting-configuration">Validazione della configurazione risultante</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../command.html#batch-mode"><code class="docutils literal notranslate"><span class="pre">BATCH</span> <span class="pre">MODE</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../API.html">Package reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../API.html">Guida del pacchetto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">Come contribuire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/index.html">Documentazione per sviluppatori</a></li>
 </ul>
 
         </div>
@@ -74,8 +77,8 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../command.html">Command reference</a></li>
-      <li class="breadcrumb-item active">Environment variables reference</li>
+          <li class="breadcrumb-item"><a href="../command.html">Guida al comando</a></li>
+      <li class="breadcrumb-item active">Guida alle variabili di ambiente</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/usage/config/env_variables.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -86,8 +89,8 @@
            <div itemprop="articleBody">
              
   <section id="environment-variables-reference">
-<h1>Environment variables reference<a class="headerlink" href="#environment-variables-reference" title="Link to this heading"></a></h1>
-<p>The map between available environment variables and options is:</p>
+<h1>Guida alle variabili di ambiente<a class="headerlink" href="#environment-variables-reference" title="Link to this heading"></a></h1>
+<p>La mappa tra le variabili di ambiente disponibili e le opzioni è:</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Environment variable</p></th>
@@ -138,15 +141,15 @@
 </tr>
 </tbody>
 </table>
-<p>The <code class="docutils literal notranslate"><span class="pre">bool</span></code> values are evaluated in the same manner that from <a class="reference internal" href="../command.html#batch-mode"><span class="std std-ref">batch csv file</span></a>.</p>
+<p>Il valori booleani sono valutati nello stesso modo che nel contesto del <a class="reference internal" href="../command.html#batch-mode"><span class="std std-ref">file batch csv</span></a>.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="cmd_args.html" class="btn btn-neutral float-left" title="Command line arguments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
-        <a href="config_file.html" class="btn btn-neutral float-right" title="Config file reference" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cmd_args.html" class="btn btn-neutral float-left" title="Argomenti da linea di comando" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="config_file.html" class="btn btn-neutral float-right" title="Guida al file di configurazione" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

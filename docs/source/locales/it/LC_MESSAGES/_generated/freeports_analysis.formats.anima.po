@@ -22,19 +22,20 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats.anima.rst:2
 msgid "freeports\\_analysis.formats.anima"
-msgstr ""
+msgstr "freeports\\_analysis.formats.anima"
 
 #: freeports_analysis.formats.anima:1 of
 msgid "ANIMA format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato ANIMA"
 
 #: ../../source/_generated/freeports_analysis.formats.anima.rst:9
 msgid "Functions"
-msgstr ""
+msgstr "Funzioni"
 
 #: ../../source/_generated/freeports_analysis.formats.anima.rst:12:<autosummary>:1
 msgid ""
 ":py:obj:`pdf_filter <freeports_analysis.formats.anima.pdf_filter>`\\ "
 "\\(xml\\_root\\)"
 msgstr ""
-
+":py:obj:`pdf_filter <freeports_analysis.formats.anima.pdf_filter>`\\ "
+"\\(xml\\_root\\)"

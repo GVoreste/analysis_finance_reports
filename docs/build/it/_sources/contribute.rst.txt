@@ -45,6 +45,7 @@ To activate the virtual environment launch:
     source venv/freeports-dev/bin/activate
 
 in other to *deactivate* it, just launch the ``deactivate`` command.
+If you want to know more about how the project is structured, you can continue reading the :doc:`developer documentation <dev/index>`
 
 **********
 Guidelines

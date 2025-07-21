@@ -1,0 +1,189 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sviluppo del codice &mdash; Documentazione freeports_analysis 0.0.3 </title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/colors.css?v=c9ec9885" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=21205c44"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=45930005"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="Sviluppo della documentazione" href="docs.html" />
+    <link rel="prev" title="Documentazione per sviluppatori" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            freeports_analysis
+              <img src="https://www.freeports.org/assets/logo/square.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" aria-label="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <p class="caption" role="heading"><span class="caption-text">Contenuto:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../usage/installation.html">Installazione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command.html">Guida al comando</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">Guida del pacchetto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Come contribuire</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentazione per sviluppatori</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sviluppo del codice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pdffilter"><code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#textextract"><code class="docutils literal notranslate"><span class="pre">TextExtract</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deserialize"><code class="docutils literal notranslate"><span class="pre">Deserialize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pdfblock-and-textblock"><code class="docutils literal notranslate"><span class="pre">PdfBlock</span></code> e <code class="docutils literal notranslate"><span class="pre">TextBlock</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#promise"><code class="docutils literal notranslate"><span class="pre">Promise</span></code>  (promessa)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#in-practice">Nel pratico</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html">Sviluppo della documentazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Creazione dei test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html">Internazionalizzazione <em>(i18n)</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">Esempio di una contribuzione</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">freeports_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Documentazione per sviluppatori</a></li>
+      <li class="breadcrumb-item active">Sviluppo del codice</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dev/code.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="code-development">
+<h1>Sviluppo del codice<a class="headerlink" href="#code-development" title="Link to this heading"></a></h1>
+<p>Il focus di questa guida è lo sviluppo del codice relativo alla elaborazione specifica di un <cite>formato pdf</cite>. Con <cite>formato pdf</cite>, identifichiamo una serie di operazioni e di codice necessario per elaborare una serie di report finanziari in <cite>csv</cite>.</p>
+<p>Abbiamo deciso di implementare la struttura in modo sufficientemente flessibile da elaborare report diversi, ma facendo alcune ipotesi in maniera da semplificare e standardizzare il processo di parsing. L’obbiettivo è quello di non ripetere il codice comune a tutti i formati in modo che le contribuzioni si possono concentrare sull’integrazione di nuovi pdf supportati.</p>
+<p>Lo schema generale per l’elaborazione di un pdf può essere rappresentato con l’immagine seguente:</p>
+<img alt="../_images/schema_algorithm.svg" src="../_images/schema_algorithm.svg" />
+<p>Il documento è prima diviso in pagine e convertito in una stringa <code class="docutils literal notranslate"><span class="pre">xml</span></code> usando il pacchetto <a class="reference external" href="https://pypi.org/project/PyMuPDF/">PyMuPDF</a> . L’assunzione è che ogni pagina del documento contenga l’informazione necessaria per delineare il contesto e capire il significato dei singoli dati rilevanti nel <cite>file csv</cite> finale. Questa assunzione può sembrare abbastanza restrittiva, ma risulta essenziale per semplificare e realizzare algoritmi ragionevolmente rapidi nell’elaborazione. Questa assunzione rende possibile implementare un parallelismo a livello di dati sulle pagine pdf; attualmente l’implementazione esegue su diversi batch di pagine in parallelo creando processi diversi (quando si è in <a class="reference internal" href="../usage/command.html#batch-mode"><span class="std std-ref">MODALITA” BATCH</span></a> il parallelismo è fatto a livello di documento e le diverse pagine sono processate sequenzialmente). L’idea dietro questa assunzione è che una pagina pdf ben ideata dovrebbe contenere tutte le informazioni necessarie ad un essere umano per capire il contesto. Se questa assunzione dovesse dimostrarsi troppo restrittiva, non potremmo assumere che il contesto delle pagine debba necessariamente essere le pagine precedenti, ma saremmo costretti a analizzare il documento diverse volte così da estrarre il contesto rilevante.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avvertimento</p>
+<p>Alcune volte l’informazione non sembra essere autonoma ma la sua dipendenza è in realtà una semplice relazione uno ad uno, uno a molti o molti a molti tra oggetti diversi. Un esempio di questo può essere il caso dell’analisi di un documento PDF contenente alcuni dati relativi a clienti e, in altre pagine, informazioni su ordini e prodotti. In questo esempio sembra che i record <cite>Cliente</cite>, <cite>Prodotto</cite> e <cite>Ordine</cite> siano interdipendenti, ma a seconda della struttura del report, l’algoritmo può analizzare le informazioni autonome di <cite>Clienti</cite>, <cite>Prodotti</cite> e <cite>Ordini</cite> e solo poco prima dell’output in CSV collegare i diversi record tramite un campo <code class="docutils literal notranslate"><span class="pre">id</span></code> (per comprendere meglio l’approccio proposto per gestire questi casi, si pensi al concetto di <a class="reference external" href="https://it.wikipedia.org/wiki/Chiave_esterna">chiave esterna</a> nel contesto dei database). Il meccanismo per supportare questo grado di interdipendenza avviene attraverso l’uso di <code class="docutils literal notranslate"><span class="pre">Promises</span></code> (promesse) e l’output di <code class="docutils literal notranslate"><span class="pre">PromisesResolutionContexs</span></code> (contesti per la risoluzione delle promesse). L’assunzione viene meno in presenza di una vera dipendenza delle informazioni.</p>
+</div>
+<p>Lo sviluppatore che desidera aggiungere una serie di report a quelli supportati, deve fornire l’implementazione specifica delle funzioni <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code>, <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> e <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code> (insieme alle classi <code class="docutils literal notranslate"><span class="pre">PdfBlock</span></code> e <code class="docutils literal notranslate"><span class="pre">TextBlock</span></code>). Ogni pagina <code class="docutils literal notranslate"><span class="pre">xml</span></code> verrà analizzata da una funzione <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> che produrrà una lista di <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code> rilevanti. Il contenuto di questi blocchi viene elaborato da una funzione chiamata <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> che restituisce una lista di blocchi con una relazione uno a uno con le informazioni che popoleranno una riga del csv, chiamati <code class="docutils literal notranslate"><span class="pre">TextBlock</span></code>. Ogni blocco viene analizzato indipendentemente in un oggetto (un <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code> astratto) che deve essere uno di quelli riconosciuti dal sistema (attualmente <code class="docutils literal notranslate"><span class="pre">Equity</span></code> e <code class="docutils literal notranslate"><span class="pre">Bond</span></code>) o un <code class="docutils literal notranslate"><span class="pre">PromisesResolutionContext</span></code>. Il <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code> può contenere dati effettivi o valori differiti chiamati in questo contesto “promesse” di valore. Nel caso più comune i dati finanziari contengono tutte le informazioni rilevanti e vengono serializzati in un dizionario Python in modo predefinito e scritti nel file csv risultante.</p>
+<section id="pdffilter">
+<h2><code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code><a class="headerlink" href="#pdffilter" title="Link to this heading"></a></h2>
+<p>Lo scopo di questa funzione è filtrare dalla rappresentazione <code class="docutils literal notranslate"><span class="pre">xml</span></code> della pagina pdf le informazioni rilevanti utilizzando il layout o la firma tipografica. Un vincolo che abbiamo scelto di rispettare è utilizzare solo informazioni relative all’aspetto grafico del pdf senza analizzare semanticamente il contenuto testuale o valutarne il significato. Questo vincolo è importante per suddividere la complessità dell’analisi di un pdf in passi più semplici e standardizzati. La tipica funzione <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code> esaminerà il font, la posizione delle diverse parti del pdf ed eventualmente parti di testo fisse considerate parte del layout della pagina (ad esempio un’intestazione presente in tutte le pagine), da cui ricaverà alcune informazioni e le converrà in <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code> con i relativi metadati personalizzati.</p>
+</section>
+<section id="textextract">
+<h2><code class="docutils literal notranslate"><span class="pre">TextExtract</span></code><a class="headerlink" href="#textextract" title="Link to this heading"></a></h2>
+<p>Lo scopo di questa funzione è estrarre dai <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code> i blocchi di testo rilevanti e aggiungere informazioni semantiche. In particolare, questa funzione riceve in input la lista delle aziende target e analizza il contenuto del testo variabile presente nei <code class="docutils literal notranslate"><span class="pre">PdfBlocks</span></code>. La tipica funzione <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> utilizzerà <a class="reference external" href="https://it.wikipedia.org/wiki/Espressione_regolare">regular expressions</a> per comprendere il ruolo di ogni parte del testo ed estrarre le informazioni rilevanti dai dati finanziari relativi alle aziende di interesse.</p>
+</section>
+<section id="deserialize">
+<h2><code class="docutils literal notranslate"><span class="pre">Deserialize</span></code><a class="headerlink" href="#deserialize" title="Link to this heading"></a></h2>
+<p>Lo scopo di questa funzione è trasformare le informazioni analizzate in un oggetto Python con campi standardizzati e validarli. Questa funzione convertirà i dati nei tipi Python che meglio riflettono la loro natura. In questa fase non viene fatto alcun filtraggio, ogni <code class="docutils literal notranslate"><span class="pre">TextBlock</span></code> corrisponderà a un oggetto Python. Questo vincolo focalizza la funzione sulle operazioni di conversione dei diversi campi. La classe astratta prodotta da questa funzione si chiama <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code>. Ogni campo della classe è di sola lettura e consiste in alcune informazioni principali e alcune aggiuntive. Le classi concrete che ereditano da <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code> sono attualmente <code class="docutils literal notranslate"><span class="pre">Equity</span></code> e <code class="docutils literal notranslate"><span class="pre">Bond</span></code> (la classe bond ha il tasso di interesse e la data di scadenza come informazioni aggiuntive). Questi oggetti vengono poi convertiti in modo predefinito in un dizionario Python e quindi, con <a class="reference external" href="https://it.wikipedia.org/wiki/Pandas_(software)">Pandas</a>, in un dataframe scritto direttamente in un <cite>file csv</cite>. Il <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code> solitamente contiene tutti i valori concreti, ma a volte può accadere che alcuni campi siano risolvibili solo dopo l’analisi completa; per questi casi si rimanda alla sezione <a class="reference internal" href="#promises"><span class="std std-ref">Promises</span></a></p>
+</section>
+<section id="pdfblock-and-textblock">
+<h2><code class="docutils literal notranslate"><span class="pre">PdfBlock</span></code> e <code class="docutils literal notranslate"><span class="pre">TextBlock</span></code><a class="headerlink" href="#pdfblock-and-textblock" title="Link to this heading"></a></h2>
+<p>Questi blocchi consistono in tre parti:</p>
+<ul class="simple">
+<li><p>Un <code class="docutils literal notranslate"><span class="pre">BlockType</span></code> (<code class="docutils literal notranslate"><span class="pre">PdfBlockType</span></code> e <code class="docutils literal notranslate"><span class="pre">TextBlockType</span></code>), ovvero un’etichetta obbligatoria che identifica il ruolo grafico e semantico dell’informazione. Questi due campi sono implementati come enumerazioni (enum) e i valori possibili devono essere definiti dallo sviluppatore del formato (fa parte delle specifiche del formato).</p></li>
+<li><p>Un campo <code class="docutils literal notranslate"><span class="pre">metadata</span></code>, che dovrebbe contenere dati personalizzati relativi a informazioni grafiche e semantiche. Il <code class="docutils literal notranslate"><span class="pre">BlockType</span></code> dovrebbe correlarsi con le chiavi attese nel campo metadata. L’implementazione è un dizionario Python libero e opzionale.</p></li>
+<li><p>Un campo opzionale <code class="docutils literal notranslate"><span class="pre">content</span></code>, che dovrebbe contenere le informazioni testuali nel pdf relative al blocco.</p></li>
+</ul>
+<p>Oltre a questi campi, il <code class="docutils literal notranslate"><span class="pre">TextBlock</span></code> ha un <code class="docutils literal notranslate"><span class="pre">PdfBlock</span></code> associato da cui è estratto (se derivato da più blocchi, viene considerato quello più importante).</p>
+</section>
+<section id="promise">
+<span id="promises"></span><h2><code class="docutils literal notranslate"><span class="pre">Promise</span></code>  (promessa)<a class="headerlink" href="#promise" title="Link to this heading"></a></h2>
+<p>Questa classe è una classe generica che esiste in forme più concrete come <code class="docutils literal notranslate"><span class="pre">SubfundPromise</span></code> o <code class="docutils literal notranslate"><span class="pre">CurrencyPromise</span></code> e rappresenta un segnaposto per un’informazione risolvibile solo dopo l’analisi completa del pdf. Quando un <code class="docutils literal notranslate"><span class="pre">FinancialData</span></code> viene istanziato, lo sviluppatore può <em>promettere</em> («promise») che il dato sarà fornito inserendo una promise come valore. La promise è caratterizzata da un campo <code class="docutils literal notranslate"><span class="pre">id</span></code> che la identifica per la risoluzione a un valore specifico post-analisi. Il valore verrà risolto usando una <code class="docutils literal notranslate"><span class="pre">PromisesResolutionMap</span></code> che collega gli <code class="docutils literal notranslate"><span class="pre">id</span></code> a valori o ad altre <code class="docutils literal notranslate"><span class="pre">Promises</span></code> in una catena che deve chiudersi con un valore concreto. In questo modo, appena prima della generazione del <code class="docutils literal notranslate"><span class="pre">csv</span></code>, avvengono le sostituzioni e i campi effettivi vengono calcolati usando la mappa. Questa mappa è costruita unendo tutti i <code class="docutils literal notranslate"><span class="pre">PromisesResolutionContexts</span></code> in output dalla funzione <code class="docutils literal notranslate"><span class="pre">deserialize</span></code>. I <code class="docutils literal notranslate"><span class="pre">PromisesResolutionContexts</span></code> devono essere dizionari Python con una chiave (da abbinare agli <code class="docutils literal notranslate"><span class="pre">id</span></code> delle <code class="docutils literal notranslate"><span class="pre">Promises</span></code>) e un valore (concreto o a sua volta una <code class="docutils literal notranslate"><span class="pre">Promise</span></code>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Avvertimento</p>
+<p>L”<code class="docutils literal notranslate"><span class="pre">id</span></code> deve essere fornito una sola volta nell’intero processo di analisi. Se lo stesso <code class="docutils literal notranslate"><span class="pre">id</span></code> appare in due diversi <code class="docutils literal notranslate"><span class="pre">PromisesResolutionContexts</span></code>, il valore viene sovrascritto in modo non prevedibile.</p>
+</div>
+</section>
+<section id="in-practice">
+<h2>Nel pratico<a class="headerlink" href="#in-practice" title="Link to this heading"></a></h2>
+<p>Per aggiungere il supporto a un nuovo formato, scegliere un nome e creare una directory con lo stesso nome in <code class="docutils literal notranslate"><span class="pre">src/freeports_analysis/formats</span></code>. In questa directory è possibile inserire qualsiasi numero di file e sottodirectory, con l’unico vincolo che, quando importata come submodulo, il pacchetto si aspetta di trovare le tre funzioni <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code>, <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code>, <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code> con le rispettive firme, e la definizione dei due enum <code class="docutils literal notranslate"><span class="pre">PdfBlockType</span></code> e <code class="docutils literal notranslate"><span class="pre">TextBlockType</span></code>. Come riferimento, è possibile usare il formato <code class="docutils literal notranslate"><span class="pre">_default</span></code> come template. Per facilitare l’aggiunta di nuovi formati, forniamo una serie di utility nel submodulo <code class="docutils literal notranslate"><span class="pre">src/freeports_analysis/formats_utils</span></code>, suddivise in quattro categorie:</p>
+<ul class="simple">
+<li><p>funzioni utili per creare l’algoritmo di elaborazione</p></li>
+<li><p>decoratori per aggiungere funzionalità standard alle funzioni di parsing</p></li>
+<li><p>decoratori che forniscono implementazioni standard di <code class="docutils literal notranslate"><span class="pre">PdfFilter</span></code>, <code class="docutils literal notranslate"><span class="pre">TextExtract</span></code> e <code class="docutils literal notranslate"><span class="pre">Deserialize</span></code></p></li>
+<li><p>enum contenenti implementazioni comuni di <code class="docutils literal notranslate"><span class="pre">PdfBlockType</span></code> e <code class="docutils literal notranslate"><span class="pre">TextBlockType</span></code></p></li>
+</ul>
+<p>L’obiettivo è identificare pattern di parsing ripetitivi e creare routine parametrizzabili e riutilizzabili. Per attivare il supporto a un formato, il suo nome in MAIUSCOLO va aggiunto al file <code class="docutils literal notranslate"><span class="pre">src/freeports_analysis/data/format_url_mapping.yaml</span></code>; questo file contiene nomi di formati (il nome in minuscolo corrisponderà al modulo caricato per l’analisi) e una lista di espressioni regolari applicate agli URL forniti (<code class="docutils literal notranslate"><span class="pre">URL</span></code>) come argomento del programma, per inferire il formato corretto durante l’analisi di risorse remote.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>l’ordine delle espressioni regolari e dei formati è rilevante, perché quello inferitoè il primo che concorde con quelli nella lista</p>
+</div>
+<p>Infine, nel repository è presente una directory <code class="docutils literal notranslate"><span class="pre">devtools/</span></code> con un template di <a class="reference external" href="https://jupyter.org/">Jupyter Notebook</a> e utility per esaminare pdf, sviluppare specifiche di formato e test. Questa directory è pensata per progettare e sperimentare componenti prima dell’integrazione nel pacchetto. Per usare il notebook, copiare il template e rinominarlo (rimuovendo la parte <code class="docutils literal notranslate"><span class="pre">.template.</span></code>).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentazione per sviluppatori" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="docs.html" class="btn btn-neutral float-right" title="Sviluppo della documentazione" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Oreste Sciacqualegni.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

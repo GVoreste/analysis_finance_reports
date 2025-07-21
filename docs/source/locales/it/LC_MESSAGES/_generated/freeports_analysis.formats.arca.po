@@ -22,9 +22,9 @@ msgstr ""
 
 #: ../../source/_generated/freeports_analysis.formats.arca.rst:2
 msgid "freeports\\_analysis.formats.arca"
-msgstr ""
+msgstr "freeports\\_analysis.formats.arca"
 
 #: freeports_analysis.formats.arca:1 of
 msgid "ARCA format submodule"
-msgstr ""
+msgstr "Sottomodulo per il formato ARCA"
 
