@@ -35,7 +35,7 @@ options = {
 
 @standard_pdf_filtering(**options, y_range=(103, 821))
 def _filter_long_pages(xml_root) -> dict:
-    pass
+    raise NotImplementedError
 
 
 @standard_pdf_filtering(
@@ -43,14 +43,13 @@ def _filter_long_pages(xml_root) -> dict:
     y_range=(("Holdings", "Helvetica-Bold"), ("Futures contracts", "Helvetica-Bold")),
 )
 def _filter_short_pages(xml_root) -> dict:
-    pass
+    raise NotImplementedError
 
 
 def pdf_filter(xml_root) -> List[PdfBlock]:
     if is_present_txt_font(xml_root, "Futures contracts", "Helvetica-Bold"):
         return _filter_short_pages(xml_root)
-    else:
-        return _filter_long_pages(xml_root)
+    return _filter_long_pages(xml_root)
 
 
 @standard_text_extraction(
@@ -60,9 +59,9 @@ def pdf_filter(xml_root) -> List[PdfBlock]:
     currency=Currency.EUR,
 )
 def text_extract(pdf_blocks, targets):
-    pass
+    raise NotImplementedError
 
 
 @standard_deserialization(True)
 def deserialize(pdf_block, targets):
-    pass
+    raise NotImplementedError

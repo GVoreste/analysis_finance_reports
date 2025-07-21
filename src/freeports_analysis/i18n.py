@@ -1,3 +1,5 @@
+"""Module that detect the locale and implement the translation of the messages"""
+
 import locale
 import tempfile
 from pathlib import Path

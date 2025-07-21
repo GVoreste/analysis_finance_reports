@@ -13,7 +13,6 @@ import yaml
 from importlib_resources import files
 from freeports_analysis import data
 from freeports_analysis.i18n import _
-from freeports_analysis.i18n import _
 
 
 logger = log.getLogger(__name__)

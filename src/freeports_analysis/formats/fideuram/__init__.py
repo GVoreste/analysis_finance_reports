@@ -39,7 +39,7 @@ TextBlockType: TypeAlias = EquityBondTextBlockType
     ],
 )
 def pdf_filter(xml_root) -> dict:
-    pass
+    raise NotImplementedError
 
 
 @standard_text_extraction(
@@ -50,9 +50,9 @@ def pdf_filter(xml_root) -> dict:
     acquisition_cost_pos=None,
 )
 def text_extract(pdf_blocks, targets):
-    pass
+    raise NotImplementedError
 
 
 @standard_deserialization()
 def deserialize(text_block, targets):
-    pass
+    raise NotImplementedError

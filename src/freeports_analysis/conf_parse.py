@@ -108,7 +108,7 @@ def _find_config():
 
 DEFAULT_CONFIG = {
     "VERBOSITY": 2,
-    # `SEPARATE_OUT_FILES` default to `False` because command line args permits to set only to `True`
+    # `SEPARATE_OUT_FILES` default to `False` because command line args only permits set `True`
     "SEPARATE_OUT_FILES": False,
     "N_WORKERS": os.process_cpu_count(),
     "BATCH": None,

@@ -14,7 +14,7 @@ from freeports_analysis.formats_utils.deserialize import standard_deserializatio
     y_range=(None, 810),
 )
 def pdf_filter(xml_root):
-    pass
+    raise NotImplementedError
 
 
 @standard_text_extraction(
@@ -25,9 +25,9 @@ def pdf_filter(xml_root):
     acquisition_cost_pos=+3,
 )
 def text_extract(pdf_blks, targets):
-    pass
+    raise NotImplementedError
 
 
 @standard_deserialization(True)
 def deserialize(txt_blks, targets):
-    pass
+    raise NotImplementedError

@@ -12,7 +12,7 @@ def text_extract(pdf_blocks: List[PdfBlock], targets: List[str]) -> List[TextBlo
     raise NotImplementedError
 
 
-def deserialize(TextBlock: TextBlock) -> dict:
+def deserialize(txt_block: TextBlock) -> dict:
     raise NotImplementedError
 
 
