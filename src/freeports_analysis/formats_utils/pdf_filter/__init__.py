@@ -6,6 +6,7 @@ based on XML elements, fonts, and positional data.
 
 from typing import List, Optional, Tuple, TypeAlias, Callable, Union
 from enum import Enum, auto
+import logging as log
 from lxml import etree
 from freeports_analysis.formats import PdfBlock, ExpectedPdfBlockNotFound, TextBlock
 from freeports_analysis.i18n import _
@@ -17,6 +18,9 @@ from .pdf_parts import ExtractedPdfLine
 from .select_font import deselect_txt_font
 from .xml.position import get_bounds
 from .. import overwrite_if_implemented
+
+logger = log.getLogger(__name__)
+
 
 UpdateMetadataFunc: TypeAlias = Callable[[etree.Element], dict]
 FilterCondition: TypeAlias = Callable[[etree.Element], bool]
@@ -158,7 +162,11 @@ def standard_pdf_filtering(
 
         @filter_page_if(lambda x: is_present_txt_font(x, header_txt, header_font))
         def pdf_filter(xml_root: etree.Element) -> List[PdfBlock]:
-            metadata = page_metadata(xml_root)
+            metadata = {}
+            try:
+                metadata = page_metadata(xml_root)
+            except ExpectedPdfBlockNotFound as e:
+                logger.warn(e)
 
             if isinstance(body_font, str):
                 body_fonts = [body_font]
